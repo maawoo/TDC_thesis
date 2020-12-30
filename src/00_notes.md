@@ -6,15 +6,12 @@
 - Lists / Glossary
 - Abstract
 - **Introduction**
-  - Thematic introduction / Outline of the problem
-  - Importance and significance of the topic in a larger context
-  - What exactly is the goal of this work?
+  - Thematic introduction / Preliminary background information that puts thesis into context
+  - Clarify focus & value of the study / What exactly is the goal?
   - Overview of what lies ahead
 - **Background**
-  - State of the art / Literature review
-  - Subtopics?
-    - Analysis Ready Data (ARD)
-    - EO data cubes (EODC)
+  - Analysis Ready Data
+  - Data Cubes in EO
 - **Methods**
 - **Results**
 - **Discussion**
@@ -22,57 +19,53 @@
 - Literature
 - Appendix
 
-----
-
 # Introduction
 
-**Roter Faden:**
-
-Problem of big EO data (big picture) >> General solutions >> Specific solution (ODC) >> ARD is fundamental, but not easy >> Goal of my work
-
-## Problem of big EO data
+### Problem of big EO data
 
 - Volume, Velocity & Variety
 - Still hard for users to harness the full potential of EO
 - Trend towards cloud solutions
-- Traditional approach of processing locally is not feasible anymore for large volumes of EO data
-- Even more data in the future... duh
+- Traditional approach of processing locally is not feasible anymore for large volumes of EO data (time-series analysis!)
 
-## General solutions
+### General solutions
 
-- Cloud-based processing (GEE, DIAS, ...)
-- Rasdaman, Pangeo, etc
-- All have pros & cons; no 'one-fits-all' solution exists
+- GEE, DIAS, Rasdaman, Pangeo, ...
+- Earth Observation Data Cubes (EODC) are another solution
+- All have pros & cons / No 'one-fits-all' solution exists
 
-## Specific Solution (ODC)
+### Specific solution
 
-- Short intro to ODC (more detailed in Background section!)
-- Examples of where it's already being used
-- Open-source & potential for future (interoperability)
+- Open Data Cubes
+- Open-source, Community, backed by multiple large organizations
+- There are already multiple national and regional ODCs
 
-## ARD is fundamental
+### ARD is fundamental
 
-- No standards yet
-- No easy access; DIY attitude in science / multiple ways and tools for processing
-- In the ODC community there's also no clear approach; Different ARD strategies used for different ODC instances and sometimes not comprehensible how ARD was processed
+- Short intro to ARD and why it's especially fundamental to EODCs
+- No simple / clear way of accessing or processing ARD
+  - DIY attitude in EO
 
-## Goal of my work
+### Goal of my work
 
-- Use established python packages to generate ARD (both optical & SAR)
-  - FORCE
-  - pyroSAR
-- Automate the process (download, processing, indexing to ODC) as easily as possible
-- No vendor lock-in (there's always multiple sources to access raw data; software is open-source)
-
-----
+- Create a regional Open Data Cube for Thuringia = Thuringia Data Cube (TDC)
+- Develop an automated workflow to generate ARD for Thuringia
+  - Use established, open-source tools to facilitate reproducibility
+- Highlight potential of the TDC by presenting 2-3 time-series analysis use cases
 
 # Background
 
-- ARD
-- EODC
-
-----
+- Analysis Ready Data
+- Data Cubes in EO
 
 # Methods
 
-- bla
+- Technical Infrastructure
+  - FORCE
+  - pyroSAR
+  - ODC
+  - ...
+- Analysis / Usecases
+  - a
+  - b
+  - c
