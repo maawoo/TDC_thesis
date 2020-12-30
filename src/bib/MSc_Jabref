@@ -1,0 +1,853 @@
+% Encoding: UTF-8
+
+@Article{Truckenbrodt2019,
+  author     = {John Truckenbrodt and Terri Freemantle and Chris Williams and Tom Jones and David Small and Cl{\'{e}}mence Dubois and Christian Thiel and Cristian Rossi and Asimina Syriou and Gregory Giuliani},
+  journal    = {Data},
+  title      = {Towards Sentinel-1 {SAR} Analysis-Ready Data: A Best Practices Assessment on Preparing Backscatter Data for the Cube},
+  year       = {2019},
+  month      = {jul},
+  number     = {3},
+  pages      = {93},
+  volume     = {4},
+  doi        = {10.3390/data4030093},
+  file       = {:/home/marco/STUDIUM/MA/Research/ARD/Truckenbrodt2019 - Towards Sentinel 1 SAR Analysis Ready Data_ a Best Practices Assessment on Preparing Backscatter Data for the Cube.pdf:PDF},
+  groups     = {ARD},
+  keywords   = {prio1, skimmed},
+  priority   = {prio1},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {skimmed},
+}
+
+@Article{Frantz2019,
+  author     = {David Frantz},
+  journal    = {Remote Sensing},
+  title      = {{FORCE}{\textemdash}Landsat + Sentinel-2 Analysis Ready Data and Beyond},
+  year       = {2019},
+  month      = {may},
+  number     = {9},
+  pages      = {1124},
+  volume     = {11},
+  doi        = {10.3390/rs11091124},
+  file       = {:/home/marco/STUDIUM/MA/Research/ARD/Frantz2019 - FORCE_Landsat + Sentinel 2 Analysis Ready Data and beyond.pdf:PDF},
+  groups     = {ARD},
+  keywords   = {prio1, skimmed},
+  priority   = {prio1},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {skimmed},
+}
+
+@Article{Giuliani2017,
+  author     = {Gregory Giuliani and Bruno Chatenoux and Andrea De Bono and Denisa Rodila and Jean-Philippe Richard and Karin Allenbach and Hy Dao and Pascal Peduzzi},
+  journal    = {Big Earth Data},
+  title      = {Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube ({SDC}) on generating Analysis Ready Data ({ARD})},
+  year       = {2017},
+  month      = {nov},
+  number     = {1-2},
+  pages      = {100--117},
+  volume     = {1},
+  abstract   = {Pressures on natural resources are increasing and a number of challenges need to be overcome to meet the needs of a growing population in a period of environmental variability. Some of these environmental issues can be monitored using remotely sensed Earth Observations (EO) data that are increasingly available from a number of freely and openly accessible repositories. However, the full information potential of EO data has not been yet realized. They remain still underutilized mainly because of their complexity, increasing volume, and the lack of efficient processing capabilities. EO Data Cubes (DC) are a new paradigm aiming to realize the full potential of EO data by lowering the barriers caused by these Big data challenges and providing access to large spatio-temporal data in an analysis ready form. Systematic and regular provision of Analysis Ready Data (ARD) will significantly reduce the burden on EO data users. Nevertheless, ARD are not commonly produced by data providers and therefore getting uniform and consistent ARD remains a challenging task. This paper presents an approach to enable rapid data access and pre-processing to generate ARD using interoperable services chains. The approach has been tested and validated generating Landsat ARD while building the Swiss Data Cube.},
+  comment    = {- **Introduction** auf jeden Fall wichtig!
+- Generell wieder einige Punkte, die das Konzept ODC unterstützen
+- Umsetzung des SDC mit Fokus auf Landsat
+- Für automatisierten Workflow zum Download, Preprozessing und Ingestion/Indexierung in DC der Daten wurde das LiMES FRamework verwendet (Live Monitoring of Earth Surface)
+	- Giuliani et al. (2017)
+- Am Ende meiner Ausarbeitung kann ich einen Vergleich zu der Umsetzung ziehen und ggfls diskutieren, was besser oder schlechter funktioniert... oder so},
+  doi        = {10.1080/20964471.2017.1398903},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Giuliani2017 - Building an Earth Observations Data Cube_ Lessons Learned from the Swiss Data Cube (SDC) on Generating Analysis Ready Data (ARD).pdf:PDF},
+  groups     = {ARD, MA - Intro, MA - Methodology, MA - Discussion, DataCubes - ODC General},
+  keywords   = {prio1, read},
+  priority   = {prio1},
+  publisher  = {Informa {UK} Limited},
+  readstatus = {read},
+}
+
+@Article{Lewis2017,
+  author     = {Adam Lewis and Simon Oliver and Leo Lymburner and Ben Evans and Lesley Wyborn and Norman Mueller and Gregory Raevksi and Jeremy Hooke and Rob Woodcock and Joshua Sixsmith and Wenjun Wu and Peter Tan and Fuqin Li and Brian Killough and Stuart Minchin and Dale Roberts and Damien Ayers and Biswajit Bala and John Dwyer and Arnold Dekker and Trevor Dhu and Andrew Hicks and Alex Ip and Matt Purss and Clare Richards and Stephen Sagar and Claire Trenham and Peter Wang and Lan-Wei Wang},
+  journal    = {Remote Sensing of Environment},
+  title      = {The Australian Geoscience Data Cube {\textemdash} Foundations and lessons learned},
+  year       = {2017},
+  month      = {dec},
+  pages      = {276--292},
+  volume     = {202},
+  abstract   = {The Australian Geoscience Data Cube (AGDC) aims to realise the full potential of Earth observation data holdings by addressing the Big Data challenges of volume, velocity, and variety that otherwise limit the usefulness of Earth observation data. There have been several iterations and AGDC version 2 is a major advance on previous work.
+The foundations and core components of the AGDC are: (1) data preparation, including geometric and radiometric corrections to Earth observation data to produce standardised surface reflectance measurements that support time-series analysis, and collection management systems which track the provenance of each Data Cube product and formalise re-processing decisions; (2) the software environment used to manage and interact with the data; and (3) the supporting high performance computing environment provided by the Australian National Computational Infrastructure (NCI).
+A growing number of examples demonstrate that our data cube approach allows analysts to extract rich new information from Earth observation time series, including through new methods that draw on the full spatial and temporal coverage of the Earth observation archives. To enable easy-uptake of the AGDC, and to facilitate future cooperative development, our code is developed under an open-source, Apache License, Version 2.0. This opensource approach is enabling other organisations, including the Committee on Earth Observing Satellites (CEOS), to explore the use of similar data cubes in developing countries.},
+  comment    = {- Follow-Up Paper zu Lewis et al. (2016) / AGDCv1 ... AGDCv2
+- Kapitel 2 enthält paar wichtige Beschreibungen zum Thema 'Big EO data', die für mein **Intro** relevant sind
+	- 'Volume, Velocity & Variety' (Laney, 2001)
+	- 'we should expect at least a 20-fold increase in the global volumes of
+raw data acquired over a 15 year period.' ...Und dann noch abgeleitete Produkte!
+- Kapitel 3 beschreibt die Kernelemente des AGDCv2. U.a. spatial alignment & radiometric correction
+	- Interessant als Vergleich zu FORCE, allerdings wäre es wichtig noch herauszufinden wie aktuell die Workflows noch sind (z.B. wird Ingestion beschrieben, allerdings laut ODC Slack nicht mehr wirklich verwendet!)
+- Beschreibung und Visualisierung (Fig. 10) der Datenbank! (allerdings wieder darauf achten, wie aktuell die Infos noch sind!)},
+  doi        = {10.1016/j.rse.2017.03.015},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Lewis2017 - The Australian Geoscience Data Cube _ Foundations and Lessons Learned.pdf:PDF},
+  groups     = {MA - Intro, MA - Methodology, DataCubes - ODC General},
+  keywords   = {prio1, read},
+  priority   = {prio1},
+  publisher  = {Elsevier {BV}},
+  readstatus = {read},
+}
+
+@InProceedings{Baumann2018,
+  author     = {Peter Baumann and Dimitar Misev and Vlad Merticariu and Bang Pham Huu and Brennan Bell},
+  booktitle  = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title      = {Datacubes: A Technology Survey},
+  year       = {2018},
+  month      = {jul},
+  publisher  = {{IEEE}},
+  abstract   = {Datacubes are emerging as a paradigm which allows offering massive spatio-temporal data more in a more homogenized and better to analyze fashion, in particular when it comes to mixed spatial and temporal evaluation. While this is agreed by many, there is no broad consensus yet on access APIs and paradigms, such as query languages versus procedural interfaces. Further, questions of efficient storage organization and processing of the underlying multi-dimensional arrays arise.
+In our contribution we provide a technology overview on datacube approaches, involving Array Databases, systems with procedural (typically python) interfaces, array libraries, and more.},
+  doi        = {10.1109/igarss.2018.8518920},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Baumann2018 - Datacubes_ a Technology Survey.pdf:PDF},
+  groups     = {DataCubes - Other General},
+  keywords   = {prio3, read},
+  priority   = {prio3},
+  readstatus = {read},
+}
+
+@InProceedings{Lewis2018,
+  author     = {Adam Lewis and Jennifer Lacey and Susanne Mecklenburg and Jonathon Ross and Andreia Siqueira and Brian Killough and Zoltan Szantoi and Takeo Tadono and Ake Rosenavist and Philippe Goryl and Nuno Miranda and Steven Hosford},
+  booktitle  = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title      = {{CEOS} Analysis Ready Data for Land ({CARD}4L) Overview},
+  year       = {2018},
+  month      = {jul},
+  publisher  = {{IEEE}},
+  abstract   = {For many land monitoring applications using remote sensing, lack of data is no longer an issue, as it may have been in the past. Programs, such as Copernicus by the European Commission and the Landsat Missions by the United States Geological Survey, have adopted systematic acquisition strategies, and distribute vast amounts of satellite data under open licenses. In parallel, storage and computing capability have evolved to make it cost-effective and practical to process and analyze these data at various scales. Data architecture solutions, such as the Open Data Cube (ODC) and the Copernicus Data and Information Access Services (DIAS), are providing frameworks that make [scientific] analysis much simpler and straightforward. 
+However, enabling non-expert users without the expertise and/or computation resources to re-process and store lowlevel data products in order to exploit these capabilities, has proven more challenging.
+The Committee on Earth Observation Satellites (CEOS1) is working to address this challenge through the CEOS Analysis Ready Data for Land (CARD4L) initiative [1]. CARD4L is foreseen to enable users to access satellite data products that are ‘ready to use’ for a wide range of land applications. Moreover, CARD4L aims to enable non-expert users access to products that have been processed ‘far enough’ to be suitable for immediate analysis for a range of applications, while ensuring they are not too specific to only be used for particular topics or areas. 
+CARD4L will be an important enabler of the Open Data Cube (ODC) initiative [2]. Through CARD4L, users will be able to easily locate products that are suitable for ingestion
+into Data Cubes [3], and will have confidence that these different CARD4L products will limit as far as possible barriers to interoperability.},
+  doi        = {10.1109/igarss.2018.8519255},
+  file       = {:/home/marco/STUDIUM/MA/Research/ARD/Lewis2018 - CEOS Analysis Ready Data for Land (CARD4L) Overview.pdf:PDF},
+  groups     = {ARD, MA - Intro, MA - Methodology},
+  keywords   = {prio2, read},
+  priority   = {prio2},
+  readstatus = {read},
+}
+
+@InProceedings{Killough2018,
+  author     = {Brian Killough},
+  booktitle  = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title      = {Overview of the Open Data Cube Initiative},
+  year       = {2018},
+  month      = {jul},
+  publisher  = {{IEEE}},
+  abstract   = {The Open Data Cube (ODC) initiative seeks to increase the value and impact of global Earth observation satellite data by providing an open and freely accessible data exploitation architecture and to foster a community to develop, sustain, and grow the technology and the breadth and depth of its applications for societal benefit. Successful ODC implementations exist in Australia, Colombia, Switzerland and Taiwan and are under development or consideration in another 39 countries. Since its inception in early 2017, the ODC has made significant progress in the advancement of open source software tools and algorithms that support the deployment and operation of data cubes on local or cloud computing systems around the world. With the increased interest in data cubes, the ODC is poised to become a world leader in open source data cube technologies to enhance the value of satellite data for all users.},
+  doi        = {10.1109/igarss.2018.8517694},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Killough2018 - Overview of the Open Data Cube Initiative.pdf:PDF},
+  groups     = {MA - Intro, DataCubes - ODC General},
+  keywords   = {prio1, read},
+  priority   = {prio1},
+  readstatus = {read},
+}
+
+@InProceedings{Woodcock2018,
+  author     = {Robert Woodcock and Matt Paget and Peter Wang and Alex Held},
+  booktitle  = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title      = {Accelerating Industry Innovation Using the Open Data Cube in Australia},
+  year       = {2018},
+  month      = {jul},
+  publisher  = {{IEEE}},
+  abstract   = {The recent step change in the velocity and volume of Earth Observation data acquisition is both an opportunity and a threat. Richer more timely data supports the development of new EO derived products and opportunities for economic and environmental benefit. Ironically, this change also threatens the innovation pipeline and the ability for organizations to exploit the outcomes as they are swamped with data management and computation challenges. The CSIRO is using the Open Data Cube in combination with a new business engagement model via its Earth Analytics Industry Innovation Hub to address these challenges and accelerate the uptake of Earth analytics innovation in Australia.},
+  doi        = {10.1109/igarss.2018.8519170},
+  file       = {:/home/marco/STUDIUM/MA/Research/Other/Woodcock2018 - Accelerating Industry Innovation Using the Open Data Cube in Australia.pdf:PDF},
+  groups     = {MA - Intro, DataCubes - ODC General},
+  keywords   = {prio2, read},
+  priority   = {prio2},
+  readstatus = {read},
+}
+
+@InProceedings{Roberts2018,
+  author    = {Dale Roberts and Bex Dunn and Norman Mueller},
+  booktitle = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title     = {Open Data Cube Products Using High-Dimensional Statistics of Time Series},
+  year      = {2018},
+  month     = {jul},
+  publisher = {{IEEE}},
+  doi       = {10.1109/igarss.2018.8518312},
+  file      = {:/home/marco/STUDIUM/MA/Research/TimeSeries/Roberts2018 - Open Data Cube Products Using High Dimensional Statistics of Time Series.pdf:PDF},
+  groups    = {Analysis - Time Series},
+  keywords  = {prio2},
+  priority  = {prio2},
+}
+
+@InProceedings{Pachon2018,
+  author    = {Indira Pachon and Salomon Ramirez and Diana Fonseca and Pilar Lozano-Rivera and Christian Ariza and Maria Paula Mancipe and Mario Villamizar and Harold Castro and Edersson Cabrera and Maria Teresa Becerra},
+  booktitle = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title     = {Random Forest Data Cube Based Algorithm for Land Cover Classification: A Colombian Case},
+  year      = {2018},
+  month     = {jul},
+  publisher = {{IEEE}},
+  doi       = {10.1109/igarss.2018.8518480},
+  file      = {:/home/marco/STUDIUM/MA/Research/Other/Pachon2018 - Random Forest Data Cube Based Algorithm for Land Cover Classification_ a Colombian Case.pdf:PDF},
+  groups    = {Analysis - Other},
+  keywords  = {prio3},
+  priority  = {prio3},
+}
+
+@InProceedings{Giuliani2018,
+  author    = {Gregory Giuliani and Bruno Chatenoux and Erica Honeck and Jean-Philippe Richard},
+  booktitle = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title     = {Towards Sentinel-2 Analysis Ready Data: a Swiss Data Cube Perspective},
+  year      = {2018},
+  month     = {jul},
+  publisher = {{IEEE}},
+  doi       = {10.1109/igarss.2018.8517954},
+  file      = {:/home/marco/STUDIUM/MA/Research/ARD/Giuliani2018 - Towards Sentinel 2 Analysis Ready Data_ a Swiss Data Cube Perspective.pdf:PDF},
+  groups    = {ARD},
+  keywords  = {prio2},
+  priority  = {prio2},
+}
+
+@InProceedings{Baumann2018a,
+  author     = {Peter Baumann},
+  booktitle  = {{IGARSS} 2018 - 2018 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title      = {Datacube Standards and their Contribution to Analysis-Ready Data},
+  year       = {2018},
+  month      = {jul},
+  publisher  = {{IEEE}},
+  abstract   = {Flexible, scalable services on massive geo data receive much attention today. OGC has taken a lead in defining interoperable spatio-temporal datacubes (the coverage paradigm) together with flexible scalable Web services (the Web Coverage Service / WCS standards suite). This OGC Big Geo Data standard has attracted all major implementers of both open-source and proprietary servers and clients. We present status, uptake, and recent progress of the coverage datacube standards in OGC, ISO, and INSPIRE.},
+  comment    = {- Gefühlt jedes Paper von Baumann:
+	- Aus Clipart zusammengewürfelte Abbildungen
+	- Werbeplattform für rasdaman und sich selbst
+- Inhaltlich sehr mager (Ich weiß: kein Paper, sondern Konferenz-Beitrag. Aber trotzdem...)
+- Ansonsten wird halt einfach WCS kurz vorgestellt},
+  doi        = {10.1109/igarss.2018.8518994},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Baumann2018a - Datacube Standards and Their Contribution to Analysis Ready Data.pdf:PDF},
+  groups     = {DataCubes - Other General},
+  keywords   = {prio3, read},
+  priority   = {prio3},
+  readstatus = {read},
+}
+
+@Article{Giuliani2019,
+  author     = {Gregory Giuliani and Joan Mas{\'{o}} and Paolo Mazzetti and Stefano Nativi and Alaitz Zabala},
+  journal    = {Data},
+  title      = {Paving the Way to Increased Interoperability of Earth Observations Data Cubes},
+  year       = {2019},
+  month      = {jul},
+  number     = {3},
+  pages      = {113},
+  volume     = {4},
+  abstract   = {Earth observations data cubes (EODCs) are a paradigm transforming the way users interact with large spatio-temporal Earth observation (EO) data. It enhances connections between data, applications and users facilitating management, access and use of analysis ready data (ARD). The ambition is allowing users to harness big EO data at a minimum cost and effort. This significant interest is illustrated by various implementations that exist. The novelty of the approach results in different innovative solutions and the lack of commonly agreed definition of EODC. Consequently, their interoperability has been recognized as a major challenge for the global change and Earth system science domains. The objective of this paper is preventing EODC from becoming silos of information; to present how interoperability can be enabled using widely-adopted geospatial standards; and to contribute to the debate of enhanced interoperability of EODC. We demonstrate how standards can be used, profiled and enriched to pave the way to increased interoperability of EODC and can help delivering and leveraging the power of EO data building, efficient discovery, access and processing services.},
+  comment    = {- Einige Probleme von EODCs, die in Zukunft gelöst werden sollten, werden beschrieben (Interoperability auf verschiedenen Leveln)
+- Differenzierung zwischen Data Cubes und Cloud-basierten Lösungen (z.B. GEE)
+- Definition von EODCs wird behandelt
+	- 'Datacube Manifesto' und 'The six faces of a datacube' werden zitiert aber es wird nicht unbedingt gesagt, dass das jetzt die beste Definition von EODCs ist
+- Insgesamt wahrscheinlich wichtig für die Diskussion und das ein oder andere auch für's Intro!},
+  doi        = {10.3390/data4030113},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Giuliani2019 - Paving the Way to Increased Interoperability of Earth Observations Data Cubes.pdf:PDF},
+  groups     = {MA - Intro, MA - Discussion, DataCubes - Impact / Use / Definitions},
+  keywords   = {prio1, read},
+  priority   = {prio1},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {read},
+}
+
+@Article{Giuliani2019a,
+  author     = {Gregory Giuliani and Gilberto Camara and Brian Killough and Stuart Minchin},
+  journal    = {Data},
+  title      = {Earth Observation Open Science: Enhancing Reproducible Science Using Data Cubes},
+  year       = {2019},
+  month      = {nov},
+  number     = {4},
+  pages      = {147},
+  volume     = {4},
+  abstract   = {Earth Observation Data Cubes (EODC) have emerged as a promising solution to efficiently and effectively handle Big Earth Observation (EO) Data generated by satellites and made freely and openly available from different data repositories. The aim of this Special Issue, “Earth Observation Data Cube”, in Data, is to present the latest advances in EODC development and implementation, including innovative approaches for the exploitation of satellite EO data using multi-dimensional (e.g., spatial, temporal, spectral) approaches. This Special Issue contains 14 articles covering a wide range of topics such as Synthetic Aperture Radar (SAR), Analysis Ready Data (ARD), interoperability, thematic applications (e.g., land cover, snow cover mapping), capacity development, semantics, processing techniques, as well as national implementations and best practices. These papers made significant contributions to the advancement of a more Open and Reproducible Earth Observation Science, reducing the gap between users’ expectations for decision-ready products and current Big Data analytical capabilities, and ultimately unlocking the information power of EO data by transforming them into actionable knowledge.},
+  comment    = {- Intro-Paper zum MDPI-Data-Special zum Thema EODCs
+- Entsprechend wenig nützlicher Inhalt, aber zu Beginn paar Sätze die nützlich für mein Intro sein könnten},
+  doi        = {10.3390/data4040147},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Giuliani2019a - Earth Observation Open Science_ Enhancing Reproducible Science Using Data Cubes.pdf:PDF},
+  groups     = {MA - Intro, DataCubes - Impact / Use / Definitions},
+  keywords   = {prio3, read},
+  priority   = {prio3},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {read},
+}
+
+@Article{Ticehurst2019,
+  author    = {Catherine Ticehurst and Zheng-Shu Zhou and Eric Lehmann and Fang Yuan and Medhavy Thankappan and Ake Rosenqvist and Ben Lewis and Matt Paget},
+  journal   = {Data},
+  title     = {Building a {SAR}-Enabled Data Cube Capability in Australia Using {SAR} Analysis Ready Data},
+  year      = {2019},
+  month     = {jul},
+  number    = {3},
+  pages     = {100},
+  volume    = {4},
+  doi       = {10.3390/data4030100},
+  file      = {:/home/marco/STUDIUM/MA/Research/DataCube/Ticehurst2019 - Building a SAR Enabled Data Cube Capability in Australia Using SAR Analysis Ready Data.pdf:PDF},
+  groups    = {ARD},
+  keywords  = {prio1},
+  priority  = {prio1},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Claverie2018,
+  author    = {Martin Claverie and Junchang Ju and Jeffrey G. Masek and Jennifer L. Dungan and Eric F. Vermote and Jean-Claude Roger and Sergii V. Skakun and Christopher Justice},
+  journal   = {Remote Sensing of Environment},
+  title     = {The Harmonized Landsat and Sentinel-2 surface reflectance data set},
+  year      = {2018},
+  month     = {dec},
+  pages     = {145--161},
+  volume    = {219},
+  doi       = {10.1016/j.rse.2018.09.002},
+  file      = {:/home/marco/STUDIUM/MA/Research/ARD/Claverie2018 - The Harmonized Landsat and Sentinel 2 Surface Reflectance Data Set.pdf:PDF},
+  groups    = {ARD},
+  keywords  = {prio3},
+  priority  = {prio3},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Asmaryan2019,
+  author     = {Shushanik Asmaryan and Vahagn Muradyan and Garegin Tepanosyan and Azatuhi Hovsepyan and Armen Saghatelyan and Hrachya Astsatryan and Hayk Grigoryan and Rita Abrahamyan and Yaniss Guigoz and Gregory Giuliani},
+  journal    = {Data},
+  title      = {Paving the Way towards an Armenian Data Cube},
+  year       = {2019},
+  month      = {aug},
+  number     = {3},
+  pages      = {117},
+  volume     = {4},
+  abstract   = {Environmental issues become an increasing global concern because of the continuous pressure on natural resources. Earth observations (EO), which include both satellite/UAV and in-situ data, can provide robust monitoring for various environmental concerns. The realization of the full information potential of EO data requires innovative tools to minimize the time and scientific knowledge needed to access, prepare and analyze a large volume of data. EO Data Cube (DC) is a new paradigm aiming to realize it. The article presents the Swiss-Armenian joint initiative on the deployment of an Armenian DC, which is anchored on the best practices of the Swiss model. The Armenian DC is a complete and up-to-date archive of EO data (e.g., Landsat 5, 7, 8, Sentinel-2) by benefiting from Switzerland’s expertise in implementing the Swiss DC. The use-case of confirm delineation of Lake Sevan using McFeeters band ratio algorithm is discussed. The validation shows that the results are sufficiently reliable. The transfer of the necessary knowledge from Switzerland to Armenia for developing and implementing the first version of an Armenian DC should be considered as a first step of a permanent collaboration for paving the way towards continuous remote environmental monitoring in Armenia.},
+  comment    = {- Armenian DC basiert auf dem Swiss DC, also technisch nichts Neues
+- Generell schlechtes Paper
+- Nur relevant für den Fall, dass ich beispielhaft Länder im Intro aufzähle die bereits eine ODC Instanz nutzen},
+  doi        = {10.3390/data4030117},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Asmaryan2019 - Paving the Way Towards an Armenian Data Cube.pdf:PDF},
+  groups     = {MA - Intro, DataCubes - ODC General},
+  keywords   = {prio3, skimmed},
+  priority   = {prio3},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {skimmed},
+}
+
+@Article{Gebbert2019,
+  author    = {Sören Gebbert and Thomas Leppelt and Edzer Pebesma},
+  journal   = {Data},
+  title     = {A Topology Based Spatio-Temporal Map Algebra for Big Data Analysis},
+  year      = {2019},
+  month     = {jun},
+  number    = {2},
+  pages     = {86},
+  volume    = {4},
+  doi       = {10.3390/data4020086},
+  file      = {:/home/marco/STUDIUM/MA/Research/Other/Gebbert2019 - A Topology Based Spatio Temporal Map Algebra for Big Data Analysis.pdf:PDF},
+  groups    = {Analysis - Other},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Augustin2019,
+  author    = {Hannah Augustin and Martin Sudmanns and Dirk Tiede and Stefan Lang and Andrea Baraldi},
+  journal   = {Data},
+  title     = {Semantic Earth Observation Data Cubes},
+  year      = {2019},
+  month     = {jul},
+  number    = {3},
+  pages     = {102},
+  volume    = {4},
+  doi       = {10.3390/data4030102},
+  file      = {:/home/marco/STUDIUM/MA/Research/DataCube/Augustin2019 - Semantic Earth Observation Data Cubes.pdf:PDF},
+  groups    = {DataCubes - Other General},
+  keywords  = {prio2},
+  priority  = {prio2},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Maso2019,
+  author     = {Joan Maso and Alaitz Zabala and Ivette Serral and Xavier Pons},
+  journal    = {Data},
+  title      = {A Portal Offering Standard Visualization and Analysis on top of an Open Data Cube for Sub-National Regions: The Catalan Data Cube Example},
+  year       = {2019},
+  month      = {jul},
+  number     = {3},
+  pages      = {96},
+  volume     = {4},
+  abstract   = {The amount of data that Sentinel fleet is generating over a territory such as Catalonia makes it virtually impossible to manually download and organize as files. The Open Data Cube (ODC) offers a solution for storing big data products in an efficient way with a modest hardware and avoiding cloud expenses. The approach will still be useful up to the next decade. Yet, ODC requires a level of expertise that most people who could benefit from the information do not have. This paper presents a web map browser that gives access to the data and goes beyond a simple visualization by combining the OGC WMS standard with modern web browser capabilities to incorporate time series analytics. This paper shows how we have applied this tool to analyze the spatial distribution of the availability of Sentinel 2 data over Catalonia and revealing differences in the number of useful scenes depending on the geographical area that ranges from one or two images per month to more than one image per week. The paper also demonstrates the usefulness of the same approach in giving access to remote sensing information to a set of protected areas around Europe participating in the H2020 ECOPotential project.},
+  comment    = {- ODC wird nicht als ultimatives tool in EO, sondern auch kritisch betrachtet (was gut ist!) 
+	- e.g. 'Unfortunately, the technical level of expertise for applications similar to the ones mentioned before relegates the use of the ODC to a subset of RS experts skilled in Python programming.'
+- Eine Lösung wird beschrieben, wie der Zugriff auf die EO Daten und mögliche Analyse-Methoden auch für User nutzbar gemacht werden kann, die z.B. keine Programmierkenntnisse in Python besitzen! 
+- Passt super in DIskussion und was mit dem Thüringer Data Cube noch gemacht werden könnte
+	- Erst technische Umsetzung und die Möglichkeit über JupyterLab mit den Daten zu arbeiten (intern bei uns / Studenten zum lernen)
+	- Danach ggf. Weboberflächen und so ein Kram für Behördenmenschen und zB die Möglichkeit in QGIS auf die Daten zuzugreifen},
+  doi        = {10.3390/data4030096},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Maso2019 - A Portal Offering Standard Visualization and Analysis on Top of an Open Data Cube for Sub National Regions_ the Catalan Data Cube Example.pdf:PDF},
+  groups     = {MA - Discussion, DataCubes - ODC General},
+  keywords   = {prio2, read},
+  priority   = {prio2},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {read},
+}
+
+@Article{Kopp2019,
+  author     = {Steve Kopp and Peter Becker and Abhijit Doshi and Dawn J. Wright and Kaixi Zhang and Hong Xu},
+  journal    = {Data},
+  title      = {Achieving the Full Vision of Earth Observation Data Cubes},
+  year       = {2019},
+  month      = {jul},
+  number     = {3},
+  pages      = {94},
+  volume     = {4},
+  abstract   = {Earth observation imagery have traditionally been expensive, difficult to find and access, and required specialized skills and software to transform imagery into actionable information. This has limited adoption by the broader science community. Changes in cost of imagery and changes in computing technology over the last decade have enabled a new approach for how to organize, analyze, and share Earth observation imagery, broadly referred to as a data cube. The vision and promise of image data cubes is to lower these hurdles and expand the user community by making analysis ready data readily accessible and providing modern approaches to more easily analyze and visualize the data, empowering a larger community of users to improve their knowledge of place and make better informed decisions. Image data cubes are large collections of temporal, multivariate datasets typically consisting of analysis ready multispectral Earth observation data. Several flavors and variations of data cubes have emerged. To simplify access for end users we developed a flexible approach supporting multiple data cube styles, referencing images in their existing structure and storage location, enabling fast access, visualization, and analysis from a wide variety of web and desktop applications. We provide here an overview of that approach and three case studies.},
+  comment    = {- Vor allem im Kapitel 2 werden ein paar wichtige Aspekte beschrieben (z.B. 'Optimizing Data Storage'), die sehr relevant sind!
+- Danach ist es aber hauptsächlich auf ArcGIS bezogen und nicht mehr wirklich hilfreich},
+  doi        = {10.3390/data4030094},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Kopp2019 - Achieving the Full Vision of Earth Observation Data Cubes.pdf:PDF},
+  groups     = {MA - Methodology, MA - Discussion, DataCubes - Other General, ARD},
+  keywords   = {prio2, read},
+  priority   = {prio2},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {read},
+}
+
+@Article{Appel2019,
+  author    = {Marius Appel and Edzer Pebesma},
+  journal   = {Data},
+  title     = {On-Demand Processing of Data Cubes from Satellite Image Collections with the gdalcubes Library},
+  year      = {2019},
+  month     = {jun},
+  number    = {3},
+  pages     = {92},
+  volume    = {4},
+  doi       = {10.3390/data4030092},
+  file      = {:/home/marco/STUDIUM/MA/Research/DataCube/Appel2019 - On Demand Processing of Data Cubes from Satellite Image Collections with the Gdalcubes Library.pdf:PDF},
+  groups    = {DataCubes - Other General},
+  keywords  = {prio3},
+  priority  = {prio3},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Dhu2019,
+  author     = {Trevor Dhu and Gregory Giuliani and Jimena Ju{\'{a}}rez and Argyro Kavvada and Brian Killough and Paloma Merodio and Stuart Minchin and Steven Ramage},
+  journal    = {Data},
+  title      = {National Open Data Cubes and Their Contribution to Country-Level Development Policies and Practices},
+  year       = {2019},
+  month      = {nov},
+  number     = {4},
+  pages      = {144},
+  volume     = {4},
+  abstract   = {The emerging global trend of satellite operators producing analysis-ready data combined with open source tools for managing and exploiting these data are leading to more and more countries using Earth observation data to drive progress against key national and international development agendas. This paper provides examples from Australia, Mexico, Switzerland, and Tanzania on how the Open Data Cube technology has been combined with analysis-ready data to provide new insights and support better policy making across issues as diverse as water resource management through to urbanization and environmental–economic accounting.},
+  comment    = {- An der **Introduction** kann ich mich ganz gut orientieren
+	- Hat ähnliche Struktur, wie ich sie mir auch überlegt habe (Problem Big EO Data... Some solutions to harness the potential already exist... ODC is awesome...)
+- Gute Zusammenfassung mehrerer Anwendungsbeispiele, wie ODC Instanzen regional genutzt werden und welcher Mehrwert daraus gezogen wird 
+	- Australia: Managing Water in the Murray-Darling Basin
+	- Switzerland: Snow Cover Monitoring
+	- Mexico: Testing the UN System for Economic-Environmental Accounting
+	- Tanzania: Managing Urbanization
+- **Conclusion**!! Unterstützt im Prinzip die Idee meines Projekts},
+  doi        = {10.3390/data4040144},
+  file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Dhu2019 - National Open Data Cubes and Their Contribution to Country Level Development Policies and Practices.pdf:PDF},
+  groups     = {MA - Discussion, MA - Intro, DataCubes - ODC General},
+  keywords   = {prio1, read},
+  priority   = {prio1},
+  publisher  = {{MDPI} {AG}},
+  readstatus = {read},
+}
+
+@TechReport{Durbin2020,
+  author      = {Chris Durbin and Patrick Quinn and Dana Shum},
+  institution = {NASA EOSDIS},
+  title       = {Task 51-Cloud-Optimized Format Study},
+  year        = {2020},
+  address     = {https://ntrs.nasa.gov/citations/20200001178},
+  month       = jan,
+  number      = {20200001178},
+  type        = {techreport},
+  file        = {:/home/marco/STUDIUM/MA/Research/ARD/Durbin2020 - Task 51 Cloud Optimized Format Study.pdf:PDF},
+  groups      = {ARD},
+  keywords    = {prio2, read},
+  priority    = {prio2},
+  readstatus  = {read},
+  url         = {https://ntrs.nasa.gov/citations/20200001178},
+}
+
+@Article{Giuliani2020,
+  author      = {Gregory Giuliani and Elvire Egger and Julie Italiano and Charlotte Poussin and Jean-Philippe Richard and Bruno Chatenoux},
+  title       = {Essential Variables for Environmental Monitoring: What Are the Possible Contributions of Earth Observation Data Cubes?},
+  year        = {2020},
+  volume      = {5},
+  doi         = {10.3390/data5040100},
+  groups      = {DataCubes - Impact / Use / Definitions},
+  incitefulid = {263541638},
+  issue       = {4},
+  keywords    = {prio2},
+  magid       = {3094204188},
+  priority    = {prio2},
+}
+
+@Article{Misev2019,
+  author      = {Dimitar Misev and Peter Baumann and Dimitris Bellos and Stefan Wiehle},
+  title       = {BigDataCube: A Scalable, Federated Service Platform for Copernicus},
+  year        = {2019},
+  doi         = {10.1109/bigdata47090.2019.9006222},
+  groups      = {DataCubes - Other General},
+  incitefulid = {57292206},
+  keywords    = {prio2},
+  magid       = {3008412778},
+  priority    = {prio2},
+}
+
+@Article{Mahecha2020,
+  author      = {Miguel D. Mahecha and Fabian Gans and Gunnar Brandt and Rune Christiansen and Sarah E. Cornell and Normann Fomferra and Guido Kraemer and Jonas Peters and Paul Bodesheim and Gustau Camps-Valls and Jonathan F. Donges and Wouter Dorigo and Lina M. Estupiñán-Suárez and Victor H. Gutierrez-Velez and Martin Gutwin and Martin Jung and Maria C. Londoño and Diego G. Miralles and Phillip Papastefanou and Markus Reichstein},
+  journal     = {Earth System Dynamics Discussions},
+  title       = {Earth system data cubes unravel global multivariate dynamics},
+  year        = {2020},
+  volume      = {11},
+  doi         = {10.5194/esd-11-201-2020},
+  groups      = {DataCubes - Other General},
+  incitefulid = {100613904},
+  issue       = {1},
+  keywords    = {prio2},
+  magid       = {2982196210},
+  priority    = {prio2},
+}
+
+@Article{Killough2019,
+  author      = {Brian Killough},
+  title       = {The Impact of Analysis Ready Data in the Africa Regional Data Cube},
+  year        = {2019},
+  abstract    = {Users of satellite Earth observation data typically invest a large amount of effort into data preparation which is a major barrier for many global users and limits the impact and utilization of this data around the world. The Committee on Earth Observation Satellites (CEOS) has initiated an effort to define and promote the production and use of Analysis Ready Data (ARD) to lower the burden on global users and increase the use and impact of its data. Through the Open Data Cube (ODC) initiative and its demonstration in Africa, ARD is making an impact on this developing region of the world. This paper discusses how this data and the associated ODC tools are being used to address water extent, land change and urbanization, which are key application areas aligned with the United Nations Sustainable Development Goals (SDG). Through the ODC, the impact of ARD is growing rapidly around the world and our ability to address local and national decision-making needs will continue to improve.},
+  comment     = {-},
+  doi         = {10.1109/igarss.2019.8898321},
+  file        = {:/home/marco/STUDIUM/MA/Research/DataCube/Killough2019 - The Impact of Analysis Ready Data in the Africa Regional Data Cube.pdf:PDF},
+  groups      = {MA - Intro, MA - Discussion, DataCubes - ODC General},
+  incitefulid = {96962756},
+  keywords    = {read, prio2},
+  magid       = {2983099966},
+  priority    = {prio2},
+  readstatus  = {read},
+}
+
+@Article{Lewis2016,
+  author      = {Adam Lewis and Leo Lymburner and Matthew B. J. Purss and Brendan P. Brooke and Benjamin J. K. Evans and Alex Ip and Arnold G. Dekker and James R. Irons and Stuart Minchin and Norman Mueller and Simon Oliver and Dale Roberts and Barbara Ryan and Medhavy Thankappan and Robert Woodcock and Lesley Wyborn},
+  journal     = {International Journal of Digital Earth},
+  title       = {Rapid, high-resolution detection of environmental change over continental scales from satellite data – the Earth Observation Data Cube},
+  year        = {2016},
+  volume      = {9},
+  abstract    = {The effort and cost required to convert satellite Earth Observation (EO)data  into  meaningful  geophysical  variables  has  prevented  thesystematic analysis of all available observations. To overcome theseproblems, we utilise an integrated High Performance Computing andData environment to rapidly process, restructure and analyse theAustralian Landsat data archive. In this approach, the EO data areassigned to a common grid framework that spans the full geospatialand temporal extent of the observations–the EO Data Cube. Thisapproach  is  pixel-based  and  incorporates  geometric  and  spectralcalibration and quality assurance of each Earth surface reflectancemeasurement. We demonstrate the utility of the approach with rapidtime-series mapping of surface water across the entire Australiancontinent using 27 years of continuous, 25 m resolution observations.Our preliminary analysis of the Landsat archive shows how the EOData Cube can effectively liberate high-resolution EO data from theircomplex sensor-specific data structures and revolutionise our ability tomeasure environmental change.},
+  comment     = {Lewis et al. (2017) !},
+  doi         = {10.1080/17538947.2015.1111952},
+  groups      = {DataCubes - ODC General},
+  incitefulid = {46919419},
+  issue       = {1},
+  keywords    = {prio3, skimmed},
+  magid       = {2236111634},
+  priority    = {prio3},
+  readstatus  = {skimmed},
+}
+
+@Article{Siqueira2019,
+  author      = {Andreia Siqueira and Takeo Tadono and Ake Rosenqvist and Jennifer Lacey and Adam Lewis and Medhavy Thankappan and Zoltan Szantoi and Philippe Goryl and Steven Labahn and Jonathon Ross and Steven Hosford and Susanne Mecklenburg},
+  title       = {CEOS Analysis Ready Data For Land – An Overview on the Current and Future Work},
+  year        = {2019},
+  abstract    = {Analysis Ready Data (ARD) products are enabling users to get first hand satellite data that are ‘ready to use’ for a wide range of applications, including time-series analysis and the way forward to multi-sensor interoperability. The Committee on Earth Observation Satellites (CEOS) is leading the CEOS Analysis Ready Data for Land (CARD4L) initiative. The rationale behind this initiative is to enable users to access products that have been already processed to a certain level. This will allow users to carry out immediate analysis on the data and to address a variety of applications without the extra time and cost that is associated with the data pre-processing steps. The aim of the proposed paper is to give an overview on the work already carried out by the CEOS community on the CARD4L framework, to introduce the processes and steps that Earth Observation (EO) data providers should undertake to have a CARD4L level product as well as the planned steps that CEOS LSIVC will be undertaking to accomplish the CARD4L initiative.},
+  comment     = {- Nur 2 Seiten und keine neuen/zusätzlichen Informationen im Vergleich zum anderen CARD4L Paper},
+  doi         = {10.1109/igarss.2019.8899846},
+  file        = {:/home/marco/STUDIUM/MA/Research/ARD/Siqueira2019 - CEOS Analysis Ready Data for Land – an Overview on the Current and Future Work.pdf:PDF},
+  groups      = {ARD},
+  incitefulid = {72989243},
+  keywords    = {prio3, read},
+  magid       = {2989251392},
+  priority    = {prio3},
+  readstatus  = {read},
+}
+
+@Article{Harinarayan1996,
+  author      = {Venky Harinarayan and Anand Rajaraman and Jeffrey D. Ullman},
+  title       = {Implementing data cubes efficiently},
+  year        = {1996},
+  volume      = {25},
+  doi         = {10.1145/233269.233333},
+  groups      = {DataCubes - Other General},
+  incitefulid = {54746546},
+  issue       = {2},
+  keywords    = {prio2},
+  magid       = {2143401113},
+  priority    = {prio2},
+}
+
+@Article{Giuliani2020a,
+  author      = {Gregory Giuliani and Pascal Peduzzi and Bruno Chatenoux and Jean-Philippe Richard and Charlotte Poussin and Michael E. Schaepman and David Small and Charlotte Steinmeier and Achilleas Psomas and Christian Ginzler},
+  title       = {The Swiss Data Cube: Earth Observations for monitoring Switzerland’s environment in space and time},
+  year        = {2020},
+  volume      = {509},
+  abstract    = {Pressures on natural resources are increasing and a number of challenges need to be overcome to meet the needs of a growing population in a period of environmental variability. The key to sustainable development is achieving a balance between the exploitation of natural resources for socioeconomic   development   and maintaining   ecosystem   services   that   are critical to  human’s  wellbeing  and  livelihoods.  Some  of  these  environmental  issues  can  be monitored using remotely sensed Earth Observations (EO) data that are increasingly available from  freely  and  openly  accessible  repositories. Hereafter,  we present  the  Swiss Data  Cube,  a unique  Analysis  Ready  Data  archive  of  satellite  imagery  and  some  use  cases  to  monitor Sustainable Development Goals.},
+  comment     = {- Mini-Paper (< 1 Seite Text... lol?)
+- Nur kurze Zusammenfassung zu SDC und nichts Neues
+- Alles wichtige zum SDC im anderen Paper von 2017},
+  doi         = {10.1088/1755-1315/509/1/012021},
+  file        = {:/home/marco/STUDIUM/MA/Research/DataCube/Giuliani2020a - The Swiss Data Cube_ Earth Observations for Monitoring Switzerland’s Environment in Space and Time.pdf:PDF},
+  groups      = {DataCubes - ODC General},
+  incitefulid = {140129522},
+  keywords    = {prio3, read},
+  magid       = {3041898469},
+  priority    = {prio3},
+  readstatus  = {read},
+}
+
+@Article{Nativi2017,
+  author      = {Stefano Nativi and Paolo Mazzetti and Max Craglia},
+  title       = {A view-based model of data-cube to support big earth data systems interoperability},
+  year        = {2017},
+  volume      = {1},
+  abstract    = {Big  Earth  Data-Cube  infrastructures  are  becoming  more  and  more  popular  to  provide Analysis  Ready  Data,  especially  for  managing  satellite  time  series.  These  infrastructures build  on  the  concept  of  multidimensional  data  model  (data  hypercube)  and  are  complex  systems engaging different disciplines and expertise. For this reason, their interoperability capacity has become a challenge in the Global Change and Earth System science domains. To address this challenge, there is a pressing need in the community to reach a widely agreed definition  of  Data-Cube  infrastructures  and  their  key  features.  In  this  respect,  a  discussion  has  started  recently  about  the  definition  of  the  possible  facets  characterizing    Data-Cube  in  the  Earth  Observation  domain.  This  manuscript  contributes  to  such  debate  by  introducing  a  view-based  model  of  Earth  Data-Cube  systems  to  design its infrastructural architecture and content schemas, with the final  goal  of  enabling  and  facilitating  interoperability.  It  introduces  six modeling views, each of them is described according to: its main concerns,  principal  stakeholders,  and  possible  patterns  to  be  used.  The manuscript onsiders the Business Intelligence experience with Data Warehouse and multidimensional “cubes” along with the more recent and analogous development in the Earth Observation domain, and  puts  forward  a  set  of  interoperability  recommendations  based  on the modeling views.},
+  comment     = {- 2017 schon wieder etwas veraltet und andere Paper sind in dem Kontext etwas relevanter...
+- Trägt generell aber zur Diskussion bei, dass gewisse Dinge im Zusammenhang mit EO Data Cubes besser definiert werden sollten
+
+Key points:
+
+- Data-Cube systems must be separated into distinct sections, such that each section addresses a separate concern.
+- A concern is a set of requirements and constraints that affect the system design and represent a  stakeholder  needs.  By  applying  the  separation  of  concerns  pattern,  Data-Cubes  can  be  represented in a way that is manageable and comprehensible by a range of different business and technical stakeholders. The benefits are multiple including: maintainability, extensibility, interoperability.
+- Content views:
+	- Semantic
+	- Geometry
+	- Encoding
+- Cyber-infrastructure views:
+	- Interaction/Interface
+	- Interconnection/Platform
+	- Composition/Ecosystem},
+  doi         = {10.1080/20964471.2017.1404232},
+  groups      = {DataCubes - Impact / Use / Definitions},
+  incitefulid = {50366670},
+  keywords    = {prio2, skimmed},
+  magid       = {2771417949},
+  priority    = {prio2},
+  readstatus  = {skimmed},
+}
+
+@Article{Sudmanns2020,
+  author      = {Martin Sudmanns and Dirk Tiede and Stefan Lang and Helena Bergstedt and Georg Trost and Hannah Augustin and Andrea Baraldi and Thomas Blaschke},
+  journal     = {International Journal of Digital Earth},
+  title       = {Big Earth data: disruptive changes in Earth observation data management and analysis?},
+  year        = {2020},
+  volume      = {13},
+  abstract    = {Turning Earth observation (EO) data consistently and systematically into valuable global information layers is an ongoing challenge for the EO community. Recently, the term ‘big Earth data’ emerged to describe massive EO datasets that confronts analysts and their traditional workflows with a range of challenges. We argue that the altered circumstances must be actively intercepted by an evolution of EO to revolutionise their application in various domains. The disruptive element is that analysts and end-users increasingly rely on Web-based workflows. In this contribution we study selected systems and portals, put them in the context of challenges and opportunities and highlight selected shortcomings and possible future developments that we
+consider relevant for the imminent uptake of big Earth data.},
+  doi         = {10.1080/17538947.2019.1585976},
+  file        = {:/home/marco/STUDIUM/MA/Research/Other/Sudmanns2020 - Big Earth Data_ Disruptive Changes in Earth Observation Data Management and Analysis_.pdf:PDF},
+  groups      = {Other, MA - Intro, MA - Discussion},
+  incitefulid = {151457084},
+  issue       = {7},
+  keywords    = {prio1, read},
+  magid       = {2922388164},
+  priority    = {prio1},
+  readstatus  = {read},
+}
+
+@Article{Giuliani2020b,
+  author      = {Gregory Giuliani and Bruno Chatenoux and Thomas Piller and Frédéric Moser and Pierre Marcel Anselme Lacroix},
+  journal     = {International Journal of Applied Earth Observation and Geoinformation},
+  title       = {Data Cube on Demand (DCoD): Generating an earth observation Data Cube anywhere in the world},
+  year        = {2020},
+  volume      = {87},
+  abstract    = {To tackle Big Data challenges such as Volume, Variety, and Velocity, the Earth Observations Data Cube (EODC)concept has emerged as a solution for lowering barriers and offering new possibilities to harness the informationpower of satellite EO data. However, installing, configuring, and managing an EODC instance is still difficultrequiring specific knowledge and capabilities. Consequently, facilitating and automating the generation andprovision of EODC given specific user’s requirements can be beneficial.In response to this issue, this paper presents the Data Cube on Demand (DCoD) approach, a proof-of-conceptthat aims at facilitating the generation and use of an EODC instance virtually anywhere in the World. Users areonly required to specify an area of interest; select the types of sensors between Landsat 5-7-8 and Sentinel-2;choose a desired temporal frame; and provide their email address to receive notifications. Then automatically anempty ODC instance is instantiated and desired data are ingested.The proposed approach has been successfully tested in two sites in Bolivia and DRC in thefield of environ-mental monitoring. It has lowered many complexity barriers of such a new technology; greatly facilitated thegeneration and use of the Data Cube technology; enhanced data sovereignty; and ultimately can help reachinglarge adoption and acceptance.},
+  comment     = {- Intro nochmal anschauen, könnte hilfreich sein (allerdings wahrscheinlich auch nicht viel anders als in den anderen ODC Papern wo im Prinzip immer das selbe im Intro erzählt wird...)
+- Der komplette Prozess ARD Daten zu generieren und einen ODC aufzusetzen... 'is complex, requires several steps and necessitate particular skills'
+	- Das Paper wäre ein Beispiel (z.B. für die Diskussion?), dass daren gearbeitet wird diesen Prozess zu vereinfachen 
+- Technisch auch interessant und muss ich nochmal genauer anschauen!
+	- Docker Compose / multi-container docker application
+	- Kein Github repo?? :(},
+  doi         = {10.1016/j.jag.2019.102035},
+  file        = {:/home/marco/STUDIUM/MA/Research/DataCube/Giuliani2020b - Data Cube on Demand (DCoD)_ Generating an Earth Observation Data Cube Anywhere in the World.pdf:PDF},
+  groups      = {DataCubes - ODC General},
+  incitefulid = {181346687},
+  issue       = {102035},
+  keywords    = {prio2, skimmed},
+  magid       = {2995869204},
+  priority    = {prio2},
+  readstatus  = {skimmed},
+}
+
+@Article{Giuliani2020c,
+  author      = {Gregory Giuliani and Bruno Chatenoux and Antonio Benvenuti and Pierre Marcel Anselme Lacroix and Mattia Santoro and Paolo Mazzetti},
+  title       = {Monitoring land degradation at national level using satellite Earth Observation time-series data to support SDG15 – exploring the potential of data cube},
+  year        = {2020},
+  volume      = {4},
+  doi         = {10.1080/20964471.2020.1711633},
+  groups      = {DataCubes - Impact / Use / Definitions},
+  incitefulid = {344109},
+  issue       = {1},
+  keywords    = {prio1},
+  magid       = {2999971033},
+  priority    = {prio1},
+}
+
+@Article{Appel2018,
+  author      = {Marius Appel and Florian Lahn and Wouter Buytaert and Edzer Pebesma},
+  journal     = {Isprs Journal of Photogrammetry and Remote Sensing},
+  title       = {Open and scalable analytics of large Earth observation datasets: from scenes to multidimensional arrays using SciDB and GDAL},
+  year        = {2018},
+  volume      = {138},
+  doi         = {10.1016/j.isprsjprs.2018.01.014},
+  groups      = {DataCubes - Other General},
+  incitefulid = {74213988},
+  keywords    = {prio2},
+  magid       = {2792826355},
+  priority    = {prio2},
+}
+
+@Article{Peter2017,
+  author      = {Strobl Peter and Peter Baumann and Lewis Adam and Szantoi Zoltan and Killough Brian and Purss Matthew and Craglia Massimo and Nativi Stefano and Held Alex and Dhu Trevor},
+  title       = {The six faces of the data cube},
+  year        = {2017},
+  doi         = {10.2760/383579},
+  groups      = {DataCubes - Other General},
+  incitefulid = {156121694},
+  keywords    = {prio2},
+  magid       = {2891300828},
+  priority    = {prio2},
+}
+
+@Article{Ivanova2020,
+  author      = {Ivana Ivánová and Helena Mitasova and Maria Antonia Brovelli},
+  journal     = {ISPRS international journal of geo-information},
+  title       = {Open geospatial software and data : a review of the current state and a perspective into the future},
+  year        = {2020},
+  volume      = {9},
+  doi         = {10.3390/ijgi9020090},
+  groups      = {Other},
+  incitefulid = {109245531},
+  issue       = {2},
+  magid       = {3004273024},
+}
+
+@Article{Gray1996,
+  author      = {Jim Gray and A. Bosworth and A. Lyaman and Hamid Pirahesh},
+  title       = {Data cube: a relational aggregation operator generalizing GROUP-BY, CROSS-TAB, and SUB-TOTALS},
+  year        = {1996},
+  volume      = {1},
+  doi         = {10.1023/a:1009726021843},
+  groups      = {DataCubes - Other General},
+  incitefulid = {115772373},
+  issue       = {1},
+  keywords    = {prio2},
+  magid       = {2103201239},
+  priority    = {prio2},
+}
+
+@Article{Gomes2020,
+  author      = {Vitor Conrado Faria Gomes and Gilberto Ribeiro de Queiroz and Karine Reis Ferreira},
+  journal     = {Remote Sensing},
+  title       = {An Overview of Platforms for Big Earth Observation Data Management and Analysis},
+  year        = {2020},
+  volume      = {12},
+  doi         = {10.3390/rs12081253},
+  groups      = {DataCubes - ODC General},
+  incitefulid = {17071695},
+  issue       = {8},
+  keywords    = {prio1},
+  magid       = {3016495922},
+  priority    = {prio1},
+}
+
+@Article{Merticariu2019,
+  author      = {Vlad Merticariu and Peter Baumann},
+  title       = {rasdaman: Open Standards Based Scalable Datacube Analytics},
+  year        = {2019},
+  doi         = {10.1145/3356394.3365591},
+  groups      = {DataCubes - Other General},
+  incitefulid = {188255494},
+  keywords    = {prio3},
+  magid       = {2982951717},
+  priority    = {prio3},
+}
+
+@Article{Graefe1993,
+  author      = {Goetz Graefe},
+  journal     = {ACM Computing Surveys},
+  title       = {Query evaluation techniques for large databases},
+  year        = {1993},
+  volume      = {25},
+  doi         = {10.1145/152610.152611},
+  groups      = {Other},
+  incitefulid = {49778947},
+  issue       = {2},
+  magid       = {2158237121},
+}
+
+@InProceedings{Cheng2019,
+  author     = {Ming-Chih Cheng and Chi-Ryong Chiou and Bo Chen and Cynthia Liu and Hsi-Ching Lin and I-Liang Shih and Chih-Hsin Chung and Huan-Yu Lin and Chiao-Ying Chou},
+  booktitle  = {{IGARSS} 2019 - 2019 {IEEE} International Geoscience and Remote Sensing Symposium},
+  title      = {Open Data Cube ({ODC}) in Taiwan: The Initiative and Protocol Development},
+  year       = {2019},
+  month      = {jul},
+  publisher  = {{IEEE}},
+  abstract   = {The growing Earth Observation (EO) satellite data requires an open and freely accessible exploitation tool to facilitate the development and sustainability of applications on land use and land cover change, water resources, forest monitoring, and etc. Open Data Cube (ODC) was initiated by the Committee on Earth Observation Satellites (CEOS) to provide a solution with new computing technologies. ODC can promote free and open EO satellite data and application algorithms, and lower the technical barriers for users on exploiting the data. This project aims to develop the ODC protocol in Taiwan and apply it on a case study - forest monitoring after the attack of typhoon Morako in Taimali river basin, the eastern of Taiwan. Firstly, the strategic implementation, the platform, and the infrastructure of Taiwan Data Cube (TWDC) are initiated. And, the TWDC is applied on forest monitoring between 2000 and 2016 using Landsat-7 images. Finally, the improvement and perspective of TWDC protocol are discussed. In the future, (1) the Formosat series images will be prepared as Analysis Ready Data (ARD), (2) the software environment will be improved on data management and user interactive interface, and (3) the protocol of TWDC will be duplicated to developing countries on international cooperation projects under the collaboration with CEOS and the Commonwealth Scientific and Industrial Research Organisation (CSIRO).},
+  comment    = {- Inhaltlich nichts Neues... sowohl im Bezug auf technische Implementation, als auch im Bezug auf die Analyse (beides sowieso nicht im Detail erklärt)
+- Nur relevant für den Fall, dass ich beispielhaft Länder im Intro aufzähle die bereits eine ODC Instanz nutzen},
+  doi        = {10.1109/igarss.2019.8898576},
+  groups     = {MA - Intro, DataCubes - ODC General},
+  keywords   = {prio3, skimmed},
+  priority   = {prio3},
+  readstatus = {skimmed},
+}
+
+@Article{Boulton2018,
+  author     = {Geoffrey Boulton},
+  journal    = {Big Earth Data},
+  title      = {The challenges of a Big Data Earth},
+  year       = {2018},
+  month      = {jan},
+  number     = {1},
+  pages      = {1--7},
+  volume     = {2},
+  abstract   = {The potential of big data fused with the vision of a digital Earth offers powerful opportunities to deepen understanding of the whole Earth system and the management of a sustainable planet. It is important to stand back from often confusing detail to clarify what those opportunities are and how they might be seized. The essential scientific potential of data, big or small, is to reveal patterns, which have often been the fundamental first step in stimulating inquiry, leading to new questions, new perspectives and potentially to new answers. The digital revolution has created  a “digital microscope” that permits us to see patterns that have not been seen before, and when coupled with machine learning technologies to analyse them in creating statistical predictions of the behaviour of both human and non-human systems. These potentials converge with the imperative to represent an Earth system with interacting non-human and human components, as a vital contribution to the understanding and actions required  in  working  towards  planetary  sustainability. But a digital Earth is also capable of being represented mathematically as a digitally networked phenomenon, analogous to an analogue computer, and should be an important target for a Big Earth Data Journal. We should also return to Al Gore’s vision of an  accessible digital Earth with wide usability. Pre-determining the separate functions of parallel digital Earths risks losing one of the great potentials of big data and learning algorithms, the identification and analysis of unanticipated relationships and processes.},
+  comment    = {- Sehr generell zum Thema 'big Earth data' und den relevanten Herausforderungen
+- 'digital microscope' Analogie ist sehr interessant
+- Sonst aber eher weniger hilfreich für mich. Passt aber bestimmt irgendwo gut rein, wo 'big Earth data' angesprochen wird},
+  doi        = {10.1080/20964471.2017.1397411},
+  file       = {:/home/marco/STUDIUM/MA/Research/Other/Boulton2018 - The Challenges of a Big Data Earth.pdf:PDF},
+  groups     = {Other, MA - Intro, MA - Discussion},
+  keywords   = {prio2, read},
+  priority   = {prio2},
+  publisher  = {Informa {UK} Limited},
+  readstatus = {read},
+}
+
+@Article{Roberts2017,
+  author    = {Dale Roberts and Norman Mueller and Alexis Mcintyre},
+  journal   = {{IEEE} Transactions on Geoscience and Remote Sensing},
+  title     = {High-Dimensional Pixel Composites From Earth Observation Time Series},
+  year      = {2017},
+  month     = {nov},
+  number    = {11},
+  pages     = {6254--6264},
+  volume    = {55},
+  doi       = {10.1109/tgrs.2017.2723896},
+  groups    = {Analysis - Time Series},
+  keywords  = {prio2},
+  priority  = {prio2},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Giuliani2017a,
+  author    = {Gregory Giuliani and Hy Dao and Andrea De Bono and Bruno Chatenoux and Karin Allenbach and Pierric De Laborie and Denisa Rodila and Nikos Alexandris and Pascal Peduzzi},
+  journal   = {Remote Sensing of Environment},
+  title     = {Live Monitoring of Earth Surface ({LiMES}): A framework for monitoring environmental changes from Earth Observations},
+  year      = {2017},
+  month     = {dec},
+  pages     = {222--233},
+  volume    = {202},
+  abstract  = {Global environmental changes are mostly induced by human activities (e.g., food and energy production, urbanization, mining activities). To assess and understand these changes that are occurring all around the planet, regular and continuous monitoring is an essential condition. However, due to the potentially large area spread over numerous locations that need to be followed, this usually leads to a low frequency of monitoring of environmental changes of only a few selected sites at best. With the increasing number of freely and openly accessible big remotely-sensed Earth Observations (EO) Data repositories and the increasing capabilities of open and interoperable software solutions it is now possible to automate various EO data processing tasks to monitor environmental changes at large scale. This paper presents the Live Monitoring of Earth Surface (LiMES) framework that helps to automate image processing tasks in transforming raw data into information and knowledge through workflows using interoperable processing service chains for monitoring environmental changes. Both benefits and limitations are demonstrated and discussed through the implementation of a prototype to facilitate the update on the status of some of the 278 UNEP Environmental Hotspots. We believe that such a framework can help to reduce the gap between massive volumes of EO data and the users such as International Organizations (IO) in order to help them better fulfil their environmental monitoring mandates by bringing raw data to a level which can be used by non-remote sensing experts for basic impacts assessments.},
+  doi       = {10.1016/j.rse.2017.05.040},
+  file      = {:/home/marco/STUDIUM/MA/Research/ARD/Giuliani2017a - Live Monitoring of Earth Surface (LiMES)_ a Framework for Monitoring Environmental Changes from Earth Observations.pdf:PDF},
+  groups    = {ARD},
+  keywords  = {prio3},
+  priority  = {prio3},
+  publisher = {Elsevier {BV}},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Comment{jabref-meta: grouping:
+0 AllEntriesGroup:;
+1 StaticGroup:ARD\;0\;1\;0x0000ffff\;\;\;;
+1 StaticGroup:DataCubes - ODC General\;0\;1\;0x00ff00ff\;\;\;;
+1 StaticGroup:DataCubes - Other General\;0\;1\;0x008000ff\;\;\;;
+1 StaticGroup:DataCubes - Impact / Use / Definitions\;0\;1\;0x80801aff\;\;\;;
+1 StaticGroup:Analysis - Time Series\;0\;1\;0xcc9933ff\;\;\;;
+1 StaticGroup:Analysis - Other\;0\;1\;0xe6e64dff\;\;\;;
+1 StaticGroup:Other\;0\;1\;0xffffffff\;\;\;;
+1 StaticGroup:MA - Intro\;0\;1\;0x4d1a4dff\;\;\;;
+1 StaticGroup:MA - Methodology\;0\;0\;0x996699ff\;\;\;;
+1 StaticGroup:MA - Discussion\;0\;0\;0xe6b3e6ff\;\;\;;
+}
