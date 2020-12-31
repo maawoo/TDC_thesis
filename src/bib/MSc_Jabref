@@ -836,6 +836,20 @@ consider relevant for the imminent uptake of big Earth data.},
   publisher = {Elsevier {BV}},
 }
 
+@Article{Wulder2012,
+  author    = {Michael A. Wulder and Jeffrey G. Masek and Warren B. Cohen and Thomas R. Loveland and Curtis E. Woodcock},
+  journal   = {Remote Sensing of Environment},
+  title     = {Opening the archive: How free data has enabled the science and monitoring promise of Landsat},
+  year      = {2012},
+  month     = {jul},
+  pages     = {2--10},
+  volume    = {122},
+  abstract  = {Landsat occupies a unique position in the constellation of civilian earth observation satellites, with a long and rich scientific and applications heritage. With nearly 40 years of continuous observation – since launch of the first satellite in 1972 – the Landsat program has benefited from insightful technical specification, robust engineering, and the necessary infrastructure for data archive and dissemination. Chiefly, the spatial and spectral resolutions have proven of broad utility and have remained largely stable over the life of the program. The foresighted acquisition and maintenance of a global image archive has proven to be of unmatched value, providing a window into the past and fueling the monitoring and modeling of global land cover and ecological change. In this paper we discuss the evolution of the Landsat program as a global monitoring mission, highlighting in particular the recent change to an open (free) data policy. The new data policy is revolutionizing the use of Landsat data, spurring the creation of robust standard products and new science and applications approaches. Open data access also promotes increased international collaboration to meet the Earth observing needs of the 21st century.},
+  doi       = {10.1016/j.rse.2012.01.010},
+  groups    = {MA - Intro, Other},
+  publisher = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
 
 @Comment{jabref-meta: grouping:
@@ -847,7 +861,7 @@ consider relevant for the imminent uptake of big Earth data.},
 1 StaticGroup:Analysis - Time Series\;0\;1\;0xcc9933ff\;\;\;;
 1 StaticGroup:Analysis - Other\;0\;1\;0xe6e64dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffffffff\;\;\;;
-1 StaticGroup:MA - Intro\;0\;1\;0x4d1a4dff\;\;\;;
+1 StaticGroup:MA - Intro\;0\;0\;0x4d1a4dff\;\;\;;
 1 StaticGroup:MA - Methodology\;0\;0\;0x996699ff\;\;\;;
 1 StaticGroup:MA - Discussion\;0\;0\;0xe6b3e6ff\;\;\;;
 }
