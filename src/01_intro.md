@@ -9,7 +9,7 @@ The ever increasing availability of petabytes of EO and other geospatial data ha
 
 In the past few years, solutions have emerged that tackle this problem by using cloud infrastructure to provide data access and processing capabilities.
 Most notebaly: Google Earth Engine (GEE) [11], Data and Information Access Service (DIAS) [12], openEO [13] and Sentinel Hub [14].
-They 
+They ...
 
 EarthServer ?
 Earth on AWS ?
@@ -18,18 +18,18 @@ Pangeo ?
 
 ----
 
-[1] https://doi.org/10.1080/10095020.2017.1333230
-[2] https://doi.org/10.1175/BAMS-D-11-00254.1
-[3] https://doi.org/10.1016/j.apenergy.2011.03.001
-[4] https://eur-lex.europa.eu/eli/reg_del/2013/1159/oj
-[5] https://op.europa.eu/en/publication-detail/-/publication/693988e9-574c-11e9-a8ed-01aa75ed71a1/language-en
-[6] https://doi.org/10.1016/j.rse.2012.01.010
-[7] https://doi.org/10.1080/17538947.2016.1264490
-[8] 10.1080/20964471.2017.1397411
+[1] Anderson2017
+[2] Hollmann2013
+[3] Eckman2012
+[4] EuropeanCommission2013
+[5] PwC2019
+[6] Wulder2012
+[7] Guo2016
+[8] Boulton2018
 [9] Laney, D. (2001). 3D data management: Controlling data volume, velocity and variety. META group research note, 6(70), 1. 
     https://studylib.net/doc/8647594/3d-data-management--controlling-data-volume--velocity--an...
-[10] 10.3390/data4040147 (page 1)
-[11]
+[10] Giuliani2019a (page 1)
+[11] Gorelick2017
 [12]
 [13]
 [14]
