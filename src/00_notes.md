@@ -56,7 +56,20 @@
 # Background
 
 - Analysis Ready Data
+  - Definition(s)
+  - Level-2 data
+  - HLS ?
+  - CARD4L
+  - ...
 - Data Cubes in EO
+  - History
+  - Definition(s)
+  - Distinction from cloud stuff like GEE ?
+  - Development of ODC in particular
+    - Technical (not much, most in methods of course)
+    - National and regional implementations
+    - ODC Initiative / Open Earth Allience
+  - ...
 
 # Methods
 
