@@ -982,6 +982,84 @@ consider relevant for the imminent uptake of big Earth data.},
   readstatus = {skimmed},
 }
 
+@Article{Soille2018,
+  author       = {P. Soille and A. Burger and D. De Marchi and P. Kempeneers and D. Rodriguez and V. Syrris and V. Vasilev},
+  date         = {2018-04},
+  journaltitle = {Future Generation Computer Systems},
+  title        = {A versatile data-intensive computing platform for information retrieval from big geospatial data},
+  doi          = {10.1016/j.future.2017.11.007},
+  pages        = {30--40},
+  volume       = {81},
+  groups       = {Other - Platforms},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Pebesma2017,
+  author    = {Pebesma, Edzer and Wagner, Wolfgang and Schramm, Matthias and Von Beringe, Alexandra and Paulik, Christoph and Neteler, Markus and Reiche, Johannes and Verbesselt, Jan and Dries, Jeroen and Goor, Erwin and Mistelbauer, Thomas and Briese, Christian and Notarnicola, Claudia and Monsorno, Roberto and Marin, Carlo and Jacob, Alexander and Kempeneers, Pieter and Soille, Pierre},
+  date      = {2017},
+  title     = {OpenEO - a Common, Open Source Interface Between Earth Observation Data Infrastructures and Front-End Applications},
+  doi       = {10.5281/ZENODO.1065474},
+  language  = {en},
+  copyright = {Creative Commons Attribution Share Alike 4.0 International},
+  groups    = {Other - Platforms},
+  keywords  = {Earth observation, cloud computing, API},
+  publisher = {Zenodo},
+}
+
+@Article{Picoli2020,
+  author       = {M. C. A. Picoli and R. Simoes and M. Chaves and L. A. Santos and A. Sanchez and A. Soares and I. D. Sanches and K. R. Ferreira and G. R. Queiroz},
+  date         = {2020-08},
+  journaltitle = {{ISPRS} Annals of Photogrammetry, Remote Sensing and Spatial Information Sciences},
+  title        = {{CBERS} {DATA} {CUBE}: A {POWERFUL} {TECHNOLOGY} {FOR} {MAPPING} {AND} {MONITORING} {BRAZILIAN} {BIOMES}},
+  doi          = {10.5194/isprs-annals-v-3-2020-533-2020},
+  pages        = {533--539},
+  volume       = {V-3-2020},
+  file         = {:/home/marco/STUDIUM/MA/Research/DataCube/2e6888f8873d025233906ab87b0915870a26.pdf:PDF},
+  groups       = {DataCubes - ODC General},
+  publisher    = {Copernicus {GmbH}},
+}
+
+@InProceedings{Yao2018,
+  author    = {Xiaochuang Yao and Yingbo Liu and Qianqian Cao and Junjie Li and Ruihong Huang and Robert Woodcock and Matt Paget and Jian Wang and Guoqing Li},
+  booktitle = {2018 International Workshop on Big Geospatial Data and Data Science ({BGDDS})},
+  date      = {2018-09},
+  title     = {China Data Cube ({CDC}) for Big Earth Observation Data: Lessons Learned from the Design and Implementation},
+  doi       = {10.1109/bgdds.2018.8626825},
+  publisher = {{IEEE}},
+  file      = {:/home/marco/STUDIUM/MA/Research/DataCube/08626825.pdf:PDF},
+  groups    = {DataCubes - ODC General},
+}
+
+@InProceedings{ArizaPorras2017,
+  author    = {Ariza-Porras, Christian and Bravo, Germ{\'a}n and Villamizar, Mario and Moreno, Andr{\'e}s and Castro, Harold and Galindo, Gustavo and Cabera, Edersson and Valbuena, Saralux and Lozano, Pilar},
+  booktitle = {Advances in Computing},
+  date      = {2017},
+  title     = {CDCol: A Geoscience Data Cube that Meets Colombian Needs},
+  editor    = {Solano, Andr{\'e}s and Ordo{\~{n}}ez, Hugo},
+  isbn      = {978-3-319-66562-7},
+  location  = {Cham},
+  pages     = {87--99},
+  publisher = {Springer International Publishing},
+  abstract  = {Environmental analysts and researchers' time is an expensive and scarce resource that should be used efficiently. Creating analysis products from remote sensing images involves several steps that take time and can be either automatized or centralized. Among all these steps, product's lineage and reproducibility must be assured. We present CDCol, a geoscience data cube that addresses these concerns and fits the analysis needs of Colombian institutions, the forest and carbon monitoring system.},
+  file      = {:/home/marco/STUDIUM/MA/Research/DataCube/advances-in-computing-2017.pdf:PDF},
+  groups    = {DataCubes - ODC General},
+}
+
+@InProceedings{Bravo2017,
+  author    = {Bravo, Germ{\'a}n and Castro, Harold and Moreno, Andr{\'e}s and Ariza-Porras, Christian and Galindo, Gustavo and Cabrera, Edersson and Valbuena, Saralux and Lozano-Rivera, Pilar},
+  booktitle = {Advances in Computing},
+  date      = {2017},
+  title     = {Architecture for a Colombian Data Cube Using Satellite Imagery for Environmental Applications},
+  editor    = {Solano, Andr{\'e}s and Ordo{\~{n}}ez, Hugo},
+  isbn      = {978-3-319-66562-7},
+  location  = {Cham},
+  pages     = {227--241},
+  publisher = {Springer International Publishing},
+  abstract  = {SOLAP data cubes are a main tool to help on the processing of satellite imagery. This article presents the work developed for adapting an existing SOLAP Data Cube to the current Colombian Protocol for processing satellite images to analyze deforestation. We studied different technological alternatives to support such protocol and extend the capabilities of the Australian data cube to include the whole analysis process. In this way, it is possible for different institutions to produce and consume information to/from the data cube allowing the standardization of such information. In consequence, an institution can generate new results based on previous information generated for another institution, keeping the associated metadata along the whole process. This paper introduces the defined architecture, a first implementation and the first results obtained by IDEAM, the Colombian official institution responsible for the monitoring of deforestation in the country.},
+  file      = {:/home/marco/STUDIUM/MA/Research/DataCube/advances-in-computing-2017.pdf:PDF},
+  groups    = {DataCubes - ODC General},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
