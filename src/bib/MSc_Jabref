@@ -1060,6 +1060,28 @@ consider relevant for the imminent uptake of big Earth data.},
   groups    = {DataCubes - ODC General},
 }
 
+@Article{Qiu2018,
+  author       = {Shi Qiu and Yukun Lin and Rong Shang and Junxue Zhang and Lei Ma and Zhe Zhu},
+  date         = {2018-12},
+  journaltitle = {Remote Sensing},
+  title        = {Making Landsat Time Series Consistent: Evaluating and Improving Landsat Analysis Ready Data},
+  doi          = {10.3390/rs11010051},
+  number       = {1},
+  pages        = {51},
+  volume       = {11},
+  groups       = {ARD},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Article{Dwyer2018,
+  author    = {John Dwyer and David Roy and Brian Sauer and Calli Jenkerson and Hankui Zhang and Leo Lymburner},
+  date      = {2018-08},
+  title     = {Analysis Ready Data: Enabling Analysis of the Landsat Archive},
+  doi       = {10.20944/preprints201808.0029.v1},
+  groups    = {ARD},
+  publisher = {{MDPI} {AG}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
