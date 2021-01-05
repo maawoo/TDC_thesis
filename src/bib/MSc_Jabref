@@ -418,29 +418,29 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
 
 @Article{Dhu2019,
   author     = {Trevor Dhu and Gregory Giuliani and Jimena Ju{\'{a}}rez and Argyro Kavvada and Brian Killough and Paloma Merodio and Stuart Minchin and Steven Ramage},
-  journal    = {Data},
   title      = {National Open Data Cubes and Their Contribution to Country-Level Development Policies and Practices},
-  year       = {2019},
-  month      = {nov},
+  doi        = {10.3390/data4040144},
   number     = {4},
   pages      = {144},
   volume     = {4},
   abstract   = {The emerging global trend of satellite operators producing analysis-ready data combined with open source tools for managing and exploiting these data are leading to more and more countries using Earth observation data to drive progress against key national and international development agendas. This paper provides examples from Australia, Mexico, Switzerland, and Tanzania on how the Open Data Cube technology has been combined with analysis-ready data to provide new insights and support better policy making across issues as diverse as water resource management through to urbanization and environmental–economic accounting.},
   comment    = {- An der **Introduction** kann ich mich ganz gut orientieren
-	- Hat ähnliche Struktur, wie ich sie mir auch überlegt habe (Problem Big EO Data... Some solutions to harness the potential already exist... ODC is awesome...)
+	- Hat ähnliche Struktur, wie ich sie mir auch überlegt habe (Problem Big EO Data... Some solutions to harness the potential already exist... ODC...)
 - Gute Zusammenfassung mehrerer Anwendungsbeispiele, wie ODC Instanzen regional genutzt werden und welcher Mehrwert daraus gezogen wird 
 	- Australia: Managing Water in the Murray-Darling Basin
 	- Switzerland: Snow Cover Monitoring
 	- Mexico: Testing the UN System for Economic-Environmental Accounting
 	- Tanzania: Managing Urbanization
 - **Conclusion**!! Unterstützt im Prinzip die Idee meines Projekts},
-  doi        = {10.3390/data4040144},
   file       = {:/home/marco/STUDIUM/MA/Research/DataCube/Dhu2019 - National Open Data Cubes and Their Contribution to Country Level Development Policies and Practices.pdf:PDF},
   groups     = {MA - Discussion, MA - Intro, DataCubes - ODC General},
+  journal    = {Data},
   keywords   = {prio1, read},
+  month      = {nov},
   priority   = {prio1},
   publisher  = {{MDPI} {AG}},
   readstatus = {read},
+  year       = {2019},
 }
 
 @TechReport{Durbin2020,
@@ -685,16 +685,16 @@ consider relevant for the imminent uptake of big Earth data.},
   priority    = {prio2},
 }
 
-@Article{Peter2017,
-  author      = {Strobl Peter and Peter Baumann and Lewis Adam and Szantoi Zoltan and Killough Brian and Purss Matthew and Craglia Massimo and Nativi Stefano and Held Alex and Dhu Trevor},
+@Article{Strobl2017,
+  author      = {Peter Strobl and Peter Baumann and Lewis Adam and Szantoi Zoltan and Killough Brian and Purss Matthew and Craglia Massimo and Nativi Stefano and Held Alex and Dhu Trevor},
   title       = {The six faces of the data cube},
-  year        = {2017},
   doi         = {10.2760/383579},
   groups      = {DataCubes - Other General},
   incitefulid = {156121694},
   keywords    = {prio2},
   magid       = {2891300828},
   priority    = {prio2},
+  year        = {2017},
 }
 
 @Article{Ivanova2020,
@@ -1080,6 +1080,54 @@ consider relevant for the imminent uptake of big Earth data.},
   doi       = {10.20944/preprints201808.0029.v1},
   groups    = {ARD},
   publisher = {{MDPI} {AG}},
+}
+
+@InProceedings{Yuan2019,
+  author    = {Fang Yuan and Catherine Ticehurst and Zheng-Shu Zhou and Eric Lehmann and Ben Lewis and Ake Rosenqvist and Sean Chua and Norman Mueller},
+  booktitle = {2019 6th Asia-Pacific Conference on Synthetic Aperture Radar ({APSAR})},
+  date      = {2019-11},
+  title     = {Water Mapping with {SAR} and Optical Data Cube},
+  doi       = {10.1109/apsar46974.2019.9048521},
+  publisher = {{IEEE}},
+  groups    = {Analysis - Other},
+}
+
+@Article{Mueller2016,
+  author       = {N. Mueller and A. Lewis and D. Roberts and S. Ring and R. Melrose and J. Sixsmith and L. Lymburner and A. McIntyre and P. Tan and S. Curnow and A. Ip},
+  date         = {2016-03},
+  journaltitle = {Remote Sensing of Environment},
+  title        = {Water observations from space: Mapping surface water from 25 years of Landsat imagery across Australia},
+  doi          = {10.1016/j.rse.2015.11.003},
+  pages        = {341--352},
+  volume       = {174},
+  groups       = {Analysis - Time Series},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Masek2008,
+  author       = {Jeffrey G. Masek and Chengquan Huang and Robert Wolfe and Warren Cohen and Forrest Hall and Jonathan Kutler and Peder Nelson},
+  date         = {2008-06},
+  journaltitle = {Remote Sensing of Environment},
+  title        = {North American forest disturbance mapped from a decadal Landsat record},
+  doi          = {10.1016/j.rse.2008.02.010},
+  number       = {6},
+  pages        = {2914--2926},
+  volume       = {112},
+  groups       = {Analysis - Time Series},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Mattmann2013,
+  author       = {Chris A. Mattmann},
+  date         = {2013-01},
+  journaltitle = {Nature},
+  title        = {A vision for data science},
+  doi          = {10.1038/493473a},
+  number       = {7433},
+  pages        = {473--475},
+  volume       = {493},
+  groups       = {Other - Big Data},
+  publisher    = {Springer Science and Business Media {LLC}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
