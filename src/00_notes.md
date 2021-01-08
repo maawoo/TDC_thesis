@@ -19,59 +19,11 @@
 - Literature
 - Appendix
 
-# Introduction
+---
 
-### Problem of big EO data
+Use this as a preliminary **brain dump** for sections that I'm not yet working on. Collect notes for sections that I'm currently working on in the relevant Markdown file!
 
-- Volume, Velocity & Variety
-- Still hard for users to harness the full potential of EO
-- Trend towards cloud solutions
-- Traditional approach of processing locally is not feasible anymore for large volumes of EO data (time-series analysis!)
-
-### General solutions
-
-- GEE, DIAS, Rasdaman, Pangeo, ...
-- Earth Observation Data Cubes (EODC) are another solution
-- All have pros & cons / No 'one-fits-all' solution exists
-
-### Specific solution
-
-- Open Data Cubes
-- Open-source, Community, backed by multiple large organizations
-- There are already multiple national and regional ODCs
-
-### ARD is fundamental
-
-- Short intro to ARD and why it's especially fundamental to EODCs
-- No simple / clear way of accessing or processing ARD
-  - DIY attitude in EO
-
-### Goal of my work
-
-- Create a regional Open Data Cube for Thuringia = Thuringia Data Cube (TDC)
-- Develop an automated workflow to generate ARD for Thuringia
-  - Use established, open-source tools to facilitate reproducibility
-- Highlight potential of the TDC by presenting 2-3 time-series analysis use cases
-
-# Background
-
-- Analysis Ready Data
-  - Definition(s)
-  - Level-2 data
-  - HLS ?
-  - CARD4L
-  - ...
-- Data Cubes in EO
-  - History
-  - Definition(s)
-  - Distinction from cloud stuff like GEE ?
-  - Development of ODC in particular
-    - Technical (not much, most in methods of course)
-    - National and regional implementations
-    - ODC Initiative / Open Earth Allience
-  - ...
-
-# Methods
+## Methods
 
 - Technical Infrastructure
   - FORCE
@@ -82,3 +34,10 @@
   - a
   - b
   - c
+
+## Results
+
+- General stuff
+  - Bar chart showing distribution of indexed scenes for all sensors
+  - Spatial distribution of available scenes for Thuringia (any areas that are less available because of sensor paths?)
+  - ...

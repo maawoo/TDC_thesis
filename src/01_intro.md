@@ -54,4 +54,4 @@ Therefore, contributing to the "lessons learned" aspect of the ODC vision (...?)
 [22] https://www.usgs.gov/core-science-systems/nli/landsat/us-landsat-analysis-ready-data  
 [23] Giuliani2018  
 [24] Truckenbrodt2019  
-[25] Frantz2019  
+[25] Frantz2019
