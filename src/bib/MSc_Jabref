@@ -9,7 +9,7 @@
   volume     = {4},
   abstract   = {This study aims at assessing the feasibility of automatically producing analysis-ready radiometrically terrain-corrected (RTC) Synthetic Aperture Radar (SAR) gamma nought backscatter data for ingestion into a data cube for use in a large spatio-temporal data environment. As such, this study investigates the analysis readiness of different openly available digital elevation models (DEMs) and the capability of the software solutions SNAP and GAMMA in terms of overall usability as well as backscatter data quality. To achieve this, the study builds on the Python library pyroSAR for providing the workflow implementation test bed and provides a Jupyter notebook for transparency and future reproducibility of performed analyses. Two test sites were selected, over the Alps and Fiji, to be able to assess regional differences and support the establishment of the Swiss and Common Sensing Open Data cubes respectively.},
   file       = {:/home/marco/STUDIUM/MA/Research/Truckenbrodt2019 - Towards Sentinel 1 SAR Analysis Ready Data_ a Best Practices Assessment on Preparing Backscatter Data for the Cube.pdf:PDF},
-  groups     = {ARD},
+  groups     = {ARD - Radar},
   journal    = {Data},
   keywords   = {prio1, skimmed},
   month      = {jul},
@@ -28,7 +28,7 @@
   volume     = {11},
   abstract   = {Ever increasing data volumes of satellite constellations call for multi-sensor analysis ready data (ARD) that relieve users from the burden of all costly preprocessing steps. This paper describes the scientific software FORCE (Framework for Operational Radiometric Correction for Environmental monitoring), an ‘all-in-one’ solution for the mass-processing and analysis of Landsat and Sentinel-2 image archives. FORCE is increasingly used to support a wide range of scientific to operational applications that are in need of both large area, as well as deep and dense temporal information. FORCE is capable of generating Level 2 ARD, and higher-level products. Level 2 processing is comprised of state-of-the-art cloud masking and radiometric correction (including corrections that go beyond ARD specification, e.g., topographic or bidirectional reflectance distribution function correction). It further includes data cubing, i.e., spatial reorganization of the data into a non-overlapping grid system for enhanced efficiency and simplicity of ARD usage. However, the usage barrier of Level 2 ARD is still high due to the considerable data volume and spatial incompleteness of valid observations (e.g., clouds). Thus, the higher-level modules temporally condense multi-temporal ARD into manageable amounts of spatially seamless data. For data mining purposes, per-pixel statistics of clear sky data availability can be generated. FORCE provides functionality for compiling best-available-pixel composites and spectral temporal metrics, which both utilize all available observations within a defined temporal window using selection and statistical aggregation techniques, respectively. These products are immediately fit for common Earth observation analysis workflows, such as machine learning-based image classification, and are thus referred to as highly analysis ready data (hARD). FORCE provides data fusion functionality to improve the spatial resolution of (i) coarse continuous fields like land surface phenology and (ii) Landsat ARD using Sentinel-2 ARD as prediction targets. Quality controlled time series preparation and analysis functionality with a number of aggregation and interpolation techniques, land surface phenology retrieval, and change and trend analyses are provided. Outputs of this module can be directly ingested into a geographic information system (GIS) to fuel research questions without any further processing, i.e., hARD+. FORCE is open source software under the terms of the GNU General Public License v. >= 3, and can be downloaded from http://force.feut.de.},
   file       = {:/home/marco/STUDIUM/MA/Research/Frantz2019 - FORCE_Landsat + Sentinel 2 Analysis Ready Data and beyond.pdf:PDF},
-  groups     = {ARD},
+  groups     = {ARD - Harmonization, ARD - Optical},
   journal    = {Remote Sensing},
   keywords   = {prio1, skimmed},
   month      = {may},
@@ -53,7 +53,7 @@
 	- Giuliani et al. (2017)
 - Am Ende meiner Ausarbeitung kann ich einen Vergleich zu der Umsetzung ziehen und ggfls diskutieren, was besser oder schlechter funktioniert... oder so},
   file       = {:/home/marco/STUDIUM/MA/Research/Giuliani2017 - Building an Earth Observations Data Cube_ Lessons Learned from the Swiss Data Cube (SDC) on Generating Analysis Ready Data (ARD).pdf:PDF},
-  groups     = {ARD, MA - Intro, MA - Methodology, MA - Discussion, DataCubes - ODC},
+  groups     = {DataCubes - ODC, ARD - General},
   journal    = {Big Earth Data},
   keywords   = {prio1, read},
   month      = {nov},
@@ -81,7 +81,7 @@ raw data acquired over a 15 year period.' ...Und dann noch abgeleitete Produkte!
 	- Interessant als Vergleich zu FORCE, allerdings wäre es wichtig noch herauszufinden wie aktuell die Workflows noch sind (z.B. wird Ingestion beschrieben, allerdings laut ODC Slack nicht mehr wirklich verwendet!)
 - Beschreibung und Visualisierung (Fig. 10) der Datenbank! (allerdings wieder darauf achten, wie aktuell die Infos noch sind!)},
   file       = {:/home/marco/STUDIUM/MA/Research/Lewis2017 - The Australian Geoscience Data Cube _ Foundations and Lessons Learned.pdf:PDF},
-  groups     = {MA - Intro, MA - Methodology, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   journal    = {Remote Sensing of Environment},
   keywords   = {prio1, read},
   month      = {dec},
@@ -118,7 +118,7 @@ In our contribution we provide a technology overview on datacube approaches, inv
 CARD4L will be an important enabler of the Open Data Cube (ODC) initiative [2]. Through CARD4L, users will be able to easily locate products that are suitable for ingestion
 into Data Cubes [3], and will have confidence that these different CARD4L products will limit as far as possible barriers to interoperability.},
   file       = {:/home/marco/STUDIUM/MA/Research/Lewis2018 - CEOS Analysis Ready Data for Land (CARD4L) Overview.pdf:PDF},
-  groups     = {ARD, MA - Intro, MA - Methodology},
+  groups     = {ARD - General},
   keywords   = {prio2, read},
   month      = {jul},
   priority   = {prio2},
@@ -134,7 +134,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   publisher  = {{IEEE}},
   abstract   = {The Open Data Cube (ODC) initiative seeks to increase the value and impact of global Earth observation satellite data by providing an open and freely accessible data exploitation architecture and to foster a community to develop, sustain, and grow the technology and the breadth and depth of its applications for societal benefit. Successful ODC implementations exist in Australia, Colombia, Switzerland and Taiwan and are under development or consideration in another 39 countries. Since its inception in early 2017, the ODC has made significant progress in the advancement of open source software tools and algorithms that support the deployment and operation of data cubes on local or cloud computing systems around the world. With the increased interest in data cubes, the ODC is poised to become a world leader in open source data cube technologies to enhance the value of satellite data for all users.},
   file       = {:/home/marco/STUDIUM/MA/Research/Killough2018 - Overview of the Open Data Cube Initiative.pdf:PDF},
-  groups     = {MA - Intro, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   keywords   = {prio1, read},
   month      = {jul},
   priority   = {prio1},
@@ -150,7 +150,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   publisher  = {{IEEE}},
   abstract   = {The recent step change in the velocity and volume of Earth Observation data acquisition is both an opportunity and a threat. Richer more timely data supports the development of new EO derived products and opportunities for economic and environmental benefit. Ironically, this change also threatens the innovation pipeline and the ability for organizations to exploit the outcomes as they are swamped with data management and computation challenges. The CSIRO is using the Open Data Cube in combination with a new business engagement model via its Earth Analytics Industry Innovation Hub to address these challenges and accelerate the uptake of Earth analytics innovation in Australia.},
   file       = {:/home/marco/STUDIUM/MA/Research/Woodcock2018 - Accelerating Industry Innovation Using the Open Data Cube in Australia.pdf:PDF},
-  groups     = {MA - Intro, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   keywords   = {prio2, read},
   month      = {jul},
   priority   = {prio2},
@@ -196,7 +196,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   publisher = {{IEEE}},
   abstract  = {Earth Observations Data Cubes (EODC) are a new paradigm revolutionizing the way users can interact with Earth Observations (EO) data. They can provide access to large spatio-temporal data in analysis ready format. Systematic and regular provision of Analysis Ready Data (ARD) can significantly reduce the burden on EO data users by minimizing the time and scientific knowledge required to access and prepare remotely-sensed data having consistent and spatially aligned calibrated surface reflectance observations. Currently, Sentinel-2 ARD are not commonly generated by the Copernicus program and consequently getting uniform and consistent Sentinel-2 ARD remains a challenging task. This paper presents an approach to generate Sentinel-2 ARD using an automated processing services chain. The approach has been tested and validated to complete the Swiss Data Cube with Sentinel-2 data.},
   file      = {:/home/marco/STUDIUM/MA/Research/Giuliani2018 - Towards Sentinel 2 Analysis Ready Data_ a Swiss Data Cube Perspective.pdf:PDF},
-  groups    = {ARD},
+  groups    = {ARD - General},
   keywords  = {prio2},
   month     = {jul},
   priority  = {prio2},
@@ -238,7 +238,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
 	- 'Datacube Manifesto' und 'The six faces of a datacube' werden zitiert aber es wird nicht unbedingt gesagt, dass das jetzt die beste Definition von EODCs ist
 - Insgesamt wahrscheinlich wichtig für die Diskussion und das ein oder andere auch für's Intro!},
   file       = {:/home/marco/STUDIUM/MA/Research/Giuliani2019 - Paving the Way to Increased Interoperability of Earth Observations Data Cubes.pdf:PDF},
-  groups     = {MA - Intro, MA - Discussion, DataCubes - Impact / Use / Definitions},
+  groups     = {DataCubes - Impact / Use / Definitions},
   journal    = {Data},
   keywords   = {prio1, read},
   month      = {jul},
@@ -259,7 +259,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   comment    = {- Intro-Paper zum MDPI-Data-Special zum Thema EODCs
 - Entsprechend wenig nützlicher Inhalt, aber zu Beginn paar Sätze die nützlich für mein Intro sein könnten},
   file       = {:/home/marco/STUDIUM/MA/Research/Giuliani2019a - Earth Observation Open Science_ Enhancing Reproducible Science Using Data Cubes.pdf:PDF},
-  groups     = {MA - Intro, DataCubes - Impact / Use / Definitions},
+  groups     = {DataCubes - Impact / Use / Definitions},
   journal    = {Data},
   keywords   = {prio2, read},
   month      = {nov},
@@ -278,7 +278,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   volume    = {4},
   abstract  = {A research alliance between the Commonwealth Scientific and Industrial Research Organization and Geoscience Australia was established in relation to Digital Earth Australia, to develop a Synthetic Aperture Radar (SAR)-enabled Data Cube capability for Australia. This project has been developing SAR analysis ready data (ARD) products, including normalized radar backscatter (gamma nought, γ0), eigenvector-based dual-polarization decomposition and interferometric coherence, all generated from the European Space Agency (ESA) Sentinel-1 interferometric wide swath mode data available on the Copernicus Australasia Regional Data Hub. These are produced using the open source ESA SNAP toolbox. The processing workflows are described, along with a comparison of the γ0 backscatter and interferometric coherence ARD produced using SNAP and the proprietary software GAMMA. This comparison also evaluates the effects on γ0 backscatter due to variations related to: Near- and far-range look angles; SNAP’s default Shuttle Radar Topography Mission (SRTM) DEM and a refined Australia-wide DEM; as well as terrain. The agreement between SNAP and GAMMA is generally good, but also presents some systematic geometric and radiometric differences. The difference between SNAP’s default SRTM DEM and the refined DEM showed a small geometric shift along the radar view direction. The systematic geometric and radiometric issues detected can however be expected to have negligible effects on analysis, provided products from the two processors and two DEMs are used separately and not mixed within the same analysis. The results lead to the conclusion that the SNAP toolbox is suitable for producing the Sentinel-1 ARD products.},
   file      = {:/home/marco/STUDIUM/MA/Research/Ticehurst2019 - Building a SAR Enabled Data Cube Capability in Australia Using SAR Analysis Ready Data.pdf:PDF},
-  groups    = {ARD},
+  groups    = {ARD - Radar},
   journal   = {Data},
   keywords  = {prio1},
   month     = {jul},
@@ -296,11 +296,11 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   abstract  = {The Harmonized Landsat and Sentinel-2 (HLS) project is a NASA initiative aiming to produce a Virtual Constellation (VC) of surface reflectance (SR) data acquired by the Operational Land Imager (OLI) and Multi-Spectral Instrument (MSI) aboard Landsat 8 and Sentinel-2 remote sensing satellites, respectively. The HLS products are based on a set of algorithms to obtain seamless products from both sensors (OLI and MSI): atmospheric correction, cloud and cloud-shadow masking, spatial co-registration and common gridding, bidirectional reflectance distribution function normalization and spectral bandpass adjustment. Three products are derived from the HLS processing chain: (i) S10: full resolution MSI SR at 10 m, 20 m and 60 m spatial resolutions; (ii) S30: a 30 m MSI Nadir BRDF (Bidirectional Reflectance Distribution Function)-Adjusted Reflectance (NBAR); (iii) L30: a 30 m OLI NBAR. All three products are processed for every Level-1 input products from Landsat 8/OLI (L1T) and Sentinel-2/MSI (L1C). As of version 1.3, the HLS data set covers 10.35 million km2 and spans from first Landsat 8 data (2013); Sentinel-2 data spans from October 2015.
 The L30 and S30 show a good consistency with coarse spatial resolution products, in particular MODIS Collection 6 MCD09CMG products (overall deviations do not exceed 11%) that are used as a reference for quality assurance. The spatial co-registration of the HLS is improved compared to original Landsat 8 L1T and Sentinel-2A L1C products, for which misregistration issues between multi-temporal data are known. In particular, the resulting computed circular errors at 90% for the HLS product are 6.2 m and 18.8 m, for S10 and L30 products, respectively. The main known issue of the current data set remains the Sentinel-2 cloud mask with many cloud detection omissions. The cross-comparison with MODIS was used to flag products with most evident non-detected clouds. A time series outlier filtering approach is suggested to detect remaining clouds. Finally, several time series are presented to highlight the high potential of the HLS data set for crop monitoring.},
   file      = {:/home/marco/STUDIUM/MA/Research/Claverie2018 - The Harmonized Landsat and Sentinel 2 Surface Reflectance Data Set.pdf:PDF},
-  groups    = {ARD},
+  groups    = {ARD - Harmonization},
   journal   = {Remote Sensing of Environment},
-  keywords  = {prio3},
+  keywords  = {prio2},
   month     = {dec},
-  priority  = {prio3},
+  priority  = {prio2},
   publisher = {Elsevier {BV}},
   year      = {2018},
 }
@@ -317,7 +317,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 - Generell schlechtes Paper
 - Nur relevant für den Fall, dass ich beispielhaft Länder im Intro aufzähle die bereits eine ODC Instanz nutzen},
   file       = {:/home/marco/STUDIUM/MA/Research/Asmaryan2019 - Paving the Way Towards an Armenian Data Cube.pdf:PDF},
-  groups     = {MA - Intro, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   journal    = {Data},
   keywords   = {prio3, skimmed},
   month      = {aug},
@@ -378,7 +378,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 	- Erst technische Umsetzung und die Möglichkeit über JupyterLab mit den Daten zu arbeiten (intern bei uns / Studenten zum lernen)
 	- Danach ggf. Weboberflächen und so ein Kram für Behördenmenschen und zB die Möglichkeit in QGIS auf die Daten zuzugreifen},
   file       = {:/home/marco/STUDIUM/MA/Research/Maso2019 - A Portal Offering Standard Visualization and Analysis on Top of an Open Data Cube for Sub National Regions_ the Catalan Data Cube Example.pdf:PDF},
-  groups     = {MA - Discussion, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   journal    = {Data},
   keywords   = {prio2, read},
   month      = {jul},
@@ -399,7 +399,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   comment    = {- Vor allem im Kapitel 2 werden ein paar wichtige Aspekte beschrieben (z.B. 'Optimizing Data Storage'), die sehr relevant sind!
 - Danach ist es aber hauptsächlich auf ArcGIS bezogen und nicht mehr wirklich hilfreich},
   file       = {:/home/marco/STUDIUM/MA/Research/Kopp2019 - Achieving the Full Vision of Earth Observation Data Cubes.pdf:PDF},
-  groups     = {MA - Methodology, MA - Discussion, ARD, DataCubes - Not ODC},
+  groups     = {DataCubes - Not ODC, ARD - General},
   journal    = {Data},
   keywords   = {prio2, read},
   month      = {jul},
@@ -444,7 +444,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 	- Tanzania: Managing Urbanization
 - **Conclusion**!! Unterstützt im Prinzip die Idee meines Projekts},
   file       = {:/home/marco/STUDIUM/MA/Research/Dhu2019 - National Open Data Cubes and Their Contribution to Country Level Development Policies and Practices.pdf:PDF},
-  groups     = {MA - Discussion, MA - Intro, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   journal    = {Data},
   keywords   = {prio1, read},
   month      = {nov},
@@ -467,7 +467,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 With the above purpose in mind, the evaluation we present seeks to inform future decisions on both archival formats for cloud data as well as formats to use for analysis, if different from the archival format. We do not expect to produce a recommendation for a single format for use in all cases but rather hope to inform format selection for a given use based on archival and usability needs. Further study may be warranted as formats, EO data, cloud infrastructure and user behavior evolve.},
   address     = {https://ntrs.nasa.gov/citations/20200001178},
   file        = {:/home/marco/STUDIUM/MA/Research/Durbin2020 - Task 51 Cloud Optimized Format Study.pdf:PDF},
-  groups      = {ARD},
+  groups      = {ARD - General},
   keywords    = {prio2, read},
   month       = jan,
   priority    = {prio2},
@@ -526,7 +526,7 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   abstract    = {Users of satellite Earth observation data typically invest a large amount of effort into data preparation which is a major barrier for many global users and limits the impact and utilization of this data around the world. The Committee on Earth Observation Satellites (CEOS) has initiated an effort to define and promote the production and use of Analysis Ready Data (ARD) to lower the burden on global users and increase the use and impact of its data. Through the Open Data Cube (ODC) initiative and its demonstration in Africa, ARD is making an impact on this developing region of the world. This paper discusses how this data and the associated ODC tools are being used to address water extent, land change and urbanization, which are key application areas aligned with the United Nations Sustainable Development Goals (SDG). Through the ODC, the impact of ARD is growing rapidly around the world and our ability to address local and national decision-making needs will continue to improve.},
   comment     = {-},
   file        = {:/home/marco/STUDIUM/MA/Research/Killough2019 - The Impact of Analysis Ready Data in the Africa Regional Data Cube.pdf:PDF},
-  groups      = {MA - Intro, MA - Discussion, DataCubes - ODC},
+  groups      = {DataCubes - ODC},
   incitefulid = {96962756},
   keywords    = {read, prio2},
   magid       = {2983099966},
@@ -560,7 +560,7 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   abstract    = {Analysis Ready Data (ARD) products are enabling users to get first hand satellite data that are ‘ready to use’ for a wide range of applications, including time-series analysis and the way forward to multi-sensor interoperability. The Committee on Earth Observation Satellites (CEOS) is leading the CEOS Analysis Ready Data for Land (CARD4L) initiative. The rationale behind this initiative is to enable users to access products that have been already processed to a certain level. This will allow users to carry out immediate analysis on the data and to address a variety of applications without the extra time and cost that is associated with the data pre-processing steps. The aim of the proposed paper is to give an overview on the work already carried out by the CEOS community on the CARD4L framework, to introduce the processes and steps that Earth Observation (EO) data providers should undertake to have a CARD4L level product as well as the planned steps that CEOS LSIVC will be undertaking to accomplish the CARD4L initiative.},
   comment     = {- Nur 2 Seiten und keine neuen/zusätzlichen Informationen im Vergleich zum anderen CARD4L Paper},
   file        = {:/home/marco/STUDIUM/MA/Research/Siqueira2019 - CEOS Analysis Ready Data for Land – an Overview on the Current and Future Work.pdf:PDF},
-  groups      = {ARD},
+  groups      = {ARD - General},
   incitefulid = {72989243},
   keywords    = {prio3, read},
   magid       = {2989251392},
@@ -642,7 +642,7 @@ Key points:
   abstract    = {Turning Earth observation (EO) data consistently and systematically into valuable global information layers is an ongoing challenge for the EO community. Recently, the term ‘big Earth data’ emerged to describe massive EO datasets that confronts analysts and their traditional workflows with a range of challenges. We argue that the altered circumstances must be actively intercepted by an evolution of EO to revolutionise their application in various domains. The disruptive element is that analysts and end-users increasingly rely on Web-based workflows. In this contribution we study selected systems and portals, put them in the context of challenges and opportunities and highlight selected shortcomings and possible future developments that we
 consider relevant for the imminent uptake of big Earth data.},
   file        = {:/home/marco/STUDIUM/MA/Research/Sudmanns2020 - Big Earth Data_ Disruptive Changes in Earth Observation Data Management and Analysis_.pdf:PDF},
-  groups      = {MA - Intro, MA - Discussion, Other - Big Data},
+  groups      = {Other - Big Data},
   incitefulid = {151457084},
   journal     = {International Journal of Digital Earth},
   keywords    = {prio1, read},
@@ -729,7 +729,7 @@ consider relevant for the imminent uptake of big Earth data.},
   comment     = {- ODC is being mentioned in section 2.6. - Institutional and Government Supported Open Source Geospatial Initiatives
 - Beyond that, this paper might be very useful if I discuss the open source aspect somewhere in my thesis!},
   file        = {:/home/marco/STUDIUM/MA/Research/Ivanova2020 - Open Geospatial Software and Data _ a Review of the Current State and a Perspective into the Future.pdf:PDF},
-  groups      = {Other, MA - Discussion},
+  groups      = {Other},
   incitefulid = {109245531},
   journal     = {ISPRS international journal of geo-information},
   keywords    = {prio2},
@@ -810,7 +810,7 @@ This survey provides a foundation for the design and implementation of query exe
   abstract   = {The growing Earth Observation (EO) satellite data requires an open and freely accessible exploitation tool to facilitate the development and sustainability of applications on land use and land cover change, water resources, forest monitoring, and etc. Open Data Cube (ODC) was initiated by the Committee on Earth Observation Satellites (CEOS) to provide a solution with new computing technologies. ODC can promote free and open EO satellite data and application algorithms, and lower the technical barriers for users on exploiting the data. This project aims to develop the ODC protocol in Taiwan and apply it on a case study - forest monitoring after the attack of typhoon Morako in Taimali river basin, the eastern of Taiwan. Firstly, the strategic implementation, the platform, and the infrastructure of Taiwan Data Cube (TWDC) are initiated. And, the TWDC is applied on forest monitoring between 2000 and 2016 using Landsat-7 images. Finally, the improvement and perspective of TWDC protocol are discussed. In the future, (1) the Formosat series images will be prepared as Analysis Ready Data (ARD), (2) the software environment will be improved on data management and user interactive interface, and (3) the protocol of TWDC will be duplicated to developing countries on international cooperation projects under the collaboration with CEOS and the Commonwealth Scientific and Industrial Research Organisation (CSIRO).},
   comment    = {- Inhaltlich nichts Neues... sowohl im Bezug auf technische Implementation, als auch im Bezug auf die Analyse (beides sowieso nicht im Detail erklärt)
 - Nur relevant für den Fall, dass ich beispielhaft Länder im Intro aufzähle die bereits eine ODC Instanz nutzen},
-  groups     = {MA - Intro, DataCubes - ODC},
+  groups     = {DataCubes - ODC},
   keywords   = {prio3, skimmed},
   month      = {jul},
   priority   = {prio3},
@@ -830,7 +830,7 @@ This survey provides a foundation for the design and implementation of query exe
 - 'digital microscope' Analogie ist sehr interessant
 - Sonst aber eher weniger hilfreich für mich. Passt aber bestimmt irgendwo gut rein, wo 'big Earth data' angesprochen wird},
   file       = {:/home/marco/STUDIUM/MA/Research/Boulton2018 - The Challenges of a Big Data Earth.pdf:PDF},
-  groups     = {MA - Intro, MA - Discussion, Other - Big Data},
+  groups     = {Other - Big Data},
   journal    = {Big Earth Data},
   keywords   = {prio2, read},
   month      = {jan},
@@ -865,7 +865,7 @@ This survey provides a foundation for the design and implementation of query exe
   volume    = {202},
   abstract  = {Global environmental changes are mostly induced by human activities (e.g., food and energy production, urbanization, mining activities). To assess and understand these changes that are occurring all around the planet, regular and continuous monitoring is an essential condition. However, due to the potentially large area spread over numerous locations that need to be followed, this usually leads to a low frequency of monitoring of environmental changes of only a few selected sites at best. With the increasing number of freely and openly accessible big remotely-sensed Earth Observations (EO) Data repositories and the increasing capabilities of open and interoperable software solutions it is now possible to automate various EO data processing tasks to monitor environmental changes at large scale. This paper presents the Live Monitoring of Earth Surface (LiMES) framework that helps to automate image processing tasks in transforming raw data into information and knowledge through workflows using interoperable processing service chains for monitoring environmental changes. Both benefits and limitations are demonstrated and discussed through the implementation of a prototype to facilitate the update on the status of some of the 278 UNEP Environmental Hotspots. We believe that such a framework can help to reduce the gap between massive volumes of EO data and the users such as International Organizations (IO) in order to help them better fulfil their environmental monitoring mandates by bringing raw data to a level which can be used by non-remote sensing experts for basic impacts assessments.},
   file      = {:/home/marco/STUDIUM/MA/Research/Giuliani2017a - Live Monitoring of Earth Surface (LiMES)_ a Framework for Monitoring Environmental Changes from Earth Observations.pdf:PDF},
-  groups    = {ARD},
+  groups    = {ARD - General},
   journal   = {Remote Sensing of Environment},
   keywords  = {prio3},
   month     = {dec},
@@ -882,7 +882,7 @@ This survey provides a foundation for the design and implementation of query exe
   volume     = {68},
   abstract   = {There are many expectations and concerns about Big Data in the sector of Earth Observation. It is necessary to understand whether Big Data is a radical shift or an incremental change for the existing digital infrastructures. This manuscript explores the impact of Big Data dimensionalities (commonly known as ‘V’ axes: volume, variety, velocity, veracity, visualization) on the Global Earth Observation System of Systems (GEOSS) and particularly its common digital infrastructure (i.e. the GEOSS Common Infrastructure). GEOSS is a global and flexible network of content providers allowing decision makers to access an extraordinary range of data and information. GEOSS is a pioneering framework for global and multidisciplinary data sharing in the EO realm. The manuscript introduces and discusses the general GEOSS strategies to address Big Data challenges, focusing on the cloud-based discovery and access solutions. A final section reports the results of the scalability and flexibility performance tests.},
   file       = {:/home/marco/STUDIUM/MA/Research/Nativi2015 - Big Data Challenges in Building the Global Earth Observation System of Systems.pdf:PDF},
-  groups     = {MA - Intro, Other - Big Data},
+  groups     = {Other - Big Data},
   journal    = {Environmental Modelling {\&} Software},
   keywords   = {skimmed, prio3},
   month      = {jun},
@@ -901,7 +901,7 @@ This survey provides a foundation for the design and implementation of query exe
   volume     = {10},
   abstract   = {Digital Earth has seen great progress during the last 19 years. When it entered into the era of big data, Digital Earth developed into a new stage, namely one characterized by ‘Big Earth Data’, confronting new challenges and opportunities. In this paper we give an overview of the development of Digital Earth by summarizing research achievements and marking the milestones of Digital Earth’s development. Then, the opportunities and challenges that Big Earth Data faces are discussed. As a data-intensive scientific research approach, Big Earth Data provides a new vision and methodology to Earth sciences, and the paper identifies the advantages of Big Earth Data to scientific research, especially in knowledge discovery and global change research. We believe that Big Earth Data will advance and promote the development of Digital Earth.},
   file       = {:/home/marco/STUDIUM/MA/Research/Guo2016 - Big Earth Data_ a New Challenge and Opportunity for Digital Earth's Development.pdf:PDF},
-  groups     = {OtherMA - Intro, Other - Big Data, MA - Intro},
+  groups     = {OtherMA - Intro, Other - Big Data},
   journal    = {International Journal of Digital Earth},
   keywords   = {prio2, skimmed},
   month      = {dec},
@@ -919,7 +919,7 @@ This survey provides a foundation for the design and implementation of query exe
   pages      = {77--96},
   volume     = {20},
   abstract   = {This paper reviews the key role that Earth Observations (EO) play in achieving the Sustainable Development Goals (SDGs) as articulated in the 2030 Agenda document and in monitoring, measuring, and reporting on progress towards the associated targets. This paper also highlights how the Group on Earth Observations (GEO) would contribute to ensure the actual use of EO in support of the 2030 Agenda; and how the Global Earth Observations System of Systems meets requirements for efficient investments in science and technology and a good return on investment, which is elaborated in the Addis Ababa Action Agenda on development financing. Through a number of examples, we first discuss how extensive EO use would: provide a substantial contribution to the achievements of the SDGs by enabling informed decision-making and by allowing monitoring of the expected results; improve national statistics for greater accuracy, by ensuring that the data are “spatially-explicit” and directly contribute to calculate the agreed SDG Targets and Indicators support the fostering of synergy between the SDGs and multilateral environmental agreements by addressing cross-cutting themes such as climate and energy; and facilitate countries’ approaches for working across different development sectors, which is, according to the special adviser on the 2030 Agenda, a key challenge to achieve the SDGs. We then focus on the role that GEO could play in enabling actual use of EO in support of the 2030 Agenda by directly addressing the Strategic Development Goal 17 on partnerships.},
-  groups     = {Other, MA - Intro},
+  groups     = {Other},
   journal    = {Geo-spatial Information Science},
   keywords   = {skimmed, prio3},
   month      = {apr},
@@ -939,7 +939,7 @@ This survey provides a foundation for the design and implementation of query exe
   abstract   = {Observations of Earth from space have been made for over 40 years and have contributed to advances in many aspects of climate science. However, attempts to exploit this wealth of data are often hampered by a lack of homogeneity and continuity and by insufficient understanding of the products and their uncertainties.
 There is, therefore, a need to reassess and reprocess satellite datasets to maximize their usefulness for climate science. The European Space Agency has responded to this need by establishing the Climate Change Initiative (CCI). The CCI will create new climate data records for (currently) 13 essential climate variables (ECVs) and make these open and easily accessible to all. Each ECV project works closely with users to produce time series from the available satellite observations relevant to users' needs. A climate modeling users' group provides a climate system perspective and a forum to bring the data and modeling communities together.
 This paper presents the CCI program. It outlines its benefit and presents approaches and challenges for each ECV project, covering clouds, aerosols, ozone, greenhouse gases, sea surface temperature, ocean color, sea level, sea ice, land cover, fire, glaciers, soil moisture, and ice sheets. It also discusses how the CCI approach may contribute to defining and shaping future developments in Earth observation for climate science.},
-  groups     = {Other, MA - Intro},
+  groups     = {Other},
   journal    = {Bulletin of the American Meteorological Society},
   keywords   = {skimmed, prio3},
   month      = {oct},
@@ -957,7 +957,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages      = {206--210},
   volume     = {90},
   abstract   = {Earth observations are playing an increasingly significant role in informing decision making in the energy sector. In renewable energy applications, space-based observations now routinely augment sparse ground-based observations used as input for renewable energy resource assessment applications. As one of the nine Group on Earth Observations (GEO) societal benefit areas, the enhancement of management and policy decision making in the energy sector is receiving attention in activities conducted by the Committee on Earth Observation Satellites (CEOS). CEOS has become the “space arm” for the implementation of the Global Earth Observation System of Systems (GEOSS) vision. It is directly supporting the space-based, near-term tasks articulated in the GEO three-year work plan. This paper describes a coordinated program of demonstration projects conducted by CEOS member agencies and partners to utilize Earth observations to enhance energy management end-user decision support systems. We discuss the importance of engagement with stakeholders and understanding their decision support needs in successfully increasing the uptake of Earth observation products for societal benefit. Several case studies are presented, demonstrating the importance of providing data sets in formats and units familiar and immediately usable by decision makers. These projects show the utility of Earth observations to enhance renewable energy resource assessment in the developing world, forecast space weather impacts on the power grid, and improve energy efficiency in the built environment.},
-  groups     = {Other, MA - Intro},
+  groups     = {Other},
   journal    = {Applied Energy},
   keywords   = {prio3, skimmed},
   month      = {feb},
@@ -974,7 +974,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages      = {2--10},
   volume     = {122},
   abstract   = {Landsat occupies a unique position in the constellation of civilian earth observation satellites, with a long and rich scientific and applications heritage. With nearly 40 years of continuous observation – since launch of the first satellite in 1972 – the Landsat program has benefited from insightful technical specification, robust engineering, and the necessary infrastructure for data archive and dissemination. Chiefly, the spatial and spectral resolutions have proven of broad utility and have remained largely stable over the life of the program. The foresighted acquisition and maintenance of a global image archive has proven to be of unmatched value, providing a window into the past and fueling the monitoring and modeling of global land cover and ecological change. In this paper we discuss the evolution of the Landsat program as a global monitoring mission, highlighting in particular the recent change to an open (free) data policy. The new data policy is revolutionizing the use of Landsat data, spurring the creation of robust standard products and new science and applications approaches. Open data access also promotes increased international collaboration to meet the Earth observing needs of the 21st century.},
-  groups     = {MA - Intro, Other},
+  groups     = {Other},
   journal    = {Remote Sensing of Environment},
   keywords   = {prio3, skimmed},
   month      = {jul},
@@ -991,7 +991,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages      = {18--27},
   volume     = {202},
   abstract   = {Google Earth Engine is a cloud-based platform for planetary-scale geospatial analysis that brings Google's massive computational capabilities to bear on a variety of high-impact societal issues including deforestation, drought, disaster, disease, food security, water management, climate monitoring and environmental protection. It is unique in the field as an integrated platform designed to empower not only traditional remote sensing scientists, but also a much wider audience that lacks the technical capacity needed to utilize traditional supercomputers or large-scale commodity cloud computing resources.},
-  groups     = {MA - Intro, Other - Platforms},
+  groups     = {Other - Platforms},
   journal    = {Remote Sensing of Environment},
   keywords   = {prio3, skimmed},
   month      = {dec},
@@ -1007,7 +1007,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   title      = {Commission Delegated Regulation (EU) No 1159/2013 of 12 July 2013 supplementing Regulation (EU) No 911/2010 of the European Parliament and of the Council on the European Earth monitoring programme (GMES) by establishing registration and licensing conditions for GMES users and defining criteria for restricting access to GMES dedicated data and GMES service information},
   url        = {http://data.europa.eu/eli/reg_del/2013/1159/oj},
   urldate    = {2021-01-01},
-  groups     = {Other, MA - Intro},
+  groups     = {Other},
   keywords   = {prio3, skimmed},
   priority   = {prio3},
   readstatus = {skimmed},
@@ -1023,7 +1023,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   publisher  = {Publications Office of the European Union},
   url        = {https://op.europa.eu/s/oDKc},
   urldate    = {2021-01-01},
-  groups     = {Other, MA - Intro},
+  groups     = {Other},
   keywords   = {prio3, skimmed},
   priority   = {prio3},
   readstatus = {skimmed},
@@ -1135,7 +1135,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages        = {51},
   volume       = {11},
   abstract     = {Recently, the United States Geological Survey (USGS) has released a new dataset, called Landsat Analysis Ready Data (ARD), which is designed specifically for facilitating time series analysis. In this study, we evaluated the temporal consistency of this new dataset and recommended several processing streamlines for improving data consistency. Specifically, we examined the impacts of data resampling, cloud/cloud shadow detection, Bidirectional Reflectance Distribution Function (BRDF) correction, and topographic correction on the temporal consistency of the Landsat Time Series (LTS). We have four major observations. First, single-resampled data (ARD) are generally more consistent than double-resampled data (re-projected Collection 1 data), but the difference is very minor. Second, the improved cloud and cloud shadow detection approach (e.g., Fmask 4.0 vs. 3.3) moderately increased data consistency. Third, BRDF correction contributed the most in making LTS consistent. Finally, we corrected the topographic effects by using several widely used algorithms, including Sun-Canopy-Sensor (SCS), a semiempirical SCS (SCS+C), and Illumination Correction (IC) algorithms, however they were found to have very limited or even negative impacts on the consistency of LTS. Therefore, we recommend using Landsat ARD with the improved cloud and cloud shadow detection approach (Fmask 4.0), and with BRDF correction for routine time series analysis.},
-  groups       = {ARD},
+  groups       = {ARD - Optical},
   keywords     = {prio3},
   priority     = {prio3},
   publisher    = {{MDPI} {AG}},
@@ -1147,7 +1147,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   title     = {Analysis Ready Data: Enabling Analysis of the Landsat Archive},
   doi       = {10.20944/preprints201808.0029.v1},
   abstract  = {Data that have been processed to allow analysis with a minimum of additional user effort areoften referred to as Analysis Ready Data (ARD). The ability to perform large scale Landsat analysisrelies on the ability to access observations that are geometrically and radiometrically consistent,and have had non-target features (clouds) and poor quality observations flagged so that they canbe excluded. The United States Geological Survey (USGS) has processed all of the Landsat 4 and 5Thematic Mapper (TM), Landsat 7 Enhanced Thematic Mapper Plus (ETM+), Landsat 8 OperationalLand Imager (OLI) and Thermal Infrared Sensor (TIRS) archive over the conterminous United States(CONUS), Alaska, and Hawaii, into Landsat ARD. The ARD are available to significantly reduce theburden of pre-processing on users of Landsat data. Provision of pre-prepared ARD is intended tomake it easier for users to produce Landsat-based maps of land cover and land-cover change andother derived geophysical and biophysical products. The ARD are provided as tiled, georegistered,top of atmosphere and atmospherically corrected products defined in a common equal area projection,accompanied by spatially explicit quality assessment information, and appropriate metadata to enablefurther processing while retaining traceability of data provenance.},
-  groups    = {ARD},
+  groups    = {ARD - Optical},
   keywords  = {prio3},
   priority  = {prio3},
   publisher = {{MDPI} {AG}},
@@ -1265,11 +1265,132 @@ weather parameter. Water deficit may occur continuously over the total growing p
   publisher    = {{MDPI} {AG}},
 }
 
+@Article{Chaves2020,
+  author       = {Michel E. D. Chaves and Michelle C. A. Picoli and Ieda D. Sanches},
+  date         = {2020-09},
+  journaltitle = {Remote Sensing},
+  title        = {Recent Applications of Landsat 8/{OLI} and Sentinel-2/{MSI} for Land Use and Land Cover Mapping: A Systematic Review},
+  doi          = {10.3390/rs12183062},
+  number       = {18},
+  pages        = {3062},
+  volume       = {12},
+  abstract     = {Recent applications of Landsat 8 Operational Land Imager (L8/OLI) and Sentinel-2 MultiSpectral Instrument (S2/MSI) data for acquiring information about land use and land cover (LULC) provide a new perspective in remote sensing data analysis. Jointly, these sources permit researchers to improve operational classification and change detection, guiding better reasoning about landscape and intrinsic processes, as deforestation and agricultural expansion. However, the results of their applications have not yet been synthesized in order to provide coherent guidance on the effect of their applications in different classification processes, as well as to identify promising approaches and issues which affect classification performance. In this systematic review, we present trends, potentialities, challenges, actual gaps, and future possibilities for the use of L8/OLI and S2/MSI for LULC mapping and change detection. In particular, we highlight the possibility of using medium-resolution (Landsat-like, 10–30 m) time series and multispectral optical data provided by the harmonization between these sensors and data cube architectures for analysis-ready data that are permeated by publicizations, open data policies, and open science principles. We also reinforce the potential for exploring more spectral bands combinations, especially by using the three Red-edge and the two Near Infrared and Shortwave Infrared bands of S2/MSI, to calculate vegetation indices more sensitive to phenological variations that were less frequently applied for a long time, but have turned on since the S2/MSI mission. Summarizing peer-reviewed papers can guide the scientific community to the use of L8/OLI and S2/MSI data, which enable detailed knowledge on LULC mapping and change detection in different landscapes, especially in agricultural and natural vegetation scenarios.},
+  comment      = {Wichtige / interessante Themen, die in dem Paper diskutiert werden: 
+
+- 5.1.4. Landsat 8 and Sentinel-2 Data Integration
+	- u.a. HLS und FORCE werden erwähnt
+- 5.2.2. Challenges to Deal with Big Data and Landsat-Sentinel’s Data Integration
+	- Hier wird auch explizit auf Data Cubes eingegangen!
+- 5.3.4. Data Cubes and ARD
+	- 'Unfortunately, different EODC initiatives are being developed
+using contrasting strategies to produce ARD. ' (...meine Rede :D)
+- 5.3.5. Incorporating Radar Data},
+  file         = {:/home/marco/STUDIUM/MA/Research/Chaves2020 - Recent Applications of Landsat 8_OLI and Sentinel 2_MSI for Land Use and Land Cover Mapping_ a Systematic Review.pdf:PDF},
+  groups       = {Analysis - Other},
+  keywords     = {prio1, skimmed},
+  priority     = {prio1},
+  publisher    = {{MDPI} {AG}},
+  readstatus   = {skimmed},
+}
+
+@Article{Ienco2019,
+  author       = {Dino Ienco and Roberto Interdonato and Raffaele Gaetano and Dinh Ho Tong Minh},
+  date         = {2019-12},
+  journaltitle = {{ISPRS} Journal of Photogrammetry and Remote Sensing},
+  title        = {Combining Sentinel-1 and Sentinel-2 Satellite Image Time Series for land cover mapping via a multi-source deep learning architecture},
+  doi          = {10.1016/j.isprsjprs.2019.09.016},
+  pages        = {11--22},
+  volume       = {158},
+  abstract     = {The huge amount of data currently produced by modern Earth Observation (EO) missions has allowed for the design of advanced machine learning techniques able to support complex Land Use/Land Cover (LULC) mapping tasks. The Copernicus programme developed by the European Space Agency provides, with missions such as Sentinel-1 (S1) and Sentinel-2 (S2), radar and optical (multi-spectral) imagery, respectively, at 10 m spatial resolution with revisit time around 5 days. Such high temporal resolution allows to collect Satellite Image Time Series (SITS) that support a plethora of Earth surface monitoring tasks. How to effectively combine the complementary information provided by such sensors remains an open problem in the remote sensing field. In this work, we propose a deep learning architecture to combine information coming from S1 and S2 time series, namely TWINNS (TWIn Neural Networks for Sentinel data), able to discover spatial and temporal dependencies in both types of SITS. The proposed architecture is devised to boost the land cover classification task by leveraging two levels of complementarity, i.e., the interplay between radar and optical SITS as well as the synergy between spatial and temporal dependencies. Experiments carried out on two study sites characterized by different land cover characteristics (i.e., the Koumbia site in Burkina Faso and Reunion Island, a overseas department of France in the Indian Ocean), demonstrate the significance of our proposal.},
+  comment      = {- Beispiel, dass an neuartigen Methoden gearbeitet wird um SAR und optische Zeitreihen zu kombinieren},
+  groups       = {Analysis - Time Series},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Scheffler2020,
+  author       = {Daniel Scheffler and David Frantz and Karl Segl},
+  date         = {2020-05},
+  journaltitle = {Remote Sensing of Environment},
+  title        = {Spectral harmonization and red edge prediction of Landsat-8 to Sentinel-2 using land cover optimized multivariate regressors},
+  doi          = {10.1016/j.rse.2020.111723},
+  pages        = {111723},
+  volume       = {241},
+  abstract     = {TL;DR: In this paper, we compare the effect of multivariate spectral harmonization techniques on the inter-sensor reflectance consistency and derived products such as spectral indices or land cover classifications.},
+  comment      = {- The proposed approach might be incorporated into the next FORCE release!},
+  file         = {:/home/marco/STUDIUM/MA/Research/Scheffler2020 - Spectral Harmonization and Red Edge Prediction of Landsat 8 to Sentinel 2 Using Land Cover Optimized Multivariate Regressors.pdf:PDF},
+  groups       = {ARD - Harmonization},
+  keywords     = {skimmed, prio2},
+  priority     = {prio2},
+  publisher    = {Elsevier {BV}},
+  readstatus   = {skimmed},
+}
+
+@Article{Zekoll2021,
+  author       = {Viktoria Zekoll and Magdalena Main-Knorn and Jerome Louis and David Frantz and Rudolf Richter and Bringfried Pflug},
+  date         = {2021-01},
+  journaltitle = {Remote Sensing},
+  title        = {Comparison of Masking Algorithms for Sentinel-2 Imagery},
+  doi          = {10.3390/rs13010137},
+  number       = {1},
+  pages        = {137},
+  volume       = {13},
+  abstract     = {Masking of clouds, cloud shadow, water and snow/ice in optical satellite imagery is an important step in automated processing chains. We compare the performance of the masking provided by Fmask (“Function of mask” implemented in FORCE), ATCOR (“Atmospheric Correction”) and Sen2Cor (“Sentinel-2 Correction”) on a set of 20 Sentinel-2 scenes distributed over the globe covering a wide variety of environments and climates. All three methods use rules based on physical properties (Top of Atmosphere Reflectance, TOA) to separate clear pixels from potential cloud pixels, but they use different rules and class-specific thresholds. The methods can yield different results because of different definitions of the dilation buffer size for the classes cloud, cloud shadow and snow. Classification results are compared to the assessment of an expert human interpreter using at least 50 polygons per class randomly selected for each image. The class assignment of the human interpreter is considered as reference or “truth”. The interpreter carefully assigned a class label based on the visual assessment of the true color and infrared false color images and additionally on the bottom of atmosphere (BOA) reflectance spectra. The most important part of the comparison is done for the difference area of the three classifications considered. This is the part of the classification images where the results of Fmask, ATCOR and Sen2Cor disagree. Results on difference area have the advantage to show more clearly the strengths and weaknesses of a classification than results on the complete image. The overall accuracy of Fmask, ATCOR, and Sen2Cor for difference areas of the selected scenes is 45%, 56%, and 62%, respectively. User and producer accuracies are strongly class- and scene-dependent, typically varying between 30% and 90%. Comparison of the difference area is complemented by looking for the results in the area where all three classifications give the same result. Overall accuracy for that “same area” is 97% resulting in the complete classification in overall accuracy of 89%, 91% and 92% for Fmask, ATCOR and Sen2Cor respectively.},
+  file         = {:/home/marco/STUDIUM/MA/Research/Zekoll2021 - Comparison of Masking Algorithms for Sentinel 2 Imagery.pdf:PDF},
+  groups       = {ARD - Optical},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Article{Rufin2020,
+  author       = {Philippe Rufin and David Frantz and Lin Yan and Patrick Hostert},
+  date         = {2020},
+  journaltitle = {{IEEE} Geoscience and Remote Sensing Letters},
+  title        = {Operational Coregistration of the Sentinel-2A/B Image Archive Using Multitemporal Landsat Spectral Averages},
+  doi          = {10.1109/lgrs.2020.2982245},
+  pages        = {1--5},
+  abstract     = {Geometric misalignment between Landsat and Sentinel-2 data sets as well as multitemporal inconsistency of Sentinel-2A and -2B data sets currently complicate multitemporal analyses. Operational coregistration of Sentinel-2A and -2B imagery is thus required. We present a modification of the established Landsat Sentinel Registration (LSReg) algorithm. The modifications enabled LSReg to be included in an operational preprocessing workflow to automatically coregister large volumes of Sentinel-2 imagery with Landsat base images that represent multiannual monthly spectral average values. The modified LSReg was tested for the complete Sentinel-2 archive covering Crete, Greece, which is a particularly challenging region due to steep topographic gradients and high shares of water in Sentinel-2 tiles. A coregistration success rate of 87.5% of all images was obtained with a mean coregistration precision of 4.4 m. The mean shifts of 14.0 m in the x-direction and 13.4 m in the y-direction before coregistration were found, with maxima exceeding four pixels. Time series noise in locations with land cover transitions (n = 585) was effectively reduced by 43% using the presented approach. The multitemporal geometric consistency of the Sentinel-2 data set was substantially improved, thus enabling time series analyses within the Sentinel-2 data record, as well as integrated Landsat and Sentinel-2A and -2B data sets. The modified algorithm is implemented in the Framework for Operational Radiometric Correction for Environmental monitoring (FORCE) version 3.0 (https://github.com/davidfrantz/force).},
+  file         = {:/home/marco/STUDIUM/MA/Research/Rufin2020 - Operational Coregistration of the Sentinel 2A_B Image Archive Using Multitemporal Landsat Spectral Averages.pdf:PDF},
+  groups       = {ARD - Optical},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Torbick2018,
+  author       = {Nathan Torbick and Xiaodong Huang and Beth Ziniti and David Johnson and Jeff Masek and Michele Reba},
+  date         = {2018-07},
+  journaltitle = {Remote Sensing},
+  title        = {Fusion of Moderate Resolution Earth Observations for Operational Crop Type Mapping},
+  doi          = {10.3390/rs10071058},
+  number       = {7},
+  pages        = {1058},
+  volume       = {10},
+  abstract     = {Crop type inventory and within season estimates at moderate (<30 m) resolution have been elusive in many regions due to the lack of temporal frequency, clouds, and restrictive data policies. New opportunities exist from the operational fusion of Landsat-8 Operational Land Imager (OLI), Sentinel-2 (A & B), and Sentinel-1 (A & B) which provide more frequent open access observations now that these satellites are fully operating. The overarching goal of this research application was to compare Harmonized Landsat-8 Sentinel-2 (HLS), Sentinel-1 (S1), and combined radar and optical data in an operational, near-real-time (within 24 h) context. We evaluated the ability of these Earth observations (EO) across major crops in four case study regions in United States (US) production hot spots. Hindcast time series combinations of these EO were fed into random forest classifiers trained with crop cover type information from the Cropland Data Layer (CDL) and ancillary ground truth. The outcomes show HLS achieved high (>85%) accuracies and the ability to provide insight on crop location and extent within the crop season. HLS fused with S1 had, at times, a higher accuracy (5–10% relative overall accuracy and kappa increases) within season although the combination of fused data was minimal at times, crop dependent, and the accuracies tended to converge by harvest. In cloud prone regions and certain temporal periods, S1 performed well overall. The growth in the availability of time dense moderate resolution data streams and different sensitivities of optical and radar data provide a mechanism for within season crop mapping and area estimates that can help improve food security.},
+  groups       = {Analysis - Other},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Article{Szantoi2020,
+  author       = {Zoltan Szantoi and Gary N. Geller and Nandin-Erdene Tsendbazar and Linda See and Patrick Griffiths and Steffen Fritz and Peng Gong and Martin Herold and Brice Mora and Andr{\'{e}} Obreg{\'{o}}n},
+  date         = {2020-10},
+  journaltitle = {Environmental Science {\&} Policy},
+  title        = {Addressing the need for improved land cover map products for policy support},
+  doi          = {10.1016/j.envsci.2020.04.005},
+  pages        = {28--35},
+  volume       = {112},
+  abstract     = {The continued increase of anthropogenic pressure on the Earth’s ecosystems is degrading the natural environment and then decreasing the services it provides to humans. The type, quantity, and quality of many of those services are directly connected to land cover, yet competing demands for land continue to drive rapid land cover change, affecting ecosystem services. Accurate and updated land cover information is thus more important than ever, however, despite its importance, the needs of many users remain only partially attended. A key underlying reason for this is that user needs vary widely, since most current products – and there are many available – are produced for a specific type of end user, for example the climate modelling community. With this in mind we focus on the need for flexible, automated processing approaches that support on-demand, customized land cover products at various scales. Although land cover processing systems are gradually evolving in this direction there is much more to do and several important challenges must be addressed, including high quality reference data for training and validation and even better access to satellite data. Here, we 1) present a generic system architecture that we suggest land cover production systems evolve towards, 2) discuss the challenges involved, and 3) propose a step forward. Flexible systems that can generate on-demand products that match users’ specific needs would fundamentally change the relationship between users and land cover products – requiring more government support to make these systems a reality.},
+  comment      = {2. The current state of EO data repositories, platforms and research infrastructures
+
+3. Towards customized, on-demand land cover information products
+- Fig. 1 shows a generic architecture that an automated system capable of generating customized products might utilize.},
+  publisher    = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
 0 AllEntriesGroup:;
-1 StaticGroup:ARD\;0\;1\;0x0000ffff\;\;\;;
+1 StaticGroup:ARD - General\;0\;1\;0x0000ffff\;\;\;;
+1 StaticGroup:ARD - Harmonization\;0\;1\;0x8099ffff\;\;\;;
+1 StaticGroup:ARD - Radar\;0\;0\;0x664db3ff\;\;\;;
+1 StaticGroup:ARD - Optical\;0\;1\;0xccb3ffff\;\;\;;
 1 StaticGroup:DataCubes - ODC\;0\;1\;0x00ff00ff\;\;\;;
 1 StaticGroup:DataCubes - Not ODC\;0\;1\;0x008000ff\;\;\;;
 1 StaticGroup:DataCubes - Impact / Use / Definitions\;0\;1\;0x80801aff\;\;\;;
@@ -1278,7 +1399,4 @@ weather parameter. Water deficit may occur continuously over the total growing p
 1 StaticGroup:Other\;0\;1\;0xffffffff\;\;\;;
 1 StaticGroup:Other - Big Data\;0\;1\;0x8a8a8aff\;\;\;;
 1 StaticGroup:Other - Platforms\;0\;0\;0x8a8a8aff\;\;\;;
-1 StaticGroup:MA - Intro\;0\;1\;0x4d1a4dff\;\;\;;
-1 StaticGroup:MA - Methodology\;0\;0\;0x996699ff\;\;\;;
-1 StaticGroup:MA - Discussion\;0\;0\;0xe6b3e6ff\;\;\;;
 }
