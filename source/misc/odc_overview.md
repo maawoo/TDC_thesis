@@ -12,7 +12,6 @@
 
 [ODC Enhancement Proposals](https://github.com/opendatacube/datacube-core/wiki/enhancement-proposals) - Description of technical improvements for ODC Core  
 [Workshop material 2019 - 'Bringing ODC into practice'](https://www.researchgate.net/profile/Gregory_Giuliani/publication/334634843_Bringing_Open_Data_Cube_into_Practice_-_Workshop_Material/links/5d3703c8299bf1995b42c774/Bringing-Open-Data-Cube-into-Practice-Workshop-Material.pdf)  
-[Catapult UK - ODC Presentation PPT](https://www.ecmwf.int/sites/default/files/elibrary/2018/18723-open-data-cube-odc-tool-increase-value-and-impact-global-earth-observation-satellite-data.pdf)  
 [ODC Youtube Channel](https://www.youtube.com/channel/UCZcdqejeGkDBK2nP-9TWshw/videos)
 
 ### Open Earth Alliance
@@ -110,20 +109,23 @@ Detailed information about data products and processing is available [here](http
 ## Austria
 ### Related publications:
 
-...
+[Augustin2019](https://doi.org/10.3390/data4030102) - *Semantic Earth Observation Data Cubes*
 
 ### ARD workflow:
 
-...
+Some information about which datasets are available for the *ACube* and how they have been processed can be found [here](https://acube.eodc.eu/xwiki/bin/view/2.%20Terminology/3.3.%20Datasets/).
 
 ### Resources:
 
+ACube - Austrian Data Cube:  
 [Website](https://acube.eodc.eu/)  
 [Notebooks](https://github.com/eodcgmbh/ACube_notebooks)  
 [Wiki](https://acube.eodc.eu/xwiki/bin/view/Main/)  
 [Presentation - EGU 2020 Poster](https://presentations.copernicus.org/EGU2020/EGU2020-21575_presentation.pdf)
 
-https://storymaps.arcgis.com/stories/05c3980c712b4190b54f7ae3156ae61e
+sen2cube - Sentinel-2 Semantic Data and Information Cube Austria:     
+[Manual](https://manual.sen2cube.at/)  
+[Storymap](https://storymaps.arcgis.com/stories/05c3980c712b4190b54f7ae3156ae61e)  
 
 ## Africa
 ### Related publications:
@@ -160,7 +162,7 @@ The Armenian Data Cube is based on the Swiss Data Cube and also uses the LiMES f
 
 ### ARD workflow:
 
-... 
+Not really described in detail in Maso2019. From what I understand, they just used Sentinel-2 level 2A data (Bottom of Atmosphere Reflectance) from the Copernicus Open Access Hub and Landsat data from SatCat, which is a data portal that has been organizing Landat data for Catalonia.
 
 ### Resources:
 
@@ -174,11 +176,11 @@ The Armenian Data Cube is based on the Swiss Data Cube and also uses the LiMES f
 
 ### ARD workflow:
 
-...
+Not described in detail in Cheng2019. Only very short description that preprocessing of Landsat-7 and -8 included spatial alignment, radiometric correction and pixel quality index.
 
 ### Resources:
 
-...
+[Explorer](https://twdc.colife.org.tw/) (Link is broken?)
 
 ## Colombia
 ### Related publications:
@@ -194,6 +196,12 @@ The Armenian Data Cube is based on the Swiss Data Cube and also uses the LiMES f
 
 ...
 
+## Virginia (USA)
+### Resources:  
+
+[Website](https://www.data4va.org/)  
+[Presentation - Video](https://www.youtube.com/watch?v=T8XTrMeJoX4)
+
 ## Mexico
 ### Related publications:
 
@@ -203,12 +211,6 @@ The Armenian Data Cube is based on the Swiss Data Cube and also uses the LiMES f
 ### Related publications:
 
 [Yao2018](https://doi.org/10.1109/BGDDS.2018.8626825) - *China Data Cube (CDC) for Big Earth Observation Data: Lessons Learned from the Design and Implementation*
-
-## Virginia (USA)
-### Resources:  
-
-[Website](https://www.data4va.org/)  
-[Presentation - Video](https://www.youtube.com/watch?v=T8XTrMeJoX4)
 
 ## Sweden
 
