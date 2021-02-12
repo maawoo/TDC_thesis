@@ -922,7 +922,7 @@ This survey provides a foundation for the design and implementation of query exe
   pages      = {77--96},
   volume     = {20},
   abstract   = {This paper reviews the key role that Earth Observations (EO) play in achieving the Sustainable Development Goals (SDGs) as articulated in the 2030 Agenda document and in monitoring, measuring, and reporting on progress towards the associated targets. This paper also highlights how the Group on Earth Observations (GEO) would contribute to ensure the actual use of EO in support of the 2030 Agenda; and how the Global Earth Observations System of Systems meets requirements for efficient investments in science and technology and a good return on investment, which is elaborated in the Addis Ababa Action Agenda on development financing. Through a number of examples, we first discuss how extensive EO use would: provide a substantial contribution to the achievements of the SDGs by enabling informed decision-making and by allowing monitoring of the expected results; improve national statistics for greater accuracy, by ensuring that the data are “spatially-explicit” and directly contribute to calculate the agreed SDG Targets and Indicators support the fostering of synergy between the SDGs and multilateral environmental agreements by addressing cross-cutting themes such as climate and energy; and facilitate countries’ approaches for working across different development sectors, which is, according to the special adviser on the 2030 Agenda, a key challenge to achieve the SDGs. We then focus on the role that GEO could play in enabling actual use of EO in support of the 2030 Agenda by directly addressing the Strategic Development Goal 17 on partnerships.},
-  groups     = {Other, All},
+  groups     = {All, One-Hit Wonders},
   journal    = {Geo-spatial Information Science},
   keywords   = {skimmed, prio3},
   month      = {apr},
@@ -960,7 +960,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages      = {206--210},
   volume     = {90},
   abstract   = {Earth observations are playing an increasingly significant role in informing decision making in the energy sector. In renewable energy applications, space-based observations now routinely augment sparse ground-based observations used as input for renewable energy resource assessment applications. As one of the nine Group on Earth Observations (GEO) societal benefit areas, the enhancement of management and policy decision making in the energy sector is receiving attention in activities conducted by the Committee on Earth Observation Satellites (CEOS). CEOS has become the “space arm” for the implementation of the Global Earth Observation System of Systems (GEOSS) vision. It is directly supporting the space-based, near-term tasks articulated in the GEO three-year work plan. This paper describes a coordinated program of demonstration projects conducted by CEOS member agencies and partners to utilize Earth observations to enhance energy management end-user decision support systems. We discuss the importance of engagement with stakeholders and understanding their decision support needs in successfully increasing the uptake of Earth observation products for societal benefit. Several case studies are presented, demonstrating the importance of providing data sets in formats and units familiar and immediately usable by decision makers. These projects show the utility of Earth observations to enhance renewable energy resource assessment in the developing world, forecast space weather impacts on the power grid, and improve energy efficiency in the built environment.},
-  groups     = {Other, All},
+  groups     = {All, One-Hit Wonders},
   journal    = {Applied Energy},
   keywords   = {prio3, skimmed},
   month      = {feb},
@@ -1010,7 +1010,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   title      = {Commission Delegated Regulation (EU) No 1159/2013 of 12 July 2013 supplementing Regulation (EU) No 911/2010 of the European Parliament and of the Council on the European Earth monitoring programme (GMES) by establishing registration and licensing conditions for GMES users and defining criteria for restricting access to GMES dedicated data and GMES service information},
   url        = {http://data.europa.eu/eli/reg_del/2013/1159/oj},
   urldate    = {2021-01-01},
-  groups     = {Other, All},
+  groups     = {All, One-Hit Wonders},
   keywords   = {prio3, skimmed},
   priority   = {prio3},
   readstatus = {skimmed},
@@ -1026,7 +1026,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   publisher  = {Publications Office of the European Union},
   url        = {https://op.europa.eu/s/oDKc},
   urldate    = {2021-01-01},
-  groups     = {Other, All},
+  groups     = {All, One-Hit Wonders},
   keywords   = {prio3, skimmed},
   priority   = {prio3},
   readstatus = {skimmed},
@@ -1506,6 +1506,79 @@ This paper reviews the nature and concept of SDI, including the components, whic
   keywords     = {prio2},
   priority     = {prio2},
   publisher    = {{MDPI} {AG}},
+}
+
+@Book{Guo2020,
+  date       = {2020},
+  title      = {Manual of Digital Earth},
+  doi        = {10.1007/978-981-32-9915-3},
+  editor     = {Huadong Guo and Michael F. Goodchild and Alessandro Annoni},
+  publisher  = {Springer Singapore},
+  file       = {:/home/marco/STUDIUM/MA/Research/Other_Books/Guo2020 - Manual of Digital Earth.pdf:PDF},
+  groups     = {Other - Big Data},
+  keywords   = {prio1, skimmed},
+  priority   = {prio1},
+  readstatus = {skimmed},
+}
+
+@Article{Abernathey2020,
+  author    = {Ryan Abernathey and Tom Augspurger and Anderson Banihirwe and Charles C Blackmon-Luca and Timothy J Crone and Chelle L Gentemann and Joseph J Hamman and Naomi Henderson and Chiara Lepore and Theo A Mccaie and Niall H Robinson and Richard P Signell},
+  date      = {2020-11},
+  title     = {Cloud-Native Repositories for Big Scientific Data},
+  doi       = {10.22541/au.160443768.88917719/v1},
+  abstract  = {Scientific data has traditionally been distributed via downloads from data server to
+local computer. This way of working suffers from limitations as scientific datasets grow towards the petabyte scale. A “cloud-native data repository,” as defined in this paper, offers several advantages over traditional data repositories—performance, reliability, cost-effectiveness, collaboration, reproducibility, creativity, downstream impacts, and access & inclusion. These objectives motivate a set of best practices for cloud-native data repositories: analysis-ready data, cloud-optimized (ARCO) formats, and loose coupling with data-proximate computing. The Pangeo Project has developed a prototype implementation of these principles by using open-source scientific Python tools. By providing an ARCO data catalog together with on-demand, scalable distributed computing, Pangeo enables users to process big data at rates exceeding 10 GB/s. Several challenges must be resolved in order to realize cloud computing’s full potential for scientific research, such as organizing funding, training users, and enforcing data privacy requirements.},
+  file      = {:/home/marco/STUDIUM/MA/Research/Abernathey2020 - Cloud Native Repositories for Big Scientific Data.pdf:PDF},
+  groups    = {Other - Big Data},
+  keywords  = {prio1},
+  priority  = {prio1},
+  publisher = {Authorea, Inc.},
+}
+
+@PhdThesis{Eberle2019,
+  author     = {Eberle, Jonas},
+  date       = {2019},
+  title      = {Web service-based exploration of Earth Observation time-series data for analyzing environmental changes},
+  doi        = {10.22032/DBT.40272},
+  language   = {en},
+  abstract   = {The increasing amount of freely available Earth observation (EO) data requires a tremendous change, in order to property handle the number of observations and storage size thereof used for the environmental monitoring of land surfaces. In the near future, the processing of EO data will need to be undertaken close to EO data archives as the downloading of large amounts requires too much time and storage capacity. It is not only scientists and geospatial processing specialists who work with EO data; stakeholders, thematic experts, and software developers do too. Due to open data strategies and the increasing size of data archives, a new market has been developed to provide analysis and application-ready data, services, and platforms. There is thus a great demand for improving the discovery, access, and analysis of EO data in line with the new possibilities of web-based infrastructures. With the aim of bridging the gap between users and EO data archives, various topics have been researched: 1) user requirements and their relation to web services and output formats; 2) technical requirements for the discovery, access, and analysis of multi-source EO time-series data, and 3) management of EO time-series data
+focusing on analysis and application-ready data.},
+  file       = {:/home/marco/STUDIUM/MA/Research/Eberle2019 - Web Service Based Exploration of Earth Observation Time Series Data for Analyzing Environmental Changes.pdf:PDF},
+  groups     = {Other - Big Data},
+  keywords   = {Umweltüberwachung, Fernerkundung, Zeitreihenanalyse, Raumdaten, Internetdienst, Geoinformationssysteme, Webentwicklung, Webanwendungen, Methoden und Techniken der Geowissenschaften, prio2, skimmed},
+  priority   = {prio2},
+  publisher  = {Friedrich-Schiller-Universität Jena},
+  readstatus = {skimmed},
+}
+
+@Article{Diaz2012,
+  author       = {Diaz, Laura and Remke, Albert},
+  date         = {2012-11},
+  journaltitle = {International Journal of Spatial Data Infrastructures Research},
+  title        = {Future SDI – Impulses from Geoinformatics Research and IT Trends},
+  doi          = {10.2902/1725-0463.2012.07.art18},
+  issn         = {1725-0463},
+  number       = {7},
+  pages        = {378--410},
+  abstract     = {The term Spatial Data Infrastructure (SDI) was defined in the nineties as a set of policies, technologies and institutional arrangements for improving the availability
+and accessibility of spatial data and information. SDIs are typically driven by
+governmental organizations, and thus follow top-down structures based on
+regulations and agreements. The drawback is that it renders SDIs less easily capable of evolving with new technological trends. While organizations are still
+struggling to implement SDIs, the World Wide Web is increasingly developing into
+a Geospatial Web, i.e. one that extensively supports the spatial and temporal
+aspects of information. This article is our contribution to the discussion on the
+future technological directions in the field of SDIs. We give a conceptual view of
+the dynamics of both SDIs and the Geospatial Web. We present a picture of the
+SDI of the future, one which benefits from these developments, based on an
+analysis of geoinformatics research topics and current ICT trends. We provide
+recommendations on how to improve the adaptability and usability of SDIs as to
+facilitate the assimilation of new ICT developments and to leverage selfreinforcing growth.},
+  file         = {:/home/marco/STUDIUM/MA/Research/Diaz2012 - Future SDI – Impulses from Geoinformatics Research and IT Trends.pdf:PDF},
+  groups       = {Other - Big Data},
+  keywords     = {prio1},
+  place        = {IT},
+  priority     = {prio1},
+  publisher    = {Publications Office of the European Union},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
