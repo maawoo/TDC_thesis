@@ -1,0 +1,14 @@
+# Fdb version 3
+["pdflatex"] 1618050790 "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/template.tex" "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/template.pdf" "template" 1618050790
+  "$documentclass$.cls" 0 -1 0 ""
+  "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/$documentclass$.cls" 0 -1 0 ""
+  "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/template.aux" 1618050790 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/template.tex" 1618050789 7384 bd0a9d8c32167b0a66c63f33a34ef589 ""
+  "/usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf" 1598393674 39451 15a3ebee027466ecb89701aa91dfebaf ""
+  "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1609938000 2559314 1558af44e94efd878e5b5ea4d03785d5 ""
+  "/usr/local/texlive/2020/texmf.cnf" 1609937938 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "template.tex" 1618050789 7384 bd0a9d8c32167b0a66c63f33a34ef589 ""
+  (generated)
+  "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/template.pdf"
+  "template.log"
+  "/home/marco/STUDIUM/MA/TDC-MScThesis/source/style/template.log"

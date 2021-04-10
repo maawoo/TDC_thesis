@@ -28,6 +28,7 @@
 
 ### ARD / Data processing
 
+https://github.com/ceos-seo/odc_manual_indexer
 [Github - eo-datasets](https://github.com/GeoscienceAustralia/eo-datasets)  
 [Github - SAR ARD Processing](https://github.com/opendatacube/radar)  -> [Ticehurst2019](https://doi.org/10.3390/data4030100)   
 [Github - Optical ARD Processing](https://github.com/GeoscienceAustralia/wagl)
