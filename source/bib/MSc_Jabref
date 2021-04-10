@@ -670,9 +670,9 @@ consider relevant for the imminent uptake of big Earth data.},
   groups      = {DataCubes - ODC, All},
   incitefulid = {181346687},
   journal     = {International Journal of Applied Earth Observation and Geoinformation},
-  keywords    = {prio2, skimmed},
+  keywords    = {prio1, skimmed},
   magid       = {2995869204},
-  priority    = {prio2},
+  priority    = {prio1},
   readstatus  = {skimmed},
   year        = {2020},
 }
@@ -767,9 +767,10 @@ consider relevant for the imminent uptake of big Earth data.},
   groups      = {DataCubes - ODC, All},
   incitefulid = {17071695},
   journal     = {Remote Sensing},
-  keywords    = {prio1},
+  keywords    = {prio1, skimmed},
   magid       = {3016495922},
   priority    = {prio1},
+  readstatus  = {skimmed},
   year        = {2020},
 }
 
@@ -1074,9 +1075,10 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   abstract     = {Currently, the overwhelming amount of Earth Observation data demands new solutions regarding processing and storage. To reduce the amount of time spent in searching, downloading and pre-processing data, the remote Sensing community is coming to an agreement on the minimum amount of corrections satellite images must convey in order to reach the broadest range of applications. Satellite imagery meeting such criteria (which usually include atmospheric, radiometric and topographic corrections) are generically called Analysis Ready Data (ARD). Furthermore, ARD is being assembled into multidimensional data cubes, minimising preprocessing tasks and allowing scientists and users in general to focus on analysis. A particular instance of this is the Brazil Data Cube (BDC) project, which is processing remote sensing images of medium spatial resolution into ARD datasets and assembling them as multidimensional cubes of the Brazilian territory. For example, BDC users are released from performing tasks such as image co-registration , aerosol interference correction. This work presents a BDC proof of concept, by analysing a BDC data cube made with images from the fourth China-Brazil Earth Resources Satellite (CBERS-4) of one of the largest biodiversity hotspot in the world, the Cerrado biome. It also shows how to map and monitor land use and land cover using the CBERS data cube. We demonstrate that the CBERS data cube is effective in resolving land use and and land cover issues to meet local and national needs related to the landscape dynamics, including deforestation, carbon emissions, and public policies.},
   file         = {:/home/marco/STUDIUM/MA/Research/Picoli2020 - CBERS DATA CUBE_ a POWERFUL TECHNOLOGY fOR MAPPING aND MONITORING BRAZILIAN BIOMES.pdf:PDF},
   groups       = {DataCubes - ODC, All},
-  keywords     = {prio2},
+  keywords     = {prio2, skimmed},
   priority     = {prio2},
   publisher    = {Copernicus {GmbH}},
+  readstatus   = {skimmed},
 }
 
 @InProceedings{Yao2018,
@@ -1263,9 +1265,10 @@ weather parameter. Water deficit may occur continuously over the total growing p
   abstract     = {Recently, remote sensing image time series analysis has being widely used to investigate the dynamics of environments over time. Many studies have combined image time series analysis with machine learning methods to improve land use and cover change mapping. In order to support image time series analysis, analysis-ready data (ARD) image collections have been modeled and organized as multidimensional data cubes. Data cubes can be defined as sets of time series associated with spatially aligned pixels. Based on lessons learned in the research project e-Sensing, related to national demands for land use and cover monitoring and related to state-of-the-art studies on relevant topics, we define the requirements to build Earth observation data cubes for Brazil. This paper presents the methodology to generate ARD and multidimensional data cubes from remote sensing images for Brazil. We describe the computational infrastructure that we are developing in the Brazil Data Cube project, composed of software applications and Web services to create, integrate, discover, access, and process the data sets. We also present how we are producing land use and cover maps from data cubes using image time series analysis and machine learning techniques.},
   file         = {:/home/marco/STUDIUM/MA/Research/Ferreira2020 - Earth Observation Data Cubes for Brazil_ Requirements, Methodology and Products.pdf:PDF},
   groups       = {DataCubes - ODC, All},
-  keywords     = {prio1},
+  keywords     = {prio1, read},
   priority     = {prio1},
   publisher    = {{MDPI} {AG}},
+  readstatus   = {read},
 }
 
 @Article{Chaves2020,
@@ -1450,8 +1453,8 @@ using contrasting strategies to produce ARD. ' (...meine Rede :D)
   abstract     = {Worldwide, forests provide natural resources and ecosystem services. However, forest ecosystems are threatened by increasing forest disturbance dynamics, caused by direct human activities or by altering environmental conditions. It is decisive to reconstruct and trace the intra- to transannual dynamics of forest ecosystems. National to local forest authorities and other stakeholders request detailed area-wide maps that delineate forest disturbance dynamics at various spatial scales. We developed a time series analysis (TSA) framework that comprises data download, data management, image preprocessing and an advanced but flexible TSA. We use dense Sentinel-2 time series and a dynamic Savitzky–Golay-filtering approach to model robust but sensitive phenology courses. Deviations from the phenology models are used to derive detailed spatiotemporal information on forest disturbances. In a first case study, we apply the TSA to map forest disturbances directly or indirectly linked to recurring bark beetle infestation in Northern Austria. In addition to spatially detailed maps, zonal statistics on different spatial scales provide aggregated information on the extent of forest disturbances between 2018 and 2019. The outcomes are (a) area-wide consistent data of individual phenology models and deduced phenology metrics for Austrian forests and (b) operational forest disturbance maps, useful to investigate and monitor forest disturbances to facilitate sustainable forest management},
   file         = {:/home/marco/STUDIUM/MA/Research/Loew2020 - Phenology Modelling and Forest Disturbance Mapping with Sentinel 2 Time Series in Austria.pdf:PDF},
   groups       = {Analysis - Time Series, All},
-  keywords     = {prio1},
-  priority     = {prio1},
+  keywords     = {prio2},
+  priority     = {prio2},
   publisher    = {{MDPI} {AG}},
 }
 
@@ -1608,6 +1611,47 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   groups    = {Other - Big Data},
   keywords  = {prio3},
   priority  = {prio3},
+}
+
+@Article{Baumann2015,
+  author       = {Peter Baumann and Paolo Mazzetti and Joachim Ungar and Roberto Barbera and Damiano Barboni and Alan Beccati and Lorenzo Bigagli and Enrico Boldrini and Riccardo Bruno and Antonio Calanducci and Piero Campalani and Oliver Clements and Alex Dumitru and Mike Grant and Pasquale Herzig and George Kakaletris and John Laxton and Panagiota Koltsida and Kinga Lipskoch and Alireza Rezaei Mahdiraji and Simone Mantovani and Vlad Merticariu and Antonio Messina and Dimitar Misev and Stefano Natali and Stefano Nativi and Jelmer Oosthoek and Marco Pappalardo and James Passmore and Angelo Pio Rossi and Francesco Rundo and Marcus Sen and Vittorio Sorbera and Don Sullivan and Mario Torrisi and Leonardo Trovato and Maria Grazia Veratelli and Sebastian Wagner},
+  date         = {2015-03},
+  journaltitle = {International Journal of Digital Earth},
+  title        = {Big Data Analytics for Earth Sciences: the {EarthServer} approach},
+  doi          = {10.1080/17538947.2014.1003106},
+  number       = {1},
+  pages        = {3--29},
+  volume       = {9},
+  abstract     = {Big Data Analytics is an emerging field since massive storage and computing capabilities have been made available by advanced e-infrastructures. Earth and Environmental sciences are likely to benefit from Big Data Analytics techniques supporting the processing of the large number of Earth Observation datasets currently acquired and generated through observations and simulations. However, Earth Science data and applications present specificities in terms of relevance of the geospatial information, wide heterogeneity of data models and formats, and complexity of processing. Therefore, Big Earth Data Analytics requires specifically tailored techniques and tools. The EarthServer Big Earth Data Analytics engine offers a solution for coverage-type datasets, built around a high performance array database technology, and the adoption and enhancement of standards for service interaction (OGC WCS and WCPS). The EarthServer solution, led by the collection of requirements from scientific communities and international initiatives, provides a holistic approach that ranges from query languages and scalability up to mobile access and visualization. The result is demonstrated and validated through the development of lighthouse applications in the Marine, Geology, Atmospheric, Planetary and Cryospheric science domains.},
+  groups       = {DataCubes - Not ODC, All},
+  publisher    = {Informa {UK} Limited},
+}
+
+@InProceedings{Camara2016,
+  author    = {Gilberto Camara and Luiz Fernando Assis and Gilberto Ribeiro and Karine Reis Ferreira and Eduardo Llapa and Lubia Vinhas},
+  booktitle = {Proceedings of the 5th {ACM} {SIGSPATIAL} International Workshop on Analytics for Big Geospatial Data - {BigSpatial} {\textquotesingle}16},
+  date      = {2016},
+  title     = {Big earth observation data analytics},
+  doi       = {10.1145/3006386.3006393},
+  publisher = {{ACM} Press},
+  abstract  = {Earth observation satellites produce petabytes of geospatial data. To manage large data sets, researchers need stable and efficient solutions that support their analytical tasks. Since the technology for big data handling is evolving rapidly, researchers find it hard to keep up with the new developments. To lower this burden, we argue that researchers should not have to convert their algorithms to specialised environments. Imposing a new API to researchers is counterproductive and slows down progress on big data analytics. This paper assesses the cost of research-friendliness, in a case where the researcher has developed an algorithm in the R language and wants to use the same code for big data analytics. We take an algorithm for remote sensing time series analysis on compare it use on map/reduce and on array database architectures. While the performance of the algorithm for big data sets is similar, organising image data for processing in Hadoop is more complicated and time-consuming than handling images in SciDB. Therefore, the combination of the array database SciDB and the R language offers an adequate support for researchers working on big Earth observation data analytics.},
+  file      = {:/home/marco/STUDIUM/MA/Research/Camara2016 - Big Earth Observation Data Analytics.pdf:PDF},
+  groups    = {Other - Big Data},
+}
+
+@Article{BauerMarschallinger2014,
+  author       = {Bernhard Bauer-Marschallinger and Daniel Sabel and Wolfgang Wagner},
+  date         = {2014-11},
+  journaltitle = {Computers {\&} Geosciences},
+  title        = {Optimisation of global grids for high-resolution remote sensing data},
+  doi          = {10.1016/j.cageo.2014.07.005},
+  pages        = {84--93},
+  volume       = {72},
+  abstract     = {Upcoming remote sensing systems onboard satellites will generate unprecedented volumes of spatial data, hence challenging processing facilities in terms of storage and processing capacities. Thus, an efficient handling of remote sensing data is of vital importance, demanding a well-suited definition of spatial grids for the data׳s storage and manipulation. For high-resolution image data, regular grids defined by map projections have been identified as practicable, cognisant of their drawbacks due to geometric distortions. To this end, we defined a new metric named grid oversampling factor (GOF) that estimates local data oversampling appearing during projection of generic satellite images to a regular raster grid. Based on common map projections, we defined sets of spatial grids optimised to minimise data oversampling. Moreover, they ensure that data undersampling cannot occur at any location. From the resulting GOF-values we concluded that equidistant projections are most suitable, with a global mean oversampling of 2% when using a system of seven continental grids (introduced under the name Equi7 Grid). Opposed to previous studies that suggested equal-area projections, we recommend the Plate Carrée, the Equidistant Conic and the Equidistant Azimuthal projection for global, hemispherical and continental grids, respectively.},
+  groups       = {All, Other},
+  keywords     = {prio1},
+  priority     = {prio1},
+  publisher    = {Elsevier {BV}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
