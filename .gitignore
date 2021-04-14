@@ -1,8 +1,6 @@
 *.log
-source/bib/MSc_Jabref.bak
-source/bib/MSc_Jabref.sav
-source/bib/MSc_Jabref.sav.bak
-
+source/bib/ardcube.bib.bak
+source/bib/ardcube.bib.sav
 .vscode/
 
 # Byte-compiled / optimized / DLL files

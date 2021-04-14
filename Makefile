@@ -8,7 +8,7 @@ TEMPLATEDIR=$(INPUTDIR)/templates
 STYLEDIR=$(BASEDIR)/style
 SCRATCHDIR=$(BASEDIR)/scratch
 
-BIBFILE=$(INPUTDIR)/bib/MSc_Jabref
+BIBFILE=$(INPUTDIR)/bib/ardcube.bib
 
 help:
 	@echo ''
