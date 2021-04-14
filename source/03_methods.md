@@ -1,63 +1,101 @@
+# Methods
+## ARDCUBE
+- Describing the main components used in this software project:
+  - What is it, which role does it play and why was it chosen?
 
-# Radar
+### pyroSAR
+- Describing pyroSAR in general with reference to Truckenbrodt2019 & Truckenbrodt2019a
+- Used in this project for:
+  - processing ARD data (SAR)
+  - generate SRTM DEM
 
-# Optical
+### FORCE
+- Describing FORCE in general with reference to Frantz2019
+- Used in this project for:
+  - downloading level-1 data (optical)
+  - processing ARD data (optical)
+  - defining gridding and organization of ARD data (both optical and SAR!)
+  - defining data format of ARD data (both optical and SAR!)
+  
+- *Fig: Figure 2 from Frantz2019? Highlighting which part of the workflow is being used here and then just put the more detailed figures (3 & 4) for the Level 1 Archiving Suite (L1AS) and the Level 2 Processing System (L2PS) into appendix?*
 
-## FORCE
-### Data cubing
+### Open Data Cube
+- Describing ODC in general with reference to ...
+- Used in this project for:
+  - organize/index metadata of the generated ARD in a PostgreSQL database
+  - access to indexed ARD by querying the database and loading as Xarray dataset
+    - Can then be used for analysis with Python tools (Xarray, Dask, ...)  
 
-Spatial resolution:
-- Landsat-8 = 30 m
-- Sentinel-2 = 10 m
-    - Resolution merging: IMPROPHE
+- *Fig: Schematic figure from [medium article](https://medium.com/opendatacube/what-is-open-data-cube-805af60820d7)?*
+- *Fig: Schematic figure from [docs](https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html#load-data)*
 
-Projection: 
-- EPSG 25832
-- Resampling = Cubic Convolution
+### Containerization
+- Singularity!
+- Short comparison to Docker and why Singularity was chosen instead
 
-Tiling:
-- Tile size = 30000
-- Block size = 3000
+### Other
+- Short description that Python was used for developing this framework, which combines the software components mentioned before
+- Mention Conda, because environments are an important part
+- Mention some main packages being used (e.g. sentinelsat, rasterio, fiona, configparse, ...?)
 
-### Corrections
 
-Radiometric:
-- Atmospheric correction
-  - DEM!
-- Topographic correction
-  - DEM!
-- BRDF
-- Adjacency effect
-- Multiple scattering
 
-https://doi.org/10.3390/rs10020352
-https://doi.org/10.1109/TGRS.2016.2530856
+## PROOF OF CONCEPT
+- **Thuringian Data Cube**
 
-Water Vapor:
-- Nope
-- http://doi.org/10.3390/rs11030257 
-    - “The uncertainty and bias were progressively reduced from Landsat 5 over Landsat 7 to Landsat 8 (with the exception of SWIR2 uncertainty) up to the point that the use of the climatology only marginally influences surface reflectance for Landsat 8’s NIR and SWIR1;”
+- Everything data related here, because the choice of data and processing is specific to this proof of concept and not ARDCube itself! (other projects could use different combination of data and process it differently!) 
 
-Aerosol Optical Depth:
-- Default / Internal estimation
+### Study Area
+- Thuringia (the **free** state!)
 
-### Cloud Detection
+- *Fig: Germany with outline of Thuringia*
 
-https://doi.org/10.1016/j.rse.2018.04.046
-https://doi.org/10.3390/rs13010137
+### Data
+#### Optical satellite data
+- Landsat 8
+- Sentinel-2
 
-- Default parameters
-- DEM!
+#### Synthetic Aperture Radar satellite data  
+- Sentinel-1
 
-### Sentinel-2 Coregistration
+#### Auxiliary data
+- Lidar 10m Digital Elevation Model
 
-https://doi.org/10.1109/LGRS.2020.2982245
+### Processing
+#### Optical satellite data
+- Processing with FORCE
+  
+#### Synthetic Aperture Radar satellite data
+- Processing with pyroSAR (not by me)
+  - Short description how it was processed
+- Interim processing (by me)
+  - Cropping
 
-- Creation of Landsat base images
+#### Gridding, Projection, data format, ...
+- Aspects that are relevant to optical and SAR datasets
 
-### Data format
+### High Performance Cluster
+- Short description of Terrasense
 
-- GeoTIFF
 
-## Other improvements?
 
+## USECASE
+- **Roda forest / drought**
+
+### Concept / Motivation
+- What is the plan and why was this usecase chosen?
+- Drought 2018
+- Impacts on forest?
+  
+### Study Area
+- Roda forest
+- Maybe reference that other studies have been done in this area by the department?
+
+- *Fig: Roda forest area + Location in Thuringia*
+
+### Data
+- Subset of data described in *proof of concept* section
+
+### Method
+- kNDVI
+- VV/VH ratio
