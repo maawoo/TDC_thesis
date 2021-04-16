@@ -932,7 +932,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
 }
 
 @Book{PwC2019,
-  author     = {{PwC (PriceWaterHouseCoopers)}},
+  author     = {PricewaterhouseCoopers},
   date       = {2019},
   title      = {Copernicus market report},
   doi        = {10.2873/011961},
@@ -1389,6 +1389,7 @@ This paper introduces TODM, a consistent set of temporally oriented data constru
   pages        = {447},
   volume       = {11},
   abstract     = {The Landsat Analysis Ready Data (ARD) are designed to make the U.S. Landsat archive straightforward to use. In this paper, the availability of the Landsat 4 and 5 Thematic Mapper (TM) and Landsat 7 Enhanced Thematic Mapper Plus (ETM+) ARD over the conterminous United States (CONUS) are quantified for a 36-year period (1 January 1982 to 31 December 2017). Complex patterns of ARD availability occur due to the satellite orbit and sensor geometry, cloud, sensor acquisition and health issues and because of changing relative orientation of the ARD tiles with respect to the Landsat orbit paths. Quantitative per-pixel and summary ARD tile results are reported. Within the CONUS, the average annual number of non-cloudy observations in each 150 × 150 km ARD tile varies from 0.53 to 16.80 (Landsat 4 TM), 11.08 to 22.83 (Landsat 5 TM), 9.73 to 21.72 (Landsat 7 ETM+) and 14.23 to 30.07 (all three sensors). The annual number was most frequently only 2 to 4 Landsat 4 TM observations (36% of the CONUS tiles), increasing to 14 to 16 Landsat 5 TM observations (26% of tiles), 12 to 14 Landsat 7 ETM+ observations (31% of tiles) and 18 to 20 observations (23% of tiles) when considering all three sensors. The most frequently observed ARD tiles were in the arid south-west and in certain mountain rain shadow regions and the least observed tiles were in the north-east, around the Great Lakes and along parts of the north-west coast. The quality of time series algorithm results is expected to be reduced at ARD tiles with low reported availability. The smallest annual number of cloud-free observations for the Landsat 5 TM are over ARD tile h28v04 (northern New York state), for Landsat 7 ETM+ are over tile h25v07 (Ohio and Pennsylvania) and for Landsat 4 TM are over tile h22v08 (northern Indiana). The greatest annual number of cloud-free observations for the Landsat 5 TM and 7 ETM+ ARD are over southern California ARD tile h04v11 and for the Landsat 4 TM are over southern Arizona tile h06v13. The reported results likely overestimate the number of good surface observations because shadows and cirrus clouds were not considered. Implications of the findings for terrestrial monitoring and future ARD research are discussed.},
+  file         = {:Egorov2019 - Landsat 4, 5 and 7 (1982 to 2017) Analysis Ready Data (ARD) Observation Coverage Over the Conterminous United States and Implications for Terrestrial Monitoring.pdf:PDF},
   groups       = {Optical, ARD},
   publisher    = {{MDPI} {AG}},
 }
@@ -1404,11 +1405,71 @@ This paper introduces TODM, a consistent set of temporally oriented data constru
   abstract     = {Formal planning and development of what became the first Landsat satellite commenced over 50 years ago in 1967. Now, having collected earth observation data for well over four decades since the 1972 launch of Landsat-1, the Landsat program is increasingly complex and vibrant. Critical programmatic elements are ensuring the continuity of high quality measurements for scientific and operational investigations, including ground systems, acquisition planning, data archiving and management, and provision of analysis ready data products. Free and open access to archival and new imagery has resulted in a myriad of innovative applications and novel scientific insights. The planning of future compatible satellites in the Landsat series, which maintain continuity while incorporating technological advancements, has resulted in an increased operational use of Landsat data. Governments and international agencies, among others, can now build an expectation of Landsat data into a given operational data stream. International programs and conventions (e.g., deforestation monitoring, climate change mitigation) are empowered by access to systematically collected and calibrated data with expected future continuity further contributing to the existing multi-decadal record. The increased breadth and depth of Landsat science and applications have accelerated following the launch of Landsat-8, with significant improvements in data quality.
 
 Herein, we describe the programmatic developments and institutional context for the Landsat program and the unique ability of Landsat to meet the needs of national and international programs. We then present the key trends in Landsat science that underpin many of the recent scientific and application developments and follow-up with more detailed thematically organized summaries. The historical context offered by archival imagery combined with new imagery allows for the development of time series algorithms that can produce information on trends and dynamics. Landsat-8 has figured prominently in these recent developments, as has the improved understanding and calibration of historical data. Following the communication of the state of Landsat science, an outlook for future launches and envisioned programmatic developments are presented. Increased linkages between satellite programs are also made possible through an expectation of future mission continuity, such as developing a virtual constellation with Sentinel-2. Successful science and applications developments create a positive feedback loop—justifying and encouraging current and future programmatic support for Landsat.},
+  file         = {:Wulder2019 - Current Status of Landsat Program, Science, and Applications.pdf:PDF},
   groups       = {Optical, ARD},
   publisher    = {Elsevier {BV}},
 }
 
+@Article{Dwyer2018,
+  author    = {John Dwyer and David Roy and Brian Sauer and Calli Jenkerson and Hankui Zhang and Leo Lymburner},
+  date      = {2018-08},
+  title     = {Analysis Ready Data: Enabling Analysis of the Landsat Archive},
+  doi       = {10.3390/rs10091363},
+  abstract  = {Data that have been processed to allow analysis with a minimum of additional user effort are often referred to as Analysis Ready Data (ARD). The ability to perform large scale Landsat analysis relies on the ability to access observations that are geometrically and radiometrically consistent, and have had non-target features (clouds) and poor quality observations flagged so that they can be excluded. The United States Geological Survey (USGS) has processed all of the Landsat 4 and 5 Thematic Mapper (TM), Landsat 7 Enhanced Thematic Mapper Plus (ETM+), Landsat 8 Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) archive over the conterminous United States (CONUS), Alaska, and Hawaii, into Landsat ARD. The ARD are available to significantly reduce the burden of pre-processing on users of Landsat data. Provision of pre-prepared ARD is intended to make it easier for users to produce Landsat-based maps of land cover and land-cover change and other derived geophysical and biophysical products. The ARD are provided as tiled, georegistered, top of atmosphere and atmospherically corrected products defined in a common equal area projection, accompanied by spatially explicit quality assessment information, and appropriate metadata to enable further processing while retaining traceability of data provenance.},
+  file      = {:Dwyer2018 - Analysis Ready Data_ Enabling Analysis of the Landsat Archive.pdf:PDF},
+  groups    = {ARD, Optical},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Potapov2020,
+  author       = {Peter Potapov and Matthew C. Hansen and Indrani Kommareddy and Anil Kommareddy and Svetlana Turubanova and Amy Pickens and Bernard Adusei and Alexandra Tyukavina and Qing Ying},
+  date         = {2020-01},
+  journaltitle = {Remote Sensing},
+  title        = {Landsat Analysis Ready Data for Global Land Cover and Land Cover Change Mapping},
+  doi          = {10.3390/rs12030426},
+  number       = {3},
+  pages        = {426},
+  volume       = {12},
+  abstract     = {The multi-decadal Landsat data record is a unique tool for global land cover and land use change analysis. However, the large volume of the Landsat image archive and inconsistent coverage of clear-sky observations hamper land cover monitoring at large geographic extent. Here, we present a consistently processed and temporally aggregated Landsat Analysis Ready Data produced by the Global Land Analysis and Discovery team at the University of Maryland (GLAD ARD) suitable for national to global empirical land cover mapping and change detection. The GLAD ARD represent a 16-day time-series of tiled Landsat normalized surface reflectance from 1997 to present, updated annually, and designed for land cover monitoring at global to local scales. A set of tools for multi-temporal data processing and characterization using machine learning provided with GLAD ARD serves as an end-to-end solution for Landsat-based natural resource assessment and monitoring. The GLAD ARD data and tools have been implemented at the national, regional, and global extent for water, forest, and crop mapping. The GLAD ARD data and tools are available at the GLAD website for free access.},
+  file         = {:Potapov2020 - Landsat Analysis Ready Data for Global Land Cover and Land Cover Change Mapping.pdf:PDF},
+  groups       = {ARD, Optical},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Article{Laney2001,
+  author    = {Laney, Doug and others},
+  title     = {3D data management: Controlling data volume, velocity and variety},
+  number    = {70},
+  pages     = {1},
+  volume    = {6},
+  journal   = {META group research note},
+  publisher = {Stanford},
+  year      = {2001},
+}
+
+@InProceedings{Potin2019,
+  author    = {Pierre Potin and Betlem Rosich and Nuno Miranda and Patrick Grimont and Ian Shurmer and Alistair O{\textquotesingle}Connell and Mike Krassenburg and Jean-Baptiste Gratadour},
+  booktitle = {{IGARSS} 2019 - 2019 {IEEE} International Geoscience and Remote Sensing Symposium},
+  date      = {2019-07},
+  title     = {Copernicus Sentinel-1 Constellation Mission Operations Status},
+  doi       = {10.1109/igarss.2019.8898949},
+  publisher = {{IEEE}},
+  groups    = {BigData},
+}
+
+@InProceedings{Kellogg2020,
+  author    = {Kent Kellogg and Pamela Hoffman and Shaun Standley and Scott Shaffer and Paul Rosen and Wendy Edelstein and Charles Dunn and Charles Baker and Phillip Barela and Yuhsyen Shen and Ana Maria Guerrero and Peter Xaypraseuth and V Raju Sagi and C V Sreekantha and Nandini Harinath and Raj Kumar and Rakesh Bhan and C. V. H. S. Sarma},
+  booktitle = {2020 {IEEE} Aerospace Conference},
+  date      = {2020-03},
+  title     = {{NASA}-{ISRO} Synthetic Aperture Radar ({NISAR}) Mission},
+  doi       = {10.1109/aero47225.2020.9172638},
+  publisher = {{IEEE}},
+  groups    = {BigData},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
+
+@Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
 
 @Comment{jabref-meta: grouping:
 0 AllEntriesGroup:;
