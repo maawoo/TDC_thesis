@@ -1,20 +1,30 @@
 # Background
 
-Short intro text explaining the structure of this section and why I start with SDIs (-> placing EODCs in a larger context!).
+## Big Data & Innovation
+
+Since the beginning of the current century, a majority of the world's technological capacity to store, communicate, and compute information has relied on digital formats [@Hilbert2011]. This has not only resulted in the amount of data growing continuously, but also the importance of 'Big Data' being realized in various fields of society, such as science, industry, and government [@WEF2012]. 
+
+The arising challenges and opportunities of growing amounts of EO and geospatial data have already been important topics in the 1990s. Al Gore coined the term 'Digital Earth' in a speech in 1998, where he envisioned a digital representation of our Earth and how it could benefit society [@Gore1998]. In the same decade, the need for improved management strategies of spatial information have increasingly been recognized by administrations worldwide and resulted in the development of Spatial Data Infrastructures (SDIs), like the INSPIRE Directive of the European Union. A brief history on this topic is provided by @Schade2019.
+
+As presented by @Guo2016 and @Boulton2018, challenges and opportunities related to the current era of 'Big Earth Data' are still being discussed two decades later. The volume of publicly available EO and geospatial data keeps growing and the variety of spatial-, spectral- and temporal resolutions, data formats and ?, adds to the difficulty of generating valuable information from this data. 
+
+The era of 'Big Earth Data' is particularly being fueled by the open data policies of the Landsat program, which includes an archive of over 40 years of global EO data [@Wulder2019], and the Copernicus program with its family of Sentinel satellites [@Aschbacher2017]. Furthermore, new missions are soon to be launched [@Kellogg2020] and new sensor technologies are being developed [@Kampe2017]. The commercial EO sector on the other hand is striving to provide EO data that exceeds the spatial- and temporal resolution of publicly available data [e.g., @Farquharson2018].
+
+Innovative trends in the rapidly evolving information technology (IT) sector have continuously been adopted by the geospatial sector. @Diaz2012 investigated this subject in relation to the development of SDIs and named 'cloud computing' as an important trend. It describes a paradigm that allows individuals to access not only data that is being managed in a remote facility, but also applications and computing power, over the internet and on demand [@Foster2008]. 
+
+@Sudmanns2020 describe a change in EO data analysis workflow that is suitable for dealing with large amounts of EO data, where analysis-ready datasets and appropriate tools for information production, are being provided in a cloud environment. They also describe that most professionals still rely on the 'traditional' workflow of downloading and processing datasets locally, however, cloud computing platforms such as Google Earth Engine [@Gorelick2017] have become more popular in recent years and enabled scientists to use EO data in unprecedented, global-scale studies [e.g., @Hansen2013]. 
 
 
-## EODC in context of Spatial Data Infrastructures
+- Cloud computing and cloud-optimized data formats: [@Abernathey2020] / https://www.tandfonline.com/doi/full/10.1080/17538947.2016.1239771 
+- Open source geospatial software: [@Ivanova2020]
 
-- Digital Earth concept (Gore 1999)
-- Development of Spatial Data Infrastructures 
-  - General concept (Rajabifard2002, Guo2020, Kotsev2020)
-  - INSPIRE & GEOSS as examples (regional, global)
-- Parallel development of storage and data access standards -> OGC / ISO
-  - WMS, WFS, WPS, ...
-- From Traditional SDIs towards new (IT) trends / rapid evolution of the sector!
-  - Diaz et al. (2012)!
-  - Cloud computing! (Manual of DE chapter 9!)
-    - Also emergence of new data formats (COG, Zarr)
+
+
+## Earth Observation Data Cubes
+
+- ...
+
+
 - Next generation SDIs (Gomes et al. 2020)
   - Online cloud computing platforms (e.g. GEE)
   - WCPS/WTSS based systems (e.g. Rasdaman/EarthServer)
@@ -23,77 +33,21 @@ Short intro text explaining the structure of this section and why I start with S
     - Gomes et al. (2020): No differentiation and using the general term 'Platforms for big EO Data Management and Analysis'
     - Giuliani et al. (2019): Tries to differentiate between data cube and cloud-based processing facilities
 
----
 
-Although the topic of 'big Earth data' is as current as ever, arising challenges in connection with growing amounts of EO and geospatial data were already recognized and discussed in the 1990s. Former Vice President of the United States Al Gore famously coined the term 'Digital Earth' in a speech given at the California Science Center in 1998, in which he envisioned a digital representation of our Earth as an opportunity to benefit from the “flood of georeferenced information” more efficiently (Gore, 1998). In the same decade, the need for improved management strategies of spatial information was increasingly recognized by administrations and communities worldwide and resulted in the development of Spatial Data Infrastructures (SDIs), which Rajabifard, Feeney & Williamson (2002) describe as being _“fundamentally about facilitation and coordination of the exchange and sharing of spatial data between stakeholders in the spatial data community.”_ (p. 12). In their work, a generic concept for SDIs is devised, which identifies people and data as one category and policy, access network and standards as a second category (Fig. 1). The former being fundamental and consistent, whereas the latter includes components that can be seen as very dynamic due to the rapid pace of technological developments.
+## Analysis Ready Data (ARD)
 
-[Fig. 1: SDI scheme by Rajabifard et al. (2002)]
-
-This generic concept can be applied to current implementations of SDIs, like the INSPIRE Directive of the European Union (EU). This regional SDI is expected to be fully implemented in 2021 and aims to facilitate the sharing, access and policy-making of public spatial information across EU member states (INSPIRE, 2021). A brief history of the development of SDIs and major milestones in a global context is provided by Schade et al. (2019).
-
-Concurrent to the advancement of SDIs, the technical foundations for storing and accessing geospatial data have been developed and standardized by the International Organization for Standardization (ISO) and the Open Geospatial Consortium (OGC). In relation to EO, the Geographic Tagged Image File Format (GeoTIFF) has been widely used as a storage format for raster data (OGC 2019). Furthermore, various interfaces have been developed that enable the discovery and access of geospatial data via web-services. These include Catalogue Services for the Web (CSW), Web Mapping Services (WMS) and Web Feature Services (WFS) for discovering, viewing and downloading data, respectively (Schade et al., 2019). Additionally, the processing of geospatial data has been possible via bla and bla. 
-
-A shift towards new technological trends that often originate in the closely related and continuously developing IT sector, can be observed in today's geospatial sector, which is also fueled by the constantly growing amount of openly available EO and geospatial data. Traditional SDIs have been focusing on serving this data via aforementioned web-services with the expectation that further processing and extraction of useful information happens client-side. Sudmanns et al. (2020) argue that this approach is inefficient when dealing with large amounts of EO data, which has lead to an increased immobility of said data and the need for adequate, server-side processing and analysis tools. 
-
-The work of Diaz et al. (2012) discusses several trends of the IT sector and their relevance to the development of SDIs. -> cloud computing as one important trend which originates in the IT sector! This has also led to the development of new, cloud-optimized data formats. For example COG instead of GeoTIFF and Zarr instead of netCDF / HDF5. 
-
-
-## Earth Observation Data Cubes
-
-- General overview / definitions
-- Difference between EODCs and Cloud computing platforms like GEE
-- Open Data Cube
-- Other Data Cube projects (?)
+- What is ARD? (History, Definitions)
+- Important aspects for SAR and optical data
+- Why is it important?
+- How can it be acquired at the moment?
+- How can it be generated at the moment?
+- Current developments / Future
 
 ---
 
-- ODC
-  - Describe everything BUT the current technical architecture!
-  - Australian history
-  - ODC Initiative
-  - Notable regional / national deployments
-  - Future (?) / Open Earth Alliance
 
-- Other DC projects
-  - Only giving an overview of notable / comparable projects; not comparing in detail because that would be too much
-  - xcubes
-  - Pangeo
-  - Earth System Data Lab
-  - Gdalcubes
-  - EarthServer
+### Requirements for all sensors
 
----
+### Optical sensors
 
-### General
-
-### ODC
-
-### Other non-ODC projects
-
-
-################################################################
-
-
-# Analysis Ready Data
-
-## History & Definition(s)
-
-- Landsat
-- CARD4L
-
-## How to process ARD
-
-No technical deep-dive! Only highlight most important / relevant. Maybe limit selection to only highlight open source and/or free software? FORCE & pyroSAR will be explained in method section in detail.
-
-- Optical
-  - [Maja](https://labo.obs-mip.fr/multitemp/maccs-how-it-works/)
-  - LiMES
-  - [FORCE](https://force-eo.readthedocs.io/en/latest/)
-- SAR
-  - GAMMA
-  - SNAP
-  - pyroSAR
-  - ASF MapReady? (no Sentinel-1!)
-
-https://www.orfeo-toolbox.org/  
-QGIS, GRASS GIS ?
+### Radar sensors 
