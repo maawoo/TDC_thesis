@@ -447,7 +447,6 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 “The cloud infrastructure provides a number of capabilities that can dramatically improve access and use of Earth Observation data. However, in many cases, data may need to be reorganized and/or reformatted in order to make them tractable to support cloud-native analysis/access patterns. The purpose of this study is to examine the pros and cons of different formats for storing data on the cloud. The evaluation will focus on both enabling high-performance data access and usage as well as to meet the existing scientific data stewardship needs of EOSDIS.”
 (Task 51 Statement of Work, Revision B - Enabling EOSDIS Data Usage Statement of Work)
 With the above purpose in mind, the evaluation we present seeks to inform future decisions on both archival formats for cloud data as well as formats to use for analysis, if different from the archival format. We do not expect to produce a recommendation for a single format for use in all cases but rather hope to inform format selection for a given use based on archival and usability needs. Further study may be warranted as formats, EO data, cloud infrastructure and user behavior evolve.},
-  address     = {https://ntrs.nasa.gov/citations/20200001178},
   file        = {:Durbin2020 - Task 51 Cloud Optimized Format Study.pdf:PDF},
   groups      = {DataFormat},
   keywords    = {prio2, read},
@@ -610,7 +609,7 @@ Key points:
   abstract    = {Turning Earth observation (EO) data consistently and systematically into valuable global information layers is an ongoing challenge for the EO community. Recently, the term ‘big Earth data’ emerged to describe massive EO datasets that confronts analysts and their traditional workflows with a range of challenges. We argue that the altered circumstances must be actively intercepted by an evolution of EO to revolutionise their application in various domains. The disruptive element is that analysts and end-users increasingly rely on Web-based workflows. In this contribution we study selected systems and portals, put them in the context of challenges and opportunities and highlight selected shortcomings and possible future developments that we
 consider relevant for the imminent uptake of big Earth data.},
   file        = {:Sudmanns2020 - Big Earth Data_ Disruptive Changes in Earth Observation Data Management and Analysis_.pdf:PDF},
-  groups      = {BigData},
+  groups      = {BigData, Background},
   incitefulid = {151457084},
   journal     = {International Journal of Digital Earth},
   keywords    = {prio1, read},
@@ -669,7 +668,9 @@ consider relevant for the imminent uptake of big Earth data.},
   groups      = {BigData},
   incitefulid = {74213988},
   journal     = {Isprs Journal of Photogrammetry and Remote Sensing},
+  keywords    = {prio3},
   magid       = {2792826355},
+  priority    = {prio3},
   year        = {2018},
 }
 
@@ -685,25 +686,6 @@ consider relevant for the imminent uptake of big Earth data.},
   magid       = {2891300828},
   priority    = {prio2},
   year        = {2017},
-}
-
-@Article{Ivanova2020,
-  author      = {Ivana Ivánová and Helena Mitasova and Maria Antonia Brovelli},
-  title       = {Open geospatial software and data : a review of the current state and a perspective into the future},
-  doi         = {10.3390/ijgi9020090},
-  issue       = {2},
-  volume      = {9},
-  abstract    = {All over the world, organizations are increasingly considering the adoption of open sourcesoftware and open data.  In the geospatial domain, this is no different, and the last few decadeshave seen significant advances in this regard. We review the current state of open source geospatialsoftware, focusing on the Open Source Geospatial Foundation (OSGeo) software ecosystem and itscommunities, as well as three kinds of open geospatial data (collaboratively contributed, authoritativeand scientific). The current state confirms that openness has changed the way in which geospatialdata are collected, processed, analyzed, and visualized.  A perspective on future developments,informed by responses from professionals in key organizations in the global geospatial community,suggests that open source geospatial software and open geospatial data are likely to have an evenmore profound impact in the future.},
-  comment     = {- ODC is being mentioned in section 2.6. - Institutional and Government Supported Open Source Geospatial Initiatives
-- Beyond that, this paper might be very useful if I discuss the open source aspect somewhere in my thesis!},
-  file        = {:Ivanova2020 - Open Geospatial Software and Data _ a Review of the Current State and a Perspective into the Future.pdf:PDF},
-  groups      = {BigData},
-  incitefulid = {109245531},
-  journal     = {ISPRS international journal of geo-information},
-  keywords    = {prio2},
-  magid       = {3004273024},
-  priority    = {prio2},
-  year        = {2020},
 }
 
 @Article{Gomes2020,
@@ -893,10 +875,11 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages      = {18--27},
   volume     = {202},
   abstract   = {Google Earth Engine is a cloud-based platform for planetary-scale geospatial analysis that brings Google's massive computational capabilities to bear on a variety of high-impact societal issues including deforestation, drought, disaster, disease, food security, water management, climate monitoring and environmental protection. It is unique in the field as an integrated platform designed to empower not only traditional remote sensing scientists, but also a much wider audience that lacks the technical capacity needed to utilize traditional supercomputers or large-scale commodity cloud computing resources.},
-  groups     = {BigData},
+  groups     = {BigData, Background},
   journal    = {Remote Sensing of Environment},
-  keywords   = {skimmed},
+  keywords   = {skimmed, prio2},
   month      = {dec},
+  priority   = {prio2},
   publisher  = {Elsevier {BV}},
   readstatus = {skimmed},
   year       = {2017},
@@ -941,7 +924,8 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   abstract     = {The increasing amount of free and open geospatial data of interest to major societal questions calls for the development of innovative data-intensive computing platforms for the efficient and effective extraction of information from these data. This paper proposes a versatile petabyte-scale platform based on commodity hardware and equipped with open-source software for the operating system, the distributed file system, and the task scheduler for batch processing as well as the containerization of user specific applications. Interactive visualization and processing based on deferred processing are also proposed. The versatility of the proposed platform is illustrated with a series of applications together with their performance metrics.},
   comment      = {- Because it's neither mentioned in the title, nor in the abstract... This paper is about the JRC platform (JEODPP)},
   groups       = {BigData},
-  keywords     = {skimmed},
+  keywords     = {skimmed, prio3},
+  priority     = {prio3},
   publisher    = {Elsevier {BV}},
   readstatus   = {skimmed},
 }
@@ -954,7 +938,8 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   language   = {en},
   copyright  = {Creative Commons Attribution Share Alike 4.0 International},
   groups     = {BigData},
-  keywords   = {Earth observation, cloud computing, API, skimmed},
+  keywords   = {Earth observation, cloud computing, API, skimmed, prio3},
+  priority   = {prio3},
   publisher  = {Zenodo},
   readstatus = {skimmed},
 }
@@ -1176,7 +1161,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   abstract  = {Scientific data has traditionally been distributed via downloads from data server to
 local computer. This way of working suffers from limitations as scientific datasets grow towards the petabyte scale. A “cloud-native data repository,” as defined in this paper, offers several advantages over traditional data repositories—performance, reliability, cost-effectiveness, collaboration, reproducibility, creativity, downstream impacts, and access & inclusion. These objectives motivate a set of best practices for cloud-native data repositories: analysis-ready data, cloud-optimized (ARCO) formats, and loose coupling with data-proximate computing. The Pangeo Project has developed a prototype implementation of these principles by using open-source scientific Python tools. By providing an ARCO data catalog together with on-demand, scalable distributed computing, Pangeo enables users to process big data at rates exceeding 10 GB/s. Several challenges must be resolved in order to realize cloud computing’s full potential for scientific research, such as organizing funding, training users, and enforcing data privacy requirements.},
   file      = {:Abernathey2020 - Cloud Native Repositories for Big Scientific Data.pdf:PDF},
-  groups    = {BigData},
+  groups    = {BigData, Background},
   keywords  = {prio1},
   priority  = {prio1},
   publisher = {Authorea, Inc.},
@@ -1205,7 +1190,7 @@ analysis of geoinformatics research topics and current ICT trends. We provide
 recommendations on how to improve the adaptability and usability of SDIs as to
 facilitate the assimilation of new ICT developments and to leverage selfreinforcing growth.},
   file         = {:Diaz2012 - Future SDI – Impulses from Geoinformatics Research and IT Trends.pdf:PDF},
-  groups       = {BigData},
+  groups       = {BigData, Background},
   place        = {IT},
   publisher    = {Publications Office of the European Union},
 }
@@ -1250,6 +1235,8 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   volume       = {9},
   abstract     = {Big Data Analytics is an emerging field since massive storage and computing capabilities have been made available by advanced e-infrastructures. Earth and Environmental sciences are likely to benefit from Big Data Analytics techniques supporting the processing of the large number of Earth Observation datasets currently acquired and generated through observations and simulations. However, Earth Science data and applications present specificities in terms of relevance of the geospatial information, wide heterogeneity of data models and formats, and complexity of processing. Therefore, Big Earth Data Analytics requires specifically tailored techniques and tools. The EarthServer Big Earth Data Analytics engine offers a solution for coverage-type datasets, built around a high performance array database technology, and the adoption and enhancement of standards for service interaction (OGC WCS and WCPS). The EarthServer solution, led by the collection of requirements from scientific communities and international initiatives, provides a holistic approach that ranges from query languages and scalability up to mobile access and visualization. The result is demonstrated and validated through the development of lighthouse applications in the Marine, Geology, Atmospheric, Planetary and Cryospheric science domains.},
   groups       = {BigData},
+  keywords     = {prio3},
+  priority     = {prio3},
   publisher    = {Informa {UK} Limited},
 }
 
@@ -1397,20 +1384,16 @@ Herein, we describe the programmatic developments and institutional context for 
   pages        = {60--65},
   volume       = {332},
   groups       = {BigData, Background},
-  keywords     = {prio3},
-  priority     = {prio3},
   publisher    = {American Association for the Advancement of Science ({AAAS})},
 }
 
 @Online{WEF2012,
-  author   = {{The World Economic Forum}},
-  date     = {2012},
-  title    = {Big Data, Big Impact: New Possibilities for International Development},
-  url      = {http://www3.weforum.org/docs/WEF_TC_MFS_BigDataBigImpact_Briefing_2012.pdf},
-  urldate  = {2021-04-17},
-  groups   = {BigData, Background},
-  keywords = {prio3},
-  priority = {prio3},
+  author  = {{The World Economic Forum}},
+  date    = {2012},
+  title   = {Big Data, Big Impact: New Possibilities for International Development},
+  url     = {http://www3.weforum.org/docs/WEF_TC_MFS_BigDataBigImpact_Briefing_2012.pdf},
+  urldate = {2021-04-17},
+  groups  = {BigData, Background},
 }
 
 @InCollection{Aschbacher2017,
@@ -1422,8 +1405,6 @@ Herein, we describe the programmatic developments and institutional context for 
   pages     = {81--86},
   publisher = {Springer Singapore},
   groups    = {BigData, Background},
-  keywords  = {prio3},
-  priority  = {prio3},
 }
 
 @InProceedings{Kampe2017,
@@ -1458,7 +1439,79 @@ Herein, we describe the programmatic developments and institutional context for 
   volume       = {13},
   file         = {:Schramm2021 - The OpenEO API_Harmonising the Use of Earth Observation Cloud Services Using Virtual Data Cube Functionalities.pdf:PDF},
   groups       = {BigData},
+  keywords     = {prio2},
+  priority     = {prio2},
   publisher    = {{MDPI} {AG}},
+}
+
+@InProceedings{Foster2008,
+  author    = {Ian Foster and Yong Zhao and Ioan Raicu and Shiyong Lu},
+  booktitle = {2008 Grid Computing Environments Workshop},
+  date      = {2008-11},
+  title     = {Cloud Computing and Grid Computing 360-Degree Compared},
+  doi       = {10.1109/gce.2008.4738445},
+  publisher = {{IEEE}},
+  groups    = {BigData, Background},
+}
+
+@Article{Hansen2013,
+  author       = {M. C. Hansen and P. V. Potapov and R. Moore and M. Hancher and S. A. Turubanova and A. Tyukavina and D. Thau and S. V. Stehman and S. J. Goetz and T. R. Loveland and A. Kommareddy and A. Egorov and L. Chini and C. O. Justice and J. R. G. Townshend},
+  date         = {2013-11},
+  journaltitle = {Science},
+  title        = {High-Resolution Global Maps of 21st-Century Forest Cover Change},
+  doi          = {10.1126/science.1244693},
+  number       = {6160},
+  pages        = {850--853},
+  volume       = {342},
+  groups       = {Background, BigData},
+  publisher    = {American Association for the Advancement of Science ({AAAS})},
+}
+
+@Online{STAC2021,
+  author   = {{STAC Contributors}},
+  date     = {2021},
+  title    = {SpatioTemporal Asset Catalogs (STAC) - Enabling online search and discovery of geospatial assets},
+  url      = {https://stacspec.org/},
+  urldate  = {2021-04-19},
+  groups   = {DataFormat, BigData, Background},
+  keywords = {prio3},
+  priority = {prio3},
+}
+
+@Article{Coetzee2020,
+  author       = {Coetzee, Serena and Ivánová, Ivana and Mitasova, Helena and Brovelli, Maria Antonia},
+  date         = {2020-02},
+  journaltitle = {{ISPRS} International Journal of Geo-Information},
+  title        = {Open Geospatial Software and Data: A Review of the Current State and A Perspective into the Future},
+  doi          = {10.3390/ijgi9020090},
+  issue        = {2},
+  number       = {2},
+  pages        = {90},
+  volume       = {9},
+  abstract     = {All over the world, organizations are increasingly considering the adoption of open sourcesoftware and open data.  In the geospatial domain, this is no different, and the last few decadeshave seen significant advances in this regard. We review the current state of open source geospatialsoftware, focusing on the Open Source Geospatial Foundation (OSGeo) software ecosystem and itscommunities, as well as three kinds of open geospatial data (collaboratively contributed, authoritativeand scientific). The current state confirms that openness has changed the way in which geospatialdata are collected, processed, analyzed, and visualized.  A perspective on future developments,informed by responses from professionals in key organizations in the global geospatial community,suggests that open source geospatial software and open geospatial data are likely to have an evenmore profound impact in the future.},
+  comment      = {- ODC is being mentioned in section 2.6. - Institutional and Government Supported Open Source Geospatial Initiatives
+- Beyond that, this paper might be very useful if I discuss the open source aspect somewhere in my thesis!},
+  file         = {:Coetzee2020 - Open Geospatial Software and Data_ a Review of the Current State and a Perspective into the Future.pdf:PDF},
+  groups       = {BigData, Background},
+  incitefulid  = {109245531},
+  journal      = {ISPRS international journal of geo-information},
+  keywords     = {prio2},
+  magid        = {3004273024},
+  priority     = {prio2},
+  publisher    = {{MDPI} {AG}},
+  year         = {2020},
+}
+
+@Article{Wilkinson2016,
+  author       = {Mark D. Wilkinson and Michel Dumontier and IJsbrand Jan Aalbersberg and Gabrielle Appleton and Myles Axton and Arie Baak and Niklas Blomberg and Jan-Willem Boiten and Luiz Bonino da Silva Santos and Philip E. Bourne and Jildau Bouwman and Anthony J. Brookes and Tim Clark and Merc{\`{e}} Crosas and Ingrid Dillo and Olivier Dumon and Scott Edmunds and Chris T. Evelo and Richard Finkers and Alejandra Gonzalez-Beltran and Alasdair J.G. Gray and Paul Groth and Carole Goble and Jeffrey S. Grethe and Jaap Heringa and Peter A.C 't Hoen and Rob Hooft and Tobias Kuhn and Ruben Kok and Joost Kok and Scott J. Lusher and Maryann E. Martone and Albert Mons and Abel L. Packer and Bengt Persson and Philippe Rocca-Serra and Marco Roos and Rene van Schaik and Susanna-Assunta Sansone and Erik Schultes and Thierry Sengstag and Ted Slater and George Strawn and Morris A. Swertz and Mark Thompson and Johan van der Lei and Erik van Mulligen and Jan Velterop and Andra Waagmeester and Peter Wittenburg and Katherine Wolstencroft and Jun Zhao and Barend Mons},
+  date         = {2016-03},
+  journaltitle = {Scientific Data},
+  title        = {The {FAIR} Guiding Principles for scientific data management and stewardship},
+  doi          = {10.1038/sdata.2016.18},
+  number       = {1},
+  volume       = {3},
+  groups       = {BigData, Background},
+  publisher    = {Springer Science and Business Media {LLC}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
@@ -1471,7 +1524,7 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:ARD\;0\;0\;0x999999ff\;\;\;;
 1 StaticGroup:SAR\;0\;0\;0x4d8080ff\;\;\;;
 1 StaticGroup:Optical\;0\;1\;0x804d80ff\;\;\;;
-1 StaticGroup:BigData\;0\;1\;0xffcce6ff\;\;\;;
+1 StaticGroup:BigData\;0\;0\;0xffcce6ff\;\;\;;
 1 StaticGroup:DataFormat\;0\;1\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
