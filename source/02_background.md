@@ -1,7 +1,5 @@
 # Background
 
-
-
 ## Big Data & Innovation
 
 Since the beginning of the current century, a majority of the world's technological capacity to store, communicate, and compute information has relied on digital formats [@Hilbert2011]. This has not only resulted in the amount of data growing continuously, but also the importance of 'Big Data' being realized in various fields of society, such as science, industry, and government [@WEF2012]. 
@@ -26,17 +24,48 @@ A recent publication by @Abernathey2020 provides an interesting perspective on s
 
 ## Earth Observation Data Cubes
 
-- Next generation SDIs (Gomes et al. 2020)
-  - Online cloud computing platforms (e.g. GEE)
-  - WCPS/WTSS based systems (e.g. Rasdaman/EarthServer)
-  - Data Cube systems (e.g. ODC)
-  - But lack of consensus in literature on categories/definitions/... -> Lines are blurred
-    - Gomes et al. (2020): No differentiation and using the general term 'Platforms for big EO Data Management and Analysis'
-    - Giuliani et al. (2019): Tries to differentiate between data cube and cloud-based processing facilities
+### Concept
 
----
+- Strobl2017
+- Nativi2017
 
-bla
+- Ariav1986 - Concept existed before
+- rasdaman, a pioneering technology that has coined the principle of queryable datacubes (https://link.springer.com/chapter/10.1007/978-3-642-77811-7_19) [@Misev2019]
+- Earlier datacube approaches have focused on business oriented data introducing OLAP (Online Analytical Processing) https://link.springer.com/article/10.1023/A:1009726021843 [@Baumann2018]
+
+- datacube approaches, involving Array Databases, systems with procedural (typically python) interfaces, array libraries, and more [Baumann2018]
+- Next generation SDI [@Gomes2020]
+
+*Fig: Schematic of an EO cube*
+
+
+### Overview of related projects
+
+- Short overview of existing projects / initiatives
+  - Baumann2015 & Misev2019 / EarthServer & BigDataCube
+  - Mahecha2020 / Earth System Data Lab
+  - Appel2019 / gdalcubes
+  - Lewis2017 / ODC
+  - Sentinel Hub?
+  - JEODPP?
+  - Pebesma2017 & Schramm2021 / openEO?
+- Distinction from platforms like GEE
+  - Lack of consensus/distinction ? -> confusing
+    - [@Gomes2020]: No differentiation and using the general term 'Platforms for big EO Data Management and Analysis'
+    - [@Giuliani2019]: Tries to differentiate between data cube and cloud-based processing facilities
+- Some advantages / disadvantages being discussed in literature
+  - Not a black box / not proprietary / no vendor lock-in in comparison to platforms like GEE
+
+- Mahecha2020: Most of the data cube initiatives are, however, motivated by the need for accessing singular (very-)high-resolution data cubes, e.g. from satellite remote sensing or climate reanalysis, and not by the need for global multivariate data exploitation
+
+
+### Open Data Cube
+
+- History
+- Short technical description (more detailed in method section)
+- Overview of related literature and national/regional deployments 
+
+*Table: ODC deployments and relevant publications*
 
 
 
