@@ -24,46 +24,40 @@ A recent publication by @Abernathey2020 provides an interesting perspective on s
 
 ## Earth Observation Data Cubes
 
-To address challenges related to 'Big Earth Data', new technological solutions have emerged in recent years. Besides cloud computing platforms like Google Earth Engine, there are an increasing number of software projects that in some way or another use the term 'Data Cube' and usually are open source. These projects can be categorized under the term Earth Observation Data Cubes (EODCs) and offer a new approach to store, organize and manage large volumes of analysis-ready EO data and thereby lowering the barrier for users to exploit the data to its full potential [@Killough2018]. 
+To address challenges related to 'Big Earth Data', new technological solutions have emerged in recent years. Besides cloud computing platforms like Google Earth Engine, there are an increasing number of software projects or implementations thereof in the geospatial domain, which in some way or another use the term 'Data Cube'. There still seems to be a lack of consensus in regard to the terminology, however, a number of recent publications are using Earth Observation Data Cube (EODC) as an umbrella term for these software projects and implementations [@Giuliani2019; @Kopp2019; @Ferreira2020]. According to @Killough2018, they offer a new approach to store, organize and manage large volumes of analysis-ready EO data and thereby lowering the barrier for users to exploit the data to its full potential. 
 
-The following section will...
+To better understand the fundamentals of EODCs, +@sec:concept provides a more comprehensive overview of the concept and how data cubes in EO are defined in literature. *@sec:overview-of-related-projects and +@sec:open-data-cube on the other hand provide an overview of important software projects and the Open Data Cube initiative in particular. 
 
 
 ### Concept
 
-While EODCs have gained popularity in recent years, the underlying idea does not originate in the geospatial domain. Already in the early 1990s, data cubes of business and statistical data have been used in the context of Online Analytical Processing (OLAP) and the Business Intelligence domain. @Ariav1986 defined a data cube as a “three-dimensional and inherently temporal data construct where time, objects, and attributes are the primary dimensions of stored data” (p.1). The general notion that data cubes are multidimensional data structures which include some form of metadata attributes, can be transferred to the concept of data cubes in the geospatial domain. Technological developments related to OLAP data cubes, however, are not directly applicable, as EO data in the form of spatio-temporal rasters is typically densely populated rather than sparsely [@Baumann2018].    
- 
-...
+While EODCs have gained popularity in recent years, the underlying idea of data cubes does not originate in the geospatial domain. Already in the early 1990s, data cubes of business and statistical data have been used in the context of Online Analytical Processing (OLAP) and the Business Intelligence domain [@Nativi2017]. @Ariav1986 defined a data cube as “a three-dimensional and inherently temporal data construct where time, objects, and attributes are the primary dimensions of stored data” [p.1]. 
+
+The general notion that data cubes are multidimensional data structures, which include some form of metadata attributes, can be transferred to the concept of data cubes in the geospatial domain. Technological developments related to OLAP data cubes, however, are not directly applicable, as EO data in the form of spatio-temporal rasters is typically densely populated rather than sparsely [@Baumann2018]. A simplified visualization of a data cube structure of EO raster data is shown in figure 1.     
+
+*Fig1: Schematic of an EO data cube* (DIY!) 
+
+In response to inconsistent definitions and terminology, @Strobl2017 proposed a concept for data cubes in the geospatial domain that highlights several important aspects independently and thereby contributing to a more harmonized definition. Matching the cube analogy they identified six aspects, or rather faces, of the data cube. 
+
+The work of @Strobl2017 builds on the conceptual view of the 'Datacube Manifesto' as proposed by @Baumann2017. Furthermore, @Nativi2017 expand on the 'six faces' concept by introducing a set of modeling views with the goal of emphasizing the interoperability and reusability aspects of data cube infrastructures. However, in the following, only the six aspects identified by @Strobl2017 are briefly summarized:
+
+**Parameter Model**
+The parameter model includes any metadata, parameterization and quality information that is necessary to understand what information is stored in each thematic layer of a data cube and facilitate further analysis. It remains a challenge to properly incorporate data of the same kind but from various origins (i.e., surface reflectance data from Sentinel-2 and Landsat 8) because of sensor related differences, as well as the variety of available processing tools and algorithms. This problem can be mitigated by using Analysis Ready Data as endorsed by the Committee on Earth Observation Satellites (CEOS) [@Lewis2018]. This topic is presented in more detail in +@sec:analysis-ready-data. 
+
+**Data Representation**
+Data representation refers to how each axes or dimension of the data cube is encoded. This includes spatial, temporal, spectral and thematic properties and can be specified by a set of metadata, such as range, interval, scale, and precision. The spatial dimension, for example, is encoded in the form of a grid system that is based on a geographic projection. The choice of an appropriate projection for the respective region of interest is very important, as otherwise it can lead to considerable spatial distortion [@Steinwand1995]. 
+
+**Data Organisation**
+This aspect covers how the data and its cell values are stored. In terms of raster data this can encompass data format (e.g., GeoTIFF, JPEG2000, Zarr), compression algorithm (e.g., Packbits, Deflate, LZW) and internal partitioning (e.g., Band Sequential, Band Interleaved by Pixel, Block Tiling). A comparison of several raster data formats in the context of access performance on a cloud system, can be found in @Durbin2020.
+
+**Infrastructure**
+The infrastructure of storing a large volume of EO data, while ensuring rapid data access and transfer, is another important aspect to consider. EODCs can be implemented on local High Performance Computing (HPC) facilities, as demonstrated by @Lewis2017. Cloud computing and storage environments like Amazon Web Services (AWS) can also be a viable infrastructure option [@Ferreira2020a].
+
+**Access and Analysis**
 
 
-- Short 'Intro' to data cubes in EO. Different initiatives, different interpretations of this concept, inconsistent use of terminology.
-- At a basic/simplified level EODCs can be seen similar to fig1
+**Interoperability**
 
-*Fig: Schematic of an EO cube* (Kopp2019?)
-
-- But more complex that this! Multiple publications that try to define important aspects of data cube systems in EO:
-
-- Baumann2017 - The Datacube Manifesto
-  - Spatio-Temporal Gridded Data
-  - Treat All Axes Alike
-  - Efficient Single-Step Multi-Dimensional Extraction
-  - Fast Along All Axes
-  - Adaptive, Transparent Partitioning
-  - Flexible Access and Analysis Language
-  
-- Strobl2017 - The six faces of the data cube
-  - Parameter Model
-  - Data Representation
-  - Data Organisation
-  - Infrastructure
-  - Access and Analysis
-  - Interoperability
-
-- Nativi2017
-  - Data-Cube infrastructure model based on a set of viewpoints
-  - purpose was to stress important interoperability and re-usability aspects that should be carefully considered when designing an Earth Data-Cube infrastructure
-  - A set of interoperability views were introduced and characterized to facilitate the comprehension of the complexity of Data-Cube systems and the possible interoperability levels necessary for being part of larger ecosystems
-  - This model aims to support and complement the ongoing discussion on the “cube” facets, initiated by the developers of some significant Data-Cube infrastructures (Strobl et al., 2017)
 
 
 ### Overview of related projects
