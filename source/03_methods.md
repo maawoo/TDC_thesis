@@ -1,4 +1,7 @@
 # Methods
+
+
+
 ## ARDCUBE
 - Describing the main components used in this software project:
   - What is it, which role does it play and why was it chosen?
@@ -29,6 +32,8 @@
 - *Fig: Schematic figure from [medium article](https://medium.com/opendatacube/what-is-open-data-cube-805af60820d7)?*
 - *Fig: Schematic figure from [docs](https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html#load-data)*
 
+- Product and Dataset YAMLs!
+
 ### Containerization
 - Singularity!
 - Short comparison to Docker and why Singularity was chosen instead
@@ -55,8 +60,12 @@
 - Landsat 8
 - Sentinel-2
 
+- *Fig: Landsat 8 and Sentinel-2 tiles overlayed over Thuringia*
+
 #### Synthetic Aperture Radar satellite data  
 - Sentinel-1
+
+- *Fig: Sentinel-1 tiles overlayed over Thuringia*
 
 #### Auxiliary data
 - Lidar 10m Digital Elevation Model
@@ -72,7 +81,9 @@
   - Cropping
 
 #### Gridding, Projection, data format, ...
-- Aspects that are relevant to optical and SAR datasets
+- Aspects that are relevant to both datasets!
+
+- *Fig: Glance7 grid?*
 
 ### High Performance Cluster
 - Short description of Terrasense
@@ -99,3 +110,4 @@
 ### Method
 - kNDVI
 - VV/VH ratio
+
