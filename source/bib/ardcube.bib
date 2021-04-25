@@ -377,7 +377,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   volume    = {4},
   abstract  = {Earth observation data cubes are increasingly used as a data structure to make large collections of satellite images easily accessible to scientists. They hide complexities in the data such that data users can concentrate on the analysis rather than on data management. However, the construction of data cubes is not trivial and involves decisions that must be taken with regard to any particular analyses. This paper proposes on-demand data cubes, which are constructed on the fly when data users process the data. We introduce the open-source C++ library and R package gdalcubes for the construction and processing of on-demand data cubes from satellite image collections, and show how it supports interactive method development workflows where data users can initially try methods on small subsamples before running analyses on high resolution and/or large areas. Two study cases, one on processing Sentinel-2 time series and the other on combining vegetation, land surface temperature, and precipitation data, demonstrate and evaluate this implementation. While results suggest that on-demand data cubes implemented in gdalcubes support interactivity and allow for combining multiple data products, the speed-up effect also strongly depends on how original data products are organized. The potential for cloud deployment is discussed.},
   file      = {:Appel2019 - On Demand Processing of Data Cubes from Satellite Image Collections with the Gdalcubes Library.pdf:PDF},
-  groups    = {EODC - Projects},
+  groups    = {EODC - Projects, Background},
   journal   = {Data},
   keywords  = {prio3},
   month     = {jun},
@@ -455,7 +455,7 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   doi         = {10.1109/bigdata47090.2019.9006222},
   abstract    = {The European Copernicus programme generates massive amounts of Earth Observation (EO) data, with the goal of improving our environmental understanding and management on local, regional, and global level. An initiative of this magnitude comes with a set of challenges, especially pertaining to effective service management once the huge volumes of raster data files are distributed across open data centers and commercial companies.The BigDataCube project responds to this challenge through the concept of federated, analysis-ready datacubes, exposed via the open OGC geo standard interfaces for interoperable access and processing, WMS, WCS, and WCPS.Such federated datacube services have been established in the project between the public German Copernicus hub, CODE-DE, and a commercial cloud provider, cloudeo AG, altogether offering access to more than 500 TB. Both data pools are federated in a location-transparent manner, establishing a common information space where users can query and combine datacubes without knowing their location of storage. In this nucleus of a growing federation recently the Alfred Wegener maritime research institute has joined, and further data centers are in the line. The spectrum of functionality available is showcased through several realistic use cases, including a value-adding Sentinel-1 SAR product on sea state and wind speed in the North Sea. The platform used is the pioneer datacube engine and OGC reference implementation, rasdaman. We report on the outcomes of the project, lessons learned, and further work foreseen in this area.},
   file        = {:Misev2019 - BigDataCube_ a Scalable, Federated Service Platform for Copernicus.pdf:PDF},
-  groups      = {EODC - Projects},
+  groups      = {EODC - Projects, Background},
   incitefulid = {57292206},
   keywords    = {prio3},
   magid       = {3008412778},
@@ -471,7 +471,7 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   volume      = {11},
   abstract    = {Understanding Earth system dynamics in light of ongoing human intervention and dependency remains a major scientific challenge. The unprecedented availability of data streams describing different facets of the Earth now offers fundamentally new avenues to address this quest. However, several practical hurdles, especially the lack of data interoperability, limit the joint potential of these data streams. Today, many initiatives within and beyond the Earth system sciences are exploring new approaches to overcome these hurdles and meet the growing interdisciplinary need for data-intensive research; using data cubes is one promising avenue. Here, we introduce the concept of Earth system data cubes and how to operate on them in a formal way. The idea is that treating multiple data dimensions, such as spatial, temporal, variable, frequency, and other grids alike, allows effective application of user-defined functions to co-interpret Earth observations and/or model–data integration. An implementation of this concept combines analysis-ready data cubes with a suitable analytic interface. In three case studies, we demonstrate how the concept and its implementation facilitate the execution of complex workflows for research across multiple variables, and spatial and temporal scales: (1) summary statistics for ecosystem and climate dynamics; (2) intrinsic dimensionality analysis on multiple timescales; and (3) model–data integration. We discuss the emerging perspectives for investigating global interacting and coupled phenomena in observed or simulated data. In particular, we see many emerging perspectives of this approach for interpreting large-scale model ensembles. The latest developments in machine learning, causal inference, and model–data integration can be seamlessly implemented in the proposed framework, supporting rapid progress in data-intensive research across disciplinary boundaries.},
   file        = {:Mahecha2020 - Earth System Data Cubes Unravel Global Multivariate Dynamics.pdf:PDF},
-  groups      = {EODC - Projects},
+  groups      = {EODC - Projects, Background},
   incitefulid = {100613904},
   journal     = {Earth System Dynamics Discussions},
   keywords    = {prio2},
@@ -1165,7 +1165,7 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   volume       = {9},
   abstract     = {Big Data Analytics is an emerging field since massive storage and computing capabilities have been made available by advanced e-infrastructures. Earth and Environmental sciences are likely to benefit from Big Data Analytics techniques supporting the processing of the large number of Earth Observation datasets currently acquired and generated through observations and simulations. However, Earth Science data and applications present specificities in terms of relevance of the geospatial information, wide heterogeneity of data models and formats, and complexity of processing. Therefore, Big Earth Data Analytics requires specifically tailored techniques and tools. The EarthServer Big Earth Data Analytics engine offers a solution for coverage-type datasets, built around a high performance array database technology, and the adoption and enhancement of standards for service interaction (OGC WCS and WCPS). The EarthServer solution, led by the collection of requirements from scientific communities and international initiatives, provides a holistic approach that ranges from query languages and scalability up to mobile access and visualization. The result is demonstrated and validated through the development of lighthouse applications in the Marine, Geology, Atmospheric, Planetary and Cryospheric science domains.},
   file         = {:Baumann2015 - Big Data Analytics for Earth Sciences_ the EarthServer Approach.pdf:PDF},
-  groups       = {EODC - Projects},
+  groups       = {EODC - Projects, Background},
   keywords     = {prio3},
   priority     = {prio3},
   publisher    = {Informa {UK} Limited},
@@ -1556,6 +1556,27 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {{MDPI} {AG}},
 }
 
+@InProceedings{Baumann1998,
+  author    = {P. Baumann and A. Dehmel and P. Furtado and R. Ritsch and N. Widmann},
+  booktitle = {Proceedings of the 1998 {ACM} {SIGMOD} international conference on Management of data - {SIGMOD} {\textquotesingle}98},
+  date      = {1998},
+  title     = {The multidimensional database system {RasDaMan}},
+  doi       = {10.1145/276304.276386},
+  publisher = {{ACM} Press},
+  groups    = {BigData, Background},
+}
+
+@InCollection{Warmerdam2008,
+  author    = {Frank Warmerdam},
+  booktitle = {Open Source Approaches in Spatial Data Handling},
+  date      = {2008},
+  title     = {The Geospatial Data Abstraction Library},
+  doi       = {10.1007/978-3-540-74831-1_5},
+  pages     = {87--104},
+  publisher = {Springer Berlin Heidelberg},
+  groups    = {DataFormat, Background},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -1570,7 +1591,7 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:SAR\;0\;0\;0x4d8080ff\;\;\;;
 1 StaticGroup:Optical\;0\;1\;0x804d80ff\;\;\;;
 1 StaticGroup:BigData\;0\;1\;0xffcce6ff\;\;\;;
-1 StaticGroup:DataFormat\;0\;1\;0xe6e6ccff\;\;\;;
+1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
