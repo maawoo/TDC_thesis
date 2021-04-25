@@ -60,7 +60,7 @@ To access and analyze the stored data, and to add new data products to the data 
 The interoperability between different data cubes is a crucial aspect to prevent them to become 'silos of information'. Interoperability can be enabled through the use of widely-adopted geospatial standards, which are governed by the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO). @Giuliani2019 emphasize the importance of this aspect.
 
 
-### Software ecosystem
+### Software ecosystem  
 
 The ecosystem of EODC related projects is diverse and continuously growing. To begin with, it is important to distinguish between EODC related software projects, which usually are open source in nature, and cloud-based processing platforms, whose background is usually commercial. There are recent publications that compare both under an umbrella term [e.g., @Gomes2020], however, the distinction can clear up confusion among users and support the characterization of EODCs. @Giuliani2019 discuss several aspects in regard to this distinction and emphasize important limitations of cloud-based platforms that might not be apparent right away (e.g., vendor lock-in).    
 
@@ -69,7 +69,7 @@ The openEO API pursues the goal of providing a common ground for a variety of ba
 In the following, the Open Data Cube is described in more detail, as it is an important part of this thesis. A selection of other related EODC projects are briefly introduced in +@sec:other-projects.
 
 
-#### Open Data Cube
+#### Open Data Cube  
 
 - History
 - Short technical description (more detailed in method section)
@@ -78,13 +78,19 @@ In the following, the Open Data Cube is described in more detail, as it is an im
 *Table: ODC deployments and relevant publications*
 
 
-#### Other projects
+#### Other projects  
 
-**Earth Server & BigDataCube**
+**EarthServer & BigDataCube**  
+EarthServer, as presented by @Baumann2015, is one of the earliest developed EODC projects. Its approach to serve large volumes of EO data centers on the Array Database RasDaMan [@Baumann1998] and OGC coverage standards for access and processing, namely WMS (Web Map Service), WCS (Web Coverage Service) and WCPS (Web Coverage Processing Service). The insights gained from EarthServer were refined further with the BigDataCube project (http://bigdatacube.org, last access: 25 April 2021), which has been implemented by various public and commercial data providers (i.a., CODE-DE and cloudeo AG) to efficiently serve hundreds of Terabytes of EO data [@Misev2019].
 
-**Earth System Data Lab**
+**gdalcubes**  
+As the setup of most other EODCs is not trivial, the gdalcubes project aims to provide a solution that lets users concentrate on the analysis rather than data management [@Appel2019]. This is achieved by on-demand data cubes, which are only created when users process their data. As the name suggests, the widely-used Geospatial Data Abstraction Library (GDAL) is a major component and can handle a large variety of raster data formats [@Warmerdam2008]. The gdalcubes project is available as an open source C++ library (https://github.com/appelmar/gdalcubes, last access: 25 April 2021) and an R package (https://github.com/appelmar/gdalcubes_R, last access: 25 April 2021). 
 
-**gdalcubes**
+**Earth System Data Cube & Lab**  
+@Mahecha2020 proposed the concept of Earth System Data Cubes (ESDC) that enable co-interpretation of EO and model data. The dimensions of each ESDC, such as spatial, temporal, variable, and frequency, are treated alike and allow the execution of complex workflows by applying user-defined functions. The scientific programming languages Julia and Python are currently supported to work with ESDCs. Furthermore, the Earth System Data Lab (ESDL; https://www.earthsystemdatalab.net, last access: 25 April 2021) was introduced by @Mahecha2020, which provides access to curated and analysis ready ESDCs stored in a cloud.  
+
+**xcube**  
+Similar to ODC, the open source project xcube is using the Python packages Xarray and Dask as its core packages (https://github.com/dcs4cop/xcube, last access: 25 April 2021). Beyond that, the conceptual direction of xcube goes into a different direction by heavily relying on the data format Zarr to enable the creation of self-contained data cubes. These can then be published and used in the cloud, as implemented by the Euro Data Cube service (https://www.eurodatacube.com, last access: 25 April 2021). 
 
 
 
