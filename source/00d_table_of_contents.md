@@ -1,5 +1,3 @@
-\pagenumbering{arabic}
-
 \tableofcontents
 
 \newpage
