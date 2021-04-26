@@ -85,9 +85,27 @@ Along with the SDC, the African Regional Data Cube (ARDC) was one of the initial
 
 Another important national EODC deployment that uses ODC at its core, is the Brazilian Data Cube (BDC; http://brazildatacube.org, last access: 26 April 2021) developed by Brazil’s National Institute for Space Research (INPE). The methodology of how the BDC was implemented is described in detail by @Ferreira2020. The BDC has already been used to develop new methods to map land use and cover changes (LUCC) [@Santos2021] and been active in developing tools that can be useful for the ODC community (https://github.com/brazil-data-cube, last access: 26 April 2021). 
 
-A comprehensive list of national ODC deployments and relevant publications can be found in the following table:
+A comprehensive list of national ODC deployments and relevant publications can be found in +@tbl:table-1-odc.
 
-*Table: ODC deployments and relevant publications*
+
+\begin{longtable}[c]{@{}ll@{}}
+\toprule
+Country / Region & Publication   \\* \midrule
+\endhead
+%
+\bottomrule
+\endfoot
+%
+\endlastfoot
+%
+Australia        & [@Lewis2017]     \\
+Switzerland      & @Giuliani2017  \\
+                 & @Giuliani2018 \\
+Brazil           & @Ferreira2020  \\* \bottomrule
+\caption{This is a nice caption!
+\label{tbl:table-1-odc}}\\
+\end{longtable}
+
 
 
 #### Other projects  
