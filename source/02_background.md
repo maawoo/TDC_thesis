@@ -54,7 +54,7 @@ This aspect covers how the data and its cell values are stored. In terms of rast
 The infrastructure of storing large volumes of EO data, while ensuring rapid data access and transfer, is another important aspect to consider. EODCs can be implemented on local High Performance Computing (HPC) facilities, as demonstrated by @Lewis2017. Cloud computing and storage environments like Amazon Web Services (AWS) can also be a viable infrastructure option [@Ferreira2020a].
 
 **Access and Analysis**  
-To access and analyze the stored data, and to add new data products to the data cube, functionalities must be implemented within the infrastructure. The availability of these functionalities to end-users can be through APIs (Application Programming Interface). Several software layers (front-end & back-end) that serve different purposes, are also imaginable.
+To access and analyse the stored data, and to add new data products to the data cube, functionalities must be implemented within the infrastructure. The availability of these functionalities to end-users can be through APIs (Application Programming Interface). Several software layers (front-end & back-end) that serve different purposes, are also imaginable.
 
 **Interoperability**  
 The interoperability between different data cubes is a crucial aspect to prevent them to become 'silos of information'. Interoperability can be enabled through the use of widely-adopted geospatial standards, which are governed by the Open Geospatial Consortium (OGC) and the International Organization for Standardization (ISO). @Giuliani2019 emphasize the importance of this aspect.
@@ -66,14 +66,26 @@ The ecosystem of EODC related projects is diverse and continuously growing. To b
 
 The openEO API pursues the goal of providing a common ground for a variety of back-ends, including those previously mentioned, by connecting them via multiple APIs [@Pebesma2017]. The concept behind openEO, which uses a data cube model at its core, is also presented in a recent publication by @Schramm2021.
 
-In the following, the Open Data Cube is described in more detail, as it is an important part of this thesis. A selection of other related EODC projects are briefly introduced in +@sec:other-projects.
+The Open Data Cube is described in more detail in the following section (+@sec:open-data-cube), as it is an important part of this thesis. A selection of other related EODC projects are briefly introduced in +@sec:other-projects.
 
 
 #### Open Data Cube  
 
-- History
-- Short technical description (more detailed in method section)
-- Overview of related literature and national/regional deployments 
+The Open Data Cube (ODC) project originates from the Australian Geoscience Data Cube (AGDC), which initially was developed with the objective to unlock the potential of 27 years of continuous EO data from the Landsat archive for the entire continent of Australia [@Lewis2016]. Major improvements were implemented in version 2 of the AGDC [@Lewis2017] and the project was renamed to ODC after long term support was ensured via governance structures [@Leith2018]. 
+
+From a technical perspective, the ODC is an open source software library to access, manage, and analyse large quantities of EO data through a Python API and a set of command line tools that can be deployed in a flexible manner [@ODC2020]. A more detailed description of the technical background can be found in section xyz.
+
+Besides being a freely available tool, ODC has developed into a community of people and supporting organizations. @Killough2018 presented the “ODC initiative” as part of the reorganisation from AGDC to ODC, which is supported by the institutions originally responsible for the AGDC, namely Geoscience Australia (GA) and the Commonwealth Scientific and Industrial Research Organization (CSIRO), as well as the Committee on Earth Observation Satellites (CEOS), Analytical Mechanics Associates (AMA), and the United States Geological Survey (USGS). The aim of this initiative is to steward and contribute to the development of the ODC software architecture, thereby enabling its utilization around the world. 
+
+In addition to the general ODC initiative, CEOS started a separate “CEOS Data Cube” initiative based on their goal to “improve data access, data preparation, and data analysis for all global users of satellite data” [@Killough2018, p.8630]. In this context, the goal to establish operational EODCs (based on the ODC tools) in 20 countries by 2022 was defined.
+
+The Swiss Data Cube (SDC) was one of the first national EODCs and the “lessons learned” described by @Giuliani2017 have been a valuable resource of information for subsequent deployments [e.g., @Asmaryan2019]. The SDC supports the Swiss government in environmental monitoring and reporting, and has been used to monitor the temporal and spatial evolution of snow cover in Switzerland [@Dhu2019].
+
+Along with the SDC, the African Regional Data Cube (ARDC) was one of the initial EODCs established as part of the CEOS Data Cube initiative. As the name suggests, the ARDC was regional in scale and encompassed the countries of Ghana, Kenya, Senegal, Sierra Leone, and Tanzania [@Killough2019]. Since then, the ARDC has developed into the continental-scale data infrastructure Digital Earth Africa (DE Africa; https://www.digitalearthafrica.org, last access: 26 April 2021). According to a report by the World Economic Forum (WEF), the socio-economic benefits created through DE Africa could exceed $2bn per year by 2024 [@WEF2021]. 
+
+Another important national EODC deployment that uses ODC at its core, is the Brazilian Data Cube (BDC; http://brazildatacube.org, last access: 26 April 2021) developed by Brazil’s National Institute for Space Research (INPE). The methodology of how the BDC was implemented is described in detail by @Ferreira2020. The BDC has already been used to develop new methods to map land use and cover changes (LUCC) [@Santos2021] and been active in developing tools that can be useful for the ODC community (https://github.com/brazil-data-cube, last access: 26 April 2021). 
+
+A comprehensive list of national ODC deployments and relevant publications can be found in the following table:
 
 *Table: ODC deployments and relevant publications*
 
@@ -81,7 +93,7 @@ In the following, the Open Data Cube is described in more detail, as it is an im
 #### Other projects  
 
 **EarthServer & BigDataCube**  
-EarthServer, as presented by @Baumann2015, is one of the earliest developed EODC projects. Its approach to serve large volumes of EO data centers on the Array Database RasDaMan [@Baumann1998] and OGC coverage standards for access and processing, namely WMS (Web Map Service), WCS (Web Coverage Service) and WCPS (Web Coverage Processing Service). The insights gained from EarthServer were refined further with the BigDataCube project (http://bigdatacube.org, last access: 25 April 2021), which has been implemented by various public and commercial data providers (i.a., CODE-DE and cloudeo AG) to efficiently serve hundreds of Terabytes of EO data [@Misev2019].
+EarthServer, as presented by @Baumann2015, is one of the earliest developed EODC projects. Its approach to serve large volumes of EO data centers on the Array Database RasDaMan [@Baumann1998] and OGC coverage standards for access and processing, namely WMS (Web Map Service), WCS (Web Coverage Service) and WCPS (Web Coverage Processing Service). The insights gained from EarthServer were refined further with the BigDataCube project (http://bigdatacube.org, last access: 25 April 2021), which has been implemented by various public and commercial data providers (i.a., CODE-DE and cloudeo AG) to efficiently serve hundreds of terabytes of EO data [@Misev2019].
 
 **gdalcubes**  
 As the setup of most other EODCs is not trivial, the gdalcubes project aims to provide a solution that lets users concentrate on the analysis rather than data management [@Appel2019]. This is achieved by on-demand data cubes, which are only created when users process their data. As the name suggests, the widely-used Geospatial Data Abstraction Library (GDAL) is a major component and can handle a large variety of raster data formats [@Warmerdam2008]. The gdalcubes project is available as an open source C++ library (https://github.com/appelmar/gdalcubes, last access: 25 April 2021) and an R package (https://github.com/appelmar/gdalcubes_R, last access: 25 April 2021). 
@@ -105,10 +117,26 @@ Similar to ODC, the open source project xcube is using the Python packages Xarra
 
 ---
 
-bla
 
-### Requirements for all sensors
 
-### Optical sensors
+(Augustin2019)
+State-of-the-art EO data cubes simplify data provision to users by facilitating data uptake and
+aiming to provide analysis-ready data (ARD) [4]. While there is still an ongoing discussion about
+how ARD are defined and specified, it is usually understood as calibrated data, and in the case of
+CARD4L (Committee on EO Satellites ARD for Land), even contains masks as a target requirement
+specification, such as for cloud and water [17,18]. The intention is to shift the burden of pre-processing
+from users to data providers, who are often better equipped to consistently and reliably process large
+volumes of high-velocity data [6,17,19]. Processing steps with a high potential level of automation can
+be conducted centrally where they only must be conducted once and are then available to all users.
+This contrasts with requiring every user to pre-process the data they would like to use on their own
+and improves comparability of initial data conditions between users and applications
 
-### Radar sensors 
+(Giuliani2017)
+A fundamental aspect while building a DC is having ARD products ingested, stored in the
+database, and readily available. Considering that ARD products are not commonly generated
+by data providers and the fact that current delivery mechanisms are not efficient, this requires
+finding a procedure to routinely generate ARD ensuring that all observations stored in a
+Data Cube are consistent and comparable (Figure 1). Ideally this procedure must be automated as much as possible (e.g. discover, download, and pre-processing), should be able to
+discover and access data from different repositories (e.g. ESPA, Sentinels Data Hub), should
+handle different sensors (e.g. Landsat MSS, TM, ETM, OLI; Sentinel 1 SAR; Sentinel 2 MSI), and
+should be interoperable (e.g. to enhance reusability)
