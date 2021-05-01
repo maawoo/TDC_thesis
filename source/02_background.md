@@ -125,7 +125,7 @@ To achieve the initiative's goals, a framework was set up, which consists of thr
 
 #### Product Family Specifications  
 
-The details provided by the PFSs can be used by data producers to identify which measures are necessary in order to deliver CARD4L compliant ARD to the users. These are further categorized as 'Threshold' and 'Target' requirements that provide specific information on: general metadata, per-pixel metadata, radiometric and atmospheric corrections, and geometric corrections [@Siqueira2019].
+The details provided by the PFSs can be used by data producers to identify which measures are necessary in order to deliver CARD4L compliant ARD to the users. These are further categorized as 'Threshold' () and 'Target' requirements that provide specific information on: general metadata, per-pixel metadata, radiometric and atmospheric corrections, and geometric corrections [@Siqueira2019].
 
 Four PFSs are presently devised: Surface Reflectance (v5.0) and Surface Temperature (v5.0) for optical sensors, and Normalized Radar Backscatter (v5.0) and Polarimetric Radar (v3.0) for synthetic aperture radar (SAR) sensors (https://ceos.org/ard, last access: 28 April 2021). A brief introduction of the Surface Reflectance and Normalized Radar Backscatter PFSs (SR-PFS and NRB-PFS, respectively) follows, as relevant ARD products are produced and used in this work. 
 
@@ -138,19 +138,8 @@ Both specifications also require *per-pixel metadata* that can be used to discri
 
 ### Generating ARD
 
-The national and regional EODCs established in relation to the CEOS Data Cube initiative mentioned in +@sec:open-data-cube, have developed different approaches for generating their ARD products. To provide both the SDC and the Armenian Data Cube with ARD, for example, the Live Monitoring of Earth Surface (LiMES) framework was used [@Giuliani2017; @Asmaryan2019], which is presented in detail by @Giuliani2017a. Other approaches are described, i.a., by @Lewis2017 for the AGDCv2 and by @Ferreira2020 for the BDC. Moreover, all software products being developed for the BDC are openly available (https://github.com/brazil-data-cube, last access: 30 April 2021). 
+The national and regional EODCs established in relation to the CEOS Data Cube initiative mentioned in +@sec:open-data-cube, have developed different approaches for generating their ARD products. To provide both the SDC and the Armenian Data Cube with ARD, for example, the Live Monitoring of Earth Surface (LiMES) framework was used [@Giuliani2017; @Asmaryan2019], which is presented in detail by @Giuliani2017a. Other approaches are described in detail, i.a., by @Lewis2017 for the AGDCv2 and by @Ferreira2020 for the BDC. Moreover, all software products being developed for the BDC are openly available (https://github.com/brazil-data-cube, last access: 30 April 2021). 
 
-Even though a variety of approaches are used, the common ground usually lies in open source software and algorithms. Especially for optical sensors the selection of peer-reviewed algorithms that can be used for radiometric and atmospheric corrections, as well as the generation of cloud masks, is large. To process Sentinel-2 data to a Level-2A Bottom-Of-Atmosphere (BOA) product, Sen2Cor is commonly used [@MainKnorn2017]. @Lonjou2016 describe the MACCS-ATCOR joint algorithm (MAJA), which can be used to process Sentinel-2 and Landsat 8 data. The Satellite Signal in the Solar Spectrum (6S) algorithm [@Vermote1997] is implemented by the Atmospheric and Radiometric Correction of Satellite Imagery software (ARCSI; https://github.com/remotesensinginfo/arcsi, last access: 30 April 2021), which is able to handle a variety of optical sensors. A software framework that not only focuses on the application of correction algorithms, but also on other important aspects for the generation of ARD for EODCs (e.g., an appropriate tiling/gridding scheme), is FORCE [@Frantz2019].  
+Even though a variety of approaches are used, the common ground usually lies in open source software and algorithms. Especially for optical sensors the selection of peer-reviewed algorithms that can be utilized for radiometric and atmospheric corrections, as well as the generation of cloud masks, is large. To process Sentinel-2 data to a Level-2A Bottom-Of-Atmosphere (BOA) product, Sen2Cor is commonly used [@MainKnorn2017]. @Lonjou2016 developed the MACCS-ATCOR joint algorithm (MAJA), which can be used to process Sentinel-2 and Landsat 8 data. The Satellite Signal in the Solar Spectrum (6S) algorithm [@Vermote1997] is implemented in the open source software ARCSI (https://github.com/remotesensinginfo/arcsi, last access: 30 April 2021), which is able to handle a variety of optical sensors. A software framework that not only focuses on the application of correction algorithms, but also on other aspects that are important when generating ARD for EODCs (e.g., an appropriate tiling/gridding scheme), is the Framework for Operational Radiometric Correction for Environmental monitoring (FORCE) [@Frantz2019].  
 
-
-
-- SAR
-  - Gamma
-  - SNAP
-
-(Giuliani2019a)
-Truckenbrodt et al. [35] and Ticehurst et al. [36] assessed
-the feasibility of automatically producing analysis-ready radiometrically terrain-corrected (RTC)
-Synthetic Aperture Radar (SAR) gamma nought backscatter data from Sentinel-1. Both studies
-concluded that the European Space Agency (ESA) Sentinel Application Platform (SNAP) toolbox
-(https://step.esa.int/main/toolboxes/snap/) is a valid solution for producing Sentinel-1 ARD products.
+In case of SAR sensors, the selection of algorithms to produce a NRB product is more uniform and ultimately it is rather a choice of which software to use. Some alternatives include the open source Orfeo Toolbox [@Inglada2009] and the proprietary GAMMA software [@GRS2021]. ESA's Sentinel Application Platform (SNAP; http://step.esa.int/main/toolboxes/snap, last access: 01 May 2021) and more specifically its Sentinel-1 toolbox (S1TBX), is a widely adopted and freely available software to process data from various ESA and third-party SAR sensors. Both @Truckenbrodt2019 and @Ticehurst2019 have investigated the feasibility of generating Sentinel-1 ARD products using SNAP and GAMMA, and came to a confirming conclusion in both cases.  
