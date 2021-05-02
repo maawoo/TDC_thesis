@@ -35,9 +35,9 @@ While EODCs have gained popularity in recent years, the underlying idea of data 
 
 The general notion that data cubes are multidimensional data structures, which include some form of metadata attributes, can be transferred to the concept of data cubes in the geospatial domain. Technological developments related to OLAP data cubes, however, are not directly applicable, as EO data in the form of spatio-temporal rasters is typically densely populated rather than sparsely [@Baumann2018]. 
 
-A simplified visualization of a data cube structure of EO raster data is shown in Figure @fig:eocube. They are usually shaped by longitude (x) and latitude (y) as the spatial dimensions, and time as the temporal dimension. Spectral bands or polarisations for optical and synthetic aperture radar (SAR) sensors respectively, are a typical forth dimension that is not shown here. 
+A simplified visualization of a data cube structure of EO raster data is shown in Figure @fig:eocube. They are usually shaped by longitude (x) and latitude (y) as the spatial dimensions, and time as the temporal dimension. Spectral bands or polarisations for optical and synthetic aperture radar (SAR) sensors respectively, are a typical fourth dimension that is not shown here. 
 
-![Schematic of an EO data cube.](source/figures/cube_Kopp2019.png){#fig:eocube width=100%}
+![Visualization of an EODC. [@Kopp2019]](source/figures/cube_Kopp2019.png){#fig:eocube width=75%}
 
 In response to inconsistent definitions and terminology, @Strobl2017 proposed a concept for data cubes in the geospatial domain that highlights several important aspects independently and thereby contributing to a more harmonized definition. Matching the cube analogy they identified six aspects, or rather faces, of the data cube. The work of @Strobl2017 builds on the conceptual view of the 'Datacube Manifesto' proposed by @Baumann2017. Furthermore, @Nativi2017 expand on the 'six faces' concept by introducing a set of modeling views with the goal of emphasizing the interoperability and reusability aspects of data cube infrastructures. In the following, only the six aspects identified by @Strobl2017 are briefly summarized and complemented with relevant publications:
 
