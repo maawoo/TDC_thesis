@@ -9,7 +9,7 @@
   volume     = {4},
   abstract   = {This study aims at assessing the feasibility of automatically producing analysis-ready radiometrically terrain-corrected (RTC) Synthetic Aperture Radar (SAR) gamma nought backscatter data for ingestion into a data cube for use in a large spatio-temporal data environment. As such, this study investigates the analysis readiness of different openly available digital elevation models (DEMs) and the capability of the software solutions SNAP and GAMMA in terms of overall usability as well as backscatter data quality. To achieve this, the study builds on the Python library pyroSAR for providing the workflow implementation test bed and provides a Jupyter notebook for transparency and future reproducibility of performed analyses. Two test sites were selected, over the Alps and Fiji, to be able to assess regional differences and support the establishment of the Swiss and Common Sensing Open Data cubes respectively.},
   file       = {:Truckenbrodt2019 - Towards Sentinel 1 SAR Analysis Ready Data_ a Best Practices Assessment on Preparing Backscatter Data for the Cube.pdf:PDF},
-  groups     = {SAR, ARD},
+  groups     = {SAR, ARD, Background},
   journal    = {Data},
   keywords   = {prio1, skimmed},
   month      = {jul},
@@ -28,7 +28,7 @@
   volume     = {11},
   abstract   = {Ever increasing data volumes of satellite constellations call for multi-sensor analysis ready data (ARD) that relieve users from the burden of all costly preprocessing steps. This paper describes the scientific software FORCE (Framework for Operational Radiometric Correction for Environmental monitoring), an ‘all-in-one’ solution for the mass-processing and analysis of Landsat and Sentinel-2 image archives. FORCE is increasingly used to support a wide range of scientific to operational applications that are in need of both large area, as well as deep and dense temporal information. FORCE is capable of generating Level 2 ARD, and higher-level products. Level 2 processing is comprised of state-of-the-art cloud masking and radiometric correction (including corrections that go beyond ARD specification, e.g., topographic or bidirectional reflectance distribution function correction). It further includes data cubing, i.e., spatial reorganization of the data into a non-overlapping grid system for enhanced efficiency and simplicity of ARD usage. However, the usage barrier of Level 2 ARD is still high due to the considerable data volume and spatial incompleteness of valid observations (e.g., clouds). Thus, the higher-level modules temporally condense multi-temporal ARD into manageable amounts of spatially seamless data. For data mining purposes, per-pixel statistics of clear sky data availability can be generated. FORCE provides functionality for compiling best-available-pixel composites and spectral temporal metrics, which both utilize all available observations within a defined temporal window using selection and statistical aggregation techniques, respectively. These products are immediately fit for common Earth observation analysis workflows, such as machine learning-based image classification, and are thus referred to as highly analysis ready data (hARD). FORCE provides data fusion functionality to improve the spatial resolution of (i) coarse continuous fields like land surface phenology and (ii) Landsat ARD using Sentinel-2 ARD as prediction targets. Quality controlled time series preparation and analysis functionality with a number of aggregation and interpolation techniques, land surface phenology retrieval, and change and trend analyses are provided. Outputs of this module can be directly ingested into a geographic information system (GIS) to fuel research questions without any further processing, i.e., hARD+. FORCE is open source software under the terms of the GNU General Public License v. >= 3, and can be downloaded from http://force.feut.de.},
   file       = {:Frantz2019 - FORCE_Landsat + Sentinel 2 Analysis Ready Data and beyond.pdf:PDF},
-  groups     = {Optical, ARD},
+  groups     = {Optical, ARD, Background},
   journal    = {Remote Sensing},
   keywords   = {prio1, skimmed},
   month      = {may},
@@ -255,7 +255,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   volume    = {4},
   abstract  = {A research alliance between the Commonwealth Scientific and Industrial Research Organization and Geoscience Australia was established in relation to Digital Earth Australia, to develop a Synthetic Aperture Radar (SAR)-enabled Data Cube capability for Australia. This project has been developing SAR analysis ready data (ARD) products, including normalized radar backscatter (gamma nought, γ0), eigenvector-based dual-polarization decomposition and interferometric coherence, all generated from the European Space Agency (ESA) Sentinel-1 interferometric wide swath mode data available on the Copernicus Australasia Regional Data Hub. These are produced using the open source ESA SNAP toolbox. The processing workflows are described, along with a comparison of the γ0 backscatter and interferometric coherence ARD produced using SNAP and the proprietary software GAMMA. This comparison also evaluates the effects on γ0 backscatter due to variations related to: Near- and far-range look angles; SNAP’s default Shuttle Radar Topography Mission (SRTM) DEM and a refined Australia-wide DEM; as well as terrain. The agreement between SNAP and GAMMA is generally good, but also presents some systematic geometric and radiometric differences. The difference between SNAP’s default SRTM DEM and the refined DEM showed a small geometric shift along the radar view direction. The systematic geometric and radiometric issues detected can however be expected to have negligible effects on analysis, provided products from the two processors and two DEMs are used separately and not mixed within the same analysis. The results lead to the conclusion that the SNAP toolbox is suitable for producing the Sentinel-1 ARD products.},
   file      = {:Ticehurst2019 - Building a SAR Enabled Data Cube Capability in Australia Using SAR Analysis Ready Data.pdf:PDF},
-  groups    = {SAR, ARD},
+  groups    = {SAR, ARD, Background},
   journal   = {Data},
   keywords  = {prio1},
   month     = {jul},
@@ -713,7 +713,7 @@ consider relevant for the imminent uptake of big Earth data.},
   volume    = {202},
   abstract  = {Global environmental changes are mostly induced by human activities (e.g., food and energy production, urbanization, mining activities). To assess and understand these changes that are occurring all around the planet, regular and continuous monitoring is an essential condition. However, due to the potentially large area spread over numerous locations that need to be followed, this usually leads to a low frequency of monitoring of environmental changes of only a few selected sites at best. With the increasing number of freely and openly accessible big remotely-sensed Earth Observations (EO) Data repositories and the increasing capabilities of open and interoperable software solutions it is now possible to automate various EO data processing tasks to monitor environmental changes at large scale. This paper presents the Live Monitoring of Earth Surface (LiMES) framework that helps to automate image processing tasks in transforming raw data into information and knowledge through workflows using interoperable processing service chains for monitoring environmental changes. Both benefits and limitations are demonstrated and discussed through the implementation of a prototype to facilitate the update on the status of some of the 278 UNEP Environmental Hotspots. We believe that such a framework can help to reduce the gap between massive volumes of EO data and the users such as International Organizations (IO) in order to help them better fulfil their environmental monitoring mandates by bringing raw data to a level which can be used by non-remote sensing experts for basic impacts assessments.},
   file      = {:Giuliani2017a - Live Monitoring of Earth Surface (LiMES)_ a Framework for Monitoring Environmental Changes from Earth Observations.pdf:PDF},
-  groups    = {Optical},
+  groups    = {Optical, Background},
   journal   = {Remote Sensing of Environment},
   month     = {dec},
   publisher = {Elsevier {BV}},
@@ -1383,11 +1383,11 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {American Association for the Advancement of Science ({AAAS})},
 }
 
-@Online{STAC2021,
+@Online{STAC2017,
   author   = {{STAC Contributors}},
-  date     = {2021},
+  date     = {2017},
   title    = {SpatioTemporal Asset Catalogs (STAC) - Enabling online search and discovery of geospatial assets},
-  url      = {https://stacspec.org/},
+  url      = {https://github.com/radiantearth/stac-spec},
   urldate  = {2021-04-19},
   groups   = {DataFormat, BigData, Background},
   keywords = {prio3},
@@ -1426,7 +1426,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi          = {10.1038/sdata.2016.18},
   number       = {1},
   volume       = {3},
-  groups       = {BigData, Background},
+  groups       = {BigData},
   publisher    = {Springer Science and Business Media {LLC}},
 }
 
@@ -1583,11 +1583,11 @@ Herein, we describe the programmatic developments and institutional context for 
   priority = {prio1},
 }
 
-@Online{ODC2020,
-  author  = {{Open Data Cube}},
-  date    = {2020},
-  title   = {Overview},
-  url     = {https://www.opendatacube.org/overview},
+@Online{ODC2021,
+  author  = {{ODC Contributors}},
+  date    = {2021},
+  title   = {Open Data Cube documentation - High Level Architecture},
+  url     = {https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html},
   urldate = {2021-04-26},
   groups  = {EODC - OpenDataCube, Background},
 }
@@ -1656,7 +1656,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {3},
   pages        = {675--686},
   volume       = {35},
-  groups       = {Optical},
+  groups       = {Optical, Background},
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
@@ -1668,7 +1668,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi       = {10.1117/12.2240935},
   editor    = {Adolfo Comer{\'{o}}n and Evgueni I. Kassianov and Klaus Schäfer},
   publisher = {{SPIE}},
-  groups    = {Optical},
+  groups    = {Optical, Background},
 }
 
 @InProceedings{MainKnorn2017,
@@ -1679,7 +1679,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi       = {10.1117/12.2278218},
   editor    = {Lorenzo Bruzzone and Francesca Bovolo and Jon Atli Benediktsson},
   publisher = {{SPIE}},
-  groups    = {Optical},
+  groups    = {Optical, Background},
 }
 
 @InProceedings{Inglada2009,
@@ -1689,7 +1689,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title     = {The Orfeo Toolbox remote sensing image processing software},
   doi       = {10.1109/igarss.2009.5417481},
   publisher = {{IEEE}},
-  groups    = {SAR},
+  groups    = {SAR, Background},
 }
 
 @Software{GRS2021,
@@ -1698,6 +1698,16 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {Gamma Remote Sensing - GAMMA Software},
   url     = {https://www.gamma-rs.ch/},
   urldate = {2021-05-01},
+  groups  = {SAR, Background},
+}
+
+@Online{xcube2021,
+  author  = {xcube Contributors},
+  date    = {2021},
+  title   = {xcube documentation - Overview},
+  url     = {https://xcube.readthedocs.io/en/latest/overview.html},
+  urldate = {2021-06-02},
+  groups  = {EODC - Projects, Background},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
@@ -1717,7 +1727,7 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
-1 StaticGroup:Background\;0\;1\;0x334db3ff\;\;\;;
+1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods\;0\;1\;0x6680e6ff\;\;\;;
 1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
 }
