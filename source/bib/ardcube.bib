@@ -9,7 +9,7 @@
   volume     = {4},
   abstract   = {This study aims at assessing the feasibility of automatically producing analysis-ready radiometrically terrain-corrected (RTC) Synthetic Aperture Radar (SAR) gamma nought backscatter data for ingestion into a data cube for use in a large spatio-temporal data environment. As such, this study investigates the analysis readiness of different openly available digital elevation models (DEMs) and the capability of the software solutions SNAP and GAMMA in terms of overall usability as well as backscatter data quality. To achieve this, the study builds on the Python library pyroSAR for providing the workflow implementation test bed and provides a Jupyter notebook for transparency and future reproducibility of performed analyses. Two test sites were selected, over the Alps and Fiji, to be able to assess regional differences and support the establishment of the Swiss and Common Sensing Open Data cubes respectively.},
   file       = {:Truckenbrodt2019 - Towards Sentinel 1 SAR Analysis Ready Data_ a Best Practices Assessment on Preparing Backscatter Data for the Cube.pdf:PDF},
-  groups     = {SAR, ARD, Background},
+  groups     = {SAR, ARD, Background, Methods},
   journal    = {Data},
   keywords   = {prio1, skimmed},
   month      = {jul},
@@ -28,7 +28,7 @@
   volume     = {11},
   abstract   = {Ever increasing data volumes of satellite constellations call for multi-sensor analysis ready data (ARD) that relieve users from the burden of all costly preprocessing steps. This paper describes the scientific software FORCE (Framework for Operational Radiometric Correction for Environmental monitoring), an ‘all-in-one’ solution for the mass-processing and analysis of Landsat and Sentinel-2 image archives. FORCE is increasingly used to support a wide range of scientific to operational applications that are in need of both large area, as well as deep and dense temporal information. FORCE is capable of generating Level 2 ARD, and higher-level products. Level 2 processing is comprised of state-of-the-art cloud masking and radiometric correction (including corrections that go beyond ARD specification, e.g., topographic or bidirectional reflectance distribution function correction). It further includes data cubing, i.e., spatial reorganization of the data into a non-overlapping grid system for enhanced efficiency and simplicity of ARD usage. However, the usage barrier of Level 2 ARD is still high due to the considerable data volume and spatial incompleteness of valid observations (e.g., clouds). Thus, the higher-level modules temporally condense multi-temporal ARD into manageable amounts of spatially seamless data. For data mining purposes, per-pixel statistics of clear sky data availability can be generated. FORCE provides functionality for compiling best-available-pixel composites and spectral temporal metrics, which both utilize all available observations within a defined temporal window using selection and statistical aggregation techniques, respectively. These products are immediately fit for common Earth observation analysis workflows, such as machine learning-based image classification, and are thus referred to as highly analysis ready data (hARD). FORCE provides data fusion functionality to improve the spatial resolution of (i) coarse continuous fields like land surface phenology and (ii) Landsat ARD using Sentinel-2 ARD as prediction targets. Quality controlled time series preparation and analysis functionality with a number of aggregation and interpolation techniques, land surface phenology retrieval, and change and trend analyses are provided. Outputs of this module can be directly ingested into a geographic information system (GIS) to fuel research questions without any further processing, i.e., hARD+. FORCE is open source software under the terms of the GNU General Public License v. >= 3, and can be downloaded from http://force.feut.de.},
   file       = {:Frantz2019 - FORCE_Landsat + Sentinel 2 Analysis Ready Data and beyond.pdf:PDF},
-  groups     = {Optical, ARD, Background},
+  groups     = {Optical, ARD, Background, Methods},
   journal    = {Remote Sensing},
   keywords   = {prio1, skimmed},
   month      = {may},
@@ -274,9 +274,9 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   file      = {:Claverie2018 - The Harmonized Landsat and Sentinel 2 Surface Reflectance Data Set.pdf:PDF},
   groups    = {Optical},
   journal   = {Remote Sensing of Environment},
-  keywords  = {prio2},
+  keywords  = {prio3},
   month     = {dec},
-  priority  = {prio2},
+  priority  = {prio3},
   publisher = {Elsevier {BV}},
   year      = {2018},
 }
@@ -973,8 +973,8 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   comment      = {- The proposed approach might be incorporated into the next FORCE release!},
   file         = {:Scheffler2020 - Spectral Harmonization and Red Edge Prediction of Landsat 8 to Sentinel 2 Using Land Cover Optimized Multivariate Regressors.pdf:PDF},
   groups       = {Optical},
-  keywords     = {skimmed, prio2},
-  priority     = {prio2},
+  keywords     = {skimmed, prio3},
+  priority     = {prio3},
   publisher    = {Elsevier {BV}},
   readstatus   = {skimmed},
 }
@@ -1185,7 +1185,7 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   url       = {https://op.europa.eu/en/publication-detail/-/publication/7075ed48-3a4d-11e9-8d04-01aa75ed71a1/language-en},
   urldate   = {2021-05-03},
   file      = {:Truckenbrodt2019a - PyroSAR a Framework for Large Scale SAR Satellite Data Processing.pdf:PDF},
-  groups    = {SAR, ARD},
+  groups    = {SAR, ARD, Methods},
   keywords  = {prio2},
   priority  = {prio2},
 }
@@ -1234,6 +1234,8 @@ This paper introduces TODM, a consistent set of temporally oriented data constru
 Herein, we describe the programmatic developments and institutional context for the Landsat program and the unique ability of Landsat to meet the needs of national and international programs. We then present the key trends in Landsat science that underpin many of the recent scientific and application developments and follow-up with more detailed thematically organized summaries. The historical context offered by archival imagery combined with new imagery allows for the development of time series algorithms that can produce information on trends and dynamics. Landsat-8 has figured prominently in these recent developments, as has the improved understanding and calibration of historical data. Following the communication of the state of Landsat science, an outlook for future launches and envisioned programmatic developments are presented. Increased linkages between satellite programs are also made possible through an expectation of future mission continuity, such as developing a virtual constellation with Sentinel-2. Successful science and applications developments create a positive feedback loop—justifying and encouraging current and future programmatic support for Landsat.},
   file         = {:Wulder2019 - Current Status of Landsat Program, Science, and Applications.pdf:PDF},
   groups       = {Optical, ARD, Background},
+  keywords     = {prio3},
+  priority     = {prio3},
   publisher    = {Elsevier {BV}},
 }
 
@@ -1245,6 +1247,8 @@ Herein, we describe the programmatic developments and institutional context for 
   abstract  = {Data that have been processed to allow analysis with a minimum of additional user effort are often referred to as Analysis Ready Data (ARD). The ability to perform large scale Landsat analysis relies on the ability to access observations that are geometrically and radiometrically consistent, and have had non-target features (clouds) and poor quality observations flagged so that they can be excluded. The United States Geological Survey (USGS) has processed all of the Landsat 4 and 5 Thematic Mapper (TM), Landsat 7 Enhanced Thematic Mapper Plus (ETM+), Landsat 8 Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) archive over the conterminous United States (CONUS), Alaska, and Hawaii, into Landsat ARD. The ARD are available to significantly reduce the burden of pre-processing on users of Landsat data. Provision of pre-prepared ARD is intended to make it easier for users to produce Landsat-based maps of land cover and land-cover change and other derived geophysical and biophysical products. The ARD are provided as tiled, georegistered, top of atmosphere and atmospherically corrected products defined in a common equal area projection, accompanied by spatially explicit quality assessment information, and appropriate metadata to enable further processing while retaining traceability of data provenance.},
   file      = {:Dwyer2018 - Analysis Ready Data_ Enabling Analysis of the Landsat Archive.pdf:PDF},
   groups    = {ARD, Optical, Background},
+  keywords  = {prio3},
+  priority  = {prio3},
   publisher = {{MDPI} {AG}},
 }
 
@@ -1545,6 +1549,8 @@ Herein, we describe the programmatic developments and institutional context for 
   volume       = {13},
   file         = {:HernandezLopez2021 - Design of a Local Nested Grid for the Optimal Combined Use of Landsat 8 and Sentinel 2 Data.pdf:PDF},
   groups       = {Optical, ARD},
+  keywords     = {prio3},
+  priority     = {prio3},
   publisher    = {{MDPI} {AG}},
 }
 
@@ -1640,18 +1646,6 @@ Herein, we describe the programmatic developments and institutional context for 
   priority  = {prio3},
 }
 
-@Article{Qiu2019,
-  author       = {Shi Qiu and Zhe Zhu and Binbin He},
-  date         = {2019-09},
-  journaltitle = {Remote Sensing of Environment},
-  title        = {Fmask 4.0: Improved cloud and cloud shadow detection in Landsats 4{\textendash}8 and Sentinel-2 imagery},
-  doi          = {10.1016/j.rse.2019.05.024},
-  pages        = {111205},
-  volume       = {231},
-  groups       = {Optical},
-  publisher    = {Elsevier {BV}},
-}
-
 @Article{Vermote1997,
   author       = {E.F. Vermote and D. Tanre and J.L. Deuze and M. Herman and J.-J. Morcette},
   date         = {1997-05},
@@ -1727,6 +1721,67 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {Elsevier {BV}},
 }
 
+@Article{Frantz2016,
+  author       = {David Frantz and Achim Roder and Marion Stellmes and Joachim Hill},
+  date         = {2016-07},
+  journaltitle = {{IEEE} Transactions on Geoscience and Remote Sensing},
+  title        = {An Operational Radiometric Landsat Preprocessing Framework for Large-Area Time Series Applications},
+  doi          = {10.1109/tgrs.2016.2530856},
+  number       = {7},
+  pages        = {3928--3943},
+  volume       = {54},
+  groups       = {Methods, Optical},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Online{Frantz2020,
+  author   = {David Frantz},
+  date     = {2020},
+  title    = {FORCE documentation},
+  url      = {https://force-eo.readthedocs.io/en/stable/},
+  subtitle = {Version 3.6.5},
+  urldate  = {2021-05-04},
+  groups   = {Optical},
+}
+
+@Article{Zhu2012,
+  author       = {Zhe Zhu and Curtis E. Woodcock},
+  date         = {2012-03},
+  journaltitle = {Remote Sensing of Environment},
+  title        = {Object-based cloud and cloud shadow detection in Landsat imagery},
+  doi          = {10.1016/j.rse.2011.10.028},
+  pages        = {83--94},
+  volume       = {118},
+  groups       = {Optical, Methods},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Tanre1979,
+  author       = {D. Tanre and M. Herman and P. Y. Deschamps and A. de Leffe},
+  date         = {1979-11},
+  journaltitle = {Applied Optics},
+  title        = {Atmospheric modeling for space measurements of ground reflectances, including bidirectional properties},
+  doi          = {10.1364/ao.18.003587},
+  number       = {21},
+  pages        = {3587},
+  volume       = {18},
+  groups       = {Optical, Methods},
+  publisher    = {The Optical Society},
+}
+
+@Article{Tanre1990,
+  author       = {D. Tanr{\'{e}} and C. Deroo and P. Duhaut and M. Herman and J. J. Morcrette and J. Perbos and P. Y. Deschamps},
+  date         = {1990-04},
+  journaltitle = {International Journal of Remote Sensing},
+  title        = {Technical note Description of a computer code to simulate the satellite signal in the solar spectrum: the 5S code},
+  doi          = {10.1080/01431169008955048},
+  number       = {4},
+  pages        = {659--668},
+  volume       = {11},
+  groups       = {Methods, Optical},
+  publisher    = {Informa {UK} Limited},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -1743,6 +1798,7 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:BigData\;0\;1\;0xffcce6ff\;\;\;;
 1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
+1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods\;0\;1\;0x6680e6ff\;\;\;;

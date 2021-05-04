@@ -18,18 +18,20 @@ pyroSAR's open source nature and availability on Github (https://github.com/john
 
 ### FORCE
 
-The Framework for Operational Radiometric Correction for Environmental monitoring, or FORCE in short, is an open source software project developed by @Frantz2019. The aim of FORCE is to provide a comprehensive solution for processing data from the Landsat and Sentinel-2 archives to ARD products, and to even go beyond ARD by providing various higher-level processing modules. 
+The Framework for Operational Radiometric Correction for Environmental monitoring, or FORCE in short, is an open source software project developed by @Frantz2019 (https://github.com/davidfrantz/force, last access: 04 May 2021). The aim of FORCE is to provide a comprehensive solution for processing data from the Landsat and Sentinel-2 archives to ARD, and furthermore, higher-level products. 
+
+The software components of FORCE are organized in the form of a level system: level-1 to automatically acquire scenes from data providers, level-2 for processing data to an ARD format, and level-3 for any higher-level processing (e.g., computation of best-available-pixel composites). The Level-1 Archiving Suite (L1AS) and the Level-2 Processing System (L2PS) are two of the main components. The interconnected workflow of both is shown in FIGURE XY and represents the state of implementation in the ARDCube project at the time of writing.     
+
+*Fig: FORCE L1AS + FORCE L2PS* (DIY combination!) [@Frantz2020]
+
+Initially, the L1AS is using provided parameters to query a cloud storage provider and download any requested scenes. Additionally, a queue file is used to track downloaded scenes and enqueue them for processing. The L2PS component is using a processing workflow based on the framework presented by @Frantz2016. It includes a modified version of the Fmask code [@Zhu2012] for cloud masking and the generation of bit-wise quality assurance information (QAI), as well as a radiometric correction with radiative-transfer-based atmospheric correction [@Tanre1979 ;@Tanre1990]. Furthermore, the workflow includes the option to utilize one of three implemented algorithms to improve the spatial resolution of the 20 m Sentinel-2 bands. Finally, the data is brought into a data cube appropriate format, i.e., reprojected and split into non-overlapping image chips based on a custom grid of rectangular tiles. 
+
+A more comprehensive description of the processing workflow, including options not implemented here, can be found in @Frantz2019 and @Frantz2020. Moreover, TABLE 1 and TABLE 2 (appendix! / *) provide overviews for the homogenized spectral bands of the produced ARD products, and for the supplementary QAI product, respectively.   
+
+In addition to the L1AS and L2PS components, some auxiliary modules of FORCE are utilized in ARDCube, namely 'force-tabulate-grid' and 'force-mosaic'. The former creates a KML (Keyhole Markup Language) file of the processing grid, and the latter automatically creates mosaics in the VRT (Virtual Raster Table) format for all image chips of the same date. Both outputs are for visualization purposes only. A third auxiliary module, 'force-cube', serves a more important task, as it is used to bring the SAR data into the same data cube appropriate format mentioned above and thereby facilitates the concurrent use of the optical and SAR datasets in an EODC.
 
 
-- Level-1 Archiving Suite (L1AS)
-- Level-2 Processing Suite (L2PS)
-- Auxiliary modules: force-tabulate-grid, force-cube & force-mosaic
-
-
-*Fig: FORCE L1AS + FORCE L2PS* (DIY combination!)
-
-- Open source and available on Github: https://github.com/davidfrantz/force 
-
+*Source: https://force-eo.readthedocs.io/en/stable/components/lower-level/level2/format.html#product-type
 
 
 ### Open Data Cube
