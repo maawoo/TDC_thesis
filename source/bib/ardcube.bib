@@ -21,7 +21,7 @@
 
 @Article{Frantz2019,
   author     = {David Frantz},
-  title      = {{FORCE}{\textemdash}Landsat + Sentinel-2 Analysis Ready Data and Beyond},
+  title      = {{FORCE} {\textemdash} Landsat + Sentinel-2 Analysis Ready Data and Beyond},
   doi        = {10.3390/rs11091124},
   number     = {9},
   pages      = {1124},
@@ -53,7 +53,7 @@
 	- Giuliani et al. (2017)
 - Am Ende meiner Ausarbeitung kann ich einen Vergleich zu der Umsetzung ziehen und ggfls diskutieren, was besser oder schlechter funktioniert... oder so},
   file       = {:Giuliani2017 - Building an Earth Observations Data Cube_ Lessons Learned from the Swiss Data Cube (SDC) on Generating Analysis Ready Data (ARD).pdf:PDF},
-  groups     = {EODC - OpenDataCube, Background},
+  groups     = {EODC - OpenDataCube, Background, Methods},
   journal    = {Big Earth Data},
   keywords   = {prio1, read},
   month      = {nov},
@@ -81,7 +81,7 @@ raw data acquired over a 15 year period.' ...Und dann noch abgeleitete Produkte!
 	- Interessant als Vergleich zu FORCE, allerdings wäre es wichtig noch herauszufinden wie aktuell die Workflows noch sind (z.B. wird Ingestion beschrieben, allerdings laut ODC Slack nicht mehr wirklich verwendet!)
 - Beschreibung und Visualisierung (Fig. 10) der Datenbank! (allerdings wieder darauf achten, wie aktuell die Infos noch sind!)},
   file       = {:Lewis2017 - The Australian Geoscience Data Cube _ Foundations and Lessons Learned.pdf:PDF},
-  groups     = {EODC - OpenDataCube, Background},
+  groups     = {EODC - OpenDataCube, Background, Methods},
   journal    = {Remote Sensing of Environment},
   keywords   = {prio1, read},
   month      = {dec},
@@ -944,7 +944,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
 }
 
 @Article{Ferreira2020,
-  author       = {Karine R. Ferreira and Gilberto R. Queiroz and Lubia Vinhas and Rennan F. B. Marujo and Rolf E. O. Simoes and Michelle C. A. Picoli and Gilberto Camara and Ricardo Cartaxo and Vitor C. F. Gomes and Lorena A. Santos and Alber H. Sanchez and Jeferson S. Arcanjo and Jos{\'{e}} Guilherme Fronza and Carlos Alberto Noronha and Raphael W. Costa and Matheus C. Zaglia and Fabiana Zioti and Thales S. Korting and Anderson R. Soares and Michel E. D. Chaves and Leila M. G. Fonseca},
+  author       = {K. R. Ferreira and G. R. Queiroz and L. Vinhas and R. F. B. Marujo and R. E. O. Simoes and Michelle C. A. Picoli and Gilberto Camara and Ricardo Cartaxo and Vitor C. F. Gomes and Lorena A. Santos and Alber H. Sanchez and Jeferson S. Arcanjo and Jos{\'{e}} Guilherme Fronza and Carlos Alberto Noronha and Raphael W. Costa and Matheus C. Zaglia and Fabiana Zioti and Thales S. Korting and Anderson R. Soares and Michel E. D. Chaves and Leila M. G. Fonseca},
   date         = {2020-12},
   journaltitle = {Remote Sensing},
   title        = {Earth Observation Data Cubes for Brazil: Requirements, Methodology and Products},
@@ -1581,7 +1581,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title    = {What is the Open Data Cube?},
   url      = {https://medium.com/opendatacube/what-is-open-data-cube-805af60820d7},
   urldate  = {2021-04-26},
-  groups   = {EODC - OpenDataCube, Background},
+  groups   = {EODC - OpenDataCube, Background, Methods},
   keywords = {prio1},
   priority = {prio1},
 }
@@ -1592,7 +1592,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title    = {Open Data Cube documentation - High Level Architecture},
   url      = {https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html},
   urldate  = {2021-04-26},
-  groups   = {EODC - OpenDataCube, Background},
+  groups   = {EODC - OpenDataCube, Background, Methods},
   keywords = {prio2},
   priority = {prio2},
 }
@@ -1735,13 +1735,12 @@ Herein, we describe the programmatic developments and institutional context for 
 }
 
 @Online{Frantz2020,
-  author   = {David Frantz},
-  date     = {2020},
-  title    = {FORCE documentation},
-  url      = {https://force-eo.readthedocs.io/en/stable/},
-  subtitle = {Version 3.6.5},
-  urldate  = {2021-05-04},
-  groups   = {Optical},
+  author  = {David Frantz and Contributors},
+  date    = {2020},
+  title   = {FORCE documentation},
+  url     = {https://force-eo.readthedocs.io/en/stable/},
+  urldate = {2021-05-04},
+  groups  = {Methods, Software},
 }
 
 @Article{Zhu2012,
@@ -1793,7 +1792,7 @@ Herein, we describe the programmatic developments and institutional context for 
   pages        = {e0177459},
   volume       = {12},
   file         = {:Kurtzer2017 - Singularity_ Scientific Containers for Mobility of Compute.pdf:PDF},
-  groups       = {Other},
+  groups       = {Other, Methods},
   publisher    = {Public Library of Science ({PLoS})},
 }
 
@@ -1818,7 +1817,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {What is a Container?},
   url     = {https://www.docker.com/resources/what-container},
   urldate = {2021-06-04},
-  groups  = {Other},
+  groups  = {Other, Methods},
 }
 
 @Article{Silver2017,
@@ -1830,7 +1829,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {7656},
   pages        = {173--174},
   volume       = {546},
-  groups       = {Other},
+  groups       = {Other, Methods},
   publisher    = {Springer Science and Business Media {LLC}},
 }
 
@@ -1843,8 +1842,63 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {5},
   pages        = {884--894},
   volume       = {21},
-  groups       = {Other},
+  groups       = {Other, Methods},
   publisher    = {Elsevier {BV}},
+}
+
+@Article{Hoyer2017,
+  author       = {Stephan Hoyer and Joseph J. Hamman},
+  date         = {2017-04},
+  journaltitle = {Journal of Open Research Software},
+  title        = {xarray: N-D labeled Arrays and Datasets in Python},
+  doi          = {10.5334/jors.148},
+  volume       = {5},
+  groups       = {Other, Methods},
+  publisher    = {Ubiquity Press, Ltd.},
+}
+
+@InProceedings{Rocklin2015,
+  author    = {Matthew Rocklin},
+  booktitle = {Proceedings of the 14th Python in Science Conference},
+  date      = {2015},
+  title     = {Dask: Parallel Computation with Blocked algorithms and Task Scheduling},
+  doi       = {10.25080/majora-7b98e3ed-013},
+  publisher = {{SciPy}},
+  groups    = {Other, Methods},
+}
+
+@Online{PangeoTeam2020,
+  author  = {{Pangeo Contributors}},
+  date    = {2020},
+  title   = {Pangeo packages - Why Xarray and Dask?},
+  url     = {https://pangeo.io/packages.html#why-xarray-and-dask},
+  urldate = {2021-05-08},
+  groups  = {Methods, Other},
+}
+
+@Software{Frantz2021,
+  author   = {David Frantz and Contributors},
+  date     = {2021-05-08},
+  title    = {FORCE},
+  location = {Github},
+  subtitle = {Framework for Operational Radiometric Correction for Environmental monitoring},
+  type     = {software},
+  url      = {https://github.com/davidfrantz/force},
+  urldate  = {2021-05-08},
+  version  = {3.6.5},
+  groups   = {Software},
+}
+
+@Software{Truckenbrodt2021,
+  author   = {John Truckenbrodt and Contributors},
+  date     = {2021-03-09},
+  title    = {pyroSAR},
+  location = {Github},
+  subtitle = {A Python Framework for Large-Scale SAR Satellite Data Processing},
+  url      = {https://github.com/johntruckenbrodt/pyroSAR},
+  urldate  = {2021-05-08},
+  version  = {0.12.1},
+  groups   = {Software},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
@@ -1864,6 +1918,7 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
+1 StaticGroup:Software\;0\;1\;0xe6e6b3ff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods\;0\;1\;0x6680e6ff\;\;\;;
