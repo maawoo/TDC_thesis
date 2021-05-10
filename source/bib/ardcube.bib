@@ -1382,13 +1382,13 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {American Association for the Advancement of Science ({AAAS})},
 }
 
-@Online{STAC2017,
+@Online{STAC2021,
   author   = {{STAC Contributors}},
-  date     = {2017},
+  date     = {2021},
   title    = {SpatioTemporal Asset Catalogs (STAC) - Enabling online search and discovery of geospatial assets},
   url      = {https://github.com/radiantearth/stac-spec},
   urldate  = {2021-04-19},
-  groups   = {DataFormat, BigData, Background},
+  groups   = {BigData, Background, Other},
   keywords = {prio3},
   priority = {prio3},
 }
@@ -1588,11 +1588,12 @@ Herein, we describe the programmatic developments and institutional context for 
 
 @Online{ODC2021,
   author   = {{ODC Contributors}},
-  date     = {2021},
-  title    = {Open Data Cube documentation - High Level Architecture},
+  date     = {2021-04-28},
+  title    = {Open Data Cube Documentation},
   url      = {https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html},
+  subtitle = {High Level Architecture},
   urldate  = {2021-04-26},
-  groups   = {EODC - OpenDataCube, Background, Methods},
+  groups   = {Background, Methods, Software},
   keywords = {prio2},
   priority = {prio2},
 }
@@ -1734,11 +1735,11 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
-@Online{Frantz2020,
+@Online{Frantz2021a,
   author  = {David Frantz and Contributors},
-  date    = {2020},
-  title   = {FORCE documentation},
-  url     = {https://force-eo.readthedocs.io/en/stable/},
+  date    = {2021-03-19},
+  title   = {FORCE Documentation},
+  url     = {https://force-eo.readthedocs.io/en/latest/},
   urldate = {2021-05-04},
   groups  = {Methods, Software},
 }
@@ -1796,24 +1797,9 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {Public Library of Science ({PLoS})},
 }
 
-@Article{Sochat2017,
-  author       = {Vanessa V. Sochat and Cameron J. Prybol and Gregory M. Kurtzer},
-  date         = {2017-11},
-  journaltitle = {{PLOS} {ONE}},
-  title        = {Enhancing reproducibility in scientific computing: Metrics and registry for Singularity containers},
-  doi          = {10.1371/journal.pone.0188511},
-  editor       = {Christophe Antoniewski},
-  number       = {11},
-  pages        = {e0188511},
-  volume       = {12},
-  file         = {:Sochat2017 - Enhancing Reproducibility in Scientific Computing_ Metrics and Registry for Singularity Containers.pdf:PDF},
-  groups       = {Other},
-  publisher    = {Public Library of Science ({PLoS})},
-}
-
-@Online{Docker2020,
+@Online{Docker2021,
   author  = {Docker},
-  date    = {2020},
+  date    = {2021},
   title   = {What is a Container?},
   url     = {https://www.docker.com/resources/what-container},
   urldate = {2021-06-04},
@@ -1853,7 +1839,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title        = {xarray: N-D labeled Arrays and Datasets in Python},
   doi          = {10.5334/jors.148},
   volume       = {5},
-  groups       = {Other, Methods},
+  groups       = {Methods, Software},
   publisher    = {Ubiquity Press, Ltd.},
 }
 
@@ -1864,41 +1850,84 @@ Herein, we describe the programmatic developments and institutional context for 
   title     = {Dask: Parallel Computation with Blocked algorithms and Task Scheduling},
   doi       = {10.25080/majora-7b98e3ed-013},
   publisher = {{SciPy}},
-  groups    = {Other, Methods},
+  groups    = {Methods, Software},
 }
 
-@Online{PangeoTeam2020,
-  author  = {{Pangeo Contributors}},
-  date    = {2020},
-  title   = {Pangeo packages - Why Xarray and Dask?},
-  url     = {https://pangeo.io/packages.html#why-xarray-and-dask},
-  urldate = {2021-05-08},
-  groups  = {Methods, Other},
+@Online{Pangeo2021,
+  author   = {{Pangeo Contributors}},
+  date     = {2021},
+  title    = {Pangeo Documentation},
+  url      = {https://pangeo.io/packages.html#why-xarray-and-dask},
+  subtitle = {Packages - Why Xarray and Dask?},
+  urldate  = {2021-05-08},
+  groups   = {Software, Methods},
 }
 
 @Software{Frantz2021,
   author   = {David Frantz and Contributors},
-  date     = {2021-05-08},
+  date     = {2021-03-19},
   title    = {FORCE},
   location = {Github},
   subtitle = {Framework for Operational Radiometric Correction for Environmental monitoring},
   type     = {software},
-  url      = {https://github.com/davidfrantz/force},
+  url      = {https://github.com/davidfrantz/force/tree/v3.6.5},
   urldate  = {2021-05-08},
   version  = {3.6.5},
-  groups   = {Software},
+  groups   = {Software, Methods},
 }
 
-@Software{Truckenbrodt2021,
-  author   = {John Truckenbrodt and Contributors},
+@Software{pyroSAR2021,
+  author   = {{pyroSAR Contributors}},
   date     = {2021-03-09},
   title    = {pyroSAR},
   location = {Github},
   subtitle = {A Python Framework for Large-Scale SAR Satellite Data Processing},
-  url      = {https://github.com/johntruckenbrodt/pyroSAR},
+  type     = {software},
+  url      = {https://github.com/johntruckenbrodt/pyroSAR/tree/v0.12.1},
   urldate  = {2021-05-08},
   version  = {0.12.1},
-  groups   = {Software},
+  groups   = {Software, Methods},
+}
+
+@Online{pyroSAR2021a,
+  author  = {{pyroSAR Contributors}},
+  date    = {2021-03-22},
+  title   = {pyroSAR Documentation},
+  url     = {https://pyrosar.readthedocs.io/en/latest},
+  urldate = {2021-05-10},
+  groups  = {Software, Methods},
+}
+
+@Misc{Krause2021,
+  author    = {Krause, C. and Dunn, B. and Bishop-Taylor, R.},
+  date      = {2021},
+  title     = {Digital Earth Australia notebooks and tools repository},
+  doi       = {10.26186/145234},
+  groups    = {Software, Methods},
+  keywords  = {FOS: Earth and related environmental sciences, Open Data Cube, Xarray, Remote Sensing},
+  publisher = {Commonwealth of Australia (Geoscience Australia)},
+}
+
+@Software{ODC2020,
+  author   = {{ODC Contributors}},
+  date     = {2020-08-18},
+  title    = {Open Data Cube Core},
+  location = {Github},
+  type     = {software},
+  url      = {https://github.com/opendatacube/datacube-core/tree/datacube-1.8.3},
+  urldate  = {2021-05-10},
+  version  = {1.8.3},
+  groups   = {Software, Methods},
+}
+
+@InProceedings{Lam2015,
+  author    = {Siu Kwan Lam and Antoine Pitrou and Stanley Seibert},
+  booktitle = {Proceedings of the Second Workshop on the {LLVM} Compiler Infrastructure in {HPC} - {LLVM} {\textquotesingle}15},
+  date      = {2015},
+  title     = {Numba: a LLVM-based Python JIT compiler},
+  doi       = {10.1145/2833157.2833162},
+  publisher = {{ACM} Press},
+  groups    = {Software, Methods},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
@@ -1918,9 +1947,9 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
-1 StaticGroup:Software\;0\;1\;0xe6e6b3ff\;\;\;;
+1 StaticGroup:Software\;0\;0\;0xe6e6b3ff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
-1 StaticGroup:Methods\;0\;1\;0x6680e6ff\;\;\;;
+1 StaticGroup:Methods\;0\;0\;0x6680e6ff\;\;\;;
 1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
 }
