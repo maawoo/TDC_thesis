@@ -90,13 +90,16 @@ Based on the prospect of how ARDCube could be used in the future (e.g., a univer
 Some important packages used in the maintainer environment are introduced at relevant points in the course of the following sections. The user environment on the other hand is intended to be used more flexibly. At a very basic level, only the ODC Python package and its dependencies (see +@sec:open-data-cube) would be needed to access datasets that were indexed into an ODC database. However, other packages are recommended to be included. Jupyter Lab, for example, allows users to start interactive computing environments in a remote web browser, which can be very useful in the context of working on HPC systems. In the end, extending the environment is left to each user and can be as simple as packages for the visualization of results, or more advanced with packages such as numba [@Lam2015] that allow for the performance optimization of array based computations. 
 
 
-### Parameterization & Usage
+### Usage & Parameterization
+
+Usage of ARDCube and its underlying, containerized software components is primarily limited by available computing resources, especially in regard to processing large volumes of EO data to ARD products. A second limitation might be the installation of Singularity, as additional steps via a lightweight virtual machine is needed for MacOS and Windows installations, which has not been tested yet. HPC systems, however, are usually running a Linux distribution, which Singularity runs natively on, and have enough computing resources. Therefore, ARDCube is intended, but not limited, to be used via command-line on HPC systems. 
+
+The individual software components use different ways to parameterize their processes. Therefore, a solution was needed that streamlines the procedure for an ease of usage in general, while leaving the option to access the native parameterization. The approach that was ultimately implemented relies on the configparser module, which is part of Python's standard library. 
 
 ...
 
 ### Modules
 
-- Concise descriptions of the main modules in relation to Figure @fig:ardcube
 
 **download_level1**
 
@@ -105,4 +108,3 @@ Some important packages used in the maintainer environment are introduced at rel
 
 
 **prepare_odc**
-

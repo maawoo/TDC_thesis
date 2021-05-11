@@ -1,43 +1,53 @@
 # Thuringian Data Cube
 
-
 ## Implementation
 
-- Some general information about the technical implementation
-- Terrasense HPC
-- ARDCube / 'Maintainer' environment
+With the help of the developed software tool ARDCube, the Thuringian Data Cube (TDC) was implemented on the HPC system Terrasense, which is used by the Earth Observation department at the Friedrich-Schiller-University Jena. The following sections describe the implementation in reference to the ARDCube modules used. ... bla
 
+- 48 cores / 500 GB RAM on the node
 
-### Data
+### Data Selection
 
-#### Coverage
+For the initial implementation of the TDC, EO datasets were acquired for a selected area and timeframe. The spatial extent of the area of interest covers the Free state of Thuringia, located in central Germany (Fig x), while a timeframe of 3 years was chosen for the temporal extent: from 2017-01-01 until 2019-12-31.
 
-- Temporal and spatial coverage of the data
-- Amount and volume of level-1 scenes per dataset  
+Based on the spatial and temporal extents, EO data for the optical satellites Landsat 8 and Sentinel-2A/B, were acquired using the *download_level1* module of ARDCube. Both Landsat 8 and Sentinel-2A/B carry multi-spectral sensors: OLI (Operational Land Imager) and MSI (MultiSpectral Instrument) for Landsat 8 and Sentinel-2A/B respectively, which work passively by collecting sunlight that is reflected back from the Earth. 
+
+Furthermore, EO data for the Sentinel-1A/B satellites was already available on Terrasense for the same extents. In contrast to the optical satellites, Sentinel-1A/B use a C-band synthetic aperture radar (SAR) instrument to actively send and receive signals to collect information about the Earth's surface. The data was acquired in the Interferometric Wide Swath (IW) acquisition mode, for both ascending and descending orbits, and include both VH and VV polarisations.
 
 - *Fig: Thuringia with Roda AOI + Location in Germany as a small map in a corner*  
 
-#### Optical Satellite Data
+Additional maps are available in APPENDIX X with the tiling schemes for Landsat 8 and Sentinel-2A/B level-1 acquisitions overlaid over the area of interest. <!--Not for Sentinel-1 though... --> 
 
-- General info about the optical data and how it was processed using FORCE
-  - Landsat 8
-  - Sentinel-2
+
+### Optical Satellite Data
+
+The level-1 data acquired was then processed to a level-2/ARD format using the *process_ard* module of ARDCube. In total 234 Landsat 8 scenes with a size of 247 GB, and 2200 Sentinel-2A/B scenes with a size of 1400 GB, formed the basis for this particular step of the TDC implementation. 
+
+- Some kind of table with information from FORCE logfiles?
 - Tables for spectral bands and QAI product -> Appendix!
-  - Relevant: [https://force-eo.readthedocs.io/en/stable/components/lower-level/level2/format.html#product-type](https://force-eo.readthedocs.io/en/stable/components/lower-level/level2/format.html#product-type)
 
-- *Fig: Landsat 8 tiles overlayed over Thuringia* ?  
-- *Fig: Sentinel-2 tiles overlayed over Thuringia* ?  
+- Processing was successful without any major problems using 2 processes with 12 threads each
+  - ~ time Landsat 8
+  - ~ time Sentinel-2
 
-#### SAR Satellite Data  
+- Size of resulting datasets
+
+
+### SAR Satellite Data  
+
+- Sentinel-1 (asc): 1494 scenes / 460 GB
+- Sentinel-1 (desc): 1218 scenes / 404 GB
 
 - General info about the SAR data and that it was already provided (but nevertheless processed using pyroSAR)
   - Sentinel-1
 - Additional processing by me
   - Cropping based on AOI + datacubing FORCE
 
-- *Fig: Sentinel-1 tiles overlayed over Thuringia* ?  
+- Processing time?
+- Size of resulting datasets
 
-#### Output Format
+
+### Output Format
 
 - Aspects related to all datasets
 - Grid system / Non-overlapping tiles
