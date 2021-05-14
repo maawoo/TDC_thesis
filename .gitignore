@@ -2,6 +2,7 @@
 source/bib/ardcube.bib.bak
 source/bib/ardcube.bib.sav
 .vscode/
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
