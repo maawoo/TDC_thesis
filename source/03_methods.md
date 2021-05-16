@@ -1,7 +1,4 @@
-# Technical Implementation 
-
-- Other chapter name? Technical *something*? ...Development? Implementation fits better for the Thuringian Data Cube as the implementation of everything described in this chapter
- 
+# Technical Development 
 
 
 ## Software Components
@@ -38,9 +35,9 @@ The L2PS component is using a processing workflow based on the framework present
 In addition to the L1AS and L2PS components, some auxiliary modules of FORCE are utilized as well, namely *force-tabulate-grid* and *force-mosaic*. The former creates a KML (Keyhole Markup Language) file of the tiling grid, and the latter automatically creates mosaics in the VRT (Virtual Raster Table) format for all image chips of the same date. Both outputs are for visualization purposes only. A third auxiliary module, *force-cube*, serves a more important task, as it is used to bring processed SAR data into the same data cube appropriate format mentioned above. Thereby facilitating the concurrent use of optical and SAR datasets in the same EODC.
 
 
-### Open Data Cube
+### Open Data Cube {#sec:odc_methods}
 
-As described in CHAPTER X, at its core the Open Data Cube (ODC) is an open source software library aimed at the management and analysis of large volumes of EO data, which has successfully been leveraged to create EODCs of national [@Giuliani2017] and even continental scales [@Lewis2017]. The main technical components of ODC are a database for data management, and a Python based API to query and access the data. 
+As described in +@sec:odc_background, at its core the Open Data Cube (ODC) is an open source software library aimed at the management and analysis of large volumes of EO data, which has successfully been leveraged to create EODCs of national [@Giuliani2017] and even continental scales [@Lewis2017]. The main technical components of ODC are a database for data management, and a Python based API to query and access the data. 
 
 ODC currently uses a PostgreSQL database to catalog information about all EO data that is available for a given deployment. This allows large datasets to be queried (e.g., by time and location) initially without having to access the actual storage location [@Leith2018]. As described by @ODC-Docs, the process of cataloging information in the context of ODC is also called *Indexing* and is achieved in two separate steps as shown in Figure @fig:odc: 
 
@@ -89,7 +86,7 @@ Based on the prospect of how ARDCube could be used in the future (e.g., a univer
 - A *maintainer* environment, which includes all packages necessary for the automated workflows to download, process, and organize data.  
 - A *user* environment, which includes packages necessary for analyzing the data and allows to be extended by users as required.
 
-Some important packages used in the maintainer environment are introduced at relevant points in the course of the following sections. The user environment on the other hand is intended to be used more flexibly. At a very basic level, only the ODC Python package and its dependencies (see +@sec:open-data-cube) would be needed to access datasets that were indexed into an ODC database. However, other packages are recommended to be included. Jupyter Lab, for example, allows users to start interactive computing environments in a remote web browser, which can be very useful in the context of working on HPC systems. In the end, extending the environment is left to each user and can be as simple as packages for the visualization of results, or more advanced with packages such as numba [@Lam2015] that allow for the performance optimization of array based computations. 
+Some important packages used in the maintainer environment are introduced at relevant points in the course of the following sections. The user environment on the other hand is intended to be used more flexibly. At a very basic level, only the ODC Python package and its dependencies (see +@sec:odc_methods) would be needed to access datasets that were indexed into an ODC database. However, other packages are recommended to be included. Jupyter Lab, for example, allows users to start interactive computing environments in a remote web browser, which can be very useful in the context of working on HPC systems. In the end, extending the environment is left to each user and can be as simple as packages for the visualization of results, or more advanced with packages such as numba [@Lam2015] that allow for the performance optimization of array based computations. 
 
 
 ### Usage & Parameterization
@@ -103,7 +100,7 @@ The individual software components use different ways to parameterize their proc
 
 The main modules of ARDCube and the underlying workflows are briefly introduced in the following. As already mentioned, Singularity containers, each including an individual software component, provide the core functionality for most of the workflows. To access these from Python scripts and execute specific processes inside the containers, the package *spython* [@spython-Software] is utilized throughout the modules.
 
-Supplementary to the main modules, various utility functions are provided by ARDCube. These include the automatic creation of a DEM mosaic for an area of interest as mentioned in +@sec:pyrosar, and the handling of auxiliary functionalities related to FORCE and ODC. 
+Supplementary to the main modules, various utility functions are provided by ARDCube. These include, for example, the automatic creation of a DEM mosaic for an area of interest as mentioned in +@sec:pyrosar, and the handling of auxiliary functionalities related to FORCE and ODC. 
 
 
 **download_level1**  
@@ -120,4 +117,4 @@ The processing of SAR satellite data is achieved via pyroSAR's SNAP API, as desc
 
 **prepare_odc**  
 
-Finally, the module *prepare_odc* can be used to automatically create the dataset definition documents for each file of a given dataset. These are necessary in order for datasets to be indexed into an available ODC database, as mentioned in +@sec:open-data-cube. Hereby, mostly Python packages of the standard library are used to collect the necessary information and create the YAML files. Additionally, the aforementioned package *rasterio* is used to collect spatial information about each raster file, which is an essential aspect of each definition document. The generated documents are stored with the same naming scheme and in the same location as each associated source file. 
+Finally, the module *prepare_odc* can be used to automatically create the dataset definition documents for each file of a given dataset. These are necessary in order for datasets to be indexed into an available ODC database, as mentioned in +@sec:odc_methods. Hereby, mostly Python packages of the standard library are used to collect the necessary information and create the YAML files. Additionally, the aforementioned package *rasterio* is used to collect spatial information about each raster file, which is an essential aspect of each definition document. The generated documents are stored with the same naming scheme and in the same location as each associated source file. 

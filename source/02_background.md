@@ -67,9 +67,9 @@ The ecosystem of EODC related projects is diverse and continuously growing. To b
 
 Also related but not fitting into either category is the openEO API, which pursues the goal of providing a common ground for a variety of back-ends, including those previously mentioned, by connecting them via multiple APIs [@Pebesma2017]. The concept behind openEO, which uses a data cube model at its core, is also presented in a recent publication by @Schramm2021.
 
-In the following section, the Open Data Cube is described in more detail, as it plays an important role in the course of this thesis. An overview of other related EODC projects is provided in +@sec:other-projects.
+In the following section, the Open Data Cube is described in more detail, as it plays an important role in the course of this work. An overview of other related EODC projects is provided in +@sec:other-projects.
 
-#### Open Data Cube  
+#### Open Data Cube {#sec:odc_background}
 
 The Open Data Cube (ODC) project originates from the Australian Geoscience Data Cube (AGDC), which initially was developed with the objective to unlock the potential of 27 years of continuous EO data from the Landsat archive for the entire continent of Australia [@Lewis2016]. Major improvements were implemented in version 2 of the AGDC [@Lewis2017] and the project was renamed to ODC after long term support was ensured via governance structures [@Leith2018]. 
 
@@ -143,7 +143,7 @@ Geometric corrections are required to be performed for both specifications in or
 
 ### Generating ARD
 
-The national and regional EODCs established in relation to the CEOS Data Cube initiative mentioned in +@sec:open-data-cube, have developed different approaches for generating their ARD products. To provide both the Swiss and the Armenian Data Cube with ARD, for example, the Live Monitoring of Earth Surface (LiMES) framework was utilized [@Giuliani2017; @Asmaryan2019], which is presented by @Giuliani2017a. Other approaches are described in detail, i.a., by @Lewis2017 for the AGDCv2 and by @Ferreira2020 for the BDC. 
+The national and regional EODCs established in relation to the CEOS Data Cube initiative mentioned in +@sec:odc_background, have developed different approaches for generating their ARD products. To provide both the Swiss and the Armenian Data Cube with ARD, for example, the Live Monitoring of Earth Surface (LiMES) framework was utilized [@Giuliani2017; @Asmaryan2019], which is presented by @Giuliani2017a. Other approaches are described in detail, i.a., by @Lewis2017 for the AGDCv2 and by @Ferreira2020 for the BDC. 
 
 Even though a variety of approaches are used, the common ground usually lies in open source software and algorithms. Especially for optical sensors an extensive selection of peer-reviewed algorithms for radiometric and atmospheric corrections, as well as commercial and open source software solutions, exist. Sen2Cor [@MainKnorn2017], for example, is commonly used to process Sentinel-2 data to a Level-2A Bottom-Of-Atmosphere (BOA) product, while @Lonjou2016 developed the MACCS-ATCOR joint algorithm (MAJA), which can be used to process both Sentinel-2 and Landsat 8 scenes. The Satellite Signal in the Solar Spectrum (6S) algorithm [@Vermote1997] is implemented in the open source software ARCSI [@ARCSI-Software], which is able to handle a variety of optical sensors. And a software framework that not only focuses on the application of correction algorithms, but also on other important aspects when generating ARD for EODCs (e.g., appropriate tiling and gridding scheme), is the Framework for Operational Radiometric Correction for Environmental monitoring (FORCE) [@Frantz2019].  
 

@@ -24,13 +24,13 @@ Earth Observation Data Cubes (EODC) based on the ODC software have been successf
 
 The implementation of EODCs to analyze EO data of large volume and variety, not only has great potential on national but also on smaller spatial scales, such as federal states. The main objective of this thesis was to implement an EODC for the Free state of Thuringia in Germany - the Thuringian Data Cube - and test its functionality and usability on a local HPC system. 
 
-Currently, no tool exists that single-handedly gathers EO data for a region of interest, processes it to an ARD product, and prepares it to be used as an EODC. Therefore, a second objective was the creation of a software project that uses existing open source tools to cover all of these aspects. An additional motivation in regard to the creation was the usability for others and the facilitation of reproducibility.
+Currently, no tool exists that single-handedly gathers EO data for a region of interest, processes it to an ARD product, and prepares it to be used as an EODC. Therefore, a second objective was the creation of a software tool that uses existing open source software to cover all of these aspects. An additional motivation in regard to the creation was the usability for others and the facilitation of reproducibility.
 
-In summary, the objectives of this thesis are to:
+In summary, the objectives of this thesis are:
 
-- Develop a software tool that facilitates all necessary steps for the creation of EODCs, including the generation of ARD products from EO datasets.
-- Implement this tool on a local HPC system and create the Thuringian Data Cube.
-- Assess its functionality and usability, as well as identify possible improvements. 
-- Demonstrate the potential with a usecase (e.g., a simplified analysis).
+- Developing a software tool that facilitates all necessary steps for the creation of EODCs, including the generation of ARD products from EO datasets.
+- Implementing this tool on a local HPC system to create the Thuringian Data Cube (TDC).
+- Assessing functionality and possible improvements, both in regard to the tool and the TDC implementation. 
+- Demonstrating potential and usability of the TDC with a usecase (e.g., a simplified analysis).
 
-The structure is as follows: CHAPTER A provides an overview of current literature in regard to the main topics that are covered throughout this thesis. CHAPTER B describes the development of the software project and all utilized components. The implementation in the form of an EODC for the Free state of Thuringia and demonstrations of its functionality are covered in CHAPTER C. Finally, the results are discussed in CHAPTER D. Both in regard to the developed software tool, as well as the implementation of the Thuringian Data Cube. 
+The structure is as follows: +@sec:background provides an overview of current literature in regard to the main topics that are covered throughout this thesis. *@sec:technical-development describes the development of the software project and all utilized components. The implementation in the form of an EODC for the Free state of Thuringia and demonstrations of its functionality are covered in +@sec:thuringian-data-cube. Finally, the results are discussed in +@sec:discussion. Both in regard to the developed software tool, as well as the implementation of the Thuringian Data Cube. 
