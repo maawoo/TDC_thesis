@@ -33,5 +33,4 @@ In summary, the objectives of this thesis are to:
 - Assess its functionality and usability, as well as identify possible improvements. 
 - Demonstrate the potential with a usecase (e.g., a simplified analysis).
 
-The structure of this thesis is as follows: CHAPTER A provides an overview over current literature in regard to the superordinate topics that are covered. CHAPTER B describes the development of the software project and all utilized components. The realization in the form of an EODC for the Free state of Thuringia and demonstrations of its functionality are covered in CHAPTER C. Finally, the results are discussed in CHAPTER D. Both in regard to the developed software tool, as well as the implementation of the Thuringian Data Cube. 
-
+The structure is as follows: CHAPTER A provides an overview of current literature in regard to the main topics that are covered throughout this thesis. CHAPTER B describes the development of the software project and all utilized components. The implementation in the form of an EODC for the Free state of Thuringia and demonstrations of its functionality are covered in CHAPTER C. Finally, the results are discussed in CHAPTER D. Both in regard to the developed software tool, as well as the implementation of the Thuringian Data Cube. 
