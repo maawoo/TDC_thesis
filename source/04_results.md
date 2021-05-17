@@ -110,29 +110,61 @@ Even though all Sentinel-1A/B GeoTIFF files were stored in the same directory, t
 
 ## Utilization
 
-- Some general information about the usage after the TDC was implemented on Terrasense
-- ARDCube / 'User' environment
-- PostgreSQL/ODC database container runs in background
-- Jupyterlab server runs in background and can be accessed via SSH tunnel from external system
-- Jupyterlab + Dask workspace
+After completing the implementation of the TDC on Terrasense, the functionality and usage was evaluated through computations that encompass a large volume of data per available dataset, as well as a smaller scale time-series analysis. 
+
+As mentioned in +@sec:python-framework the conda *user* environment facilitates usage of the TDC. In addition, the Singularity container containing the ODC PostgreSQL database needs to run as a background process in order for the ODC Python package to access the indexed data. As a working environment a JupyterLab server was started on Terrasense, which could then be accessed on an external system via an SSH (Secure Shell Protocol) tunnel that forwards the necessary ports (i.e., communication endpoints in a computing network) used by the database and the JupyterLab server.  
+
+All files related to the results presented in this section are also available in a public Github repository: [https://github.com/maawoo/TDC_use](https://github.com/maawoo/TDC_use).
 
 
-### Big Computation
+### Per-pixel Computations
 
-- Obviously another name is needed for this section :)
+To identify any problems and possible bottlenecks, for example in terms of disk and memory bandwidth, per-pixel computations were performed for the datasets. Hereby, for each pixel of the entire spatial extent of the TDC, the sum of valid observations was calculated by considering each pixel's time-series information. 
 
-- Everything related to the per pixel computation for the entire datasets (> 1 Tb size)
-- Motivation:
-  - Mainly just to test if anything is not working as expected when large datasets are used in analysis
-  - Usefulness beyond that can be elaborated on in discussion (which was not really clear before doing the computations anyway)
+The calculation for SAR datasets is rather straightforward, as only no data values need to be excluded or masked to get the sum of valid observations. For optical datasets on the other hand, an appropriate clear-sky mask needs to be created from the information provided by the QAI band. In this case, the masking tool of the ODC core Python package was used to create a boolean mask from the QAI flag values listed in @tbl:qai_flags. The values are combined in a logical *AND* fashion, which means that pixels are only set to *True* if all conditions apply. The result is a boolean array for an entire dataset, which is then used to calculate the sum of valid observations.
 
-- *Figs: Per pixel computations*   
-  - Maybe just one optical (Sentinel-2) and one SAR (either ascending or descending) and rest in appendix?
-  - Inkl highlight of interesting aspects (e.g., blobs in optical related to cloud mask... which can then be explained later on with related literature)
-- Jupyter notebook available on Github
+-----------------------------------------------------------
+**QAI flag**                                **Value**                      
+------------------------------------------ ----------------
+Valid data                                   valid                             
+
+Cloud state                                  clear                             
+
+Cloud shadow                                 no                             
+-----------------------------------------------------------
+
+Table: QAI flags used for the computation {#tbl:qai_flags}
 
 
-### Roda Usecase
+#### Performance Considerations
+
+Some performance aspects need to be considered before large computations are performed. As described in +@sec:odc_methods the Python package Dask is handling the parallelization of computations, and more specifically the distributed scheduler of Dask is used as, amongst others it provides access to a diagnostic dashboard and performance reports. Two aspects were evaluated by using the aforementioned per-pixel computation on a spatial subset of the Sentinel-1 ascending (??) dataset: array chunk sizes and multi-threading. 
+
+As described by @Rocklin2015, Dask uses NumPy-like arrays and blocked array algorithms internally. It can handle large computational problems efficiently by breaking up an array into smaller chunks, perform a computation per chunk and then aggregate all intermediate results. The arrangement (e.g., per dimension) and size of array chunks can affect performance and also depends on the algorithm used [@Dask-Docs_chunks]. In case of the per-pixel computation, for example, only the spatial dimensions need to be chunked as the algorithm requires all values along the temporal dimension. 
+
+A simple test was performed by varying the chunk size as shown in @fig:dask_chunks. Additionally, the number of tasks that are needed to ultimately come to the same computational result is shown for both arrays. As a result of doubling the chunk size, the number of tasks needed decreases significantly, which furthermore decreases the total duration for the computation from 483 seconds to 220 seconds.  
+
+![Chunk size comparison: A) 750x750; B) 1500x1500](source/figures/04_results_3__dask_chunks.png){#fig:dask_chunks width=100%}
+
+The second test concerns multi-threading, which is known as the ability of a single processor to follow multiple streams of execution concurrently [@Nemirovsky2013, p. 1]. Processors are also called *workers* in some cases, such as Dask, and streams are commonly known as *threads*. For the multi-threading test only the number of workers and threads per worker was varied, while the computation, data subset and chunk sizes stayed the same. The diagnostic dashboard and reports provided by Dask can visualize the stream of individual tasks performed by each thread and thereby reveal inefficient use of computing resources. 
+
+The task stream of 4 workers and 6 threads per worker is shown in Figure X A, while Figure X B shows the task stream using 1 worker and 24 threads. Overall it is apparent that the tasks are more evenly distributed when a single worker has access to all threads and that all threads are continuously used. The coloration of tasks reveals that a certain amount of communication (red) is needed when multiple workers are utilized, and that the computation in general is happening in a different order. (A) loads all pixel values first (green) and does the aggregation along the time dimension and per chunk (purple) at the end. (B) on the other hand shows a more efficient use of resources, which is reflected in the total duration of 483 seconds as opposed to 897 seconds in case of (A). 
+
+![Task stream comparison. A) 4 workers / 6 threads each; B) 1 worker / 24 threads each](source/figures/04_results_4__dask_task_streams.png){#fig:dask_task_stream width=100%}
+
+
+#### Results
+
+Based on the performance considerations tested, the actual per-pixel observations were calculated for each dataset. The results for the Sentinel-1A/B (descending) and Sentinel-2A/B datasets are shown in Figure @fig:pp_obs_s1_desc and @fig:pp_obs_s2, respectively. Similar figures are available in APPENDIX X for the Landsat 8 and the Sentinel-1A/B (ascending) datasets.
+
+![Per pixel observations - Sentinel-1A/B Descending](source/figures/04_results_5__obs_s1_desc.png){#fig:pp_obs_s1_desc width=100%}
+
+![Per pixel observations - Sentinel-2A/B](source/figures/04_results_6__obs_s2.png){#fig:pp_obs_s2 width=100%}
+
+On a larger spatial scale the number of valid observations is mostly affected by the orbits of the inital level-1 datasets. This can be observed in all cases, with some regions of fewer observations overlapping. 
+
+
+### Roda Forest Analysis
 
 #### Concept
 

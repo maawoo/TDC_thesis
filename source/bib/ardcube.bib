@@ -9,7 +9,7 @@
   volume     = {4},
   abstract   = {This study aims at assessing the feasibility of automatically producing analysis-ready radiometrically terrain-corrected (RTC) Synthetic Aperture Radar (SAR) gamma nought backscatter data for ingestion into a data cube for use in a large spatio-temporal data environment. As such, this study investigates the analysis readiness of different openly available digital elevation models (DEMs) and the capability of the software solutions SNAP and GAMMA in terms of overall usability as well as backscatter data quality. To achieve this, the study builds on the Python library pyroSAR for providing the workflow implementation test bed and provides a Jupyter notebook for transparency and future reproducibility of performed analyses. Two test sites were selected, over the Alps and Fiji, to be able to assess regional differences and support the establishment of the Swiss and Common Sensing Open Data cubes respectively.},
   file       = {:Truckenbrodt2019 - Towards Sentinel 1 SAR Analysis Ready Data_ a Best Practices Assessment on Preparing Backscatter Data for the Cube.pdf:PDF},
-  groups     = {SAR, ARD, Background, Methods},
+  groups     = {SAR, ARD, Background, Methods/Results},
   journal    = {Data},
   keywords   = {prio1, skimmed},
   month      = {jul},
@@ -28,7 +28,7 @@
   volume     = {11},
   abstract   = {Ever increasing data volumes of satellite constellations call for multi-sensor analysis ready data (ARD) that relieve users from the burden of all costly preprocessing steps. This paper describes the scientific software FORCE (Framework for Operational Radiometric Correction for Environmental monitoring), an ‘all-in-one’ solution for the mass-processing and analysis of Landsat and Sentinel-2 image archives. FORCE is increasingly used to support a wide range of scientific to operational applications that are in need of both large area, as well as deep and dense temporal information. FORCE is capable of generating Level 2 ARD, and higher-level products. Level 2 processing is comprised of state-of-the-art cloud masking and radiometric correction (including corrections that go beyond ARD specification, e.g., topographic or bidirectional reflectance distribution function correction). It further includes data cubing, i.e., spatial reorganization of the data into a non-overlapping grid system for enhanced efficiency and simplicity of ARD usage. However, the usage barrier of Level 2 ARD is still high due to the considerable data volume and spatial incompleteness of valid observations (e.g., clouds). Thus, the higher-level modules temporally condense multi-temporal ARD into manageable amounts of spatially seamless data. For data mining purposes, per-pixel statistics of clear sky data availability can be generated. FORCE provides functionality for compiling best-available-pixel composites and spectral temporal metrics, which both utilize all available observations within a defined temporal window using selection and statistical aggregation techniques, respectively. These products are immediately fit for common Earth observation analysis workflows, such as machine learning-based image classification, and are thus referred to as highly analysis ready data (hARD). FORCE provides data fusion functionality to improve the spatial resolution of (i) coarse continuous fields like land surface phenology and (ii) Landsat ARD using Sentinel-2 ARD as prediction targets. Quality controlled time series preparation and analysis functionality with a number of aggregation and interpolation techniques, land surface phenology retrieval, and change and trend analyses are provided. Outputs of this module can be directly ingested into a geographic information system (GIS) to fuel research questions without any further processing, i.e., hARD+. FORCE is open source software under the terms of the GNU General Public License v. >= 3, and can be downloaded from http://force.feut.de.},
   file       = {:Frantz2019 - FORCE_Landsat + Sentinel 2 Analysis Ready Data and beyond.pdf:PDF},
-  groups     = {Optical, ARD, Background, Methods},
+  groups     = {Optical, ARD, Background, Methods/Results},
   journal    = {Remote Sensing},
   keywords   = {prio1, skimmed},
   month      = {may},
@@ -53,7 +53,7 @@
 	- Giuliani et al. (2017)
 - Am Ende meiner Ausarbeitung kann ich einen Vergleich zu der Umsetzung ziehen und ggfls diskutieren, was besser oder schlechter funktioniert... oder so},
   file       = {:Giuliani2017 - Building an Earth Observations Data Cube_ Lessons Learned from the Swiss Data Cube (SDC) on Generating Analysis Ready Data (ARD).pdf:PDF},
-  groups     = {EODC - OpenDataCube, Background, Methods},
+  groups     = {EODC - OpenDataCube, Background, Methods/Results},
   journal    = {Big Earth Data},
   keywords   = {prio1, read},
   month      = {nov},
@@ -81,7 +81,7 @@ raw data acquired over a 15 year period.' ...Und dann noch abgeleitete Produkte!
 	- Interessant als Vergleich zu FORCE, allerdings wäre es wichtig noch herauszufinden wie aktuell die Workflows noch sind (z.B. wird Ingestion beschrieben, allerdings laut ODC Slack nicht mehr wirklich verwendet!)
 - Beschreibung und Visualisierung (Fig. 10) der Datenbank! (allerdings wieder darauf achten, wie aktuell die Infos noch sind!)},
   file       = {:Lewis2017 - The Australian Geoscience Data Cube _ Foundations and Lessons Learned.pdf:PDF},
-  groups     = {EODC - OpenDataCube, Background, Methods},
+  groups     = {EODC - OpenDataCube, Background, Methods/Results},
   journal    = {Remote Sensing of Environment},
   keywords   = {prio1, read},
   month      = {dec},
@@ -1167,7 +1167,7 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   volume       = {72},
   abstract     = {Upcoming remote sensing systems onboard satellites will generate unprecedented volumes of spatial data, hence challenging processing facilities in terms of storage and processing capacities. Thus, an efficient handling of remote sensing data is of vital importance, demanding a well-suited definition of spatial grids for the data׳s storage and manipulation. For high-resolution image data, regular grids defined by map projections have been identified as practicable, cognisant of their drawbacks due to geometric distortions. To this end, we defined a new metric named grid oversampling factor (GOF) that estimates local data oversampling appearing during projection of generic satellite images to a regular raster grid. Based on common map projections, we defined sets of spatial grids optimised to minimise data oversampling. Moreover, they ensure that data undersampling cannot occur at any location. From the resulting GOF-values we concluded that equidistant projections are most suitable, with a global mean oversampling of 2% when using a system of seven continental grids (introduced under the name Equi7 Grid). Opposed to previous studies that suggested equal-area projections, we recommend the Plate Carrée, the Equidistant Conic and the Equidistant Azimuthal projection for global, hemispherical and continental grids, respectively.},
   file         = {:BauerMarschallinger2014 - Optimisation of Global Grids for High Resolution Remote Sensing Data.pdf:PDF},
-  groups       = {DataFormat},
+  groups       = {DataFormat, Methods/Results},
   keywords     = {prio1},
   priority     = {prio1},
   publisher    = {Elsevier {BV}},
@@ -1185,7 +1185,7 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   url       = {https://op.europa.eu/en/publication-detail/-/publication/7075ed48-3a4d-11e9-8d04-01aa75ed71a1/language-en},
   urldate   = {2021-05-03},
   file      = {:Truckenbrodt2019a - PyroSAR a Framework for Large Scale SAR Satellite Data Processing.pdf:PDF},
-  groups    = {SAR, ARD, Methods},
+  groups    = {SAR, ARD, Methods/Results},
   keywords  = {prio2},
   priority  = {prio2},
 }
@@ -1246,7 +1246,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi       = {10.3390/rs10091363},
   abstract  = {Data that have been processed to allow analysis with a minimum of additional user effort are often referred to as Analysis Ready Data (ARD). The ability to perform large scale Landsat analysis relies on the ability to access observations that are geometrically and radiometrically consistent, and have had non-target features (clouds) and poor quality observations flagged so that they can be excluded. The United States Geological Survey (USGS) has processed all of the Landsat 4 and 5 Thematic Mapper (TM), Landsat 7 Enhanced Thematic Mapper Plus (ETM+), Landsat 8 Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) archive over the conterminous United States (CONUS), Alaska, and Hawaii, into Landsat ARD. The ARD are available to significantly reduce the burden of pre-processing on users of Landsat data. Provision of pre-prepared ARD is intended to make it easier for users to produce Landsat-based maps of land cover and land-cover change and other derived geophysical and biophysical products. The ARD are provided as tiled, georegistered, top of atmosphere and atmospherically corrected products defined in a common equal area projection, accompanied by spatially explicit quality assessment information, and appropriate metadata to enable further processing while retaining traceability of data provenance.},
   file      = {:Dwyer2018 - Analysis Ready Data_ Enabling Analysis of the Landsat Archive.pdf:PDF},
-  groups    = {ARD, Optical, Background},
+  groups    = {ARD, Optical, Background, Methods/Results},
   keywords  = {prio3},
   priority  = {prio3},
   publisher = {{MDPI} {AG}},
@@ -1581,7 +1581,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title    = {What is the Open Data Cube?},
   url      = {https://medium.com/opendatacube/what-is-open-data-cube-805af60820d7},
   urldate  = {2021-04-26},
-  groups   = {EODC - OpenDataCube, Background, Methods},
+  groups   = {EODC - OpenDataCube, Background, Methods/Results},
   keywords = {prio1},
   priority = {prio1},
 }
@@ -1592,7 +1592,7 @@ Herein, we describe the programmatic developments and institutional context for 
   url      = {https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html},
   subtitle = {High Level Architecture},
   urldate  = {2021-04-26},
-  groups   = {Background, Methods, Software},
+  groups   = {Background, Software, Methods/Results},
   keywords = {prio2},
   priority = {prio2},
 }
@@ -1730,7 +1730,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {7},
   pages        = {3928--3943},
   volume       = {54},
-  groups       = {Methods, Optical},
+  groups       = {Optical, Methods/Results},
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
@@ -1739,7 +1739,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {FORCE Documentation},
   url     = {https://force-eo.readthedocs.io/en/latest/},
   urldate = {2021-05-04},
-  groups  = {Methods, Software},
+  groups  = {Software, Methods/Results},
 }
 
 @Article{Zhu2012,
@@ -1750,7 +1750,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi          = {10.1016/j.rse.2011.10.028},
   pages        = {83--94},
   volume       = {118},
-  groups       = {Optical, Methods},
+  groups       = {Optical, Methods/Results},
   publisher    = {Elsevier {BV}},
 }
 
@@ -1763,7 +1763,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {21},
   pages        = {3587},
   volume       = {18},
-  groups       = {Optical, Methods},
+  groups       = {Optical, Methods/Results},
   publisher    = {The Optical Society},
 }
 
@@ -1776,7 +1776,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {4},
   pages        = {659--668},
   volume       = {11},
-  groups       = {Methods, Optical},
+  groups       = {Optical, Methods/Results},
   publisher    = {Informa {UK} Limited},
 }
 
@@ -1791,7 +1791,7 @@ Herein, we describe the programmatic developments and institutional context for 
   pages        = {e0177459},
   volume       = {12},
   file         = {:Kurtzer2017 - Singularity_ Scientific Containers for Mobility of Compute.pdf:PDF},
-  groups       = {Other, Methods},
+  groups       = {Other, Methods/Results},
   publisher    = {Public Library of Science ({PLoS})},
 }
 
@@ -1801,7 +1801,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {What is a Container?},
   url     = {https://www.docker.com/resources/what-container},
   urldate = {2021-06-04},
-  groups  = {Other, Methods},
+  groups  = {Other, Methods/Results},
 }
 
 @Article{Silver2017,
@@ -1813,7 +1813,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {7656},
   pages        = {173--174},
   volume       = {546},
-  groups       = {Other, Methods},
+  groups       = {Other, Methods/Results},
   publisher    = {Springer Science and Business Media {LLC}},
 }
 
@@ -1826,7 +1826,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {5},
   pages        = {884--894},
   volume       = {21},
-  groups       = {Other, Methods},
+  groups       = {Other, Methods/Results},
   publisher    = {Elsevier {BV}},
 }
 
@@ -1837,7 +1837,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title        = {xarray: N-D labeled Arrays and Datasets in Python},
   doi          = {10.5334/jors.148},
   volume       = {5},
-  groups       = {Methods, Software},
+  groups       = {Software, Methods/Results},
   publisher    = {Ubiquity Press, Ltd.},
 }
 
@@ -1848,7 +1848,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title     = {Dask: Parallel Computation with Blocked algorithms and Task Scheduling},
   doi       = {10.25080/majora-7b98e3ed-013},
   publisher = {{SciPy}},
-  groups    = {Methods, Software},
+  groups    = {Software, Methods/Results},
 }
 
 @Online{Pangeo-Docs,
@@ -1857,7 +1857,7 @@ Herein, we describe the programmatic developments and institutional context for 
   url      = {https://pangeo.io/packages.html#why-xarray-and-dask},
   subtitle = {Packages - Why Xarray and Dask?},
   urldate  = {2021-05-08},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @Software{FORCE-Software,
@@ -1868,7 +1868,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type     = {software},
   url      = {https://github.com/davidfrantz/force},
   urldate  = {2021-05-08},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @Software{pyroSAR-Software,
@@ -1879,7 +1879,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type     = {software},
   url      = {https://github.com/johntruckenbrodt/pyroSAR},
   urldate  = {2021-05-08},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @Online{pyroSAR-Docs,
@@ -1887,7 +1887,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {pyroSAR Documentation},
   url     = {https://pyrosar.readthedocs.io/en/latest},
   urldate = {2021-05-10},
-  groups  = {Software, Methods},
+  groups  = {Software, Methods/Results},
 }
 
 @Misc{Krause2021,
@@ -1895,7 +1895,7 @@ Herein, we describe the programmatic developments and institutional context for 
   date      = {2021},
   title     = {Digital Earth Australia notebooks and tools repository},
   doi       = {10.26186/145234},
-  groups    = {Software, Methods},
+  groups    = {Software, Methods/Results},
   keywords  = {FOS: Earth and related environmental sciences, Open Data Cube, Xarray, Remote Sensing},
   publisher = {Commonwealth of Australia (Geoscience Australia)},
 }
@@ -1907,7 +1907,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type     = {software},
   url      = {https://github.com/opendatacube/datacube-core},
   urldate  = {2021-05-10},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @InProceedings{Lam2015,
@@ -1917,7 +1917,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title     = {Numba: a LLVM-based Python JIT compiler},
   doi       = {10.1145/2833157.2833162},
   publisher = {{ACM} Press},
-  groups    = {Software, Methods},
+  groups    = {Software, Methods/Results},
 }
 
 @Software{ARCSI-Software,
@@ -1938,7 +1938,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type         = {software},
   url          = {https://docs.python.org/3/library/configparser.html},
   urldate      = {2021-05-12},
-  groups       = {Software, Methods},
+  groups       = {Software, Methods/Results},
 }
 
 @Software{sentinelsat-Software,
@@ -1949,7 +1949,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type     = {software},
   url      = {https://github.com/sentinelsat/sentinelsat},
   urldate  = {2021-05-12},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @Software{spython-Software,
@@ -1959,7 +1959,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type     = {software},
   url      = {https://pypi.org/project/spython},
   urldate  = {2021-05-12},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @Software{rasterio-Software,
@@ -1970,7 +1970,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type         = {software},
   url          = {https://github.com/mapbox/rasterio},
   urldate      = {2021-05-12},
-  groups       = {Software, Methods},
+  groups       = {Software, Methods/Results},
 }
 
 @Online{Singularity-Docs,
@@ -1980,7 +1980,7 @@ Herein, we describe the programmatic developments and institutional context for 
   subtitle = {Installation on Windows or Mac},
   urldate  = {2021-05-14},
   version  = {3.7},
-  groups   = {Software, Methods},
+  groups   = {Software, Methods/Results},
 }
 
 @Article{Frantz2019a,
@@ -1992,7 +1992,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {3},
   pages        = {257},
   volume       = {11},
-  groups       = {Optical, Methods},
+  groups       = {Optical, Methods/Results},
   publisher    = {{MDPI} {AG}},
 }
 
@@ -2005,7 +2005,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {7},
   pages        = {4153--4164},
   volume       = {54},
-  groups       = {Optical, Methods},
+  groups       = {Optical, Methods/Results},
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
@@ -2018,7 +2018,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {11},
   pages        = {1023--1032},
   volume       = {7},
-  groups       = {Optical},
+  groups       = {Optical, Methods/Results},
   publisher    = {Informa {UK} Limited},
 }
 
@@ -2028,6 +2028,29 @@ Herein, we describe the programmatic developments and institutional context for 
   url          = {http://sites.bu.edu/measures/},
   organization = {Boston University},
   urldate      = {2021-05-15},
+  groups       = {DataFormat, Methods/Results},
+}
+
+@Article{Nemirovsky2013,
+  author       = {Mario Nemirovsky and Dean M. Tullsen},
+  date         = {2013-01},
+  journaltitle = {Synthesis Lectures on Computer Architecture},
+  title        = {Multithreading Architecture},
+  doi          = {10.2200/s00458ed1v01y201212cac021},
+  number       = {1},
+  pages        = {1--109},
+  volume       = {8},
+  groups       = {Other, Methods/Results},
+  publisher    = {Morgan {\&} Claypool Publishers {LLC}},
+}
+
+@Online{Dask-Docs_chunks,
+  author   = {{Anaconda Inc.} and Contributors},
+  title    = {Dask Documentation},
+  url      = {https://docs.dask.org/en/latest/array-chunks.html},
+  subtitle = {Chunks},
+  urldate  = {2021-05-17},
+  groups   = {Software, Methods/Results},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
@@ -2050,6 +2073,6 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:Software\;0\;0\;0xe6e6b3ff\;\;\;;
 1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
-1 StaticGroup:Methods\;0\;0\;0x6680e6ff\;\;\;;
+1 StaticGroup:Methods/Results\;0\;1\;0x6680e6ff\;\;\;;
 1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
 }
