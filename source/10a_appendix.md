@@ -1,7 +1,7 @@
 # Appendix: Some extra stuff {.unnumbered}
 
-<!-- 
-This could be a list of papers by the author for example 
--->
-
-Add appendix here. Vivamus hendrerit rhoncus interdum. Sed ullamcorper et augue at porta. Suspendisse facilisis imperdiet urna, eu pellentesque purus suscipit in. Integer dignissim mattis ex aliquam blandit. Curabitur lobortis quam varius turpis ultrices egestas.
+- ODC example product and dataset definitions in YAML format (+@sec:odc_methods) 
+- Map with tiling schemes of Landsat 8 & Sentinel-2A/B (+@sec:data-selection)
+- FORCE Spectral bands + QAI (+@sec:optical-satellite-data)
+- Per-pixel observations Landsat 8 + Sentinel-1A/B ascending (+@sec:pp_obs_results)
+- Roda Forest Analysis extra stuff (+@sec:roda_results)

@@ -1,5 +1,8 @@
 # Technical Development 
 
+- 'Development' because I'm already using the term 'implementation' all the time in the next chapter in connection to the TDC 
+- System Components / System Architecture instead of Software Components / ARDCube ...?
+
 
 ## Software Components
 
@@ -58,7 +61,7 @@ Some additional utilities are provided with the core Python package of ODC, like
 
 ### Containerization
 
-Encapsulating a software environment, including its dependencies, system libraries, settings, and runtime code, so that it can be run on different computing environments reliably, is known as software containerization [@Docker2021]. The implementation of this aspect played an important role for various reasons: 
+Encapsulating a software environment, including its dependencies, system libraries, settings, and runtime code, so that it can be run on different computing environments reliably, is known as software containerization [@Docker]. The implementation of this aspect played an important role for various reasons: 
 
 - Simplifying the setup process in general and for deployment on HPC (High Performance Computing) systems in particular.
 - Avoiding possible issues related to the concurrent use of software components that rely on similar dependencies.
@@ -76,7 +79,7 @@ An open source software project called *ARDCube* was developed, which integrates
 
 ![ARDCube overview](source/figures/03_methods_3__ardcube.png){#fig:ardcube width=100%}
 
-
+\newpage
 ### Python Framework 
 
 A variety of Python packages form the basic framework of ARDCube. They are utilized to manage the integrated software components and further extend on their functionality by enabling the automation of specific workflows. To manage these Python packages on the other hand, the package manager conda ([https://conda.io](https://conda.io), last access: 07 May 2021) is used. It offers the possibility to create self-contained environments that can include a custom selection of Python packages. In addition, these environments can easily be shared and replicated by others, which yet again facilitates reproducibility. 
@@ -86,7 +89,7 @@ Based on the prospect of how ARDCube could be used in the future (e.g., a univer
 - A *maintainer* environment, which includes all packages necessary for the automated workflows to download, process, and organize data.  
 - A *user* environment, which includes packages necessary for analyzing the data and allows to be extended by users as required.
 
-Some important packages used in the maintainer environment are introduced at relevant points in the course of the following sections. The user environment on the other hand is intended to be used more flexibly. At a very basic level, only the ODC Python package and its dependencies (see +@sec:odc_methods) would be needed to access datasets that were indexed into an ODC database. However, other packages are recommended to be included. Jupyter Lab, for example, allows users to start interactive computing environments in a remote web browser, which can be very useful in the context of working on HPC systems. In the end, extending the environment is left to each user and can be as simple as packages for the visualization of results, or more advanced with packages such as numba [@Lam2015] that allow for the performance optimization of array based computations. 
+Some important packages used in the maintainer environment are introduced at relevant points in the course of the following sections. The user environment on the other hand is intended to be used more flexibly. At a very basic level, only the ODC Python package and its dependencies (see +@sec:odc_methods) would be needed to access datasets that were indexed into an ODC database. However, other packages are recommended to be included. JupyterLab, for example, allows users to start interactive computing environments in a remote web browser, which can be very useful in the context of working on HPC systems. In the end, extending the environment is left to each user and can be as simple as packages for the visualization of results, or more advanced with packages such as numba [@Lam2015] that allow for the performance optimization of array based computations. 
 
 
 ### Usage & Parameterization

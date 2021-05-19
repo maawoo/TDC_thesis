@@ -3,6 +3,8 @@
 
 # Introduction
 
+## Motivation
+
 Earth observation (EO) satellites have been producing diverse and consistent datasets that provide valuable information about the Earth's surface for multiple decades now. This continuously growing volume of data and its derived products support the assessment and monitoring of global policy frameworks, such as the United Nations Sustainable Development Goals (SDGs) [@Anderson2017], contribute to the climate data records of several Essential Climate Variables (ECVs) [@Hollmann2013] and assist decision makers in the sustainable use of Earth's resources [@Eckman2012].
 
 This extensive volume of EO data has been more accessible than ever, which can be emphasized with the two most important satellite data archives: the Landsat program by NASA and the United States Geological Survey (USGS), and the Copernicus program by the European Commission and the European Space Agency (ESA). A free and open access policy for all data produced by the Copernicus program has been agreed upon before the launch of the first Sentinel satellite in 2014 [@EuropeanCommission2013]. A decision that was supported by reports forecasting significant positive impacts in various socioeconomic areas of the European Union [@PwC2019]. Access to the Landsat archive, with some datasets starting as early as 1972, only changed to an open data policy in 2009, which subsequently resulted in a significant increase in usage as well as scientific and public value of this data [@Wulder2012; @Zhu2019].
@@ -27,10 +29,9 @@ The implementation of EODCs to analyze EO data of large volume and variety, not 
 Currently, no tool exists that single-handedly gathers EO data for a region of interest, processes it to an ARD product, and prepares it to be used as an EODC. Therefore, a second objective was the creation of a software tool that uses existing open source software to cover all of these aspects. An additional motivation in regard to the creation was the usability for others and the facilitation of reproducibility.
 
 In summary, the objectives of this thesis are:
-
 - Developing a software tool that facilitates all necessary steps for the creation of EODCs, including the generation of ARD products from EO datasets.
 - Implementing this tool on a local HPC system to create the Thuringian Data Cube (TDC).
 - Assessing functionality and possible improvements, both in regard to the tool and the TDC implementation. 
-- Demonstrating potential and usability of the TDC with a usecase (e.g., a simplified analysis).
+- Demonstrating usage and potential of the TDC with a use case (e.g., a simplified analysis).
 
-The structure is as follows: +@sec:background provides an overview of current literature in regard to the main topics that are covered throughout this thesis. *@sec:technical-development describes the development of the software project and all utilized components. The implementation in the form of an EODC for the Free state of Thuringia and demonstrations of its functionality are covered in +@sec:thuringian-data-cube. Finally, the results are discussed in +@sec:discussion. Both in regard to the developed software tool, as well as the implementation of the Thuringian Data Cube. 
+The structure is as follows: +@sec:background provides an overview of current literature in regard to the main topics that are covered throughout this thesis. *@sec:technical-development describes the development of the software project and all utilized components. The implementation in the form of an EODC for the Free state of Thuringia and demonstrations of its functionality and usage are covered in +@sec:thuringian-data-cube. Finally, the results are discussed in +@sec:discussion, both in regard to the developed software tool and the implementation of the Thuringian Data Cube. 
