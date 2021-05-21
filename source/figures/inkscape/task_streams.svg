@@ -16,8 +16,8 @@
    inkscape:version="1.0.2 (1.0.2+r75+1)"
    sodipodi:docname="task_streams.svg"
    inkscape:export-filename="/home/marco/STUDIUM/MA/ARDCube_thesis/source/figures/inkscape/task_streams2.png"
-   inkscape:export-xdpi="200"
-   inkscape:export-ydpi="200">
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -31,7 +31,7 @@
      inkscape:cx="100.33121"
      inkscape:cy="885.5927"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1427"
+     inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-global="true"
@@ -65,6 +65,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline">
+    <rect
+       style="fill:#fffffd;stroke-width:0.695326"
+       id="rect1357"
+       width="240.56595"
+       height="328.80502"
+       x="23.919373"
+       y="27.272053" />
     <g
        id="g1389"
        transform="translate(-0.41016161,3.5543478)">
