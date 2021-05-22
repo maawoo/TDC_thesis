@@ -27,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.33872179"
-     inkscape:cx="100.33121"
-     inkscape:cy="885.5927"
+     inkscape:zoom="0.67744358"
+     inkscape:cx="308.92695"
+     inkscape:cy="608.64101"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1389"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:snap-global="true"
@@ -78,15 +78,15 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="-290.59723"
-         y="31.687733"
+         x="-292.70361"
+         y="31.66556"
          id="text176-3"
          transform="rotate(-89.650894)"
          inkscape:transform-center-x="-0.68983727"
          inkscape:transform-center-y="16.80024"><tspan
            id="tspan174-6"
-           x="-290.59723"
-           y="31.687733"
+           x="-292.70361"
+           y="31.66556"
            style="font-size:3.52778px;stroke-width:0.264583"
            sodipodi:role="line">Task stream per thread</tspan></text>
       <text
@@ -170,15 +170,15 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:3.52778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="-147.07008"
-         y="30.704327"
+         x="-139.99277"
+         y="30.356926"
          id="text176"
          transform="rotate(-89.650894)"
          inkscape:transform-center-x="-0.68983727"
          inkscape:transform-center-y="16.80024"><tspan
            id="tspan174"
-           x="-147.07008"
-           y="30.704327"
+           x="-139.99277"
+           y="30.356926"
            style="font-size:3.52778px;stroke-width:0.264583"
            sodipodi:role="line">Task stream per thread</tspan></text>
       <text
@@ -366,5 +366,27 @@
              style="font-size:2.82222px;stroke-width:0.264583">Aggregating values per chunk  (sum) </tspan></text>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="35.037277"
+       y="43.592232"
+       id="text164"><tspan
+         sodipodi:role="line"
+         id="tspan162"
+         x="35.037277"
+         y="43.592232"
+         style="font-size:7.76111px;stroke-width:0.264583">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:7.76111px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="34.427773"
+       y="222.56743"
+       id="text164-3"><tspan
+         sodipodi:role="line"
+         id="tspan162-6"
+         x="34.427773"
+         y="222.56743"
+         style="font-size:7.76111px;stroke-width:0.264583">B</tspan></text>
   </g>
 </svg>
