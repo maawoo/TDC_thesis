@@ -12,7 +12,7 @@ For the initial implementation of the TDC, EO datasets were acquired for a selec
 
 Based on the spatial and temporal extents, EO data for the optical satellites Landsat 8 and Sentinel-2A/B, were acquired using the *download_level1* module of ARDCube. Both Landsat 8 and Sentinel-2A/B carry multi-spectral sensors: OLI (Operational Land Imager) and MSI (MultiSpectral Instrument) for Landsat 8 and Sentinel-2A/B respectively, which work passively by collecting sunlight that is reflected back from the Earth. 
 
-Furthermore, EO data for the Sentinel-1A/B satellites was already available on Terrasense for the same extents. In contrast to the optical satellites, Sentinel-1A/B use a C-band synthetic aperture radar (SAR) instrument to actively send and receive signals to collect information about the Earth's surface. The data was acquired in the Interferometric Wide Swath (IW) acquisition mode, for both ascending and descending orbits, and include both VH and VV polarisations.
+Furthermore, EO data for the Sentinel-1A/B satellites was already available on Terrasense for the same extents. In contrast to the optical satellites, Sentinel-1A/B use a C-band synthetic aperture radar (SAR) instrument to actively send and receive signals to collect information about the Earth's surface. The data was acquired in the Interferometric Wide Swath (IW) acquisition mode, for both ascending and descending orbits, and include both VH and VV polarizations.
 
 ![Free(!) state of Thuringia with Roda forest AOI.](source/figures/04_results_1__thuringia.png){#fig:thuringia width=100%}
 
@@ -63,7 +63,7 @@ Table: Important parameters! {#tbl:force-params}
 
 FORCE L2PS uses a nested parallelization strategy and settings are highly depended on each system's setup. To choose appropriate settings in this regard, the advice given by @FORCE-Docs was followed and the processing of both datasets was performed on a Terrasense node using 12 processes with 2 threads each. Using this setup it took 1 hour and 45 minutes to process the Landsat 8 dataset, and 48 hours and 36 minutes for the Sentinel-2 dataset. A simple log file with additional information about the processing of each individual scene is output by FORCE. From these it was calculated that the actual average processing time for Landsat 8 scenes was 5 minutes and 24 seconds, whereas Sentinel-2 scenes took an average of 15 minutes and 52 seconds.
 
-The resulting files for both datasets were written in the GeoTIFF format with band sequential (BSQ) interleaving, LZW compression and internal blocks for partial image access. The size of internal blocks depend on the specifications of the overall tiling grid, which is described in +@sec:projection. Generally, however, they are arranged as strips that are as wide as the size of each individual tile. Other GeoTIFF format settings, such as compression algorithm, are not easily changed as they are hard-coded in FORCE.
+The resulting files for both datasets were written in the GeoTIFF format with band sequential (BSQ) interleaving, LZW compression and internal blocks for partial image access. The size of internal blocks depends on the specifications of the overall tiling grid, which is described in +@sec:projection. Generally, however, they are arranged as strips that are as wide as the size of each individual tile. Other GeoTIFF format settings, such as compression algorithm, are not easily changed as they are hard-coded in FORCE.
 
 Two GeoTIFF files were created for each scene: a multi-band GeoTIFF for the Bottom-of-Atmosphere (BOA) reflectance, and a single-band GeoTIFF for Quality Assurance Information (QAI). The bands of each BOA file contain data that is specific to the commonly used spectral wavelengths of optical EO sensors and are provided in a common spatial resolution. Metadata, including data that is specific to FORCE, was written into each file automatically during processing. Furthermore, to simplify the usage of data from multiple sensors the mapping of the internal bands was homogenized, which is shown in TABLE X (APPENDIX A) for the datasets used here. Additionally, TABLE Y (APPENDIX B) provides more details about the information contained in the QAI files.  
 
@@ -72,7 +72,7 @@ Two GeoTIFF files were created for each scene: a multi-band GeoTIFF for the Bott
 
 As mentioned in +@sec:data-selection, ascending and descending datasets for the Sentinel-1A/B satellites were provided by the Earth Observation department and were already processed to an ARD format as well. Through a Bash script that was also supplied for each scene, the individual steps of the original processing workflow could be retraced. In contrast to the workflow integrated in ARDCube, pyroSAR was utilized with the proprietary software GAMMA. In both cases, however, radiometrically terrain-corrected gamma nought backscatter data in accordance with the workflow presented by @Truckenbrodt2019 is produced. **Something something DEM.** The provided datasets had a volume of: 1494 scenes with a size of 460 GB, and 1218 scenes with a size of 404 GB for the ascending and descending datasets, respectively. 
 
-To assure that these datasets are in the same geographic projection and tiling grid as the aforementioned optical datasets, the post-processing steps described in +@sec:modules were applied using the *process_ard* module. As a result of using the auxiliary FORCE module *force-cube*, some specifications related to the produced GeoTIFF file format are the same as described for the optical datasets, including compression algorithm, internal block size and BSQ encoding. The resulting scenes consist of two single-band GeoTIFF files, each containing the data specific to one of the polarisations: VV (Vertical send; Vertical receive) and VH (Vertical send; Horizontal receive). General metadata was provided as an additional XML file for each scene, and no additional, FORCE-specific metadata was written into the files during the post-processing steps.  
+To assure that these datasets are in the same geographic projection and tiling grid as the aforementioned optical datasets, the post-processing steps described in +@sec:modules were applied using the *process_ard* module. As a result of using the auxiliary FORCE module *force-cube*, some specifications related to the produced GeoTIFF file format are the same as described for the optical datasets, including compression algorithm, internal block size and BSQ encoding. The resulting scenes consist of two single-band GeoTIFF files, each containing the data specific to one of the polarizations: VV (Vertical send; Vertical receive) and VH (Vertical send; Horizontal receive). General metadata was provided as an additional XML file for each scene, and no additional, FORCE-specific metadata was written into the files during the post-processing steps.  
 
 
 ### Projection & Tiling {#sec:projection}
@@ -115,9 +115,9 @@ All files related to the results presented in this section are also available in
 
 ### Per-pixel Computations
 
-To identify any problems and possible bottlenecks, for example in terms of disk and memory bandwidth, per-pixel computations were performed for the datasets. Hereby, for each pixel of the entire spatial extent of the TDC, the sum of valid observations was calculated by considering each pixel's time-series information. 
+To identify any problems and possible bottlenecks in terms of disk and memory bandwidth on one hand, and to get a better understanding of the spatio-temporal characteristics of the datasets on the other, per-pixel computations were performed. Hereby, for each individual pixel of the entire spatial extent of the TDC, the sum of valid observations are calculated by considering each pixel's time-series information. 
 
-The calculation for SAR datasets is rather straightforward, as only no data values need to be excluded or masked to get the sum of valid observations and only one of the polarisation bands need to be considered as the coverage of valid data should be the same. 
+The calculation for SAR datasets is rather straightforward, as only no data values need to be excluded or masked to get the sum of valid observations and only one of the polarization bands need to be considered as the coverage of valid data should be the same. 
 
 For optical datasets on the other hand, an appropriate clear-sky mask needs to be created from the information provided by the QAI band. In this case, the masking tool of the ODC core Python package was used to create a boolean mask from the QAI flag values listed in @tbl:qai_flags. The values are combined in a logical *AND* fashion, which means that pixels are only set to *True* if all conditions apply. The result is a boolean array for the entire dataset, which is then used to calculate the sum of valid observations.
 
@@ -133,51 +133,67 @@ Cloud shadow                                 False
 
 Table: QAI flags used for the computation {#tbl:qai_flags}
 
-
 #### Performance Considerations
 
-Some performance aspects need to be considered before large computations are performed. As described in +@sec:odc_methods the Python package Dask is handling the parallelization of computations, and more specifically the distributed scheduler of Dask is used as, amongst others it provides access to a diagnostic dashboard and performance reports. Two aspects were evaluated by using the aforementioned per-pixel computation on a spatial subset of the Sentinel-1 ascending dataset: array chunk sizes and multi-threading. 
+Some performance aspects need to be considered before large computations are performed. As described in +@sec:odc_methods the Python package Dask is handling the parallelization of computations, and more specifically the distributed scheduler of Dask is used, as, amongst others, it provides access to a diagnostic dashboard and performance reports. Two aspects in particular were evaluated by using the aforementioned per-pixel computation on a spatial subset of the Sentinel-1 ascending dataset: array chunk sizes and multi-threading. 
 
 As described by @Rocklin2015, Dask uses NumPy-like arrays and blocked array algorithms internally. It can handle large computational problems efficiently by breaking up an array into smaller chunks, perform a computation per chunk and then aggregate all intermediate results. The arrangement (e.g., per dimension) and size of array chunks can affect performance and also depends on the algorithm used [@Dask-Docs_chunks]. In case of the per-pixel computation, for example, only the spatial dimensions need to be chunked as the algorithm requires all values along the temporal dimension. 
 
-A simple test was performed by varying the chunk size as shown in @fig:dask_chunks. Additionally, the number of tasks that are needed to ultimately come to the same computational result is shown for both arrays. As a result of doubling the chunk size, the number of tasks needed decreases significantly, which furthermore decreases the total duration for the computation from 449 seconds to 196 seconds.  
+A simple test was performed by varying the chunk size as shown in @fig:dask_chunks. The number of tasks that are needed to ultimately come to the same computational result is also shown for both arrays. As a result of doubling the chunk size, the number of tasks needed decreases significantly, which furthermore decreases the total duration for the computation from 449 seconds to 196 seconds. 
 
 ![Chunk size comparison: A) 500x500; B) 1000x1000](source/figures/04_results_3__dask_chunks.png){#fig:dask_chunks width=75%}
 
 The second test concerns multi-threading, which is known as the ability of a single processor to follow multiple streams of execution concurrently [@Nemirovsky2013, p. 1]. Processors are also called *workers* in some cases, such as Dask, and streams are commonly known as *threads*. For the multi-threading test only the number of workers and threads per worker was varied, while the computation, data subset and chunk sizes stayed the same. The diagnostic dashboard and reports provided by Dask can visualize the stream of individual tasks performed by each thread and thereby reveal inefficient use of computing resources. 
 
-The task stream of 4 workers and 6 threads per worker is shown in Figure X A, while Figure X B shows the task stream using 1 worker and 24 threads. Overall it is apparent that the tasks are more evenly distributed when a single worker has access to all threads and that all threads are continuously used. The coloration of tasks reveals that a certain amount of communication is needed when multiple workers are utilized, and that the computation in general is happening in a different order. (A) loads all pixel values first and does the aggregation along the time dimension and per chunk at the end. (B) on the other hand shows a more efficient use of resources, which is reflected in the total duration of 196 seconds as opposed to 270 seconds in case of (A). 
+The task streams of 4 workers and 6 threads per worker, as well as 1 worker and 24 threads are shown in Figure @fig:dask_task_stream A and B, respectively. Overall it is apparent that the tasks are more evenly distributed when a single worker has access to all threads and that it facilitates continuous usage of their allocated computing resources. The coloration of tasks reveals that a certain amount of communication is needed when multiple workers are utilized. Additionally, the computation seems to happen in a sequential order, i.e., pixel values are loaded first and the aggregation along the time dimension and per chunk, being done at the end. Task stream B on the other hand shows a more efficient use of resources, which is reflected in the total duration of 196 seconds as opposed to 270 seconds in case of task stream A. 
 
 ![Task stream comparison. A) 4 workers/6 threads each; B) 1 worker/24 threads each](source/figures/04_results_4__dask_task_streams.png){#fig:dask_task_stream width=100%}
-
 
 \newpage
 #### Results {#sec:pp_obs_results}
 
 Based on the performance considerations tested, the actual per-pixel observations were calculated for each dataset. The results for the Sentinel-1A/B (descending) and Sentinel-2A/B datasets are shown in Figure @fig:pp_obs_s1_desc and @fig:pp_obs_s2, respectively. Similar figures are available in APPENDIX X for the Landsat 8 and the Sentinel-1A/B (ascending) datasets.
 
+On a larger spatial scale the number of valid observations is mostly affected by the orbits of the initial level-1 datasets. This can be observed in all cases, with some regions of fewer observations overlapping between the different datasets. Additionally, the original overlapping UTM grid of the Sentinel-2A/B dataset can be identified due to slightly higher number of observations along its edges (see APPENDIX ? for comparison). 
+
+As expected, the Sentinel-1A/B datasets show a rather homogenous distribution of values. However, a closer look reveals clusters of pixels with lower numbers of valid observations in comparison to surrounding areas. Most clusters appear in urban areas, as highlighted in Figure @fig:pp_obs_s1_desc for the state capital Erfurt, and might be related to processing artifacts due to high backscatter values.
+
+Smaller scale patterns are apparent in both optical datasets, due to the cloud/cloud-shadow-mask used for the computation. Some particular patterns correspond to false positive detections of the modified FMask algorithm that is used during ARD processing [@Frantz2015; @Frantz2018]. Examples are highlighted as A and B in Figure @fig:pp_obs_s2. Various points located in urban or industrial areas are repeatedly flagged as cloud covered and appear as circular areas of fewer observations because of the 300 m cloud-buffer chosen during processing (see @tbl:force-params) (A), while other areas outline the extent of water bodies due to false positive cloud-shadow detections (B). Other patterns seem to show a natural variation due to topography. As highlighted by C, the number of valid observations in the Thuringian forest, which is situated at higher elevations than the rest of the region, is noticeably lower than in the Thuringian basin located to the northeast.   
+
 ![Wird nochmal überarbeitet! Per pixel observations - Sentinel-1A/B Descending](source/figures/04_results_5__obs_s1_desc.png){#fig:pp_obs_s1_desc width=100%}
+
 ![Wird nochmal überarbeitet! Per pixel observations - Sentinel-2A/B](source/figures/04_results_6__obs_s2.png){#fig:pp_obs_s2 width=100%}
 
-On a larger spatial scale the number of valid observations is mostly affected by the orbits of the initial level-1 datasets. This can be observed in all cases, with some regions of fewer observations overlapping between the different datasets. Additionally, the original overlapping UTM grid of the Sentinel-2A/B dataset can be identified due to slightly higher number of observations along its edges. 
-
-As expected, the Sentinel-1A/B datasets show a rather homogenous distribution of values. However, a closer look reveals clusters of pixels with lower numbers of valid observations in comparison to surrounding areas. Some clusters appear in urban areas, as highlighted in Figure @fig:pp_obs_s1_desc for the state capital Erfurt, and could be explained as processing artifacts due to high backscatter values. It is not clear if the appearance of clusters outside urban areas have the same source of origin, so further investigation of the occurrence is needed.  
-
-Some smaller scale patterns are apparent in both optical datasets, which can be explained by the cloud/cloud-shadow-mask used for the computation. They correspond to possible false positive detections of the modified FMask algorithm that is used during ARD processing [@Frantz2015; @Frantz2018]. Examples are highlighted as (A) and (B) in Figure @fig:pp_obs_s2. Various points are repeatedly flagged as cloudy and appear as circular areas of fewer observations because of the 300 m cloud-buffer chosen during processing (see @tbl:force-params), while other areas outline the extent of water bodies due to false positive cloud-shadow detections. Other patterns seem to show a naturally higher occurrence of cloud cover due to topography. As highlighted by (C) the number of valid observations in the Thuringian forest is noticeably lower than in the Thuringian basin located to the northeast.   
 
 \newpage
 ### Roda Forest Analysis
 
-#### Concept
+A further assessment of the usability of the TDC was performed through a time-series analysis that incorporates all available datasets. For this analysis the Roda forest was chosen, which is located to the south-east of the city of Jena (see Figure @fig:thuringia), and primarily contains coniferous, evergreen trees [@Thiel2016]. Central European forests experienced a severe summer drought in 2018 that was classified as climatically even more extreme than the millennial drought of 2003 and resulted in a significant increase of drought-induced tree mortality, as well as drought-legacy effects in 2019 [@Schuldt2020]. The temporal extent of the current implementation of the TDC is suitable to compare the years for which most of the drought effects are expected to be observed (2018 & 2019) to a reference year (2017). 
 
-...
+![Forested area Roda](source/figures/04_results_7__roda_aoi.png){#fig:roda width=100%}
+
+
+#### Methodology
+
+For the first part of the analysis, the Normalized Difference Vegetation Index (NDVI) is calculated for all clear-sky observations of the Landsat 8 and Sentinel-2A/B datasets. The NDVI is a commonly used index to monitor vegetation health and is calculated using the following spectral bands: 
+
+$NDVI = NIR - RED/NIR + RED$ {#eq:ndvi}
+
+The Landsat 8 data is resampled using Nearest Neighbor interpolation to the same 10 m spatial resolution as the Sentinel-2A/B dataset, thus creating an array of the same size and facilitating the merging of both arrays into a single NDVI dataset. As both datasets have slightly different acquisition times, no individual time steps get merged and the full temporal resolution is retained. 
+
+The merged NDVI dataset is used to calculate temporal aggregates for the summer periods (June, July and August) of each available year. Hereby, for each pixel the median value per summer period is calculated. The resulting aggregated rasters can then be compared, e.g., by calculating the difference between the rasters for the summer periods 2018 and 2019 to the raster of the reference year 2017. This enables a visual assessment of possible drought effects in the region of interest. A similar raster showing the described difference between summer periods is also calculated for the Sentinel-1A/B ascending dataset. Here, the cross-polarized (VH) backscatter data is used, as it generally highlights volume scattering, which is typical for the canopies of forests.
+
+For the second part of the analysis the aforementioned rasters are inspected to identify forest areas that show a significant decrease in NDVI and VH backscatter values, suggesting drought-related degradation. A pixel of apparent degradation, and one located in a more stable area are then selected to visualize the time-series of all available values. 
 
 #### Results {#sec:roda_results}
 
-- *Fig: Median NDVI difference for 2018/2019 (combined) related to 2017 with an area of apparent degradation/drought impact and one without, highlighted/marked*  
-- *Fig: Time-series plots of areas highlighted in figure before.*
-  - Lineplots VH backscatter ascending/descending (smoothed -> rolling mean?) 
-  - Scatter of NDVI data points used for median calculation for the summer periods  
+Figure @fig:roda_analysis_1 shows the results of the first part of the analysis. Both rasters, visualizing the difference of median NDVI and backscatter between the summer periods 2018 and 2019, and the reference year 2017, show very similar patterns. Some extensive areas show a significant decrease in both NDVI and VH backscatter for example. As can be seen in Figure @fig:roda, however, these are usually not covered by forest and are probably areas that are used agriculturally. 
 
-- Individual figures for median NDVI 2017, 2018, 2019 in APPENDIX
-  - Also VH backscatter median? And same difference plot?
+A particular region is highlighted for both rasters, which shows a forested area in the central part of the region of interest. Here, patches of apparent degradation can be observed in both rasters and two pixels were selected for the visualization of the time-series. 
+
+
+
+
+![Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.](source/figures/04_results_8__roda_analysis_1.png){#fig:roda_analysis_1 width=100%}
+
+![Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.](source/figures/04_results_9__roda_analysis_2.png){#fig:roda_analysis_2 width=100%}
