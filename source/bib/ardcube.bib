@@ -672,7 +672,7 @@ consider relevant for the imminent uptake of big Earth data.},
   abstract   = {The growing Earth Observation (EO) satellite data requires an open and freely accessible exploitation tool to facilitate the development and sustainability of applications on land use and land cover change, water resources, forest monitoring, and etc. Open Data Cube (ODC) was initiated by the Committee on Earth Observation Satellites (CEOS) to provide a solution with new computing technologies. ODC can promote free and open EO satellite data and application algorithms, and lower the technical barriers for users on exploiting the data. This project aims to develop the ODC protocol in Taiwan and apply it on a case study - forest monitoring after the attack of typhoon Morako in Taimali river basin, the eastern of Taiwan. Firstly, the strategic implementation, the platform, and the infrastructure of Taiwan Data Cube (TWDC) are initiated. And, the TWDC is applied on forest monitoring between 2000 and 2016 using Landsat-7 images. Finally, the improvement and perspective of TWDC protocol are discussed. In the future, (1) the Formosat series images will be prepared as Analysis Ready Data (ARD), (2) the software environment will be improved on data management and user interactive interface, and (3) the protocol of TWDC will be duplicated to developing countries on international cooperation projects under the collaboration with CEOS and the Commonwealth Scientific and Industrial Research Organisation (CSIRO).},
   comment    = {- Inhaltlich nichts Neues... sowohl im Bezug auf technische Implementation, als auch im Bezug auf die Analyse (beides sowieso nicht im Detail erklärt)
 - Nur relevant für den Fall, dass ich beispielhaft Länder im Intro aufzähle die bereits eine ODC Instanz nutzen},
-  groups     = {EODC - OpenDataCube, Introduction},
+  groups     = {EODC - OpenDataCube},
   keywords   = {prio3, skimmed},
   month      = {jul},
   priority   = {prio3},
@@ -924,7 +924,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   publisher = {Springer International Publishing},
   abstract  = {SOLAP data cubes are a main tool to help on the processing of satellite imagery. This article presents the work developed for adapting an existing SOLAP Data Cube to the current Colombian Protocol for processing satellite images to analyze deforestation. We studied different technological alternatives to support such protocol and extend the capabilities of the Australian data cube to include the whole analysis process. In this way, it is possible for different institutions to produce and consume information to/from the data cube allowing the standardization of such information. In consequence, an institution can generate new results based on previous information generated for another institution, keeping the associated metadata along the whole process. This paper introduces the defined architecture, a first implementation and the first results obtained by IDEAM, the Colombian official institution responsible for the monitoring of deforestation in the country.},
   file      = {:Bravo2017 - Architecture for a Colombian Data Cube Using Satellite Imagery for Environmental Applications.pdf:PDF},
-  groups    = {EODC - OpenDataCube},
+  groups    = {EODC - OpenDataCube, Introduction},
 }
 
 @Article{Qiu2018,
@@ -1684,7 +1684,7 @@ Herein, we describe the programmatic developments and institutional context for 
 
 @Online{xcube-Docs,
   author   = {{xcube Contributors}},
-  title    = {xcube documentation},
+  title    = {xcube Documentation},
   url      = {https://xcube.readthedocs.io/en/latest/overview.html},
   subtitle = {Overview},
   urldate  = {2021-06-02},
@@ -2149,6 +2149,37 @@ Herein, we describe the programmatic developments and institutional context for 
   groups  = {Software},
 }
 
+@Article{Papadopoulos2016,
+  author       = {Stavros Papadopoulos and Kushal Datta and Samuel Madden and Timothy Mattson},
+  date         = {2016-11},
+  journaltitle = {Proceedings of the {VLDB} Endowment},
+  title        = {The {TileDB} array data storage manager},
+  doi          = {10.14778/3025111.3025117},
+  number       = {4},
+  pages        = {349--360},
+  volume       = {10},
+  file         = {:Papadopoulos2016 - The TileDB Array Data Storage Manager.pdf:PDF},
+  groups       = {EODC - Projects, Background},
+  publisher    = {{VLDB} Endowment},
+}
+
+@Online{Sinergise,
+  author   = {{Sinergise Ltd.}},
+  title    = {Sentinel Hub},
+  url      = {https://www.sentinel-hub.com},
+  subtitle = {Cloud API for Satellite Imagery},
+  urldate  = {2021-05-23},
+  groups   = {EODC - Projects, Introduction},
+}
+
+@Online{TileDB-Docs,
+  author  = {{TileDB Inc.}},
+  title   = {TileDB Documentation},
+  url     = {https://docs.tiledb.com/main/},
+  urldate = {2021-05-23},
+  groups  = {Software, Background},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -2156,7 +2187,7 @@ Herein, we describe the programmatic developments and institutional context for 
 @Comment{jabref-meta: grouping:
 0 AllEntriesGroup:;
 1 StaticGroup:EODC - Concept\;0\;1\;0xb31a1aff\;\;\;;
-1 StaticGroup:EODC - Projects\;0\;0\;0xe64d4dff\;\;\;;
+1 StaticGroup:EODC - Projects\;0\;1\;0xe64d4dff\;\;\;;
 1 StaticGroup:EODC - OpenDataCube\;0\;1\;0xff8080ff\;\;\;;
 1 StaticGroup:EODC - Use/Impact\;0\;1\;0xffb3b3ff\;\;\;;
 1 StaticGroup:ARD\;0\;0\;0x999999ff\;\;\;;
@@ -2167,7 +2198,7 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
 1 StaticGroup:Software\;0\;0\;0xe6e6b3ff\;\;\;;
-1 StaticGroup:Introduction\;0\;0\;0x001a80ff\;\;\;;
+1 StaticGroup:Introduction\;0\;1\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;0\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods/Results\;0\;1\;0x6680e6ff\;\;\;;
 1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
