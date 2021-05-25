@@ -1,4 +1,4 @@
-# Background
+# State of the Art
 
 ## Big Data & Innovation
 
