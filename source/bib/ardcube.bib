@@ -272,7 +272,7 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   abstract  = {The Harmonized Landsat and Sentinel-2 (HLS) project is a NASA initiative aiming to produce a Virtual Constellation (VC) of surface reflectance (SR) data acquired by the Operational Land Imager (OLI) and Multi-Spectral Instrument (MSI) aboard Landsat 8 and Sentinel-2 remote sensing satellites, respectively. The HLS products are based on a set of algorithms to obtain seamless products from both sensors (OLI and MSI): atmospheric correction, cloud and cloud-shadow masking, spatial co-registration and common gridding, bidirectional reflectance distribution function normalization and spectral bandpass adjustment. Three products are derived from the HLS processing chain: (i) S10: full resolution MSI SR at 10 m, 20 m and 60 m spatial resolutions; (ii) S30: a 30 m MSI Nadir BRDF (Bidirectional Reflectance Distribution Function)-Adjusted Reflectance (NBAR); (iii) L30: a 30 m OLI NBAR. All three products are processed for every Level-1 input products from Landsat 8/OLI (L1T) and Sentinel-2/MSI (L1C). As of version 1.3, the HLS data set covers 10.35 million km2 and spans from first Landsat 8 data (2013); Sentinel-2 data spans from October 2015.
 The L30 and S30 show a good consistency with coarse spatial resolution products, in particular MODIS Collection 6 MCD09CMG products (overall deviations do not exceed 11%) that are used as a reference for quality assurance. The spatial co-registration of the HLS is improved compared to original Landsat 8 L1T and Sentinel-2A L1C products, for which misregistration issues between multi-temporal data are known. In particular, the resulting computed circular errors at 90% for the HLS product are 6.2 m and 18.8 m, for S10 and L30 products, respectively. The main known issue of the current data set remains the Sentinel-2 cloud mask with many cloud detection omissions. The cross-comparison with MODIS was used to flag products with most evident non-detected clouds. A time series outlier filtering approach is suggested to detect remaining clouds. Finally, several time series are presented to highlight the high potential of the HLS data set for crop monitoring.},
   file      = {:Claverie2018 - The Harmonized Landsat and Sentinel 2 Surface Reflectance Data Set.pdf:PDF},
-  groups    = {Optical},
+  groups    = {Optical, Discussion},
   journal   = {Remote Sensing of Environment},
   keywords  = {prio3},
   month     = {dec},
@@ -972,7 +972,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   abstract     = {TL;DR: In this paper, we compare the effect of multivariate spectral harmonization techniques on the inter-sensor reflectance consistency and derived products such as spectral indices or land cover classifications.},
   comment      = {- The proposed approach might be incorporated into the next FORCE release!},
   file         = {:Scheffler2020 - Spectral Harmonization and Red Edge Prediction of Landsat 8 to Sentinel 2 Using Land Cover Optimized Multivariate Regressors.pdf:PDF},
-  groups       = {Optical},
+  groups       = {Optical, Discussion},
   keywords     = {skimmed, prio3},
   priority     = {prio3},
   publisher    = {Elsevier {BV}},
@@ -1003,7 +1003,7 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages        = {1--5},
   abstract     = {Geometric misalignment between Landsat and Sentinel-2 data sets as well as multitemporal inconsistency of Sentinel-2A and -2B data sets currently complicate multitemporal analyses. Operational coregistration of Sentinel-2A and -2B imagery is thus required. We present a modification of the established Landsat Sentinel Registration (LSReg) algorithm. The modifications enabled LSReg to be included in an operational preprocessing workflow to automatically coregister large volumes of Sentinel-2 imagery with Landsat base images that represent multiannual monthly spectral average values. The modified LSReg was tested for the complete Sentinel-2 archive covering Crete, Greece, which is a particularly challenging region due to steep topographic gradients and high shares of water in Sentinel-2 tiles. A coregistration success rate of 87.5% of all images was obtained with a mean coregistration precision of 4.4 m. The mean shifts of 14.0 m in the x-direction and 13.4 m in the y-direction before coregistration were found, with maxima exceeding four pixels. Time series noise in locations with land cover transitions (n = 585) was effectively reduced by 43% using the presented approach. The multitemporal geometric consistency of the Sentinel-2 data set was substantially improved, thus enabling time series analyses within the Sentinel-2 data record, as well as integrated Landsat and Sentinel-2A and -2B data sets. The modified algorithm is implemented in the Framework for Operational Radiometric Correction for Environmental monitoring (FORCE) version 3.0 (https://github.com/davidfrantz/force).},
   file         = {:Rufin2020 - Operational Coregistration of the Sentinel 2A_B Image Archive Using Multitemporal Landsat Spectral Averages.pdf:PDF},
-  groups       = {Optical},
+  groups       = {Optical, Discussion},
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
@@ -1435,7 +1435,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {21},
   pages        = {3634},
   volume       = {12},
-  groups       = {Roda usecase},
+  groups       = {Roda usecase, Discussion},
   publisher    = {{MDPI} {AG}},
 }
 
@@ -1517,7 +1517,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {Guide to GeoTIFF compression and optimization with GDAL},
   url     = {https://kokoalberti.com/articles/geotiff-compression-optimization-guide/},
   urldate = {2021-03-15},
-  groups  = {DataFormat, Background},
+  groups  = {DataFormat, Background, Methods/Results},
 }
 
 @Article{HernandezLopez2021,
@@ -2044,7 +2044,7 @@ Herein, we describe the programmatic developments and institutional context for 
   number       = {6},
   pages        = {1242--1246},
   volume       = {12},
-  groups       = {Optical, Methods/Results},
+  groups       = {Optical, Methods/Results, Discussion},
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
@@ -2056,7 +2056,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi          = {10.1016/j.rse.2018.04.046},
   pages        = {471--481},
   volume       = {215},
-  groups       = {Optical, Methods/Results},
+  groups       = {Optical, Methods/Results, Discussion},
   publisher    = {Elsevier {BV}},
 }
 
@@ -2111,7 +2111,7 @@ Herein, we describe the programmatic developments and institutional context for 
   pages        = {86--103},
   volume       = {45},
   file         = {:Schuldt2020 - A First Assessment of the Impact of the Extreme 2018 Summer Drought on Central European Forests.pdf:PDF},
-  groups       = {Roda usecase, Introduction, Methods/Results},
+  groups       = {Roda usecase, Introduction, Methods/Results, Discussion},
   publisher    = {Elsevier {BV}},
 }
 
@@ -2246,6 +2246,114 @@ Herein, we describe the programmatic developments and institutional context for 
   groups    = {Other, Introduction},
 }
 
+@Article{Villard2007,
+  author       = {L. Villard and Pierre Borderies},
+  date         = {2007},
+  journaltitle = {{PIERS} Online},
+  title        = {Backscattering Border Effects for Forests at C-band},
+  doi          = {10.2529/PIERS061006120418},
+  number       = {5},
+  pages        = {731--735},
+  volume       = {3},
+  groups       = {Roda usecase, SAR, Discussion},
+  publisher    = {{PIERS} Enterprise},
+}
+
+@Article{She2015,
+  author       = {Xiaojun She and Lifu Zhang and Yi Cen and Taixia Wu and Changping Huang and Muhammad Baig},
+  date         = {2015-10},
+  journaltitle = {Remote Sensing},
+  title        = {Comparison of the Continuity of Vegetation Indices Derived from Landsat 8 {OLI} and Landsat 7 {ETM}$\mathplus$ Data among Different Vegetation Types},
+  doi          = {10.3390/rs71013485},
+  number       = {10},
+  pages        = {13485--13506},
+  volume       = {7},
+  groups       = {Roda usecase, Discussion},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Article{Dubois2020,
+  author       = {C. Dubois and M. M. Mueller and C. Pathe and T. Jagdhuber and F. Cremer and C. Thiel and C. Schmullius},
+  date         = {2020-08},
+  journaltitle = {{ISPRS} Annals of Photogrammetry, Remote Sensing and Spatial Information Sciences},
+  title        = {{CHARACTERIZATION} {OF} {LAND} {COVER} {SEASONALITY} {IN} {SENTINEL}-1 {TIME} {SERIES} {DATA}},
+  doi          = {10.5194/isprs-annals-v-3-2020-97-2020},
+  pages        = {97--104},
+  volume       = {V-3-2020},
+  groups       = {Roda usecase, Discussion},
+  publisher    = {Copernicus {GmbH}},
+}
+
+@Article{SteeleDunne2012,
+  author       = {Susan C. Steele-Dunne and Jan Friesen and Nick van de Giesen},
+  date         = {2012-07},
+  journaltitle = {{IEEE} Transactions on Geoscience and Remote Sensing},
+  title        = {Using Diurnal Variation in Backscatter to Detect Vegetation Water Stress},
+  doi          = {10.1109/tgrs.2012.2194156},
+  number       = {7},
+  pages        = {2618--2629},
+  volume       = {50},
+  groups       = {Roda usecase, Discussion},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Bouvet2018,
+  author       = {Alexandre Bouvet and St{\'{e}}phane Mermoz and Marie Ball{\`{e}}re and Thierry Koleck and Thuy Le Toan},
+  date         = {2018-08},
+  journaltitle = {Remote Sensing},
+  title        = {Use of the {SAR} Shadowing Effect for Deforestation Detection with Sentinel-1 Time Series},
+  doi          = {10.3390/rs10081250},
+  number       = {8},
+  pages        = {1250},
+  volume       = {10},
+  groups       = {Roda usecase, Discussion},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Online{Destatis2020,
+  author  = {Destatis},
+  date    = {2020-07-27},
+  title   = {Forest damage due to drought: trees logged because of insect infestation nearly tripled in 2019 compared with 2018},
+  url     = {https://www.destatis.de/EN/Press/2020/07/PE20_N041_412.html},
+  urldate = {2021-05-26},
+  groups  = {Roda usecase, Discussion},
+}
+
+@Article{Hollaus2019,
+  author       = {Markus Hollaus and Mariette Vreugdenhil},
+  date         = {2019-11},
+  journaltitle = {Current Forestry Reports},
+  title        = {Radar Satellite Imagery for Detecting Bark Beetle Outbreaks in Forests},
+  doi          = {10.1007/s40725-019-00098-z},
+  number       = {4},
+  pages        = {240--250},
+  volume       = {5},
+  groups       = {Roda usecase, Discussion},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Gascon2017,
+  author       = {Ferran Gascon and Catherine Bouzinac and Olivier Th{\'{e}}paut and Mathieu Jung and Benjamin Francesconi and J{\'{e}}r{\^{o}}me Louis and Vincent Lonjou and Bruno Lafrance and St{\'{e}}phane Massera and Ang{\'{e}}lique Gaudel-Vacaresse and Florie Languille and Bahjat Alhammoud and Fran{\c{c}}oise Viallefont and Bringfried Pflug and Jakub Bieniarz and S{\'{e}}bastien Clerc and Laëtitia Pessiot and Thierry Tr{\'{e}}mas and Enrico Cadau and Roberto De Bonis and Claudia Isola and Philippe Martimort and Val{\'{e}}rie Fernandez},
+  date         = {2017-06},
+  journaltitle = {Remote Sensing},
+  title        = {Copernicus Sentinel-2A Calibration and Products Validation Status},
+  doi          = {10.3390/rs9060584},
+  number       = {6},
+  pages        = {584},
+  volume       = {9},
+  groups       = {Optical, Discussion},
+  publisher    = {{MDPI} {AG}},
+}
+
+@Online{ESA2021,
+  author  = {ESA},
+  date    = {2021-03-22},
+  title   = {Forthcoming deployment of the Copernicus Sentinel-2 products geometric refinement},
+  url     = {https://sentinel.esa.int/web/sentinel/-/forthcoming-deployment-of-the-copernicus-sentinel-2-products-geometric-refinement/1.1},
+  urldate = {2021-05-26},
+  groups  = {Discussion, Optical},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -2261,11 +2369,11 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:Optical\;0\;1\;0x804d80ff\;\;\;;
 1 StaticGroup:BigData\;0\;1\;0xffcce6ff\;\;\;;
 1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
-1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
+1 StaticGroup:Roda usecase\;0\;0\;0xe6b34dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
 1 StaticGroup:Software\;0\;0\;0xe6e6b3ff\;\;\;;
 1 StaticGroup:Introduction\;0\;1\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;1\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods/Results\;0\;1\;0x6680e6ff\;\;\;;
-1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
+1 StaticGroup:Discussion\;0\;0\;0x99b3ffff\;\;\;;
 }
