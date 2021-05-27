@@ -13,7 +13,7 @@ Out of these, the functionality provided by the processing component was utilize
 
 Two auxiliary tools are offered by pyroSAR to create a DEM for an area of interest [@pyroSAR-Docs]. First, all relevant tiles are obtained from one of various sources, such as the Shuttle Radar Topography Mission (SRTM) in 1 arcsecond (~30 m) or 3 arcsecond (~90 m) spatial resolution. The individual tiles are then merged and clipped to the extent of the area of interest. In addition to the processing of SAR scenes, the resulting DEM file can also be used in other workflows.
 
-For the processing of SAR scenes, pyroSAR's SNAP API was chosen because of the open-source availability of the SNAP software in comparison to the proprietary alternative GAMMA. Processing via the SNAP API is achieved by adapting XML workflows based on user input and then parsing them directly to SNAP's Graph Processing Tool (GPT) [@Truckenbrodt2019a]. The custom workflows can also be stored alongside the output files to facilitate the reproducibility of processing results.   
+For the processing of SAR scenes, pyroSAR's SNAP API was chosen because of the open-source availability of the SNAP software in comparison to the proprietary alternative GAMMA. Processing via the SNAP API is achieved by adapting XML (Extensible Markup Language) workflows based on user input and then parsing them directly to SNAP's Graph Processing Tool (GPT) [@Truckenbrodt2019a]. The custom workflows can also be stored alongside the output files to facilitate the reproducibility of processing results.   
 
 The feasibility to produce SAR backscatter products of an appropriate quality for time-series analysis was investigated by @Truckenbrodt2019. The study focused on producing Sentinel-1 ARD in regard to EODCs in particular, and ultimately came to an affirming conclusion, which further supports the methodology implemented in this work.
 
@@ -51,7 +51,7 @@ After the database has been made aware of available datasets via the process of 
 
 When data is loaded into a Python environment it is organized as an Xarray Dataset including separate data variables for each requested band and appropriately labelled temporal and spatial dimensions [@ODC-Docs]. The execution of loading and computation in a *lazy* manner is also supported, which means that data is only loaded and computed until actually needed. In combination with the *chunking* of data into smaller portions, it is possible to run algorithms over very large EO datasets efficiently, even if the data itself does not fit into the system's memory. 
 
-Some additional utilities are provided with the core Python package of ODC, like a masking tool to create boolean masks from bit-wise QAI products during analysis. More extensive collections of tools and algorithm examples are available in repositories created by users of the ODC community [e.g., @Krause2021]. Furthermore, a selection of applications has been developed that extend the functionality of ODC in various ways ([https://www.opendatacube.org/data-cube-applications](https://www.opendatacube.org/data-cube-applications), last access: 08 May 2021).
+Some additional utilities are provided with the core Python package of ODC, like a masking tool to create Boolean masks from bitwise QAI products during analysis. More extensive collections of tools and algorithm examples are available in repositories created by users of the ODC community [e.g., @Krause2021]. Furthermore, a selection of applications has been developed that extend the functionality of ODC in various ways ([https://www.opendatacube.org/data-cube-applications](https://www.opendatacube.org/data-cube-applications), last access: 08 May 2021).
 
 
 ### Containerization
@@ -81,7 +81,7 @@ A variety of Python packages form the basic framework of ARDCube. They are utili
 
 Based on the prospect of how ARDCube could be used in the future (e.g., a university department), two user groups were identified and hence all packages are managed in two separate conda environments: 
 
-- A *maintainer* environment, which includes all packages necessary for the automated workflows to download, process, and organize data.  
+- A *maintainer* environment, which includes all packages necessary for the automated workflows to download, process, and organize data.
 - A *user* environment, which includes packages necessary for analysing the data and allows to be extended by users as required.
 
 Some important packages used in the maintainer environment are introduced at relevant points in the course of the following sections. The user environment on the other hand is intended to be used more flexibly. At a very basic level, only the ODC Python package and its dependencies (see Section @sec:odc_methods) would be needed to access datasets that were indexed into an ODC database. However, other packages are recommended to be included. JupyterLab, for example, allows users to start interactive computing environments in a remote web browser, which can be very useful in the context of working on HPC systems. In the end, extending the environment is left to each user and can be as simple as packages for the visualization of results, or more advanced with packages such as numba [@Lam2015] that allow for the performance optimization of array-based computations. 
