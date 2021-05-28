@@ -8,8 +8,8 @@ pyroSAR is an open-source Python package [@pyroSAR-Software] with the aim to pro
 
 Out of these, the functionality provided by the processing component was utilized for the development of the software tool. More specifically, to handle two particular tasks:
 
-- Creating a Digital Elevation Model (DEM) mosaic 
-- Processing of SAR scenes to an ARD product using the integrated SNAP API
+- Creating a Digital Elevation Model (DEM) mosaic. 
+- Processing of SAR scenes to an ARD product using the integrated SNAP API.
 
 Two auxiliary tools are offered by pyroSAR to create a DEM for an area of interest [@pyroSAR-Docs]. First, all relevant tiles are obtained from one of various sources, such as the Shuttle Radar Topography Mission (SRTM) in 1 arcsecond (~30 m) or 3 arcsecond (~90 m) spatial resolution. The individual tiles are then merged and clipped to the extent of the area of interest. In addition to the processing of SAR scenes, the resulting DEM file can also be used in other workflows.
 

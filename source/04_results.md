@@ -2,9 +2,8 @@
 
 ## Implementation
 
-With the help of the developed software tool ARDCube, the Thuringian Data Cube (TDC) was implemented on the HPC system TerraSense, which is used by the Department of Earth Observation at the Friedrich-Schiller-University Jena. The available computing resources on the selected node on TerraSense consist of four AMD Opteron 6348 processors that operate at 2.8 GHz by default and contain 12 single-threaded cores each. Moreover, 500 GB of computing memory and an HDD (Hard Disk Drive) file system are available. The following sections describe the implementation in reference to the ARDCube modules used.
+With the help of the developed software tool ARDCube the Thuringian Data Cube (TDC) was implemented on the HPC system TerraSense, which is used by the Department of Earth Observation at the Friedrich-Schiller-University Jena and runs CentOS xy as the operating system. The available computing resources on the selected node on TerraSense consist of four AMD Opteron 6348 processors that operate at 2.8 GHz by default and contain 12 single-threaded cores each. Moreover, 500 GB of computing memory and an HDD (Hard Disk Drive) file system are available. The following sections describe the implementation in reference to the ARDCube modules used.
 
-- CentOS
 
 ### Data Selection
 
@@ -23,7 +22,7 @@ Additional maps are available in APPENDIX X with the tiling schemes for Landsat 
 
 The level-1 data acquired were processed to a level-2/ARD format using the *process_ard* module of ARDCube. In total, 234 Landsat 8 scenes with a size of 247 GB, and 2200 Sentinel-2A/B scenes with a size of 1400 GB formed the basis for this particular step of the TDC implementation.
 
-The processing workflow of the FORCE L2PS module (see Figure @fig:force) can be customized with various processing parameters. In the case of processing data for the TDC, mostly default settings were chosen, as they are commonly used by the FORCE developers themselves to generate ARD [@FORCE-Docs]. Some of the more important parameters are listed in Table @tbl:force-params. 
+The processing workflow of the FORCE L2PS module (Figure @fig:force) can be customized with various processing parameters. In the case of processing data for the TDC, mostly default settings were chosen, as they are commonly used by the FORCE developers themselves to generate ARD [@FORCE-Docs]. Some of the more important parameters are listed in Table @tbl:force-params. 
 
 To perform the topographic correction, as well as improving cloud/cloud-shadow detection and atmospheric correction, a Digital Elevation Model (DEM) is needed. A LiDAR-derived DEM with 10 m spatial resolution for the entire extent of the Free State of Thuringia was provided by the Department of Earth Observation for this purpose. The DEM was used in an uncompressed format to prevent a possible negative impact on processing performance [cf. @Alberti2018].  
 
@@ -92,7 +91,7 @@ For the processing of ARD via FORCE, multiple parameters related to projection a
 
 The latter was applied to all datasets of the TDC as part of the ARD processing described in Sections @sec:optical-satellite-data and @sec:sar-satellite-data. The resulting grid system of square tiles with a size of 150 km each is shown in @fig:glance. 
 
-![GLANCE7 EU grid over the extent of the TDC. Each grid cell constitutes a non-overlapping tile with a unique tile identifier.](source/figures/04_results_2__glance.png){#fig:glance width=100%}
+![GLANCE7 EU grid over the spatial extent of the Free State of Thuringia. Each grid cell constitutes a non-overlapping tile with a unique tile identifier.](source/figures/04_results_2__glance.png){#fig:glance width=100%}
 
 The GLANCE7 grid was developed as part of the NASA MEaSUREs project GLobal LANd Cover and Estimation (GLANCE) designed by Boston University [@Friedl] and is based on the EQUI7 grid system proposed by @BauerMarschallinger2014. It uses Lambert Azimuthal Equal Area projections to minimize distortion for each of the seven continents and ensures that areas in an ARD product are in proportion to the actual areas on the Earth's surface. A similar equal-area projection has also been used by @Dwyer2018 for the Landsat ARD products. 
 
@@ -144,13 +143,13 @@ As described by @Rocklin2015, Dask uses NumPy-like arrays and blocked array algo
 
 A simple test was performed by varying the chunk size as shown in @fig:dask_chunks. The number of tasks that are needed to ultimately come to the same computational result is also shown for both arrays. As a result of doubling the chunk size, the number of tasks needed decreases significantly, which furthermore decreases the total duration for the computation from 449 seconds to 196 seconds. 
 
-![Chunk size comparison: A) 500x500; B) 1000x1000](source/figures/04_results_3__dask_chunks.png){#fig:dask_chunks width=75%}
+![bla Chunk size comparison: A) 500x500; B) 1000x1000](source/figures/04_results_3__dask_chunks.png){#fig:dask_chunks width=75%}
 
 The second test concerns multi-threading, which is known as the ability of a single processor to follow multiple streams of execution concurrently [@Nemirovsky2013, p. 1]. Processors are also called *workers* in some cases, such as Dask, and streams are commonly known as *threads*. For the multi-threading test only the number of workers and threads per worker was varied, while the computation, data subset and chunk sizes stayed the same. The diagnostic dashboard and reports provided by Dask can visualize the stream of individual tasks performed by each thread and thereby reveal inefficient use of computing resources. 
 
 The task streams of 4 workers and 6 threads per worker, as well as 1 worker and 24 threads are shown in Figure @fig:dask_task_stream A and B, respectively. Overall it is apparent that the tasks are more evenly distributed when a single worker has access to all threads and that it facilitates continuous usage of their allocated computing resources. The coloration of tasks reveals that a certain amount of communication is needed when multiple workers are utilized. Additionally, the computation seems to happen in a sequential order, i.e., pixel values are loaded first and the aggregation along the time dimension and per chunk, being done at the end. Task stream B on the other hand shows a more efficient use of resources, which is reflected in the total duration of 196 seconds as opposed to 270 seconds in case of task stream A. 
 
-![Task stream comparison. A) 4 workers/6 threads each; B) 1 worker/24 threads each](source/figures/04_results_4__dask_task_streams.png){#fig:dask_task_stream width=100%}
+![bla Task stream comparison. A) 4 workers/6 threads each; B) 1 worker/24 threads each](source/figures/04_results_4__dask_task_streams.png){#fig:dask_task_stream width=100%}
 
 \newpage
 #### Results {#sec:pp_obs_results}
@@ -184,7 +183,7 @@ For the first part of the analysis, the Normalized Difference Vegetation Index (
 
 $NDVI = \frac{NIR - RED}{NIR + RED}$ {#eq:ndvi}
 
-The Landsat 8 data is resampled using Nearest Neighbor interpolation to the same 10 m spatial resolution as the Sentinel-2A/B dataset, thus creating an array of the same size and facilitating the merging of both arrays into a single NDVI dataset. As both datasets have slightly different acquisition times, no individual time steps get merged and the full temporal resolution is retained. 
+The Landsat 8 data is resampled using Nearest Neighbor interpolation to the same 10 m spatial resolution as the Sentinel-2A/B dataset, thus creating an array of the same size and facilitating the merging of both arrays into a single NDVI dataset. As both datasets have slightly different acquisition times, no individual time steps get merged and the full temporal resolution is thereby retained. 
 
 The merged NDVI dataset is used to calculate temporal aggregates for the summer periods (June, July and August) of each available year. Hereby, for each pixel the median value per summer period is calculated. The resulting aggregated rasters can then be compared, e.g., by calculating the difference between the rasters for the summer periods 2018 and 2019 to the raster of the reference year 2017. This enables a visual assessment of possible drought effects in the region of interest. A similar raster showing the described difference between summer periods is also calculated for the Sentinel-1A/B ascending dataset. Here, the cross-polarized (VH) backscatter data is used, as it generally highlights volume scattering, which typically occures in forest canopies.
 
@@ -200,6 +199,6 @@ A particular region is highlighted for both rasters, which shows a forested area
 
 The time-series plots confirm the reasoning behind selecting these particular points and show different developments of the values over time. While all datasets visualized for point B seem to be rather stable throughout the observed timeframe, a significant decrease of NDVI values and a noticeable decrease of VH backscatter values can be observed for point A around May 2018. It should be noted that outlier values are likely to still be present in the NDVI time-series, especially for winter months. A seasonal variation of the backscatter signal can be seen in plot B, which is particularly apparent for the descending dataset. No seasonality is apparent in the NDVI time-series on the other hand. 
 
-![Wird nochmal überarbeitet! Difference of the median NDVI and ascending VH backscatter for the summer periods 2018 and 2019 relative to 2017. A centrally located area is highlighted for both rasters, where two pixels were selected for the time-series visualization (see Figure @fig:roda_analysis_2). Spatial reference system: GLANCE7 EU grid.](source/figures/04_results_8__roda_analysis_1.png){#fig:roda_analysis_1 width=100%}
+![Difference of the median NDVI and ascending VH backscatter for the summer periods 2018 and 2019 relative to 2017. A centrally located area is highlighted for both rasters, where two pixels were selected for the time-series visualization (see Figure @fig:roda_analysis_2). Spatial reference system: GLANCE7 EU grid.](source/figures/04_results_8__roda_analysis_1.png){#fig:roda_analysis_1 width=100%}
 
 ![Time-series plots for the pixels selected in Figure @fig:roda_analysis_1. The VH backscatter values were smoothed by calculating the weekly mean. NDVI values that were used to calculate the median for each summer period are highlighted.](source/figures/04_results_9__roda_analysis_2.png){#fig:roda_analysis_2 width=100%}
