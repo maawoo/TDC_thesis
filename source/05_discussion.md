@@ -1,6 +1,8 @@
 # Discussion
 
-Short intro text explaining the order of discussed topics...
+The following discussion is divided into three sections. Section @sec:usability-assessment discusses the usability of the initial implementation of the TDC in regard to the presented use cases and integrated datasets, while also mentioning some possible improvements that are readily available. Section @sec:implementation-assessment focuses on technical aspects of the implementation related to ARD in general and the Open Data Cube. Finally, Section @sec:outlook provides an outlook on how the ARDCube tool could be extended, as well as the possible usage of the TDC at the Department of Earth Observation at the University of Jena.  
+
+
 
 ## Usability Assessment
 
@@ -9,8 +11,6 @@ By carrying out the use cases described in Section @sec:use-cases the usability 
 Fortunately, no significant issues were apparent during the per-pixel computations of the TDC. In addition, some important aspects could be tested beforehand, which are relevant to the software library used to perform scalable computations in Python. No universal set of parameters exists that always results in the best performance. As the tests have demonstrated, however, the available resources can easily be used to diagnose problems and adjust parameters accordingly. The visualization of diagnostics and insights as an interactive dashboard is a great way to reduce abstractness and the sense of working with a *black box*.     
 
 The results of computing valid observations per pixel for the entire extent of the TDC provide valuable information about the temporal and spatial characteristics of the datasets. On one hand, inappropriate parameterization during the processing of ARD can be identified, such as a too large buffer for cloud, cloud-shadow and snow detection. Optimal parameters should of course be determined beforehand by first processing a smaller subset of the dataset. However, a visualization of the end product can reveal inconsistencies in the underlying data that might otherwise remain unnoticed. Furthermore, it can be used in support of performing time-series analysis. An area of interest can, for example, be located in a region of significantly fewer observations due to the orbit paths of the EO satellites. In addition, valid data points might be removed unintentionally when applying masks derived from the QAI band, as the algorithm used during processing can include false-positive detections [@Frantz2015; @Frantz2018]. It is important to consider these aspects before conducting an analysis or at least being aware of possible impacts. Having access to this information prior to the analysis or being able to easily generate and visualize it for a particular study area can be very beneficial. 
- 
----
 
 The study area of the Roda forest is located in a region of fewer observations for the Sentinel-2A/B and descending Sentinel-1A/B datasets. Nevertheless, the amount of data points were sufficient to conduct the time-series analysis in the form that was intended and the potential of using the TDC could successfully be demonstrated.
 
@@ -22,30 +22,29 @@ The lack of seasonality in the NDVI time-series for point B might indicate that 
 
 - Appendix stuff -> possible drought legacy effects?
 
-Data points from the Sentinel-2A/B and Landsat 8 datasets have been combined to calculate the median NDVI differences seen in Figure @fig:roda_analysis_1 (and APPENDIX!). This combined use is not trivial, as both sensors cover slightly different spectral wavelengths. While effort is being made to create harmonized data products from both sensors [@Claverie2018; @Scheffler2020], ARD products that have been created with FORCE are not yet harmonized during processing. Therefore, this aspect needs to be considered when similar time-series analysis are conducted using the TDC and the appropriateness of aggregating data points from different datasets ultimately depends on the study objective.     
+Data points from the Sentinel-2A/B and Landsat 8 datasets have been combined to calculate the median NDVI differences seen in Figure @fig:roda_analysis_1 (and APPENDIX!). This combined usage is not trivial, as both sensors cover slightly different spectral wavelengths. While effort is being made to create harmonized data products from both sensors [@Claverie2018; @Scheffler2020], ARD products that have been created with FORCE are not yet harmonized during processing. Therefore, this aspect needs to be considered when similar time-series analysis are conducted using the TDC and the appropriateness of aggregating data points from different datasets ultimately depends on the study objective.     
 
-The quality of time-series derived from the Sentinel-2A/B dataset of the TDC could be improved for future analyses. Currently, the Level-1C data products of the Sentinel-2 mission have a multitemporal geometric uncertainty of around 12 m [@Gascon2017]. While a geometric refinement is currently being implemented to improve the accuracy [@ESA2021], it is not clear if the reprocessing of past datasets is planned. A coregistration option has already been implemented into FORCE L2PS (see Figure @fig:force). @Rufin2020 describe the algorithm used in more detail, which ultimately leverages base images created from the Landsat 8 near-infrared band to improve the multitemporal geometric uncertainty of the processed Sentinel-2 ARD product to an average of around 4.4 m.
+Currently, the Level-1C data products of the Sentinel-2 mission have a multi-temporal geometric uncertainty of around 12 m [@Gascon2017], which can be a negative influence on time-series analyses. While a geometric refinement is currently being implemented by ESA to improve the accuracy [@ESA2021], it is not clear if the reprocessing of past datasets is planned. A coregistration option has already been implemented into FORCE L2PS (see Figure @fig:force). @Rufin2020 describe the algorithm used in more detail, which ultimately leverages base images created from the Landsat 8 near-infrared band to improve the multi-temporal geometric uncertainty of the processed Sentinel-2 ARD product to an average of around 4.4 m. This processing option requires some preparation steps but is readily available in the version of FORCE utilized in this work. The quality of time-series can thus be improved for future analyses performed with the TDC by reprocessing the Sentinel-2A/B dataset.  
 
----
+The Sentinel-1A/B datasets were already provided in an ARD format and have been processed using an SRTM 1 arcsecond DEM (see Section @sec:sar-satellite-data). As @Truckenbrodt2019 describe in their work, large discrepancies can sometimes be observed between different openly available DEM options, such as SRTM. This can affect the quality of the topographic normalization during processing and ultimately the time-series analysis of individual pixels. Similarly to the Sentinel-2A/B dataset, it might be worthwhile to reprocess the dataset to further improve the data quality in regard to time-series analysis. The LiDAR-derived DEM utilized during the processing of the Sentinel-2A/B and Landsat 8 datasets could be used after a similar quality assessement as described by @Truckenbrodt2019 has been performed.  
 
-- ODC-core, Xarray, Dask already provide a lot of possibilities to work with the data
-  - The ecosystem is huge and continues to grow
-  - Other libraries that are not necessarily part of the ecosystem can still be integrated if needed (e.g., numba) or wetterdienst to plot weather data (for the Roda use case for example)
-  - Also ML! (e.g., example in dea-notebooks)
+In conclusion, the usability of the current implementation of the TDC has successfully been demonstrated with the performed use cases. The quality of all datasets is appropriate for time-series analysis but could be further improved with readily available processing options and ancillary data. Access to the indexed ARD products via the ODC Python API works without any issues or additional preparation steps. For example, no reprojection and resampling of the data has to be performed during data loading as all datasets are stored in a common projection and the same non-overlapping tiling scheme. The utilization of a continental projection, such as GLANCE7, can be additionally advantageous in the future by facilitating interoperability with other study areas in the same region if the same projection is used.   
+
+The existing ecosystem of Python packages surrounding the core packages Xarray and Dask is steadily growing and has been adopted by a variety of scientific fields and institutions [e.g., @EynardBontemps2019]. The aspect of adoption should not be neglected in connection with open-source software projects, as it can ensure long term support of development. Various packages in this ecosystem can pave the way to more advanced types of analyses than demonstrated here. The Dask extension dask-ml [@DaskML-Software], for example, provides access to scalable machine learning by leveraging the popular Python library Scikit-Learn [@Pedregosa2011]. Furthermore, packages that might not be directly related to the ecosystem can easily be integrated into an analysis, such as the Roda use case, to provide additional information like climatic time-series data from weather stations located in the study area [@Wetterdienst-Software]. 
 
 
 
 ## Implementation Assessment
+
+
 ### Analysis Ready Data
 
-- To my knowledge no official FORCE or pyroSAR CARD4L assessments have been done. (I haven't done them either...) 
-  - An assessment would be helpful in identifying any shortcomings in "analysis readiness"
-  - In general there is little doubt in the quality of ARD production in both cases though...
+Processing optical and SAR data with the software components integrated in the ARDCube tool produces datasets that can directly be used in an analysis and hence be designated as ARD products. However, a formal assessment of how well these products comply with the current CARD4L specifications described in Section @sec:card4l, has neither been done in the course of this work, nor by the developers of FORCE or pyroSAR. However, @Truckenbrodt2019 acknowledge that this is a future goal along with a relevant extension of the pyroSAR software and at the time of writing the official CARD4L website already lists FORCE as an ARD resource.
 
-Data Format
-- Currently relies on FORCE defaults for the GeoTIFF specifications that were described
-- A change in data format (e.g., internal tiling of GeoTIFFs as blocks instead of strips, which is also default for COGs) would mean additional post-processing steps
-- Assessments for quality, performance and so on are needed before deciding on any format changes and need to be justified, because it already works pretty well as is... 
+Various aspects that are related to ARD were taken into account while developing the ARDCube tool and implementing the TDC, but were not actively adjusted or changed. For the data format of both optical and SAR datasets, for example, the current setup solely relies upon which GeoTIFF specifications are defined by FORCE for the output files. @Alberti2018 demonstrates that GeoTIFF specifications such as the compression algorithm can have a significant impact on read and write speeds, as well as the ratio of compression and therefore storage size. Moreover, the internal tiling of the files affects the performance of only accessing a small part of each file, which is done repeatedly when a time-series of a pixel is retrieved, for example. These aspects need to be considered when large volumes of EO data are supposed to be handled during an analysis. New raster data formats have also emerged in recent times, including Cloud Optimized GeoTIFF (COG) and Zarr, which provide their own set of specifications, as well as advantages and disadvantages [@Yee2020]. In regard to the TDC, the current approach works quite well as demonstrated with the per-pixel computations (Section @sec:per-pixel-computations). Therefore, any changes of the data format need to be justified, as existing datasets and the processing workflows would need to be adjusted. An assessment of this kind could be very beneficial, because a lack of studies is noticeable in this regard.
+
+
+---
 
 Metadata
 - Same as data itself: reliance on how FORCE/pyroSAR handle it 
@@ -90,6 +89,7 @@ Data Products
     - https://www.osgeo.org/projects/open-data-cube/
   - ... so maybe those problems can soon be solved! (nobody should expect the core devs to do everything :) )
 
+- Advantage of using ODC instead of relying on something like GEE for example
 
 
 ## Outlook

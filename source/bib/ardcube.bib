@@ -9,7 +9,7 @@
   volume     = {4},
   abstract   = {This study aims at assessing the feasibility of automatically producing analysis-ready radiometrically terrain-corrected (RTC) Synthetic Aperture Radar (SAR) gamma nought backscatter data for ingestion into a data cube for use in a large spatio-temporal data environment. As such, this study investigates the analysis readiness of different openly available digital elevation models (DEMs) and the capability of the software solutions SNAP and GAMMA in terms of overall usability as well as backscatter data quality. To achieve this, the study builds on the Python library pyroSAR for providing the workflow implementation test bed and provides a Jupyter notebook for transparency and future reproducibility of performed analyses. Two test sites were selected, over the Alps and Fiji, to be able to assess regional differences and support the establishment of the Swiss and Common Sensing Open Data cubes respectively.},
   file       = {:Truckenbrodt2019 - Towards Sentinel 1 SAR Analysis Ready Data_ a Best Practices Assessment on Preparing Backscatter Data for the Cube.pdf:PDF},
-  groups     = {SAR, ARD, Background, Methods/Results},
+  groups     = {SAR, ARD, Background, Methods/Results, Discussion},
   journal    = {Data},
   keywords   = {prio1, skimmed},
   month      = {jul},
@@ -411,8 +411,8 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   year       = {2019},
 }
 
-@TechReport{Durbin2020,
-  author      = {Chris Durbin and Patrick Quinn and Dana Shum},
+@TechReport{Yee2020,
+  author      = {Chan Yee and Chris Durbin and Patrick Quinn and Dana Shum},
   institution = {NASA EOSDIS},
   title       = {Task 51-Cloud-Optimized Format Study},
   number      = {20200001178},
@@ -423,7 +423,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 (Task 51 Statement of Work, Revision B - Enabling EOSDIS Data Usage Statement of Work)
 With the above purpose in mind, the evaluation we present seeks to inform future decisions on both archival formats for cloud data as well as formats to use for analysis, if different from the archival format. We do not expect to produce a recommendation for a single format for use in all cases but rather hope to inform format selection for a given use based on archival and usability needs. Further study may be warranted as formats, EO data, cloud infrastructure and user behavior evolve.},
   file        = {:Durbin2020 - Task 51 Cloud Optimized Format Study.pdf:PDF},
-  groups      = {DataFormat, Background},
+  groups      = {DataFormat, Background, Discussion},
   keywords    = {prio2, read},
   month       = jan,
   priority    = {prio2},
@@ -1157,10 +1157,11 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
 
 @InProceedings{Truckenbrodt2019a,
   author    = {Truckenbrodt, John and Cremer, Felix and Baris, Ismail and Eberle, Jonas},
-  booktitle = {Proceedings of 2019 Big Data from Space (BiDS'19)},
+  booktitle = {Proceedings of the 2019 conference on Big Data from Space (BiDS'19)},
   date      = {2019},
   title     = {pyroSAR: A Framework for Large-Scale SAR Satellite Data Processing},
   doi       = {10.2760/848593},
+  editor    = {Pierre Soille and S. Loekken and S. Albani},
   language  = {en},
   pages     = {197-200},
   publisher = {Publications Office of the European Union},
@@ -1517,7 +1518,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {Guide to GeoTIFF compression and optimization with GDAL},
   url     = {https://kokoalberti.com/articles/geotiff-compression-optimization-guide/},
   urldate = {2021-03-15},
-  groups  = {DataFormat, Background, Methods/Results},
+  groups  = {DataFormat, Background, Methods/Results, Discussion},
 }
 
 @Article{HernandezLopez2021,
@@ -2182,7 +2183,7 @@ Herein, we describe the programmatic developments and institutional context for 
 }
 
 @Online{WEF2021a,
-  author  = {{WEF}},
+  author  = {{The World Economic Forum}},
   date    = {2021-01-19},
   title   = {The Global Risks Report 2021},
   url     = {https://www.weforum.org/reports/the-global-risks-report-2021},
@@ -2263,7 +2264,7 @@ Herein, we describe the programmatic developments and institutional context for 
   author       = {Xiaojun She and Lifu Zhang and Yi Cen and Taixia Wu and Changping Huang and Muhammad Baig},
   date         = {2015-10},
   journaltitle = {Remote Sensing},
-  title        = {Comparison of the Continuity of Vegetation Indices Derived from Landsat 8 {OLI} and Landsat 7 {ETM}$\mathplus$ Data among Different Vegetation Types},
+  title        = {Comparison of the Continuity of Vegetation Indices Derived from Landsat 8 {OLI} and Landsat 7 {ETM}+ Data among Different Vegetation Types},
   doi          = {10.3390/rs71013485},
   number       = {10},
   pages        = {13485--13506},
@@ -2354,6 +2355,55 @@ Herein, we describe the programmatic developments and institutional context for 
   groups  = {Discussion, Optical},
 }
 
+@InProceedings{EynardBontemps2019,
+  author    = {Guillaume Eynard-Bontemps and Ryan Abernathey and Joseph Hamman and Aurelien Ponte and Willi Rath},
+  booktitle = {Proceedings of the 2019 conference on Big Data from Space (BiDS'19)},
+  date      = {2019},
+  title     = {The Pangeo Big Data Ecosystem and its use at CNES},
+  doi       = {10.2760/848593},
+  editor    = {Pierre Soille and S. Loekken and S. Albani},
+  isbn      = {9789276000341},
+  language  = {en},
+  location  = {Luxembourg},
+  pages     = {49-52},
+  publisher = {Publications Office of the European Union},
+  url       = {https://archimer.ifremer.fr/doc/00503/61441/65160.pdf},
+  urldate   = {2021-05-28},
+  groups    = {Software, Other, Discussion},
+}
+
+@Software{DaskML-Software,
+  author   = {{Dask-ML Contributors}},
+  title    = {Dask-ML},
+  location = {Github},
+  subtitle = {Scalable Machine Learning with Dask},
+  type     = {software},
+  url      = {https://github.com/dask/dask-ml},
+  urldate  = {2021-05-28},
+  groups   = {Software, Discussion},
+}
+
+@Article{Pedregosa2011,
+  author  = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V. and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P. and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+  title   = {Scikit-learn: Machine Learning in {P}ython},
+  pages   = {2825--2830},
+  volume  = {12},
+  groups  = {Software, Discussion},
+  journal = {Journal of Machine Learning Research},
+  year    = {2011},
+}
+
+@Software{Wetterdienst-Software,
+  author   = {Benjamin Gutzmann and Andreas Motl and Daniel Lassahn and Trevor James Smith and Ilya Kamenshchikov and Michael Schrammel and Contributors},
+  title    = {Wetterdienst},
+  location = {Github},
+  subtitle = {Open weather data for humans},
+  type     = {software},
+  url      = {https://github.com/earthobservations/wetterdienst},
+  urldate  = {2021-05-28},
+  groups   = {Software, Discussion},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -2375,5 +2425,5 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:Introduction\;0\;1\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;1\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods/Results\;0\;1\;0x6680e6ff\;\;\;;
-1 StaticGroup:Discussion\;0\;0\;0x99b3ffff\;\;\;;
+1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
 }
