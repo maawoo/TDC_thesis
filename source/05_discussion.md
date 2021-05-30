@@ -54,12 +54,14 @@ A final aspect to be briefly discussed is the availability of auxiliary data pro
 
 ### Open Data Cube
 
-- Once everything is integrated/setup it works great, but to get there is not as straightforward as is advertised in some cases/articles
-- Docker  
-  - Even though it's not really mentioned in Docs, multiple Docker projects exist... 
-    - https://github.com/opendatacube: 2 repos and 1 subdirectory in the core repo!
-    - Then there is Datacube On Demand which is described as open source by Giuliani et al but nowhere to be found?
-    - In the end Singularity container and conda environment a great solution. It works, is scalable and no security issues!
+@Gentemann2021 state that a paradigm shift is happening in science, as data, software, and computational resources are moving towards cloud-based solutions. However, a lot of challenges are yet to be solved and HPC systems will remain important tools while technologies related to this shift are increasingly being adopted [@Abernathey2020]. In conjunction with this trend, various cloud-based EO platforms have emerged. As described by @Giuliani2019, these platforms potentially come with their own set of drawbacks and limit the control and flexibility of users. These aspects are particularly important in regard to research departments where existing computational resources are utilized to perform data-intensive workloads and additional data sources are often integrated into analyses. It can therefore be said that the ODC is an appropriate choice for the initial implementation of the TDC at the Department of Earth Observation at the University of Jena. 
+
+The complete setup of an operational EODC based on the ODC software library is still rather complex, as a lot of factors need to be considered and both IT and remote sensing knowledge is required. This problem has also been pointed out by @Giuliani2020b and @HernandezLopez2021 and is limiting the adoption of this technology. A possible solution was proposed by @Giuliani2020b in the form of the Docker-based “Data Cube on Demand (DCoD)”. It intends to cover the entire process of downloading and processing EO data, and creating an ODC instance for a particular area of interest. Being open-source with possible improvements and development of the proposed project through external contributors has been named by the authors as an additional advantage, but the DCoD has yet to be made public. 
+
+The ARDCube project developed in the course of this work intends to solve the same problem as the DCoD, while focusing on the deployment on HPC systems. As mentioned in Section @sec:containerization, Singularity has been selected as the containerization solution for this reason. The path to finding this solution was not straightforward, however, because the usage of Docker prevails in many scientific domains. Various Docker-based projects exist that are related to the ODC, for example. Concurrently, a lack of documentation exists in this regard as well, which can result in confusion amongst ODC users.       
+
+
+
 - PostgreSQL database and YAML based indexing might not be the best solution
   - Both aspects are also considered by devs and likely changed in the future (other db backends / STAC)
     - https://github.com/opendatacube/datacube-core/wiki/enhancement-proposals  
@@ -71,6 +73,7 @@ A final aspect to be briefly discussed is the availability of auxiliary data pro
       - Pangeo is just a collection of tools (Geoscience in general, not just EO) -> some functionalities/preparation steps needed to work with EO data might be lacking 
       - datacube-core is solving exactely this (wrapping Xarray and using rasterio for reprojections etc)
   - Also xcube with their Zarr integration and also the same core libraries (Xarray+Dask) is very interesting!
+
 - Community
   - Documentation is in some parts outdated/confusing for new users. e.g. Ingestion is still described in Docs but "not recommended" in Community?
   - Big open source projects should have a proper community space to ask questions/get help
@@ -83,7 +86,6 @@ A final aspect to be briefly discussed is the availability of auxiliary data pro
     - https://www.osgeo.org/projects/open-data-cube/
   - ... so maybe those problems can soon be solved! (nobody should expect the core devs to do everything :) )
 
-- Advantage of using ODC instead of relying on something like GEE for example
 
 
 ## Outlook
@@ -99,7 +101,8 @@ A final aspect to be briefly discussed is the availability of auxiliary data pro
 
 - [More data!](https://media.giphy.com/media/xT0BKi1TLjmKiu1HGg/giphy.gif)
   - Temporal 
-  - Other sensors: Landsat archive with FORCE, easy and ARDCube is ready! SAR data a bit more work needed. 
+  - Other sensors: Landsat archive with FORCE, easy and ARDCube is ready! 
+  - SAR SLC
 - Automation / Near Real Time data stream
   - ARDCube commands could be used with a cronjob on Terrasense for example
   - Also relevant from BIDS presentation: https://elib.dlr.de/137176/
