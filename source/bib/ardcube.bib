@@ -1390,7 +1390,7 @@ Herein, we describe the programmatic developments and institutional context for 
   comment      = {- ODC is being mentioned in section 2.6. - Institutional and Government Supported Open Source Geospatial Initiatives
 - Beyond that, this paper might be very useful if I discuss the open source aspect somewhere in my thesis!},
   file         = {:Coetzee2020 - Open Geospatial Software and Data_ a Review of the Current State and a Perspective into the Future.pdf:PDF},
-  groups       = {BigData, Background},
+  groups       = {BigData, Background, Discussion},
   incitefulid  = {109245531},
   journal      = {ISPRS international journal of geo-information},
   keywords     = {prio2},
@@ -1575,7 +1575,7 @@ Herein, we describe the programmatic developments and institutional context for 
   url      = {https://datacube-core.readthedocs.io/en/latest/architecture/high_level.html},
   subtitle = {High Level Architecture},
   urldate  = {2021-04-26},
-  groups   = {Background, Software, Methods/Results, Discussion},
+  groups   = {Background, Methods/Results, Discussion, EODC - OpenDataCube},
   keywords = {prio2},
   priority = {prio2},
 }
@@ -1890,7 +1890,7 @@ Herein, we describe the programmatic developments and institutional context for 
   type     = {software},
   url      = {https://github.com/opendatacube/datacube-core},
   urldate  = {2021-05-10},
-  groups   = {Software, Methods/Results},
+  groups   = {Methods/Results, EODC - OpenDataCube},
 }
 
 @InProceedings{Lam2015,
@@ -2427,6 +2427,94 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {American Geophysical Union ({AGU})},
 }
 
+@Online{Kouzoubov2019,
+  author   = {Kirill Kouzoubov and Damien Ayers and Alex Leith},
+  date     = {2019-06-12},
+  title    = {ODC Enhancement Proposal 003},
+  url      = {https://github.com/opendatacube/datacube-core/wiki/ODC-EP-003---Replace-the-ODC-Index-and-Internal-Database-API},
+  subtitle = {Replace the ODC Index and Internal Database API},
+  urldate  = {2021-05-31},
+  groups   = {EODC - OpenDataCube, Discussion},
+}
+
+@Online{Woodcock2019,
+  author   = {Robert Woodcock},
+  date     = {2019-07-18},
+  title    = {ODC Eenhancement Proposal 002},
+  url      = {https://github.com/opendatacube/datacube-core/wiki/ODC-EP-002---Support-for-multiple-DC-databases},
+  subtitle = {Support for multiple DC databases},
+  urldate  = {2021-05-31},
+  groups   = {EODC - OpenDataCube, Discussion},
+}
+
+@Online{Dhar2021,
+  author   = {Tisham Dhar},
+  date     = {2021-04-22},
+  title    = {ODC Enhancement Proposal 004},
+  url      = {https://github.com/opendatacube/datacube-core/wiki/ODC-EP-004---Use-alternative-index-backends},
+  subtitle = {Use alternative index backends},
+  urldate  = {2021-05-31},
+  groups   = {EODC - OpenDataCube, Discussion},
+}
+
+@Online{Hamman2020,
+  author  = {Joe Hamman},
+  date    = {2020-03-03},
+  title   = {Introducing Intake-stac},
+  url     = {https://medium.com/pangeo/introducing-intake-stac-2c988d8e1d30},
+  urldate = {2021-05-31},
+  groups  = {Software, Discussion},
+}
+
+@Software{StackSTAC-Software,
+  author   = {Gabe Joseph and Contributors},
+  title    = {StackSTAC},
+  location = {Github},
+  subtitle = {Turn a STAC catalog into a dask-based xarray},
+  type     = {software},
+  url      = {https://github.com/gjoseph92/stackstac},
+  urldate  = {2021-05-31},
+  groups   = {Software, Discussion},
+}
+
+@Online{Pangeo-Web,
+  author   = {{Pangeo Contributors}},
+  title    = {Pangeo},
+  url      = {https://pangeo.io/index.html},
+  subtitle = {A community platform for Big Data geoscience},
+  urldate  = {2021-05-31},
+  groups   = {Software, Discussion},
+}
+
+@Article{Kellndorfer2021,
+  author    = {Kellndorfer, Josef},
+  date      = {2021},
+  title     = {The new era of SAR time series: Tackling big EO data analysis and visualization with Pangeo tools},
+  doi       = {10.5281/ZENODO.4756696},
+  language  = {en},
+  copyright = {Creative Commons Attribution 4.0 International},
+  groups    = {Other, Discussion},
+  keywords  = {Synthetic Aperture Radar, SAR, Pangeo},
+  publisher = {Zenodo},
+}
+
+@Online{OSGeo-ODC,
+  author  = {OSGeo},
+  title   = {OSGeo Community Projects: Open Data Cube},
+  url     = {https://www.osgeo.org/projects/open-data-cube/},
+  urldate = {2021-05-31},
+  groups  = {Software, Discussion},
+}
+
+@Online{Gowda,
+  author   = {Sanjay Gowda},
+  title    = {Open Earth Alliance},
+  url      = {https://www.earthobservations.org/documents/gwp20_22/OEA.pdf},
+  subtitle = {2020-2022 GEO Work Programme},
+  urldate  = {2021-05-31},
+  groups   = {Discussion, EODC - OpenDataCube},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -2444,9 +2532,9 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
 1 StaticGroup:Roda usecase\;0\;0\;0xe6b34dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
-1 StaticGroup:Software\;0\;0\;0xe6e6b3ff\;\;\;;
+1 StaticGroup:Software\;0\;1\;0xe6e6b3ff\;\;\;;
 1 StaticGroup:Introduction\;0\;1\;0x001a80ff\;\;\;;
 1 StaticGroup:Background\;0\;1\;0x334db3ff\;\;\;;
 1 StaticGroup:Methods/Results\;0\;1\;0x6680e6ff\;\;\;;
-1 StaticGroup:Discussion\;0\;0\;0x99b3ffff\;\;\;;
+1 StaticGroup:Discussion\;0\;1\;0x99b3ffff\;\;\;;
 }
