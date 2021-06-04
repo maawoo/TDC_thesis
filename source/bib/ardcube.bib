@@ -423,7 +423,7 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
 (Task 51 Statement of Work, Revision B - Enabling EOSDIS Data Usage Statement of Work)
 With the above purpose in mind, the evaluation we present seeks to inform future decisions on both archival formats for cloud data as well as formats to use for analysis, if different from the archival format. We do not expect to produce a recommendation for a single format for use in all cases but rather hope to inform format selection for a given use based on archival and usability needs. Further study may be warranted as formats, EO data, cloud infrastructure and user behavior evolve.},
   file        = {:Yee2020 - Task 51 Cloud Optimized Format Study.pdf:PDF},
-  groups      = {DataFormat, Background, Discussion},
+  groups      = {Background, Discussion, Data / Data Format / Grid / ...},
   keywords    = {prio2, read},
   month       = jan,
   priority    = {prio2},
@@ -1149,7 +1149,7 @@ facilitate the assimilation of new ICT developments and to leverage selfreinforc
   volume       = {72},
   abstract     = {Upcoming remote sensing systems onboard satellites will generate unprecedented volumes of spatial data, hence challenging processing facilities in terms of storage and processing capacities. Thus, an efficient handling of remote sensing data is of vital importance, demanding a well-suited definition of spatial grids for the data׳s storage and manipulation. For high-resolution image data, regular grids defined by map projections have been identified as practicable, cognisant of their drawbacks due to geometric distortions. To this end, we defined a new metric named grid oversampling factor (GOF) that estimates local data oversampling appearing during projection of generic satellite images to a regular raster grid. Based on common map projections, we defined sets of spatial grids optimised to minimise data oversampling. Moreover, they ensure that data undersampling cannot occur at any location. From the resulting GOF-values we concluded that equidistant projections are most suitable, with a global mean oversampling of 2% when using a system of seven continental grids (introduced under the name Equi7 Grid). Opposed to previous studies that suggested equal-area projections, we recommend the Plate Carrée, the Equidistant Conic and the Equidistant Azimuthal projection for global, hemispherical and continental grids, respectively.},
   file         = {:BauerMarschallinger2014 - Optimisation of Global Grids for High Resolution Remote Sensing Data.pdf:PDF},
-  groups       = {DataFormat, Methods/Results},
+  groups       = {Methods/Results, Data / Data Format / Grid / ...},
   keywords     = {prio1},
   priority     = {prio1},
   publisher    = {Elsevier {BV}},
@@ -1497,7 +1497,7 @@ Herein, we describe the programmatic developments and institutional context for 
   journaltitle = {Photogrammetric Engineering & Remote Sensing},
   title        = {Map Projections for Global and Continental Data Sets and an Analysis of Pixel Distortion Caused by Reprojection},
   url          = {https://www.asprs.org/wp-content/uploads/pers/1995journal/dec/1995_dec_1487-1497.pdf},
-  groups       = {DataFormat, Background},
+  groups       = {Background, Data / Data Format / Grid / ...},
 }
 
 @InProceedings{Ferreira2020a,
@@ -1518,7 +1518,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {Guide to GeoTIFF compression and optimization with GDAL},
   url     = {https://kokoalberti.com/articles/geotiff-compression-optimization-guide/},
   urldate = {2021-03-15},
-  groups  = {DataFormat, Background, Methods/Results, Discussion},
+  groups  = {Background, Methods/Results, Discussion, Data / Data Format / Grid / ...},
 }
 
 @Article{HernandezLopez2021,
@@ -1555,7 +1555,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi       = {10.1007/978-3-540-74831-1_5},
   pages     = {87--104},
   publisher = {Springer Berlin Heidelberg},
-  groups    = {DataFormat, Background},
+  groups    = {Background, Data / Data Format / Grid / ...},
 }
 
 @Online{Leith2018,
@@ -1727,7 +1727,7 @@ Herein, we describe the programmatic developments and institutional context for 
 }
 
 @Article{Tanre1979,
-  author       = {D. Tanre and M. Herman and P. Y. Deschamps and A. de Leffe},
+  author       = {D. Tanr{\'{e}} and M. Herman and P. Y. Deschamps and A. de Leffe},
   date         = {1979-11},
   journaltitle = {Applied Optics},
   title        = {Atmospheric modeling for space measurements of ground reflectances, including bidirectional properties},
@@ -1903,7 +1903,7 @@ Herein, we describe the programmatic developments and institutional context for 
 }
 
 @Software{confparser-Software,
-  author       = {configparser Contributors},
+  author       = {{configparser Contributors}},
   title        = {configparser},
   organization = {Python Software Foundation},
   subtitle     = {Configuration file parser},
@@ -2000,7 +2000,7 @@ Herein, we describe the programmatic developments and institutional context for 
   url          = {http://sites.bu.edu/measures/},
   organization = {Boston University},
   urldate      = {2021-05-15},
-  groups       = {DataFormat, Methods/Results},
+  groups       = {Methods/Results, Data / Data Format / Grid / ...},
 }
 
 @Article{Nemirovsky2013,
@@ -2137,7 +2137,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {ATKIS Basis-DLM},
   url     = {https://www.geoportal-th.de/de-de/Downloadbereiche/Download-Offene-Geodaten-Thüringen/Download-ATKIS-Basis-DLM},
   urldate = {2021-05-23},
-  groups  = {Other, Methods/Results},
+  groups  = {Methods/Results, Data / Data Format / Grid / ...},
 }
 
 @Article{Papadopoulos2016,
@@ -2222,7 +2222,7 @@ Herein, we describe the programmatic developments and institutional context for 
   title   = {Thüringer Gesetz zum Klimaschutz und zur Anpassung an die Folgen des Klimawandels},
   url     = {https://landesrecht.thueringen.de/perma?a=KlimaSchG_TH},
   urldate = {2021-05-24},
-  groups  = {Other, Introduction},
+  groups  = {Introduction, Roda usecase},
 }
 
 @InCollection{Frischbier2013,
@@ -2233,7 +2233,7 @@ Herein, we describe the programmatic developments and institutional context for 
   doi       = {10.1007/978-94-007-7960-0_16},
   pages     = {243--257},
   publisher = {Springer Netherlands},
-  groups    = {Other, Introduction},
+  groups    = {Introduction, Roda usecase},
 }
 
 @Article{Villard2007,
@@ -2615,6 +2615,51 @@ Herein, we describe the programmatic developments and institutional context for 
   publisher    = {Elsevier {BV}},
 }
 
+@Article{Masek2020,
+  author       = {Jeffrey G. Masek and Michael A. Wulder and Brian Markham and Joel McCorkel and Christopher J. Crawford and James Storey and Del T. Jenstrom},
+  date         = {2020-10},
+  journaltitle = {Remote Sensing of Environment},
+  title        = {Landsat 9: Empowering open science and applications through continuity},
+  doi          = {10.1016/j.rse.2020.111968},
+  pages        = {111968},
+  volume       = {248},
+  groups       = {Optical, Background},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Bloss1988,
+  author       = {Adrienne Bloss and Paul Hudak and Jonathan Young},
+  date         = {1988-09},
+  journaltitle = {Lisp and Symbolic Computation},
+  title        = {Code optimizations for lazy evaluation},
+  doi          = {10.1007/bf01806169},
+  number       = {2},
+  pages        = {147--164},
+  volume       = {1},
+  groups       = {Other, Methods/Results},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Online{GDITh,
+  author       = {GDI-Th},
+  title        = {Geodateninfrastruktur Thüringen},
+  url          = {https://www.geoportal-th.de/de-de/Downloadbereiche/Download-Offene-Geodaten-Thüringen/Download-Höhendaten},
+  organization = {Freistaat Thüringen},
+  subtitle     = {Offene Geodaten: Höhendaten (DGM / DOM / LAZ)},
+  urldate      = {2021-06-04},
+  groups       = {Methods/Results, Data / Data Format / Grid / ...},
+}
+
+@Online{Holden,
+  author       = {Chris Holden},
+  title        = {GLANCE Grids},
+  url          = {https://measures-glance.github.io/glance-grids/},
+  organization = {Boston University},
+  subtitle     = {Global LANd Cover mapping and Estimation (GLANCE) Grids},
+  urldate      = {2021-06-04},
+  groups       = {Data / Data Format / Grid / ..., Methods/Results},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: fileDirectoryLatex-marco-marco-pop:/home/marco/STUDIUM/MA/ARDCube_thesis/source;}
@@ -2625,12 +2670,12 @@ Herein, we describe the programmatic developments and institutional context for 
 1 StaticGroup:EODC - Projects\;0\;1\;0xe64d4dff\;\;\;;
 1 StaticGroup:EODC - OpenDataCube\;0\;1\;0xff8080ff\;\;\;;
 1 StaticGroup:EODC - Use/Impact\;0\;1\;0xffb3b3ff\;\;\;;
-1 StaticGroup:ARD\;0\;0\;0x999999ff\;\;\;;
+1 StaticGroup:ARD\;0\;1\;0x999999ff\;\;\;;
 1 StaticGroup:SAR\;0\;1\;0x4d8080ff\;\;\;;
 1 StaticGroup:Optical\;0\;1\;0x804d80ff\;\;\;;
 1 StaticGroup:BigData\;0\;0\;0xffcce6ff\;\;\;;
-1 StaticGroup:DataFormat\;0\;0\;0xe6e6ccff\;\;\;;
-1 StaticGroup:Roda usecase\;0\;0\;0xe6b34dff\;\;\;;
+1 StaticGroup:Data / Data Format / Grid / ...\;0\;1\;0xe6e6ccff\;\;\;;
+1 StaticGroup:Roda usecase\;0\;1\;0xe6b34dff\;\;\;;
 1 StaticGroup:Other\;0\;1\;0xffff80ff\;\;\;;
 1 StaticGroup:Software\;0\;0\;0xe6e6b3ff\;\;\;;
 1 StaticGroup:Introduction\;0\;1\;0x001a80ff\;\;\;;
