@@ -146,3 +146,15 @@
 
 % For use of \cref and \Cref used by pandoc secnos
 \usepackage{cleveref}
+
+%% pandoc-fignos: environment for tagged figures
+\newenvironment{fignos:tagged-figure}[1][]{
+  \let\oldthefigure\thefigure
+  \let\oldtheHfigure\theHfigure
+  \renewcommand{\thefigure}{#1}
+  \renewcommand{\theHfigure}{#1}
+}{
+  \let\thefigure\oldthefigure
+  \let\theHfigure\oldtheHfigure
+  \addtocounter{figure}{-1}
+}
