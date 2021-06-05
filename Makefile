@@ -53,6 +53,7 @@ pdf:
 		"$(INPUTDIR)/metadata.yml" \
 		--filter=pandoc-shortcaption \
 		--filter=pandoc-xnos \
+		--lua-filter="$(STYLEDIR)/short-captions.lua" \
 		--bibliography="$(BIBFILE)" \
 		--citeproc \
 		--csl="$(STYLEDIR)/ref_format.csl" \
