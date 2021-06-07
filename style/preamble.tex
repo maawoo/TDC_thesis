@@ -148,6 +148,7 @@
 \usepackage{cleveref}
 
 %% pandoc-fignos: environment for tagged figures
+%% https://github.com/tomduck/pandoc-fignos/blob/6ab8ac6e2d5ab89805e96a36fd01ba19e8f697a6/pandoc_fignos.py#L344
 \newenvironment{fignos:tagged-figure}[1][]{
   \let\oldthefigure\thefigure
   \let\oldtheHfigure\theHfigure
@@ -157,4 +158,40 @@
   \let\thefigure\oldthefigure
   \let\theHfigure\oldtheHfigure
   \addtocounter{figure}{-1}
+}
+
+%% pandoc-tablenos: environment to disable table caption prefixes
+%% https://github.com/tomduck/pandoc-tablenos/blob/902efdb0ee3475385f1fea0286ab6a0cb2ba0b12/pandoc_tablenos.py#L368
+\makeatletter
+\newcounter{tableno}
+\newenvironment{tablenos:no-prefix-table-caption}{
+  \caption@ifcompatibility{}{
+    \let\oldthetable\thetable
+    \let\oldtheHtable\theHtable
+    \renewcommand{\thetable}{tableno:\thetableno}
+    \renewcommand{\theHtable}{tableno:\thetableno}
+    \stepcounter{tableno}
+    \captionsetup{labelformat=empty}
+  }
+}{
+  \caption@ifcompatibility{}{
+    \captionsetup{labelformat=default}
+    \let\thetable\oldthetable
+    \let\theHtable\oldtheHtable
+    \addtocounter{table}{-1}
+  }
+}
+\makeatother
+
+%% pandoc-tablenos: environment for tagged tables
+%% https://github.com/tomduck/pandoc-tablenos/blob/902efdb0ee3475385f1fea0286ab6a0cb2ba0b12/pandoc_tablenos.py#L392
+\newenvironment{tablenos:tagged-table}[1][]{
+  \let\oldthetable\thetable
+  \let\oldtheHtable\theHtable
+  \renewcommand{\thetable}{#1}
+  \renewcommand{\theHtable}{#1}
+}{
+  \let\thetable\oldthetable
+  \let\theHtable\oldtheHtable
+  \addtocounter{table}{-1}
 }
