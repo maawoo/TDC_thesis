@@ -10,3 +10,8 @@ supervisor:
 - Dr. Marcel Urban
 degree: Master of Science
 ---
+
+---
+nocite: |
+  @GDB2021
+---
