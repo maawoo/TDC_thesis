@@ -39,7 +39,7 @@ A simplified visualization of a data cube structure of EO raster data is shown i
 
 - Definition Appel2019!
 
-![Visualization of an EODC. [@Kopp2019]](source/figures/02_background_1__Kopp2019_eocube.png){#fig:eocube width=50%}
+![Simplified visualization of an EODC [@Kopp2019].](source/figures/02_background_1__Kopp2019_eocube.png){#fig:eocube width=50% short-caption="Simplified visualization of an EODC."}
 
 In response to inconsistent definitions and terminology, @Strobl2017 proposed a concept that aimed to contribute to a more harmonized definition of what a “data cube” in the geospatial domain is. They highlight several distinct aspects that need to be considered when creating an EODC and in order to harness its full potential. Matching the cube analogy they identified six aspects, or rather faces, which hereafter are briefly summarized and complemented with relevant publications. The work of @Strobl2017 builds on the conceptual view of the *Datacube Manifesto* proposed by @Baumann2017. Moreover, @Nativi2017 further expand on the *six faces* concept by introducing a set of modeling views with the goal of emphasizing the interoperability and reusability aspects of data cube infrastructures.
 
@@ -74,7 +74,7 @@ In the following section, the Open Data Cube is described in more detail, as it 
 
 The Open Data Cube (ODC) project originates from the Australian Geoscience Data Cube (AGDC), which initially was developed with the objective to unlock the potential of 27 years of continuous EO data from the Landsat archive covering the entire continent of Australia [@Lewis2016]. Major improvements were implemented in the second version of the AGDC [@Lewis2017] and the project was renamed to ODC after long term support was ensured via governance structures [@Leith2018]. 
 
-From a technical perspective, the ODC is an open-source software library to access, manage, and analyze large quantities of EO data that can be deployed in a flexible manner [@ODC-Docs]. This is achieved through a database, a Python API and a set of command line tools. A more detailed description of the technical background can be found in Section @sec:odc_methods.
+From a technical perspective, the ODC is an open-source software library to access, manage, and analyze large quantities of EO data that can be deployed in a flexible manner [@ODC-Docs1]. This is achieved through a database, a Python API and a set of command line tools. A more detailed description of the technical background can be found in Section @sec:odc_methods.
 
 Besides being a freely available software library, ODC has developed into a community of people and supporting organizations. @Killough2018 presented the “ODC initiative” as part of the reorganization from AGDC to ODC, which is supported by the institutions originally responsible for the AGDC, namely Geoscience Australia and the Commonwealth Scientific and Industrial Research Organization (CSIRO), as well as the Committee on Earth Observation Satellites (CEOS), Analytical Mechanics Associates (AMA), and the USGS. The aim of this initiative is to steward and contribute to the development of the ODC software architecture, thereby enabling its utilization around the world. 
 

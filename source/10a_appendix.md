@@ -73,14 +73,15 @@ Table: FORCE Level 2 per-pixel quality assurance information (QAI) description. 
 \newpage
 ## **Appendix B - TDC Use Cases** {.unlisted .unnumbered}
 
-![Per-pixel number of valid observations between 2017-01-01 and 2019-12-31 for the Sentinel-1A/B ascending dataset.](source/figures/10_appendix_4__obs_s1_asc.png){#fig:appendixfig_B1 tag="B-1" width=100% short-caption="Per-pixel number of valid observations for Sentinel-1A/B ascending."}
+![Number of valid observations between 2017-01-01 and 2019-12-31 for each available pixel of the Sentinel-1A/B ascending dataset.](source/figures/10_appendix_4__obs_s1_asc.png){#fig:appendixfig_B1 tag="B-1" width=100% short-caption="Per-pixel number of valid observations for Sentinel-1A/B ascending."}
 
-![Per-pixel number of clear-sky observations between 2017-01-01 and 2019-12-31 for the Landsat 8 dataset.](source/figures/10_appendix_5__obs_l8.png){#fig:appendixfig_B2 tag="B-2" width=100% short-caption="Per-pixel number of clear-sky observations for Landsat 8."}
+![Number of clear-sky observations between 2017-01-01 and 2019-12-31 for each available pixel of the Landsat 8 dataset.](source/figures/10_appendix_5__obs_l8.png){#fig:appendixfig_B2 tag="B-2" width=100% short-caption="Per-pixel number of clear-sky observations for Landsat 8."}
 
-![This is a long caption.](source/figures/10_appendix_6__roda_ndvi_diff.png){#fig:appendixfig_B3 tag="B-3" width=100% short-caption="This is a short caption."}
 
-![This is a long caption.](source/figures/10_appendix_7__roda_vh_diff.png){#fig:appendixfig_B4 tag="B-4" width=100% short-caption="This is a short caption."}
+![Difference of the median NDVI (Normalized Difference Vegetation Index) derived from the optical datasets for the summer periods (June, July, August) 2018 (A) and 2019 (B) relative to 2017. The maps are projected in the GLANCE7 EU grid [@Holden] with corresponding easting and northing coordinates.](source/figures/10_appendix_6__roda_ndvi_diff.png){#fig:appendixfig_B3 tag="B-3" width=100% short-caption="Median NDVI difference between the summer periods 2018 and 2019 separately relative to 2017 for the Roda forest AOI."}
 
-![This is a long caption.](source/figures/10_appendix_8__roda_ndvi.png){#fig:appendixfig_B5 tag="B-5" width=100% short-caption="This is a short caption."}
+![Difference of the median SAR backscatter (descending orbit; VH polarization) for the summer periods (June, July, August) 2018 and 2019 relative to 2017. The maps are projected in the GLANCE7 EU grid [@Holden] with corresponding easting and northing coordinates.](source/figures/10_appendix_7__roda_vh_diff.png){#fig:appendixfig_B4 tag="B-4" width=100% short-caption="Median SAR backscatter (descending) difference between the summer periods 2018/2019 relative to 2017 for the Roda forest AOI."}
 
-![This is a long caption.](source/figures/10_appendix_9__roda_vh.png){#fig:appendixfig_B6 tag="B-6" width=100% short-caption="This is a short caption."}
+![Individual plots of median NDVI (Normalized Difference Vegetation Index) derived from the optical datasets for the summer periods (June, July, August) of 2017 (A), 2018 (B) and 2019 (C).](source/figures/10_appendix_8__roda_ndvi.png){#fig:appendixfig_B5 tag="B-5" width=100% short-caption="Individual plots of median NDVI for summer periods 2017, 2018 and 2019."}
+
+![Individual plots of median SAR backscatter (ascending orbit; VH polarization) for the summer periods (June, July, August) of 2017 (A), 2018 (B) and 2019 (C).](source/figures/10_appendix_9__roda_vh.png){#fig:appendixfig_B6 tag="B-6" width=100% short-caption="Individual plots of median SAR backscatter (ascending) for summer periods 2017, 2018 and 2019."}
