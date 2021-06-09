@@ -8,8 +8,14 @@
 
 ![Sentinel-1A/B example acquisition footprints for the ascending (A) and descending (B) orbits over the Free State of Thuringia.](source/figures/10_appendix_3__sar_footprints.png){#fig:appendixfig_A3 width=80% tag="A-3" short-caption="Sentinel-1A/B example acquisition footprints."}
 
-
 \newpage
+
+\renewcommand{\thetable}{A-\arabic{table}}
+\setcounter{table}{0}
+
+\begin{table}[h]
+\caption[FORCE level-2 output bands and mapping to original level-1 bands.]{\label{table:appendixtab_A1}FORCE level-2 output bands and mapping to original level-1 bands. Adapted from (Frantz et al., n.d.-b; Frantz, 2019).}
+\end{table}
 
 \footnotesize
 | **Wavelength Designation** | **FORCE Level-2 (Landsat 4-8)** | **FORCE Level-2 (Sentinel-2A/B)** | **USGS Level-1 (Landsat 4/5/7)** | **USGS Level-1 (Landsat 8)** | **ESA Level-1 (Sentinel-2A/B)** |
@@ -25,12 +31,17 @@
 | SWIR1                      | 5                               | 9                                 | 5                                | 6                            | 11                              |
 | SWIR2                      | 6                               | 10                                | 7                                | 7                            | 12                              |
 
-Table: FORCE level-2 output bands and mapping to original level-1 bands. Adapted from [@FORCE-Docs2; @Frantz2019]. {#tbl:appendixtab_A1 tag="A-1"}
-
 \normalsize
 
 
 \newpage
+
+\renewcommand{\thetable}{A-\arabic{table}}
+\setcounter{table}{1}
+
+\begin{table}[h]
+\caption[FORCE level-2 per-pixel quality assurance information (QAI) description..]{\label{table:appendixtab_A2}FORCE level-2 per-pixel quality assurance information (QAI) description. IA = Incidence Angle; TC = Topographic Correction. Adapted from (Frantz et al., n.d.-b; Frantz, 2019).}
+\end{table}
 
 \footnotesize
 | **Bit No.** | **Parameter Name**   | **Bit Comb.** | **Integer** | **State**                                           |
@@ -65,8 +76,6 @@ Table: FORCE level-2 output bands and mapping to original level-1 bands. Adapted
 |             |                      | 1             | 1           | yes (enhanced C-correction applied)                 |
 | 14          | Water vapor          | 0             | 0           | measured (best quality, only Sentinel-2)            |
 |             |                      | 1             | 1           | fill (scene average, only Sentinel-2)               |
-
-Table: FORCE level-2 per-pixel quality assurance information (QAI) description. IA = Incidence Angle; TC = Topographic Correction. Adapted from [@FORCE-Docs2; @Frantz2019]. {#tbl:appendixtab_A2 tag="A-2"}
 
 \normalsize
 

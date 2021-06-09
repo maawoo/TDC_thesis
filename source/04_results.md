@@ -15,19 +15,23 @@ Furthermore, EO data for the Sentinel-1A/B satellites was already available on T
 
 ![Extent of the Free State of Thuringia, including various characteristics (e.g., location in Germany, topography and the location of major cities). An area of the Roda forest is highlighted, which is of interest for the use case described in Section @sec:use-cases. The map is projected in the GLANCE7 EU grid [@Holden] with corresponding easting and northing coordinates. An additional grid shows latitude and longitude coordinates of the commonly used WGS84 reference system (EPSG:4326).](source/figures/04_results_1__thuringia.png){#fig:thuringia width=100% short-caption="Extent and characteristics of the Free State of Thuringia."}
 
-Additional maps are available in APPENDIX X with the tiling schemes for Landsat 8 and Sentinel-2A/B level-1 acquisitions overlaid over the area of interest. Sentinel-1A/B on the other hand do not use a fixed tiling scheme. ESA regularly provides acquisition segments covering a period of 12 days each, which is not feasible to visualize in this case. However, exemplary scene layouts for ascending and descending orbits are also provided in APPENDIX X.
+Additional maps are available in Appendix A with the tiling schemes for Sentinel-2A/B level-1 (Figure @fig:appendixfig_A1) and Landsat 8 (Figure @fig:appendixfig_A2) acquisitions overlaid over the area of interest. Sentinel-1A/B, on the other hand, do not use a fixed tiling scheme. ESA regularly provides acquisition segments covering a period of 12 days each, which is not feasible to visualize in this case. However, exemplary scene footprints for ascending and descending orbits are provided in Figure @fig:appendixfig_A3.
 
-- Appendix A, Figure @fig:appendixfig_A1, @fig:appendixfig_A2 and @fig:appendixfig_A3
 
 ### Optical Satellite Data
 
 The level-1 data acquired were processed to a level-2/ARD format using the *process_ard* module of ARDCube. In total, 234 Landsat 8 scenes with a size of 247 GB, and 2200 Sentinel-2A/B scenes with a size of 1400 GB formed the basis for this particular step of the TDC implementation.
 
-The processing workflow of the FORCE L2PS module (Figure @fig:force) can be customized with various processing parameters. In the case of processing data for the TDC, mostly default settings were chosen, as they are commonly used by the FORCE developers themselves to generate ARD [@FORCE-Docs3]. Some of the more important parameters are listed in Table @tbl:force-params. 
+The processing workflow of the FORCE L2PS module (Figure @fig:force) can be customized with various processing parameters. In the case of processing data for the TDC, mostly default settings were chosen, as they are commonly used by the FORCE developers themselves to generate ARD [@FORCE-Docs3]. Some of the more important parameters are listed in Table \ref{table:force-params}. 
 
 To perform the topographic correction, as well as improving cloud/cloud-shadow detection and atmospheric correction, a Digital Elevation Model (DEM) is needed. A DEM with 10 m spatial resolution for the entire extent of the Free State of Thuringia was provided by the Department of Earth Observation for this purpose, which has been derived from openly available LiDAR (Light Detection and Ranging) data [@GDITh]. The DEM was used in an uncompressed format to prevent a possible negative impact on processing performance [cf. @Alberti2018].  
 
 It is also important to note that no water vapor correction using an external water vapor database was performed as this option is only relevant for Landsat data, and in particular Landsat 4-7 [@Frantz2019a], which were not used for this initial implementation. Further details on the algorithm *Improphe*, which was used to improve the spatial resolution of the 20 m Sentinel-2 bands during the *Resolution Merge* processing step, is provided by @Frantz2016a.
+
+\begin{table}[h]
+\caption[FORCE L2PS processing parameters used for the initial implementation
+of the TDC.]{\label{table:force-params}FORCE L2PS parameters used to process Landsat 8 and Sentinel-2A/B scenes for the initial implementation of the TDC. BRDF = Bidirectional Reflectance Distribution Function; AOD = Atmospheric Optical Depth.}
+\end{table}
 
 -------------------------------------------------------------------------------
 **Parameter**                                **Value**                      
@@ -61,15 +65,12 @@ Resolution Merge                              Improphe        Sentinel-2 only
 Co-Registration                               Null/False      Sentinel-2 only 
 -------------------------------------------------------------------------------
 
-Table: FORCE L2PS parameters used to process Landsat 8 and Sentinel-2A/B scenes for the initial implementation of the TDC. BRDF = Bidirectional Reflectance Distribution Function; AOD = Atmospheric Optical Depth. {#tbl:force-params}
-
 FORCE L2PS uses a nested parallelization strategy and settings are highly depended on each system's setup. To choose appropriate settings in this regard, the advice given by @FORCE-Docs3 was followed and the processing of both datasets was performed on a TerraSense node using 12 processes with 2 threads each. Using this setup, it took 1 hour and 45 minutes to process the Landsat 8 dataset, and 48 hours and 36 minutes for the Sentinel-2 dataset. A simple log file with additional information about the processing of each individual scene is written by FORCE. From these it was calculated that the actual average processing time for Landsat 8 scenes was 5 minutes and 24 seconds, whereas Sentinel-2 scenes took an average of 15 minutes and 52 seconds. This difference is expected, because of the higher spatial resolution of the Sentinel-2 data and the additional *Resolution Merge* processing step. 
 
 The resulting files for both datasets were written in the GeoTIFF format with band sequential (BSQ) interleaving, Lempel–Ziv–Welch (LZW) compression and internal blocks for partial image access. The size of internal blocks depends on the specifications of the overall tiling grid, which is described in Section @sec:projection. Generally, however, they are arranged as strips that are as wide as the size of each individual tile. Other GeoTIFF format settings, such as compression algorithm, are not easily changed as they are hard-coded in FORCE.
 
-Two GeoTIFF files were created for each scene: a multi-band GeoTIFF for the Bottom-of-Atmosphere (BOA) reflectance, and a single-band GeoTIFF for Quality Assurance Information (QAI). The bands of each BOA file contain data that is specific to the commonly used spectral wavelengths of optical EO sensors and are provided in a common spatial resolution. Metadata, including data that is specific to FORCE, was written into each file automatically during processing. Furthermore, to simplify the usage of data from multiple sensors the mapping of the internal bands was homogenized, which is shown in TABLE X (APPENDIX A) for the datasets used here. Additionally, TABLE Y (APPENDIX B) provides more details about the information contained in the QAI files.  
+Two GeoTIFF files were created for each scene: a multi-band GeoTIFF for the Bottom-of-Atmosphere (BOA) reflectance, and a single-band GeoTIFF for Quality Assurance Information (QAI). The bands of each BOA file contain data that is specific to the commonly used spectral wavelengths of optical EO sensors and are provided in a common spatial resolution. Metadata, including data that is specific to FORCE, was written into each file automatically during processing. Furthermore, to simplify the usage of data from multiple sensors the mapping of the internal bands was homogenized, which is shown in Table \ref{table:appendixtab_A1} of Appendix A for the datasets used here. Additionally, Table \ref{table:appendixtab_A2} provides more details about the information contained in the QAI files.  
 
-- Appendix A, Tables @tbl:appendixtab_A1 and @tbl:appendixtab_A2
 
 ### SAR Satellite Data  
 
@@ -121,7 +122,13 @@ To identify any problems and possible bottlenecks in terms of disk and memory ba
 
 The calculation for SAR datasets is rather straightforward, as only no data values need to be excluded or masked to get the sum of valid observations and only one of the polarization bands need to be considered as the coverage of valid data is expected to be the same. 
 
-For optical datasets, on the other hand, an appropriate clear-sky mask needs to be created from the information provided by the QAI band. In this case, the masking tool of the ODC core Python package was used to create a Boolean mask from the QAI flag values listed in Table @tbl:qai_flags. The values are combined in a logical *AND* fashion, which means that pixels are only set to *True* if all conditions apply. The result is a Boolean array for the entire dataset, which is then used to calculate the sum of valid, clear-sky observations.
+For optical datasets, on the other hand, an appropriate clear-sky mask needs to be created from the information provided by the QAI band. In this case, the masking tool of the ODC core Python package was used to create a Boolean mask from the QAI flag values listed in Table \ref{table:qai_flags}. The values are combined in a logical *AND* fashion, which means that pixels are only set to *True* if all conditions apply. The result is a Boolean array for the entire dataset, which is then used to calculate the sum of valid, clear-sky observations.
+
+\setcounter{table}{1}
+
+\begin{table}[h]
+\caption[QAI flags used for the per-pixel computation of the optical datasets.]{\label{table:qai_flags}Quality assurance information (QAI) flags used to create a Boolean mask for the per-pixel computation of the optical datasets (Landsat 8, Sentinel-2A/B).}
+\end{table}
 
 -----------------------------------------------------------
 **QAI flag**                                **Value**                      
@@ -132,8 +139,6 @@ Cloud state                                  'clear'
 
 Cloud shadow                                 False                             
 -----------------------------------------------------------
-
-Table: Quality assurance information (QAI) flags used to create a Boolean mask for the per-pixel computation of the optical datasets (Landsat 8 & Sentinel-2A/B). {#tbl:qai_flags}
 
 
 #### Performance Considerations
@@ -155,15 +160,13 @@ The task streams of 4 workers and 6 threads per worker, as well as 1 worker and 
 \newpage
 #### Results {#sec:pp_obs_results}
 
-Based on the performance considerations tested, the actual per-pixel observations were calculated for each dataset. The results for the Sentinel-1A/B (descending) and Sentinel-2A/B datasets are shown in Figure @fig:pp_obs_s1_desc and @fig:pp_obs_s2, respectively. Similar figures are available in APPENDIX X for the Landsat 8 and the Sentinel-1A/B (ascending) datasets.
-
-- Appendix B, Figures @fig:appendixfig_B1 and @fig:appendixfig_B2
+Based on the performance considerations tested, the actual per-pixel observations were calculated for each dataset. The results for the Sentinel-1A/B (descending) and Sentinel-2A/B datasets are shown in Figure @fig:pp_obs_s1_desc and @fig:pp_obs_s2, respectively. Similar figures are available in Appendix B for the Sentinel-1A/B (ascending) (Figure @fig:appendixfig_B1) and Landsat 8 (Figure @fig:appendixfig_B2) datasets.
 
 On a larger spatial scale the number of valid observations is mostly affected by the orbits of the initial level-1 datasets. This can be observed in all cases, with some regions of fewer observations overlapping between the different datasets. Additionally, the original overlapping UTM grid of the Sentinel-2A/B dataset can be identified due to a slightly higher number of observations along its edges (see Appendix A, Figure @fig:appendixfig_A1 for comparison). 
 
 As expected, the Sentinel-1A/B datasets show a rather homogenous distribution of values. However, a closer look reveals clusters of pixels with lower numbers of valid observations in comparison to surrounding areas. Most clusters appear in urban areas, as highlighted in Figure @fig:pp_obs_s1_desc for the state capital Erfurt, and might be related to processing artifacts due to high backscatter values.
 
-Smaller-scale patterns are apparent in both optical datasets, due to the cloud/cloud-shadow-mask used for the computation. Some particular patterns correspond to false positive detections of the modified FMask algorithm that is used during ARD processing [@Frantz2015; @Frantz2018]. Examples are highlighted as A and B in Figure @fig:pp_obs_s2. Various points located in urban or industrial areas are repeatedly flagged as cloud covered, which appear as circular areas of fewer observations because of the 300 m cloud-buffer chosen during processing (see Table @tbl:force-params) (A). In other areas the extent of water bodies is outlined due to false positive cloud-shadow detections (B). Other patterns seem to show a natural variation due to topography. As highlighted by C, the number of clear-sky observations in the Thuringian forest, which is situated at higher elevations than the rest of the region, is noticeably lower than in the Thuringian basin located to the northeast.   
+Smaller-scale patterns are apparent in both optical datasets, due to the cloud/cloud-shadow-mask used for the computation. Some particular patterns correspond to false positive detections of the modified FMask algorithm that is used during ARD processing [@Frantz2015; @Frantz2018]. Examples are highlighted as A and B in Figure @fig:pp_obs_s2. Various points located in urban or industrial areas are repeatedly flagged as cloud covered, which appear as circular areas of fewer observations because of the 300 m cloud-buffer chosen during processing (see Table \ref{table:force-params}) (A). In other areas the extent of water bodies is outlined due to false positive cloud-shadow detections (B). Other patterns seem to show a natural variation due to topography. As highlighted by C, the number of clear-sky observations in the Thuringian forest, which is situated at higher elevations than the rest of the region, is noticeably lower than in the Thuringian basin located to the northeast.   
 
 ![Number of valid observations between 2017-01-01 and 2019-12-31 for each available pixel of the Sentinel-1A/B descending dataset. An area of the state captial Erfurt is highlighted (a), which shows clusters of pixels with a reduced number of valid observations in comparison to surrounding areas.](source/figures/04_results_5__obs_s1_desc.png){#fig:pp_obs_s1_desc width=100% short-caption="Per-pixel computation: Valid observations for Sentinel-1A/B descending."}
 
