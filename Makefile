@@ -51,7 +51,6 @@ pdf:
 		--pdf-engine=xelatex \
 		"$(INPUTDIR)"/*.md \
 		"$(INPUTDIR)/metadata.yml" \
-		--filter=pandoc-shortcaption \
 		--filter=pandoc-xnos \
 		--lua-filter="$(STYLEDIR)/short-captions.lua" \
 		--bibliography="$(BIBFILE)" \
