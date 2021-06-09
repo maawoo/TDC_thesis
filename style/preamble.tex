@@ -128,16 +128,3 @@
   \let\theHfigure\oldtheHfigure
   \addtocounter{figure}{-1}
 }
-
-%% pandoc-tablenos: environment for tagged tables
-%% https://github.com/tomduck/pandoc-tablenos/blob/902efdb0ee3475385f1fea0286ab6a0cb2ba0b12/pandoc_tablenos.py#L392
-\newenvironment{tablenos:tagged-table}[1][]{
-  \let\oldthetable\thetable
-  \let\oldtheHtable\theHtable
-  \renewcommand{\thetable}{#1}
-  \renewcommand{\theHtable}{#1}
-}{
-  \let\thetable\oldthetable
-  \let\theHtable\oldtheHtable
-  \addtocounter{table}{-1}
-}
