@@ -1,4 +1,4 @@
-# Abbreviations {.unnumbered}
+# List of Abbreviations {.unnumbered}
 
 \small
 \begin{longtable}{ll} 
