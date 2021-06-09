@@ -51,7 +51,8 @@ pdf:
 		--pdf-engine=xelatex \
 		"$(INPUTDIR)"/*.md \
 		"$(INPUTDIR)/metadata.yml" \
-		--filter=pandoc-xnos \
+		--filter=pandoc-fignos \
+		--filter=pandoc-secnos \
 		--lua-filter="$(STYLEDIR)/short-captions.lua" \
 		--bibliography="$(BIBFILE)" \
 		--citeproc \
@@ -71,8 +72,9 @@ tex:
 		--pdf-engine=xelatex \
 		"$(INPUTDIR)"/*.md \
 		"$(INPUTDIR)/metadata.yml" \
-		--filter=pandoc-shortcaption \
-		--filter=pandoc-xnos \
+		--filter=pandoc-fignos \
+		--filter=pandoc-secnos \
+		--lua-filter="$(STYLEDIR)/short-captions.lua" \
 		--bibliography="$(BIBFILE)" \
 		--citeproc \
 		--csl="$(STYLEDIR)/ref_format.csl" \
