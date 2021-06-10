@@ -7,14 +7,12 @@
 \textbf{AGDC} & \textbf{A}ustralian \textbf{G}eoscience \textbf{D}ata \textbf{C}ube \\  
 \textbf{AMA} & \textbf{A}nalytical \textbf{M}echanics \textbf{A}ssociates \\  
 \textbf{AOD} & \textbf{A}tmospheric \textbf{O}ptical \textbf{D}epth \\  
-\textbf{AOI} & \textbf{A}rea \textbf{o}f \textbf{I}nterest \\  
 \textbf{API} & \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \\  
 \textbf{ARCO} & \textbf{A}nalysis \textbf{R}eady \textbf{C}loud \textbf{O}ptimized \\  
 \textbf{ARD} & \textbf{A}nalysis \textbf{R}eady \textbf{D}ata \\  
 \textbf{ARDC} & \textbf{A}frican \textbf{R}egional \textbf{D}ata \textbf{C}ube \\  
-\textbf{AWS} & \textbf{A}mazon \textbf{W}eb \textbf{S}ervices \\  
 \textbf{BDC} & \textbf{B}razilian \textbf{D}ata \textbf{C}ube \\ 
-\textbf{BOA} & \textbf{B}ottom \textbf{o}f \textbf{A}tmosphere \\  
+\textbf{BOA} & \textbf{B}ottom \textbf{O}f \textbf{A}tmosphere \\  
 \textbf{BRDF} & \textbf{B}idirectional \textbf{R}eflectance \textbf{D}istribution \textbf{F}unction \\  
 \textbf{BSQ} & \textbf{B}and \textbf{s}e\textbf{q}uential interleaving \\  
 \textbf{BT} & \textbf{B}rightness \textbf{T}emperature \\  
@@ -25,7 +23,6 @@
 \textbf{CSIRO} & \textbf{C}ommonwealth \textbf{S}cientific and \textbf{I}ndustrial \textbf{R}esearch \textbf{O}rganization \\ 
 \textbf{DCoD} & \textbf{D}ata \textbf{C}ube \textbf{o}n \textbf{D}emand \\ 
 \textbf{DEM} & \textbf{D}igital \textbf{E}levation \textbf{M}odel \\ 
-\textbf{ECV} & \textbf{E}ssential \textbf{C}limate \textbf{V}ariable \\ 
 \textbf{EO} & \textbf{E}arth \textbf{O}bservation \\ 
 \textbf{EODC} & \textbf{E}arth \textbf{O}bservation \textbf{D}ata \textbf{C}ube \\ 
 \textbf{EPSG} & \textbf{E}uropean \textbf{P}etroleum \textbf{S}urvey \textbf{G}roup \\ 
@@ -55,7 +52,7 @@
 \textbf{LiMES} & \textbf{Li}ve \textbf{M}onitoring of \textbf{E}arth \textbf{S}urface framework \\
 \textbf{LZW} & \textbf{L}empel-\textbf{Z}iv-\textbf{W}elch compression \\
 \textbf{L1AS} & FORCE \textbf{L}evel-\textbf{1} \textbf{A}rchiving \textbf{S}uite \\
-\textbf{L1PS} & FORCE \textbf{L}evel-\textbf{2} \textbf{P}rocessing \textbf{S}ystem \\
+\textbf{L2PS} & FORCE \textbf{L}evel-\textbf{2} \textbf{P}rocessing \textbf{S}ystem \\
 \textbf{MAJA} & \textbf{M}ACCS-\textbf{A}TCOR \textbf{J}oint \textbf{A}lgorithm \\
 \textbf{MSI} & \textbf{M}ulti\textbf{S}pectral \textbf{I}nstrument \\
 \textbf{NASA} & \textbf{N}ational \textbf{A}eronautics and \textbf{S}pace \textbf{A}dministration \\ 
@@ -71,9 +68,7 @@
 \textbf{QAI} & \textbf{Q}uality \textbf{A}ssurance \textbf{I}nformation \\ 
 \textbf{SAR} & \textbf{S}ynthetic \textbf{A}perture \textbf{R}adar \\ 
 \textbf{SDC} & \textbf{S}wiss \textbf{D}ata \textbf{C}ube \\ 
-\textbf{SDG} & \textbf{S}ustainable \textbf{D}evelopment \textbf{G}oal \\ 
 \textbf{SDI} & \textbf{S}patial \textbf{D}ata \textbf{I}nfrastructure \\ 
-\textbf{SLC} & \textbf{S}ingle \textbf{L}ook \textbf{C}omplex \\ 
 \textbf{SNAP} & \textbf{S}e\textbf{n}tinel \textbf{A}pplication \textbf{P}latform \\ 
 \textbf{SR} & \textbf{S}urface \textbf{R}eflectance \\ 
 \textbf{SRTM} & \textbf{S}huttle \textbf{R}adar \textbf{T}opography \textbf{M}ission \\ 
@@ -81,7 +76,7 @@
 \textbf{STAC} & \textbf{S}patio\textbf{T}emporal \textbf{A}sset \textbf{C}atalog \\ 
 \textbf{TC} & \textbf{T}opographic \textbf{C}orrection \\  
 \textbf{TDC} & \textbf{T}huringian \textbf{D}ata \textbf{C}ube \\ 
-\textbf{TOA} & \textbf{T}op \textbf{o}f \textbf{A}tmosphere \\  
+\textbf{TOA} & \textbf{T}op \textbf{O}f \textbf{A}tmosphere \\  
 \textbf{USGS} & \textbf{U}nited \textbf{S}tates \textbf{G}eological \textbf{S}urvey \\  
 \textbf{UTM} & \textbf{U}niversal \textbf{T}ransverse \textbf{M}ercator \\  
 \textbf{VH} & \textbf{V}ertical transmit, \textbf{H}orizontal receive\\  
