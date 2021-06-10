@@ -1,10 +1,10 @@
 ---
 pagetitle: This is the HTML document title
-title: This is the title of the thesis
-subtitle: This is the subtitle of the thesis
+title: The Thuringian Data Cube
+subtitle: Implementation of an Earth Observation Data Cube for the Free State of Thuringia
 author: Marco Wolsza
-date: June 2021
-location: Friedrich-Schiller-Universität Jena
+date: June 18, 2021
+location: Friedrich Schiller University Jena
 supervisor:
 - Dr.-Ing. Clémence Dubois
 - Dr. Marcel Urban
@@ -12,6 +12,10 @@ degree: Master of Science
 ---
 
 ---
+link-citations: true
 nocite: |
   @GDB2021
+  @S2_tiles
+  @S2_orbits
+  @L8_tiles
 ---
