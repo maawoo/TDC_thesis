@@ -51,7 +51,7 @@ After the database has been made aware of available datasets via the process of 
 
 When data is loaded into a Python environment it is organized as an Xarray Dataset including separate data variables for each requested band and appropriately labelled temporal and spatial dimensions [@ODC-Docs1]. The evaluation of arguments (e.g., loading of data or executing a computation) is also supported in a *lazy* manner, which means that the evaluation of an argument only happens when its value is first demanded [@Bloss1988, p. 147]. In combination with the *chunking* of data into smaller portions, it is possible to run algorithms over very large EO datasets efficiently, even if the data itself does not fit into the system's memory. 
 
-Some additional utilities are provided with the core Python package of ODC, like a masking tool to create Boolean masks from bitwise QAI products during analysis. More extensive collections of tools and algorithm examples are available in repositories created by users of the ODC community [e.g., @Krause2021]. Furthermore, a selection of applications has been developed that extend the functionality of ODC in various ways ([https://www.opendatacube.org/data-cube-applications](https://www.opendatacube.org/data-cube-applications), last access: 08 May 2021).
+Some additional utilities are provided with the core Python package of ODC, like a masking tool to create Boolean masks from bitwise QAI products during analysis. More extensive collections of tools and algorithm examples are available in repositories created by users of the ODC community [e.g., @Krause2021]. Furthermore, a selection of applications has been developed that extend the functionality of ODC in various ways [@ODC-Docs4].
 
 
 ### Containerization
@@ -77,7 +77,7 @@ An open-source software project called *ARDCube* was developed, which integrates
 \newpage
 ### Python Framework 
 
-A variety of Python packages form the basic framework of ARDCube. They are utilized to manage the integrated software components and further extend their functionality by enabling the automation of specific workflows. To manage these Python packages, on the other hand, the package manager conda ([https://conda.io](https://conda.io), last access: 07 May 2021) is used. It offers the possibility to create self-contained environments that can include a custom selection of Python packages. In addition, these environments can easily be shared and replicated by others, which yet again facilitates reproducibility. 
+A variety of Python packages form the basic framework of ARDCube. They are utilized to manage the integrated software components and further extend their functionality by enabling the automation of specific workflows. To manage these Python packages, on the other hand, the package manager Conda [@Conda] is used. It offers the possibility to create self-contained environments that can include a custom selection of Python packages. In addition, these environments can easily be shared and replicated by others, which yet again facilitates reproducibility. 
 
 Based on the prospect of how ARDCube could be used in the future (e.g., a university department), two user groups were identified and hence all packages are managed in two separate conda environments: 
 

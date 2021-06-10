@@ -11,7 +11,7 @@
 \textbf{ARCO} & \textbf{A}nalysis \textbf{R}eady \textbf{C}loud \textbf{O}ptimized \\  
 \textbf{ARD} & \textbf{A}nalysis \textbf{R}eady \textbf{D}ata \\  
 \textbf{ARDC} & \textbf{A}frican \textbf{R}egional \textbf{D}ata \textbf{C}ube \\  
-\textbf{BDC} & \textbf{B}razilian \textbf{D}ata \textbf{C}ube \\ 
+\textbf{BDC} & \textbf{B}razil \textbf{D}ata \textbf{C}ube \\ 
 \textbf{BOA} & \textbf{B}ottom \textbf{O}f \textbf{A}tmosphere \\  
 \textbf{BRDF} & \textbf{B}idirectional \textbf{R}eflectance \textbf{D}istribution \textbf{F}unction \\  
 \textbf{BSQ} & \textbf{B}and \textbf{s}e\textbf{q}uential interleaving \\  

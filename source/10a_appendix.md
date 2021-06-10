@@ -40,7 +40,7 @@
 \setcounter{table}{1}
 
 \begin{table}[h]
-\caption[FORCE level-2 per-pixel quality assurance information (QAI) description..]{\label{table:appendixtab_A2}FORCE level-2 per-pixel quality assurance information (QAI) description. IA = Incidence Angle; TC = Topographic Correction. Adapted from (Frantz et al., n.d.-b; Frantz, 2019).}
+\caption[FORCE level-2 per-pixel Quality Assurance Information (QAI) description..]{\label{table:appendixtab_A2}FORCE level-2 per-pixel Quality Assurance Information (QAI) description. IA = Incidence Angle; TC = Topographic Correction. Adapted from (Frantz et al., n.d.-b; Frantz, 2019).}
 \end{table}
 
 \footnotesize

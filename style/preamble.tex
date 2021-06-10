@@ -7,9 +7,6 @@
 \usepackage{fancyhdr}
 \pagestyle{plain}
 
-% Following package is used to add background image to front page
-% \usepackage{wallpaper}
-
 % Table package
 \usepackage{ctable}% http://ctan.org/pkg/ctable
 
@@ -103,11 +100,11 @@
 % \usepackage[section,subsection]{extraplaceins}
 
 % Rotate images and tables
-\usepackage{float}
-\usepackage{pdfpages}
-\usepackage{pdflscape}
-\usepackage{graphicx}
-\usepackage{rotating}
+% \usepackage{float}
+% \usepackage{pdfpages}
+% \usepackage{pdflscape}
+% \usepackage{graphicx}
+% \usepackage{rotating}
 
 % Custom math
 \usepackage{bbold}
@@ -115,6 +112,9 @@
 
 % For use of \cref and \Cref used by pandoc secnos
 \usepackage{cleveref}
+
+% prohibit hyphenation at all explicit hyphens (e.g., 'per-pixel' will not be hyphenated)
+\exhyphenpenalty10000
 
 %% pandoc-fignos: environment for tagged figures
 %% https://github.com/tomduck/pandoc-fignos/blob/6ab8ac6e2d5ab89805e96a36fd01ba19e8f697a6/pandoc_fignos.py#L344

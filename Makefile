@@ -53,6 +53,7 @@ pdf:
 		"$(INPUTDIR)/metadata.yml" \
 		--filter=pandoc-fignos \
 		--filter=pandoc-secnos \
+		--filter=pandoc-eqnos \
 		--lua-filter="$(STYLEDIR)/short-captions.lua" \
 		--bibliography="$(BIBFILE)" \
 		--citeproc \
