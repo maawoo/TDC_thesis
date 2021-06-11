@@ -81,7 +81,7 @@
 \textbf{UTM} & \textbf{U}niversal \textbf{T}ransverse \textbf{M}ercator \\  
 \textbf{VH} & \textbf{V}ertical transmit, \textbf{H}orizontal receive\\  
 \textbf{VRT} & \textbf{V}irtual \textbf{R}aster \textbf{T}able \\  
-\textbf{VV} & \textbf{V}ertical transmit, {V}ertical receive \\
+\textbf{VV} & \textbf{V}ertical transmit, \textbf{V}ertical receive \\
 \textbf{WCS} & \textbf{W}eb \textbf{C}overage \textbf{S}ervice \\  
 \textbf{WCPS} & \textbf{W}eb \textbf{C}overage \textbf{P}rocessing \textbf{S}ervice \\ 
 \textbf{WEF} & \textbf{W}orld \textbf{E}conomic \textbf{F}orum \\  
