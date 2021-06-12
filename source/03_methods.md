@@ -72,7 +72,7 @@ A Singularity container can be created from a definition file that provides a ki
 \newpage
 ## System Architecture
 
-An open-source software project called *ARDCube* was developed, which integrates all components introduced in Section @sec:system-components. It is hosted on Github ([https://github.com/maawoo/ARDCube](https://github.com/maawoo/ARDCube)) and can be used by others without restrictions as stated by the MIT licence. An overview of all integrated components, as well as the main workflows managed by individual modules, is shown in Figure @fig:ardcube. The following sections will describe the most important aspects in more detail. Documents that are more specific, such as setup instructions, are provided in the Github repository. 
+An open-source software project called *ARDCube* was developed, which integrates all components introduced in Section @sec:system-components. It is hosted on GitHub ([https://github.com/maawoo/ARDCube](https://github.com/maawoo/ARDCube)) and can be used by others without restrictions as stated by the MIT licence. An overview of all integrated components, as well as the main workflows managed by individual modules, is shown in Figure @fig:ardcube. The following sections will describe the most important aspects in more detail. Documents that are more specific, such as setup instructions, are provided in the GitHub repository. 
 
 ![Overview of the ARDCube tool.](source/figures/03_methods_3__ardcube.png){#fig:ardcube width=100%}
 

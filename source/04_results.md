@@ -13,7 +13,7 @@ Based on the spatial and temporal extents, EO data for the optical satellites La
 
 Furthermore, EO data for the Sentinel-1A/B satellites was already available on TerraSense for the same extents. In contrast to the optical satellites, Sentinel-1A/B use a C-band SAR instrument to actively send and receive signals to collect information about the Earth's surface. The data was acquired in the Interferometric Wide Swath (IW) acquisition mode, for both ascending and descending orbits, and include both VH (Vertical transmit; Horizontal receive) and VV (Vertical transmit; Vertical receive) polarizations.
 
-![Extent of the Free State of Thuringia, including various characteristics (e.g., location in Germany, topography and the location of major cities). An area of the Roda forest is highlighted, which is of interest for the use case described in Section @sec:use-cases. The map is projected in the GLANCE7 EU grid [@Holden] with corresponding easting and northing coordinates. An additional grid shows latitude and longitude coordinates of the commonly used WGS84 reference system (EPSG:4326).](source/figures/04_results_1__thuringia.png){#fig:thuringia width=100% short-caption="Extent and characteristics of the Free State of Thuringia."}
+![Extent of the Free State of Thuringia, including various characteristics (e.g., location in Germany, topography and the location of major cities). An area of the Roda forest is highlighted, which is of interest for the use case described in Section @sec:roda-forest-analysis. The map is projected in the GLANCE7 EU grid [@Holden] with corresponding easting and northing coordinates. An additional grid shows latitude and longitude coordinates of the commonly used WGS84 reference system (EPSG:4326).](source/figures/04_results_1__thuringia.png){#fig:thuringia width=100% short-caption="Extent and characteristics of the Free State of Thuringia."}
 
 Additional maps are available in Appendix A with the tiling schemes for Sentinel-2A/B level-1 (Figure @fig:appendixfig_A1) and Landsat 8 (Figure @fig:appendixfig_A2) acquisitions overlaid over the area of interest. Sentinel-1A/B, on the other hand, do not use a fixed tiling scheme. ESA regularly provides acquisition segments covering a period of 12 days each, which is not feasible to visualize in this case. However, exemplary scene footprints for ascending and descending orbits are provided in Figure @fig:appendixfig_A3.
 
@@ -110,10 +110,12 @@ After completing the implementation of the TDC on TerraSense, the usability was 
 
 As mentioned in Section @sec:python-framework the conda *user* environment facilitates usage of the TDC. As a prerequisite, the containerized PostgreSQL database needs to run as a background process in order for the ODC Python package to access the indexed data. Furthermore, a JupyterLab server was started on TerraSense to provide an interactive working environment, which could then be accessed on an external system via a Secure Shell Protocol (SSH) tunnel that simply forwards the necessary port used by the JupyterLab server.  
 
-All files related to the results presented in this section are also available in a public Github repository: [https://github.com/maawoo/TDC_use](https://github.com/maawoo/TDC_use).
+All files related to the results presented in this section are also available in a public GitHub repository: [https://github.com/maawoo/TDC_use](https://github.com/maawoo/TDC_use).
 
 
 ### Per-pixel Computations
+
+#### Concept
 
 To identify any problems and possible bottlenecks in terms of disk and memory bandwidth on one hand, and to get a better understanding of the spatio-temporal characteristics of the datasets on the other, per-pixel computations were performed. Hereby, for each individual pixel of the entire spatial extent of the TDC, the sum of valid (SAR datasets) and clear-sky (optical datasets) observations are calculated by considering each pixel's time-series information. 
 
@@ -174,6 +176,8 @@ Other, larger-scale patterns seem to show a natural variation due to topography.
 
 \newpage
 ### Roda Forest Analysis
+
+#### Motivation & Study Area
 
 A further assessment of the usability of the TDC was performed through a time-series analysis that incorporates all available datasets. For this analysis the Roda forest was chosen, which is located to the southeast of the city of Jena (see Figure @fig:thuringia), and primarily contains coniferous, evergreen trees [@Thiel2016]. Figure @fig:roda_aoi shows the area in more detail with a forest cover layer from an official survey [@ATKIS2021] overlaid.
 
