@@ -1,3 +1,5 @@
+\cleardoublepage
+
 # List of Abbreviations {.unnumbered}
 
 \small

@@ -1,3 +1,5 @@
+\cleardoublepage
+
 \tableofcontents
 
 \newpage

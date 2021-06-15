@@ -12,6 +12,8 @@ degree: Master of Science
 ---
 
 ---
+classoption:
+- twoside
 link-citations: true
 nocite: |
   @GDB2021

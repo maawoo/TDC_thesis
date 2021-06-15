@@ -1,3 +1,7 @@
+\thispagestyle{empty}
+\cleardoublepage
+
+\thispagestyle{empty}
 
 \vspace*{\fill}
 \noindent
@@ -6,6 +10,4 @@ I, Marco Wolsza confirm that the work presented in this thesis is my own. Where 
 }
 \vspace*{\fill}
 
-\pagenumbering{roman}
-\setcounter{page}{1}
 \newpage

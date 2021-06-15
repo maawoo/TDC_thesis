@@ -30,6 +30,7 @@ To perform the topographic correction, as well as improving cloud and cloud shad
 
 No water vapor correction using an external water vapor database was performed, as this option is only relevant for Landsat data and in particular Landsat 4-7 [@Frantz2019a], which were not used for this implementation. The *Improphe* algorithm was used to improve the spatial resolution of the 20 m Sentinel-2 bands during the *Resolution Merge* processing step. Further details on the algorithm are provided by @Frantz2016a.
 
+\newpage
 \begin{table}[h]
 \caption[FORCE L2PS processing parameters used for the implementation
 of the TDC.]{\label{table:force-params}FORCE L2PS parameters used to process Landsat 8 and Sentinel-2 scenes for the implementation of the TDC. BRDF = Bidirectional Reflectance Distribution Function; AOD = Atmospheric Optical Depth.}
