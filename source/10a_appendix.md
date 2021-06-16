@@ -2,11 +2,11 @@
 
 ## **Appendix A — TDC Implementation** {.unlisted .unnumbered}
 
-![Sentinel-2A/B product tiling scheme and and acquisition orbit swaths over the Free State of Thuringia.](source/figures/10_appendix_1__tiling_s2.png){#fig:appendixfig_A1 width=100% tag="A-1" short-caption="Sentinel-2A/B product tiling scheme and acquisition orbit swaths."}
+![Sentinel-2A/B product tiling scheme and and acquisition orbit swaths over the Free State of Thuringia.](source/figures/10_appendix_1__tiling_s2.png){#fig:appendixfig_A1 width=100% tag="A-1" short-caption="Sentinel-2 product tiling scheme and acquisition orbit swaths."}
 
 ![Landsat 8 product tiling scheme over the Free State of Thuringia.](source/figures/10_appendix_2__tiling_l8.png){#fig:appendixfig_A2 width=100% tag="A-2" short-caption="Landsat 8 product tiling scheme."}
 
-![Sentinel-1A/B example acquisition footprints for the ascending (A) and descending (B) orbits over the Free State of Thuringia.](source/figures/10_appendix_3__sar_footprints.png){#fig:appendixfig_A3 width=80% tag="A-3" short-caption="Sentinel-1A/B example acquisition footprints."}
+![Sentinel-1A/B example acquisition footprints for the ascending (A) and descending (B) orbits over the Free State of Thuringia.](source/figures/10_appendix_3__sar_footprints.png){#fig:appendixfig_A3 width=80% tag="A-3" short-caption="Sentinel-1 ascending and descending example acquisition footprints."}
 
 \newpage
 
@@ -14,7 +14,7 @@
 \setcounter{table}{0}
 
 \begin{table}[h]
-\caption[FORCE level-2 output bands and mapping to original level-1 bands.]{\label{table:appendixtab_A1}FORCE level-2 output bands and mapping to original level-1 bands. Adapted from (Frantz et al., n.d.-b; Frantz, 2019).}
+\caption[FORCE level-2 output bands and mapping to original level-1 bands.]{\label{table:appendixtab_A1}FORCE level-2 output bands and mapping to original level-1 bands. Adapted from Frantz et al. (n.d.-b) and Frantz (2019).}
 \end{table}
 
 \footnotesize
@@ -40,7 +40,7 @@
 \setcounter{table}{1}
 
 \begin{table}[h]
-\caption[FORCE level-2 per-pixel Quality Assurance Information (QAI) description..]{\label{table:appendixtab_A2}FORCE level-2 per-pixel Quality Assurance Information (QAI) description. IA = Incidence Angle; TC = Topographic Correction. Adapted from (Frantz et al., n.d.-b; Frantz, 2019).}
+\caption[FORCE level-2 per-pixel Quality Assurance Information (QAI) description.]{\label{table:appendixtab_A2}FORCE level-2 per-pixel Quality Assurance Information (QAI) description. IA = Incidence Angle; TC = Topographic Correction. Adapted from Frantz et al. (n.d.-b) and Frantz (2019).}
 \end{table}
 
 \footnotesize
@@ -82,7 +82,7 @@
 \newpage
 ## **Appendix B — TDC Use Cases** {.unlisted .unnumbered}
 
-![Number of valid observations between 2017-01-01 and 2019-12-31 for each available pixel of the Sentinel-1A/B ascending dataset.](source/figures/10_appendix_4__obs_s1_asc.png){#fig:appendixfig_B1 width=100% tag="B-1" short-caption="Per-pixel computation: Valid observations for Sentinel-1A/B ascending."}
+![Number of valid observations between 2017-01-01 and 2019-12-31 for each available pixel of the Sentinel-1A/B ascending dataset.](source/figures/10_appendix_4__obs_s1_asc.png){#fig:appendixfig_B1 width=100% tag="B-1" short-caption="Per-pixel computation: Valid observations for Sentinel-1 ascending."}
 
 ![Number of clear-sky observations between 2017-01-01 and 2019-12-31 for each available pixel of the Landsat 8 dataset.](source/figures/10_appendix_5__obs_l8.png){#fig:appendixfig_B2 width=100% tag="B-2" short-caption="Per-pixel computation: Clear-sky observations for Landsat 8."}
 

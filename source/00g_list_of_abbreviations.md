@@ -16,7 +16,7 @@
 \textbf{BDC} & \textbf{B}razil \textbf{D}ata \textbf{C}ube \\ 
 \textbf{BOA} & \textbf{B}ottom \textbf{O}f \textbf{A}tmosphere \\  
 \textbf{BRDF} & \textbf{B}idirectional \textbf{R}eflectance \textbf{D}istribution \textbf{F}unction \\  
-\textbf{BSQ} & \textbf{B}and \textbf{s}e\textbf{q}uential interleaving \\  
+\textbf{BSQ} & \textbf{B}and \textbf{S}e\textbf{q}uential Interleaving \\  
 \textbf{BT} & \textbf{B}rightness \textbf{T}emperature \\  
 \textbf{CARD4L} & \textbf{C}EOS \textbf{A}nalysis \textbf{R}eady \textbf{D}ata \textbf{for} \textbf{L}and \\ 
 \textbf{CEOS} & \textbf{C}ommittee on \textbf{E}arth \textbf{O}bservation \textbf{S}atellites \\ 
@@ -65,8 +65,8 @@
 \textbf{OLAP} & \textbf{O}n\textbf{l}ine \textbf{A}nalytical \textbf{P}rocessing \\ 
 \textbf{OLI} & \textbf{O}perational \textbf{L}and \textbf{I}mager \\ 
 \textbf{OSGeo} & \textbf{O}pen \textbf{S}ource \textbf{Geo}spatial Foundation \\ 
-\textbf{PAA} & \textbf{P}roduct \textbf{A}lignment \textbf{A}ssessment \\ 
-\textbf{PFS} & \textbf{P}roduct \textbf{F}amily \textbf{S}pecification \\ 
+\textbf{PAA} & CARD4L \textbf{P}roduct \textbf{A}lignment \textbf{A}ssessment \\ 
+\textbf{PFS} & CARD4L \textbf{P}roduct \textbf{F}amily \textbf{S}pecification \\ 
 \textbf{QAI} & \textbf{Q}uality \textbf{A}ssurance \textbf{I}nformation \\ 
 \textbf{SAR} & \textbf{S}ynthetic \textbf{A}perture \textbf{R}adar \\ 
 \textbf{SDC} & \textbf{S}wiss \textbf{D}ata \textbf{C}ube \\ 
