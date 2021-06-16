@@ -46,12 +46,6 @@
   pages      = {100--117},
   volume     = {1},
   abstract   = {Pressures on natural resources are increasing and a number of challenges need to be overcome to meet the needs of a growing population in a period of environmental variability. Some of these environmental issues can be monitored using remotely sensed Earth Observations (EO) data that are increasingly available from a number of freely and openly accessible repositories. However, the full information potential of EO data has not been yet realized. They remain still underutilized mainly because of their complexity, increasing volume, and the lack of efficient processing capabilities. EO Data Cubes (DC) are a new paradigm aiming to realize the full potential of EO data by lowering the barriers caused by these Big data challenges and providing access to large spatio-temporal data in an analysis ready form. Systematic and regular provision of Analysis Ready Data (ARD) will significantly reduce the burden on EO data users. Nevertheless, ARD are not commonly produced by data providers and therefore getting uniform and consistent ARD remains a challenging task. This paper presents an approach to enable rapid data access and pre-processing to generate ARD using interoperable services chains. The approach has been tested and validated generating Landsat ARD while building the Swiss Data Cube.},
-  comment    = {- **Introduction** auf jeden Fall wichtig!
-- Generell wieder einige Punkte, die das Konzept ODC unterstützen
-- Umsetzung des SDC mit Fokus auf Landsat
-- Für automatisierten Workflow zum Download, Preprozessing und Ingestion/Indexierung in DC der Daten wurde das LiMES FRamework verwendet (Live Monitoring of Earth Surface)
-	- Giuliani et al. (2017)
-- Am Ende meiner Ausarbeitung kann ich einen Vergleich zu der Umsetzung ziehen und ggfls diskutieren, was besser oder schlechter funktioniert... oder so},
   file       = {:Giuliani2017 - Building an Earth Observations Data Cube_ Lessons Learned from the Swiss Data Cube (SDC) on Generating Analysis Ready Data (ARD).pdf:PDF},
   groups     = {EODC - OpenDataCube, Background, Methods/Results},
   journal    = {Big Earth Data},
@@ -72,14 +66,6 @@
   abstract   = {The Australian Geoscience Data Cube (AGDC) aims to realise the full potential of Earth observation data holdings by addressing the Big Data challenges of volume, velocity, and variety that otherwise limit the usefulness of Earth observation data. There have been several iterations and AGDC version 2 is a major advance on previous work.
 The foundations and core components of the AGDC are: (1) data preparation, including geometric and radiometric corrections to Earth observation data to produce standardised surface reflectance measurements that support time-series analysis, and collection management systems which track the provenance of each Data Cube product and formalise re-processing decisions; (2) the software environment used to manage and interact with the data; and (3) the supporting high performance computing environment provided by the Australian National Computational Infrastructure (NCI).
 A growing number of examples demonstrate that our data cube approach allows analysts to extract rich new information from Earth observation time series, including through new methods that draw on the full spatial and temporal coverage of the Earth observation archives. To enable easy-uptake of the AGDC, and to facilitate future cooperative development, our code is developed under an open-source, Apache License, Version 2.0. This opensource approach is enabling other organisations, including the Committee on Earth Observing Satellites (CEOS), to explore the use of similar data cubes in developing countries.},
-  comment    = {- Follow-Up Paper zu Lewis et al. (2016) / AGDCv1 ... AGDCv2
-- Kapitel 2 enthält paar wichtige Beschreibungen zum Thema 'Big EO data', die für mein **Intro** relevant sind
-	- 'Volume, Velocity & Variety' (Laney, 2001)
-	- 'we should expect at least a 20-fold increase in the global volumes of
-raw data acquired over a 15 year period.' ...Und dann noch abgeleitete Produkte!
-- Kapitel 3 beschreibt die Kernelemente des AGDCv2. U.a. spatial alignment & radiometric correction
-	- Interessant als Vergleich zu FORCE, allerdings wäre es wichtig noch herauszufinden wie aktuell die Workflows noch sind (z.B. wird Ingestion beschrieben, allerdings laut ODC Slack nicht mehr wirklich verwendet!)
-- Beschreibung und Visualisierung (Fig. 10) der Datenbank! (allerdings wieder darauf achten, wie aktuell die Infos noch sind!)},
   file       = {:Lewis2017 - The Australian Geoscience Data Cube _ Foundations and Lessons Learned.pdf:PDF},
   groups     = {EODC - OpenDataCube, Background, Methods/Results},
   journal    = {Remote Sensing of Environment},
@@ -176,11 +162,6 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   pages      = {113},
   volume     = {4},
   abstract   = {Earth observations data cubes (EODCs) are a paradigm transforming the way users interact with large spatio-temporal Earth observation (EO) data. It enhances connections between data, applications and users facilitating management, access and use of analysis ready data (ARD). The ambition is allowing users to harness big EO data at a minimum cost and effort. This significant interest is illustrated by various implementations that exist. The novelty of the approach results in different innovative solutions and the lack of commonly agreed definition of EODC. Consequently, their interoperability has been recognized as a major challenge for the global change and Earth system science domains. The objective of this paper is preventing EODC from becoming silos of information; to present how interoperability can be enabled using widely-adopted geospatial standards; and to contribute to the debate of enhanced interoperability of EODC. We demonstrate how standards can be used, profiled and enriched to pave the way to increased interoperability of EODC and can help delivering and leveraging the power of EO data building, efficient discovery, access and processing services.},
-  comment    = {- Einige Probleme von EODCs, die in Zukunft gelöst werden sollten, werden beschrieben (Interoperability auf verschiedenen Leveln)
-- Differenzierung zwischen Data Cubes und Cloud-basierten Lösungen (z.B. GEE)
-- Definition von EODCs wird behandelt
-	- 'Datacube Manifesto' und 'The six faces of a datacube' werden zitiert aber es wird nicht unbedingt gesagt, dass das jetzt die beste Definition von EODCs ist
-- Insgesamt wahrscheinlich wichtig für die Diskussion und das ein oder andere auch für's Intro!},
   file       = {:Giuliani2019 - Paving the Way to Increased Interoperability of Earth Observations Data Cubes.pdf:PDF},
   groups     = {EODC - Concept, Background, ARD},
   journal    = {Data},
@@ -200,8 +181,6 @@ into Data Cubes [3], and will have confidence that these different CARD4L produc
   pages      = {147},
   volume     = {4},
   abstract   = {Earth Observation Data Cubes (EODC) have emerged as a promising solution to efficiently and effectively handle Big Earth Observation (EO) Data generated by satellites and made freely and openly available from different data repositories. The aim of this Special Issue, “Earth Observation Data Cube”, in Data, is to present the latest advances in EODC development and implementation, including innovative approaches for the exploitation of satellite EO data using multi-dimensional (e.g., spatial, temporal, spectral) approaches. This Special Issue contains 14 articles covering a wide range of topics such as Synthetic Aperture Radar (SAR), Analysis Ready Data (ARD), interoperability, thematic applications (e.g., land cover, snow cover mapping), capacity development, semantics, processing techniques, as well as national implementations and best practices. These papers made significant contributions to the advancement of a more Open and Reproducible Earth Observation Science, reducing the gap between users’ expectations for decision-ready products and current Big Data analytical capabilities, and ultimately unlocking the information power of EO data by transforming them into actionable knowledge.},
-  comment    = {- Intro-Paper zum MDPI-Data-Special zum Thema EODCs
-- Entsprechend wenig nützlicher Inhalt, aber zu Beginn paar Sätze die nützlich für mein Intro sein könnten},
   file       = {:Giuliani2019a - Earth Observation Open Science_ Enhancing Reproducible Science Using Data Cubes.pdf:PDF},
   groups     = {EODC - Concept},
   journal    = {Data},
@@ -258,9 +237,6 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   pages        = {117},
   volume       = {4},
   abstract     = {Environmental issues become an increasing global concern because of the continuous pressure on natural resources. Earth observations (EO), which include both satellite/UAV and in-situ data, can provide robust monitoring for various environmental concerns. The realization of the full information potential of EO data requires innovative tools to minimize the time and scientific knowledge needed to access, prepare and analyze a large volume of data. EO Data Cube (DC) is a new paradigm aiming to realize it. The article presents the Swiss-Armenian joint initiative on the deployment of an Armenian DC, which is anchored on the best practices of the Swiss model. The Armenian DC is a complete and up-to-date archive of EO data (e.g., Landsat 5, 7, 8, Sentinel-2) by benefiting from Switzerland’s expertise in implementing the Swiss DC. The use-case of confirm delineation of Lake Sevan using McFeeters band ratio algorithm is discussed. The validation shows that the results are sufficiently reliable. The transfer of the necessary knowledge from Switzerland to Armenia for developing and implementing the first version of an Armenian DC should be considered as a first step of a permanent collaboration for paving the way towards continuous remote environmental monitoring in Armenia.},
-  comment      = {- Armenian DC basiert auf dem Swiss DC, also technisch nichts Neues
-- Generell schlechtes Paper
-- Nur relevant für den Fall, dass ich beispielhaft Länder im Intro aufzähle die bereits eine ODC Instanz nutzen},
   file         = {:Asmaryan2019 - Paving the Way Towards an Armenian Data Cube.pdf:PDF},
   groups       = {EODC - OpenDataCube, Background},
   journal      = {Data},
@@ -298,12 +274,6 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   pages      = {96},
   volume     = {4},
   abstract   = {The amount of data that Sentinel fleet is generating over a territory such as Catalonia makes it virtually impossible to manually download and organize as files. The Open Data Cube (ODC) offers a solution for storing big data products in an efficient way with a modest hardware and avoiding cloud expenses. The approach will still be useful up to the next decade. Yet, ODC requires a level of expertise that most people who could benefit from the information do not have. This paper presents a web map browser that gives access to the data and goes beyond a simple visualization by combining the OGC WMS standard with modern web browser capabilities to incorporate time series analytics. This paper shows how we have applied this tool to analyze the spatial distribution of the availability of Sentinel 2 data over Catalonia and revealing differences in the number of useful scenes depending on the geographical area that ranges from one or two images per month to more than one image per week. The paper also demonstrates the usefulness of the same approach in giving access to remote sensing information to a set of protected areas around Europe participating in the H2020 ECOPotential project.},
-  comment    = {- ODC wird nicht als ultimatives tool in EO, sondern auch kritisch betrachtet (was gut ist!) 
-	- e.g. 'Unfortunately, the technical level of expertise for applications similar to the ones mentioned before relegates the use of the ODC to a subset of RS experts skilled in Python programming.'
-- Eine Lösung wird beschrieben, wie der Zugriff auf die EO Daten und mögliche Analyse-Methoden auch für User nutzbar gemacht werden kann, die z.B. keine Programmierkenntnisse in Python besitzen! 
-- Passt super in DIskussion und was mit dem Thüringer Data Cube noch gemacht werden könnte
-	- Erst technische Umsetzung und die Möglichkeit über JupyterLab mit den Daten zu arbeiten (intern bei uns / Studenten zum lernen)
-	- Danach ggf. Weboberflächen und so ein Kram für Behördenmenschen und zB die Möglichkeit in QGIS auf die Daten zuzugreifen},
   file       = {:Maso2019 - A Portal Offering Standard Visualization and Analysis on Top of an Open Data Cube for Sub National Regions_ the Catalan Data Cube Example.pdf:PDF},
   groups     = {EODC - OpenDataCube, Introduction},
   journal    = {Data},
@@ -322,8 +292,6 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   pages      = {94},
   volume     = {4},
   abstract   = {Earth observation imagery have traditionally been expensive, difficult to find and access, and required specialized skills and software to transform imagery into actionable information. This has limited adoption by the broader science community. Changes in cost of imagery and changes in computing technology over the last decade have enabled a new approach for how to organize, analyze, and share Earth observation imagery, broadly referred to as a data cube. The vision and promise of image data cubes is to lower these hurdles and expand the user community by making analysis ready data readily accessible and providing modern approaches to more easily analyze and visualize the data, empowering a larger community of users to improve their knowledge of place and make better informed decisions. Image data cubes are large collections of temporal, multivariate datasets typically consisting of analysis ready multispectral Earth observation data. Several flavors and variations of data cubes have emerged. To simplify access for end users we developed a flexible approach supporting multiple data cube styles, referencing images in their existing structure and storage location, enabling fast access, visualization, and analysis from a wide variety of web and desktop applications. We provide here an overview of that approach and three case studies.},
-  comment    = {- Vor allem im Kapitel 2 werden ein paar wichtige Aspekte beschrieben (z.B. 'Optimizing Data Storage'), die sehr relevant sind!
-- Danach ist es aber hauptsächlich auf ArcGIS bezogen und nicht mehr wirklich hilfreich},
   file       = {:Kopp2019 - Achieving the Full Vision of Earth Observation Data Cubes.pdf:PDF},
   groups     = {EODC - Concept, Background},
   journal    = {Data},
@@ -362,14 +330,6 @@ The L30 and S30 show a good consistency with coarse spatial resolution products,
   pages      = {144},
   volume     = {4},
   abstract   = {The emerging global trend of satellite operators producing analysis-ready data combined with open source tools for managing and exploiting these data are leading to more and more countries using Earth observation data to drive progress against key national and international development agendas. This paper provides examples from Australia, Mexico, Switzerland, and Tanzania on how the Open Data Cube technology has been combined with analysis-ready data to provide new insights and support better policy making across issues as diverse as water resource management through to urbanization and environmental–economic accounting.},
-  comment    = {- An der **Introduction** kann ich mich ganz gut orientieren
-	- Hat ähnliche Struktur, wie ich sie mir auch überlegt habe (Problem Big EO Data... Some solutions to harness the potential already exist... ODC...)
-- Gute Zusammenfassung mehrerer Anwendungsbeispiele, wie ODC Instanzen regional genutzt werden und welcher Mehrwert daraus gezogen wird 
-	- Australia: Managing Water in the Murray-Darling Basin
-	- Switzerland: Snow Cover Monitoring
-	- Mexico: Testing the UN System for Economic-Environmental Accounting
-	- Tanzania: Managing Urbanization
-- **Conclusion**!! Unterstützt im Prinzip die Idee meines Projekts},
   file       = {:Dhu2019 - National Open Data Cubes and Their Contribution to Country Level Development Policies and Practices.pdf:PDF},
   groups     = {EODC - Use/Impact, Background},
   journal    = {Data},
@@ -459,7 +419,6 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   doi         = {10.1109/igarss.2019.8898321},
   pages       = {5646-5649},
   abstract    = {Users of satellite Earth observation data typically invest a large amount of effort into data preparation which is a major barrier for many global users and limits the impact and utilization of this data around the world. The Committee on Earth Observation Satellites (CEOS) has initiated an effort to define and promote the production and use of Analysis Ready Data (ARD) to lower the burden on global users and increase the use and impact of its data. Through the Open Data Cube (ODC) initiative and its demonstration in Africa, ARD is making an impact on this developing region of the world. This paper discusses how this data and the associated ODC tools are being used to address water extent, land change and urbanization, which are key application areas aligned with the United Nations Sustainable Development Goals (SDG). Through the ODC, the impact of ARD is growing rapidly around the world and our ability to address local and national decision-making needs will continue to improve.},
-  comment     = {-},
   file        = {:Killough2019 - The Impact of Analysis Ready Data in the Africa Regional Data Cube.pdf:PDF},
   groups      = {EODC - Use/Impact, Background},
   incitefulid = {96962756},
@@ -478,7 +437,6 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   pages       = {106-111},
   volume      = {9},
   abstract    = {The effort and cost required to convert satellite Earth Observation (EO)data  into  meaningful  geophysical  variables  has  prevented  thesystematic analysis of all available observations. To overcome theseproblems, we utilise an integrated High Performance Computing andData environment to rapidly process, restructure and analyse theAustralian Landsat data archive. In this approach, the EO data areassigned to a common grid framework that spans the full geospatialand temporal extent of the observations–the EO Data Cube. Thisapproach  is  pixel-based  and  incorporates  geometric  and  spectralcalibration and quality assurance of each Earth surface reflectancemeasurement. We demonstrate the utility of the approach with rapidtime-series mapping of surface water across the entire Australiancontinent using 27 years of continuous, 25 m resolution observations.Our preliminary analysis of the Landsat archive shows how the EOData Cube can effectively liberate high-resolution EO data from theircomplex sensor-specific data structures and revolutionise our ability tomeasure environmental change.},
-  comment     = {Lewis et al. (2017) !},
   file        = {:Lewis2016 - Rapid, High Resolution Detection of Environmental Change Over Continental Scales from Satellite Data – the Earth Observation Data Cube.pdf:PDF},
   groups      = {EODC - OpenDataCube, Background},
   incitefulid = {46919419},
@@ -507,21 +465,6 @@ With the above purpose in mind, the evaluation we present seeks to inform future
   pages        = {75-99},
   volume       = {1},
   abstract     = {Big  Earth  Data-Cube  infrastructures  are  becoming  more  and  more  popular  to  provide Analysis  Ready  Data,  especially  for  managing  satellite  time  series.  These  infrastructures build  on  the  concept  of  multidimensional  data  model  (data  hypercube)  and  are  complex  systems engaging different disciplines and expertise. For this reason, their interoperability capacity has become a challenge in the Global Change and Earth System science domains. To address this challenge, there is a pressing need in the community to reach a widely agreed definition  of  Data-Cube  infrastructures  and  their  key  features.  In  this  respect,  a  discussion  has  started  recently  about  the  definition  of  the  possible  facets  characterizing    Data-Cube  in  the  Earth  Observation  domain.  This  manuscript  contributes  to  such  debate  by  introducing  a  view-based  model  of  Earth  Data-Cube  systems  to  design its infrastructural architecture and content schemas, with the final  goal  of  enabling  and  facilitating  interoperability.  It  introduces  six modeling views, each of them is described according to: its main concerns,  principal  stakeholders,  and  possible  patterns  to  be  used.  The manuscript onsiders the Business Intelligence experience with Data Warehouse and multidimensional “cubes” along with the more recent and analogous development in the Earth Observation domain, and  puts  forward  a  set  of  interoperability  recommendations  based  on the modeling views.},
-  comment      = {- 2017 schon wieder etwas veraltet und andere Paper sind in dem Kontext etwas relevanter...
-- Trägt generell aber zur Diskussion bei, dass gewisse Dinge im Zusammenhang mit EO Data Cubes besser definiert werden sollten
-
-Key points:
-
-- Data-Cube systems must be separated into distinct sections, such that each section addresses a separate concern.
-- A concern is a set of requirements and constraints that affect the system design and represent a  stakeholder  needs.  By  applying  the  separation  of  concerns  pattern,  Data-Cubes  can  be  represented in a way that is manageable and comprehensible by a range of different business and technical stakeholders. The benefits are multiple including: maintainability, extensibility, interoperability.
-- Content views:
-	- Semantic
-	- Geometry
-	- Encoding
-- Cyber-infrastructure views:
-	- Interaction/Interface
-	- Interconnection/Platform
-	- Composition/Ecosystem},
   file         = {:Nativi2017 - A View Based Model of Data Cube to Support Big Earth Data Systems Interoperability.pdf:PDF},
   groups       = {EODC - Concept, Background},
   incitefulid  = {50366670},
@@ -559,12 +502,6 @@ consider relevant for the imminent uptake of big Earth data.},
   issue       = {102035},
   volume      = {87},
   abstract    = {To tackle Big Data challenges such as Volume, Variety, and Velocity, the Earth Observations Data Cube (EODC)concept has emerged as a solution for lowering barriers and offering new possibilities to harness the informationpower of satellite EO data. However, installing, configuring, and managing an EODC instance is still difficultrequiring specific knowledge and capabilities. Consequently, facilitating and automating the generation andprovision of EODC given specific user’s requirements can be beneficial.In response to this issue, this paper presents the Data Cube on Demand (DCoD) approach, a proof-of-conceptthat aims at facilitating the generation and use of an EODC instance virtually anywhere in the World. Users areonly required to specify an area of interest; select the types of sensors between Landsat 5-7-8 and Sentinel-2;choose a desired temporal frame; and provide their email address to receive notifications. Then automatically anempty ODC instance is instantiated and desired data are ingested.The proposed approach has been successfully tested in two sites in Bolivia and DRC in thefield of environ-mental monitoring. It has lowered many complexity barriers of such a new technology; greatly facilitated thegeneration and use of the Data Cube technology; enhanced data sovereignty; and ultimately can help reachinglarge adoption and acceptance.},
-  comment     = {- Intro nochmal anschauen, könnte hilfreich sein (allerdings wahrscheinlich auch nicht viel anders als in den anderen ODC Papern wo im Prinzip immer das selbe im Intro erzählt wird...)
-- Der komplette Prozess ARD Daten zu generieren und einen ODC aufzusetzen... 'is complex, requires several steps and necessitate particular skills'
-	- Das Paper wäre ein Beispiel (z.B. für die Diskussion?), dass daren gearbeitet wird diesen Prozess zu vereinfachen 
-- Technisch auch interessant und muss ich nochmal genauer anschauen!
-	- Docker Compose / multi-container docker application
-	- Kein Github repo?? :(},
   file        = {:Giuliani2020a - Data Cube on Demand (DCoD)_ Generating an Earth Observation Data Cube Anywhere in the World.pdf:PDF},
   groups      = {EODC - Use/Impact, Discussion},
   incitefulid = {181346687},
@@ -652,9 +589,6 @@ consider relevant for the imminent uptake of big Earth data.},
   pages      = {1--7},
   volume     = {2},
   abstract   = {The potential of big data fused with the vision of a digital Earth offers powerful opportunities to deepen understanding of the whole Earth system and the management of a sustainable planet. It is important to stand back from often confusing detail to clarify what those opportunities are and how they might be seized. The essential scientific potential of data, big or small, is to reveal patterns, which have often been the fundamental first step in stimulating inquiry, leading to new questions, new perspectives and potentially to new answers. The digital revolution has created  a “digital microscope” that permits us to see patterns that have not been seen before, and when coupled with machine learning technologies to analyse them in creating statistical predictions of the behaviour of both human and non-human systems. These potentials converge with the imperative to represent an Earth system with interacting non-human and human components, as a vital contribution to the understanding and actions required  in  working  towards  planetary  sustainability. But a digital Earth is also capable of being represented mathematically as a digitally networked phenomenon, analogous to an analogue computer, and should be an important target for a Big Earth Data Journal. We should also return to Al Gore’s vision of an  accessible digital Earth with wide usability. Pre-determining the separate functions of parallel digital Earths risks losing one of the great potentials of big data and learning algorithms, the identification and analysis of unanticipated relationships and processes.},
-  comment    = {- Sehr generell zum Thema 'big Earth data' und den relevanten Herausforderungen
-- 'digital microscope' Analogie ist sehr interessant
-- Sonst aber eher weniger hilfreich für mich. Passt aber bestimmt irgendwo gut rein, wo 'big Earth data' angesprochen wird},
   file       = {:Boulton2018 - The Challenges of a Big Data Earth.pdf:PDF},
   groups     = {BigData, Background},
   journal    = {Big Earth Data},
@@ -935,7 +869,6 @@ This paper presents the CCI program. It outlines its benefit and presents approa
   pages        = {111723},
   volume       = {241},
   abstract     = {TL;DR: In this paper, we compare the effect of multivariate spectral harmonization techniques on the inter-sensor reflectance consistency and derived products such as spectral indices or land cover classifications.},
-  comment      = {- The proposed approach might be incorporated into the next FORCE release!},
   file         = {:Scheffler2020 - Spectral Harmonization and Red Edge Prediction of Landsat 8 to Sentinel 2 Using Land Cover Optimized Multivariate Regressors.pdf:PDF},
   groups       = {Optical, Discussion},
   keywords     = {skimmed, prio3},
@@ -1365,8 +1298,6 @@ Herein, we describe the programmatic developments and institutional context for 
   pages        = {90},
   volume       = {9},
   abstract     = {All over the world, organizations are increasingly considering the adoption of open sourcesoftware and open data.  In the geospatial domain, this is no different, and the last few decadeshave seen significant advances in this regard. We review the current state of open source geospatialsoftware, focusing on the Open Source Geospatial Foundation (OSGeo) software ecosystem and itscommunities, as well as three kinds of open geospatial data (collaboratively contributed, authoritativeand scientific). The current state confirms that openness has changed the way in which geospatialdata are collected, processed, analyzed, and visualized.  A perspective on future developments,informed by responses from professionals in key organizations in the global geospatial community,suggests that open source geospatial software and open geospatial data are likely to have an evenmore profound impact in the future.},
-  comment      = {- ODC is being mentioned in section 2.6. - Institutional and Government Supported Open Source Geospatial Initiatives
-- Beyond that, this paper might be very useful if I discuss the open source aspect somewhere in my thesis!},
   file         = {:Coetzee2020 - Open Geospatial Software and Data_ a Review of the Current State and a Perspective into the Future.pdf:PDF},
   groups       = {BigData, Background, Discussion},
   incitefulid  = {109245531},
