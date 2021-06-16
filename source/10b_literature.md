@@ -4,12 +4,11 @@
 \singlespacing
 \setlength{\parindent}{0in}
 
-<!-- 
-Do not edit this page.
+<!-- https://tex.stackexchange.com/a/528905 --> 
+\interlinepenalty=10000
+\raggedbottom
 
-References are automatically generated from the BibTex file (References.bib)
-
-...which you should create using your reference manager.
--->
+<!-- https://tex.stackexchange.com/a/15656 -->
+\sloppy
 
 # References

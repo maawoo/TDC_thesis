@@ -116,6 +116,10 @@
 % prohibit hyphenation at all explicit hyphens (e.g., 'per-pixel' will not be hyphenated)
 \exhyphenpenalty10000
 
+% https://texfaq.org/FAQ-widows
+\clubpenalty10000
+\widowpenalty10000
+
 %% pandoc-fignos: environment for tagged figures
 %% https://github.com/tomduck/pandoc-fignos/blob/6ab8ac6e2d5ab89805e96a36fd01ba19e8f697a6/pandoc_fignos.py#L344
 \newenvironment{fignos:tagged-figure}[1][]{
