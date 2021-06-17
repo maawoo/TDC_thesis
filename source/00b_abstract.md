@@ -10,7 +10,7 @@ The amount of Earth Observation (EO) data being available through free and open 
 
 The Thuringian Data Cube (TDC), an EODC based on the Open Data Cube software library, was implemented on a High Performance Computing system for the Free State of Thuringia in Germany. The initial implementation includes analysis-ready EO data from Landsat 8, Sentinel-2A/B and Sentinel-1A/B for a three-year period (2017--2019) and was facilitated by developing a software tool called ARDCube. Two use cases were conducted to demonstrate the potential of the TDC and assess its usability, including a time-series analysis investigating possible drought-related impacts on a forest area in eastern Thuringia. 
 
-The study demonstrates the capabilities of the TDC, and that it successfully lays a foundation to efficiently manage and analyze large volumes of EO data for the Free State of Thuringia. Various opportunities were identified to further improve the TDC in regard to the technical implementation and the integrated ARD products, as well as for subsequent analyses related to the performed use cases.  
+The study demonstrates the capabilities of the TDC, and that it successfully lays a foundation to efficiently manage and analyze large volumes of EO data for the Free State of Thuringia. Various opportunities were identified to further improve the TDC in regard to the technical implementation and the integrated ARD products, as well as for subsequent analyses related to the use cases to be performed.  
 
 
 \newpage
